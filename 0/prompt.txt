@@ -1,17 +1,1 @@
-Check that Entire session logging is working properly before we proceed
-
----
-
-Lets update entire to the newest version
-
----
-
-perhaps Ill try restarting WSL and my sessions, and resume this chat to see if things change.
-
----
-
-Check it now.
-
----
-
 do a test commit, and then check if it is recorded properly
