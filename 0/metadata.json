@@ -1,0 +1,85 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4CCAYBZKNFRCKSPVE86APZ3",
+  "session_id": "01a1189a-03a1-7250-9b16-02c75cfa47c5",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-07T23:49:20.652617787Z",
+  "branch": "main",
+  "checkpoints_count": 4,
+  "save_step_count": 2,
+  "files_touched": [
+    "docs/acceptance-cases.md",
+    "docs/requirements-traceability.csv",
+    "docs/verification/check-u01.py",
+    "docs/verification/interview-meaning-inventory.csv",
+    "docs/verification/u01.md",
+    "references/contracts.md",
+    "references/decision-log.md"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "035d97d551cf",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 195501,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 4928640,
+    "output_tokens": 42062,
+    "api_call_count": 44,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 4
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-07T23:49:20.447099347Z",
+    "agent_lines": 1033,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 1006,
+    "human_removed": 0,
+    "total_committed": 1536,
+    "total_lines_changed": 2039,
+    "agent_percentage": 50.662089259440904,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 1985,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        "REQUIREMENTS.md": 625,
+        "TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md": 701,
+        "interviews/interview-B-3.md": 571
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 88,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3533,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 591,
+      "user_lines_removed": 503,
+      "agent_lines_added": 3936,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        "docs/requirements-traceability.csv": 503
+      },
+      "user_removed_per_file": {
+        "docs/requirements-traceability.csv": 503
+      }
+    }
+  ]
+}
