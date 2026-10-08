@@ -1,66 +1,10 @@
-Review the current diff for U03 and U04 only. Start with U03 as U04 depends on U03. Stop after U03 if there are problems.
+U03 and U04 havw passed their required checks and I have reviewed the diff.
 
-Do not modify files yet.
-Do not begin U05.
+Create the git commit for these completed implementation units.
 
-Compare their implementation against:
+Commit message:
 
-- Their purpose and completion criteria;
-- its referenced requirements and interview semantics;
-- its specified checks and failure cases;
-- previously frozen contracts and passed gates;
-- the expected vs. observed results reported during implementation.
+U03 + U04: Runtime skeleton / Evidence Journal
 
-Review specifically for:
-
-- incomplete or incorrectly interpreted requirements;
-- unsupported assumptions or invented business semantics;
-- accidental scope expansion;
-- changes to frozen contracts made for convenience;
-- weakened invariants or fail-closed behavior;
-- missing negative/failure-path coverage;
-- tests that merely mirror implementation instead of verifying externally meaningful behavior;
-- provenance, ID, hash, state, or authority errors relevant to this unit;
-- unnecessary complexity or unrelated refactoring.
-
-Report findings by severity:
-
-CRITICAL
-HIGH
-MEDIUM
-LOW
-
-For each finding include:
-- file/location;
-- issue;
-- requirement/invariant affected;
-- why it matters;
-- recommended correction.
-
-Also report:
-
-COMPLETION CRITERIA REVIEW:
-- criterion → satisfied / not satisfied / uncertain
-
-SCOPE REVIEW:
-- changes within their scope?
-- unrelated changes?
-- frozen-contract changes?
-
-VERDICT:
-- ready for their individual checkpoint
-- needs fixes before checkpoint
-- blocked by unresolved design/contract issue
-
-If there are no material findings, explicitly state that the diff is ready for
-the complete checkpoint.
-
-Do not make changes and do not commit.
-
----
-
-Investigate the two issues found in U03 and applied the recommended fixes. Resume the diff review of U03 and U04 after fixing.
-
----
-
-Now that U03 is complete, make the 3 recommended corrections you found for U04. Repeat the combined diff review for U03 and U04 after the fixes.
+Do not make additional code changes before committing.
+After the commit, report the commit hash and confirm the working tree state.
