@@ -102,6 +102,8 @@ def _record_checks(record: dict, snapshot: dict, root: Path) -> None:
         if record['basis_kind'] == 'discovered':
             require(record['attempt_key'] is not None and record['retrieved_at'] is not None
                     and record['content_hash'] is not None, 'discovered scope requires original capture provenance')
+            require(_instant(record['retrieved_at']) <= _instant(snapshot['created_at']),
+                    'scope discovery finishes after scope creation')
         else:
             require(record['attempt_key'] is None and record['retrieved_at'] is None,
                     'declared scope must not invent a retrieval')
@@ -333,6 +335,12 @@ def _review_checks(records, index, snapshot, upstream, root, *, retained_review=
                     (not index[i][1]['conditions'] or
                      (record.get('conditions_satisfied') is True and record.get('condition_evidence_ids')))
                     for i in record['feedback_ids']), 'approval lacks authenticated matching feedback')
+            if record['status'] == 'rejected':
+                require(request is not None and bool(record['feedback_ids']) and all(
+                    index[i][1]['authentication'] == 'verified' and
+                    index[i][1]['match_status'] == 'matched' and
+                    index[i][1]['outcome'] == 'rejected'
+                    for i in record['feedback_ids']), 'rejection lacks authenticated matching feedback')
 
 
 def validate_snapshot(snapshot: dict, *, root: Path, upstream: list[dict]) -> None:
@@ -398,13 +406,21 @@ def _validate_snapshot(snapshot: dict, *, root: Path, upstream: list[dict],
                 require(target_seq < seq or same_stage, 'forbidden same-stage record link: ' + field)
                 if target_seq < seq:
                     require(identity in snapshot['consumed_record_ids'], 'upstream link missing from consumption: ' + field)
-        if record['record_type'] == 'action' and record['approval_status'] == 'approved':
+        if record['record_type'] == 'action':
             approvals = [r for _, r in index.values() if r['record_type'] == 'approval'
                          and record['id'] in r['subject_ids']]
-            require(any(r['status'] == 'approved' for r in approvals),
-                    'approved action lacks an explicit approval record')
-            require(all(r['status'] in {'approved', 'not-required'} for r in approvals),
-                    'approved action has an unresolved or rejected approval requirement')
+            if record['approval_status'] == 'approved':
+                require(any(r['status'] == 'approved' for r in approvals),
+                        'approved action lacks an explicit approval record')
+                require(all(r['status'] in {'approved', 'not-required'} for r in approvals),
+                        'approved action has an unresolved or rejected approval requirement')
+            elif record['approval_status'] == 'not-required':
+                require(bool(approvals) and all(r['status'] == 'not-required' for r in approvals),
+                        'not-required action lacks consistent explicit exemption requirements')
+            elif record['approval_status'] == 'rejected':
+                require(any(r['status'] == 'rejected' for r in approvals),
+                        'rejected action lacks an explicit rejection record')
+            # Pending is conservative: it does not assert a decision or exemption.
         if record['record_type'] == 'impact':
             rule = index[record['rule_id']][1]
             require(record['identity_key']['rule_basis'] == rule['rule_version_id'],

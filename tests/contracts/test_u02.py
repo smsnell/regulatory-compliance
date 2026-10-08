@@ -168,6 +168,76 @@ class SnapshotContracts(unittest.TestCase):
         (self.root/COMPLETION_MARKER).write_bytes(json_bytes(marker))
         return accept_package(self.root)
 
+    def check_rehashed_package(self, chain):
+        """Exercise disk acceptance without hiding semantic failures behind old hashes."""
+        for i, snapshot in enumerate(chain):
+            if i:
+                snapshot['predecessor']['sha256'] = sha256_bytes(
+                    (self.root / SNAPSHOT_PATHS[i - 1]).read_bytes())
+            (self.root / SNAPSHOT_PATHS[i]).write_bytes(json_bytes(snapshot))
+        marker = parse_json((self.root / COMPLETION_MARKER).read_bytes())
+        marker['stage07']['sha256'] = sha256_bytes((self.root / SNAPSHOT_PATHS[-1]).read_bytes())
+        (self.root / COMPLETION_MARKER).write_bytes(json_bytes(marker))
+        return accept_package(self.root)
+
+    def test_g1_action_states_agree_with_requirements(self):
+        for status in ('not-required', 'rejected'):
+            chain = deepcopy(CHAIN)
+            chain[5]['state']['proposed_actions'][0]['approval_status'] = status
+            with self.subTest(status=status), self.assertRaises(ContractError):
+                self.check_rehashed_package(chain)
+        chain = deepcopy(CHAIN)
+        chain[5]['state']['proposed_actions'][0]['approval_status'] = 'not-required'
+        chain[5]['state']['approval_requirements'][0]['status'] = 'not-required'
+        self.assertEqual(self.check_rehashed_package(chain)[5]['state']['proposed_actions'][0]['approval_status'],
+                         'not-required')
+        approval = chain[5]['state']['approval_requirements'].pop()
+        chain[5]['produced_record_ids'].remove(approval['id'])
+        with self.assertRaises(ContractError):
+            self.check_rehashed_package(chain)
+
+    def test_g1_rejection_requires_authenticated_matching_rejection(self):
+        chain = deepcopy(CHAIN)
+        stage = chain[5]
+        stage['state']['proposed_actions'][0]['approval_status'] = 'rejected'
+        approval = stage['state']['approval_requirements'][0]
+        approval['status'] = 'rejected'
+        with self.assertRaisesRegex(ContractError, 'rejection lacks authenticated matching feedback'):
+            self.check_rehashed_package(chain)
+        feedback = self.current_feedback(stage)
+        feedback['outcome'] = 'rejected'
+        stage['state']['feedback'] = [feedback]
+        stage['produced_record_ids'].append(feedback['id'])
+        approval['feedback_ids'] = [feedback['id']]
+        self.assertEqual(self.check_rehashed_package(chain)[5]['state']['approval_requirements'][0]['status'],
+                         'rejected')
+        for field, value in [('authentication', 'unverified'), ('outcome', 'approved'),
+                             ('outcome', 'conditional'), ('outcome', 'unresolved'),
+                             ('claimed_request_id', 'wrong-request'), ('responder_role', 'Legal')]:
+            bad = deepcopy(chain)
+            bad[5]['state']['feedback'][0][field] = value
+            with self.subTest(field=field, value=value), self.assertRaises(ContractError):
+                self.check_rehashed_package(bad)
+        bad = deepcopy(chain)
+        bad[5]['state']['proposed_actions'][0]['approval_status'] = 'not-required'
+        with self.assertRaises(ContractError):
+            self.check_rehashed_package(bad)
+
+    def test_g1_discovery_must_finish_before_scope_freezes(self):
+        for timestamp, accepted in [('2026-10-07T15:02:00Z', False),
+                                    ('2026-10-07T15:01:00Z', True),
+                                    ('2026-10-07T17:00:00+02:00', True)]:
+            chain = deepcopy(CHAIN)
+            chain[0]['state']['scope_basis'][0]['retrieved_at'] = timestamp
+            chain[1]['state']['attempts'][0]['retrieved_at'] = timestamp
+            chain[1]['state']['sources'][0]['retrieved_at'] = timestamp
+            with self.subTest(timestamp=timestamp):
+                if accepted:
+                    self.assertEqual(len(self.check_rehashed_package(chain)), 7)
+                else:
+                    with self.assertRaisesRegex(ContractError, 'scope discovery finishes after scope creation'):
+                        self.check_rehashed_package(chain)
+
     def test_retained_feedback_does_not_reapply_older_history(self):
         s=deepcopy(CHAIN[5]);feedback=self.current_feedback(s)
         s['state']['feedback']=[feedback];s['produced_record_ids'].append(feedback['id'])
@@ -250,7 +320,12 @@ class SnapshotContracts(unittest.TestCase):
             else:
                 with self.assertRaises(ContractError):validate_snapshot(bad,root=self.root,upstream=CHAIN[:5])
                 bad['state']['proposed_actions'][0]['approval_status']='pending'
-                validate_snapshot(bad,root=self.root,upstream=CHAIN[:5])
+                if status == 'rejected':
+                    # Pending action does not legitimize an invented reviewer rejection.
+                    with self.assertRaisesRegex(ContractError, 'rejection lacks authenticated matching feedback'):
+                        validate_snapshot(bad,root=self.root,upstream=CHAIN[:5])
+                else:
+                    validate_snapshot(bad,root=self.root,upstream=CHAIN[:5])
 
     def test_upstream_boolean_number_substitution_rejected(self):
         for value in (0,0.0):

@@ -126,13 +126,23 @@ Predicate completeness and authority meaning remain U09/U11 responsibilities.
 
 Approvals cannot be inferred from labels. An approved action needs an explicit
 approval record and no pending or rejected requirement for that action. An
-explicit `not-required` requirement does not prevent approval. Each request,
+explicit `not-required` requirement does not prevent approval. An
+action marked `not-required` must have at least one explicit requirement and all
+its requirements must be `not-required`; an empty list does not establish an
+exemption. An action marked `rejected` needs at least one explicit rejected
+requirement. `pending` remains a conservative action state and asserts neither
+a decision nor an exemption. Each request,
 subject and reviewer tuple identifies one approval requirement; overlapping
 requirements for the same decision are rejected, including identical duplicates.
 Different reviewers remain separate decisions. Approval request IDs resolve uniquely to typed review requests;
 subjects and required reviewer agree with that request. Linked feedback covers
 those subjects and the same request/reviewer. An approved approval record needs
 authenticated, matched feedback with an approved or satisfied conditional outcome.
+A rejected approval record likewise needs a request and nonempty authenticated,
+matched feedback whose outcomes are all `rejected`. The same subject, reviewer,
+retained-draft and current revalidation checks apply to both decision outcomes.
+Technical validation failures remain failures or unresolved feedback and cannot
+manufacture a reviewer rejection.
 Matched feedback requires `reviewed_draft` and `revalidation`; empty artifact
 claims cannot authorize approval. The exact schemas are `$defs/reviewed-draft`
 and `$defs/review-revalidation`.
@@ -206,8 +216,10 @@ Stage 01 primary `scope-basis` records are either:
   attempt key/retrieval time/source path/hash, with no forward Stage 02 IDs.
 
 Stage 02 imports each discovered attempt exactly once with the original
-key/time/path/hash and a `scope_basis_id` link. Its time may precede Stage 01's
-creation. A genuine extra read uses a new attempt key. Failed scope discovery
+key/time/path/hash and a `scope_basis_id` link. Discovery must finish at or before
+Stage 01 creation, comparing timestamp instants across explicit UTC offsets;
+equal timestamps are allowed at the recorded precision. A genuine extra read
+uses a new attempt key. Failed scope discovery
 produces an incomplete preflight inventory, not a conforming scope snapshot.
 
 `write_snapshot(root, snapshot, upstream=...)` validates, serializes once to
