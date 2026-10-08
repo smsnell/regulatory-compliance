@@ -1,0 +1,62 @@
+Review the current diff for U05 and U06 only.
+
+Do not modify files yet.
+Do not begin U07.
+
+Compare their implementation against:
+
+- U05 and U06's purpose and completion criteria;
+- its referenced requirements and interview semantics;
+- its specified checks and failure cases;
+- previously frozen contracts and passed gates;
+- the expected vs. observed results reported during implementation.
+
+Review specifically for:
+
+- incomplete or incorrectly interpreted requirements;
+- unsupported assumptions or invented business semantics;
+- accidental scope expansion;
+- changes to frozen contracts made for convenience;
+- weakened invariants or fail-closed behavior;
+- missing negative/failure-path coverage;
+- tests that merely mirror implementation instead of verifying externally meaningful behavior;
+- provenance, ID, hash, state, or authority errors relevant to this unit;
+- unnecessary complexity or unrelated refactoring.
+
+Report findings by severity:
+
+CRITICAL
+HIGH
+MEDIUM
+LOW
+
+For each finding include:
+- file/location;
+- issue;
+- requirement/invariant affected;
+- why it matters;
+- recommended correction.
+
+Also report:
+
+COMPLETION CRITERIA REVIEW:
+- criterion → satisfied / not satisfied / uncertain
+
+SCOPE REVIEW:
+- changes within their scope?
+- unrelated changes?
+- frozen-contract changes?
+
+VERDICT:
+- ready for their checkpoint
+- needs fixes before checkpoint
+- blocked by unresolved design/contract issue
+
+If there are no material findings, explicitly state that the diff is ready for
+the their checkpoint.
+
+Do not make changes and do not commit.
+
+---
+
+Those recommendations are reasonable, make the fixes.
