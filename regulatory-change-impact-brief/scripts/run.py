@@ -9,12 +9,25 @@ import sys
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, required=True)
+    parser.add_argument('--capture-slice', action='store_true',
+                        help='Run only U07 Stage 01/02 in an isolated candidate')
+    parser.add_argument('--scope', type=Path, help='Authorized declared scope JSON (capture slice only)')
+    parser.add_argument('--supersedes-run-id', help='Retained occurrence being retried (capture slice only)')
+    parser.add_argument('--change-reason', help='Reason for a new scope or retry')
     args = parser.parse_args()
     try:
         if sys.version_info < (3,12):
             raise ValueError('Python 3.12 or later required')
-        from rci.runtime import production
-        outcome = production(args.config)
+        if args.capture_slice:
+            from rci.runner import capture_slice
+            outcome = capture_slice(args.config, scope_path=args.scope,
+                                    supersedes_run_id=args.supersedes_run_id,
+                                    change_reason=args.change_reason)
+        else:
+            if args.scope or args.supersedes_run_id or args.change_reason:
+                raise ValueError('scope/retry options require --capture-slice')
+            from rci.runtime import production
+            outcome = production(args.config)
     except (ImportError, OSError, ValueError, TimeoutError) as error:
         # Config values/credentials are never echoed by validation.
         outcome = {'status':'failed','reason':str(error),'production_package':False}

@@ -1,0 +1,144 @@
+{
+  "consumed_record_ids": [],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-08T17:56:12.277680Z",
+  "decisions": [],
+  "predecessor": null,
+  "produced_record_ids": [
+    "record:run-149f79bdebdd4dba9b498c26b5a975d8:01:scope-basis:e54ef10e125142df89898a44166a0ac9"
+  ],
+  "run_id": "run-149f79bdebdd4dba9b498c26b5a975d8",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 1,
+  "snapshot_id": "snapshot-f61488e4ffd24cb6b2e7d0f2ba33a02e",
+  "stage": "scope",
+  "state": {
+    "approval_gates": [
+      "Legal final interpretations and exceptions",
+      "Operations dates, activation and incident closure"
+    ],
+    "as_of": "2026-08-26T00:00:00Z",
+    "as_of_precision": "date",
+    "assigned_review_date": "2026-08-26",
+    "audiences": [
+      "Legal",
+      "Operations"
+    ],
+    "change_reason": "Verify declared scope with separate fresh core reads",
+    "code_fingerprint": "sha256:92ba7c690fc4f4b46ae3cffcdbec471de77a5188e22a96af292c38559732f3ee",
+    "config_fingerprint": "sha256:d042116660970ce66e3ae22acc897d8ef0c0d8cd4acc5dafbc69e84ffaea546c",
+    "extensions": {
+      "u07_sources": {
+        "schema_version": "rci-source-declarations/1",
+        "value": {
+          "sources": [
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "LAW",
+              "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "OJ",
+              "route": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "AMEND",
+              "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "CONSOLIDATED",
+              "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "TIME",
+              "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "FAQ",
+              "route": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "POLICY",
+              "route": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "SYSTEMS",
+              "route": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "EVIDENCE",
+              "route": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "CALENDAR",
+              "route": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA"
+            }
+          ]
+        }
+      }
+    },
+    "review_type": "Article 50 EU programme draft review",
+    "scope_basis": [
+      {
+        "attempt_key": null,
+        "authorized_by": "U07 verification: scope retained from authorized SYSTEMS discovery",
+        "basis_kind": "declared",
+        "basis_version": "u07-retained-discovery-scope/1",
+        "content_hash": null,
+        "evidence_ids": [],
+        "id": "record:run-149f79bdebdd4dba9b498c26b5a975d8:01:scope-basis:e54ef10e125142df89898a44166a0ac9",
+        "local_reference": null,
+        "record_type": "scope-basis",
+        "retrieved_at": null,
+        "source_basis": [
+          "run-6bec153b2d1343a5a43cc2f333798c4d snapshots/01-scope.json; scope input only, operational facts require fresh reads",
+          "analysis/scope-input.json",
+          "sha256:bbbfb6948378a6d887eefde4e2b2bb9bba6c4ffc22f533ab73848b0974fdfa08"
+        ],
+        "summary": "Eight actual requested system IDs; current operational facts require fresh corroboration.",
+        "system_ids": [
+          "AI-001",
+          "AI-002",
+          "AI-003",
+          "AI-004",
+          "AI-005",
+          "AI-006",
+          "AI-007",
+          "AI-008"
+        ]
+      }
+    ],
+    "supersedes_run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+    "systems_in_scope": [
+      "AI-001",
+      "AI-002",
+      "AI-003",
+      "AI-004",
+      "AI-005",
+      "AI-006",
+      "AI-007",
+      "AI-008"
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

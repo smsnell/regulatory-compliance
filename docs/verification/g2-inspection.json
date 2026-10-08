@@ -1,0 +1,121 @@
+{
+  "retained_runs": [
+    {
+      "run_id": "run-149f79bdebdd4dba9b498c26b5a975d8",
+      "attempts": 22,
+      "retrieval_states": {
+        "retrieved": 13,
+        "invalid": 6,
+        "unverified": 3
+      },
+      "basis": "declared",
+      "normalized_rows": 26,
+      "status": "partial",
+      "original_provenance": "verified",
+      "full_package": "rejected"
+    },
+    {
+      "run_id": "run-2f538edac83640ea814d2af17a6a9963",
+      "attempts": 2,
+      "retrieval_states": {
+        "unavailable": 2
+      },
+      "scope_failure": "zero fabricated snapshots",
+      "full_package": "rejected"
+    },
+    {
+      "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+      "attempts": 22,
+      "retrieval_states": {
+        "unverified": 3,
+        "retrieved": 13,
+        "invalid": 6
+      },
+      "basis": "discovered",
+      "normalized_rows": 26,
+      "status": "partial",
+      "original_provenance": "verified",
+      "discovery_time": "2026-10-08T17:55:25.715330Z",
+      "scope_time": "2026-10-08T17:55:26.237026Z",
+      "full_package": "rejected"
+    }
+  ],
+  "independent_mutations": [
+    {
+      "case": "unsupported-role",
+      "result": "rejected",
+      "reason": "normalized_rows differ from retained register normalization"
+    },
+    {
+      "case": "wrong-source-evidence",
+      "result": "rejected",
+      "reason": "normalized_rows differ from retained register normalization"
+    },
+    {
+      "case": "missing-normalized-row",
+      "result": "rejected",
+      "reason": "normalized_rows differ from retained register normalization"
+    },
+    {
+      "case": "wrong-field-locator",
+      "result": "rejected",
+      "reason": "normalized_rows differ from retained register normalization"
+    },
+    {
+      "case": "wrong-source-locator",
+      "result": "rejected",
+      "reason": "source record differs from authorized declaration"
+    },
+    {
+      "case": "missing-table-accounting",
+      "result": "rejected",
+      "reason": "raw table accounting incomplete or changed"
+    },
+    {
+      "case": "invalid-normalized-type",
+      "result": "rejected",
+      "reason": "invalid normalized values: 'APPROVED' is not one of [True, False, None]"
+    },
+    {
+      "case": "wrong-existing-date",
+      "result": "rejected",
+      "reason": "normalized_rows differ from retained register normalization"
+    },
+    {
+      "case": "omitted-LAW",
+      "result": "rejected",
+      "reason": "missing required source attempts"
+    }
+  ],
+  "original_evidence_unchanged": true,
+  "independent_failure_probes": [
+    {
+      "scenario": "healthy-limitations",
+      "status": "blocked",
+      "capture_slice_complete": true,
+      "reason": "U07 slice finished; stages 03\u201307 and final artifacts are not implemented",
+      "stage02_status": "partial"
+    },
+    {
+      "scenario": "storage-failure",
+      "status": "failed",
+      "capture_slice_complete": false,
+      "reason": "Technical source capture failure; preserve this occurrence and rerun after repair",
+      "stage02_status": "failed"
+    },
+    {
+      "scenario": "integrity-failure",
+      "status": "failed",
+      "capture_slice_complete": false,
+      "reason": "retained hash mismatch",
+      "stage02_status": "not fabricated"
+    },
+    {
+      "scenario": "discovery-storage-failure",
+      "status": "failed",
+      "capture_slice_complete": false,
+      "reason": "Technical scope discovery capture failure; fresh run required",
+      "stage02_status": "not fabricated"
+    }
+  ]
+}

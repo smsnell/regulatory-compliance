@@ -1,0 +1,73 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "5bdcaeba65f94537bd423d1bfae15ecb",
+    "content": "full",
+    "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "content_type": "application/binary",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:c7813e5327a84cbe8e6868666e42db0e",
+    "identity_check": "unverified",
+    "local_reference": "sources/5bdcaeba65f94537bd423d1bfae15ecb.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+    "outcome": "HTTP 302",
+    "record_type": "attempt",
+    "recoverable_failure": "Redirect response retained; next GET separately journaled",
+    "retrieval_status": "invalid",
+    "retrieved_at": "2026-10-08T17:55:24.800259Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "SYSTEMS",
+    "started_at": "2026-10-08T17:55:24.568283Z",
+    "summary": "Read attempt for SYSTEMS",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Redirect response retained; next GET separately journaled",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:c7813e5327a84cbe8e6868666e42db0e",
+    "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "content_type": "application/binary",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:capture:8a30acdbf6f64b139ec19f0bd3dea7b1",
+    "local_reference": "sources/5bdcaeba65f94537bd423d1bfae15ecb.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": null,
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU/",
+      "requested_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU"
+    },
+    "summary": "Retained representation for SYSTEMS"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "Redirect response retained; next GET separately journaled",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "SYSTEMS",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

@@ -1,0 +1,65 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "5a937a74a69a4050b4465233594814fd",
+    "content": "full",
+    "content_hash": "sha256:0a0f4470e0d6d44f398ea78bce698c61c5c3fa5d130c55630b1d26a1394e245a",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:0626d4c33ed546c8ad18e7832637c46f",
+    "identity_check": "verified",
+    "local_reference": "sources/5a937a74a69a4050b4465233594814fd.bin",
+    "original_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T17:55:31.529650Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "TIME",
+    "started_at": "2026-10-08T17:55:31.186064Z",
+    "summary": "Read attempt for TIME",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": "\"1791185883-gzip\"",
+      "identity_reason": "Returned title and visible document content match requested source",
+      "last_modified": "Mon, 05 Oct 2026 07:38:03 GMT",
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "Timeline for the Implementation of the EU AI Act | AI Act Service Desk"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:0626d4c33ed546c8ad18e7832637c46f",
+    "content_hash": "sha256:0a0f4470e0d6d44f398ea78bce698c61c5c3fa5d130c55630b1d26a1394e245a",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:capture:16774389883540cc86c3d55dae383e2a",
+    "local_reference": "sources/5a937a74a69a4050b4465233594814fd.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline"
+    },
+    "summary": "Retained representation for TIME"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

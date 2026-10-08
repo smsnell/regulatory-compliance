@@ -1,0 +1,94 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "b3008a77f0b94438b03201da71441721",
+    "content": "full",
+    "content_hash": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b",
+    "content_type": "text/csv; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk/gviz/tq?gid=0&headers=1&tqx=out:csv",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:a47a25a7ef07476091f2b46c0cf28fcf",
+    "identity_check": "verified",
+    "local_reference": "sources/b3008a77f0b94438b03201da71441721.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T17:55:33.806157Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "EVIDENCE",
+    "started_at": "2026-10-08T17:55:33.678953Z",
+    "summary": "Read attempt for EVIDENCE",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous unfiltered tab CSV captured with raw row/cell locators",
+      "last_modified": null,
+      "returned_identity": {
+        "column_count": 9,
+        "document_id": "19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+        "headers": [
+          "record_id",
+          "system_id",
+          "record_type",
+          "reported_at",
+          "owner",
+          "status",
+          "evidence_ref",
+          "evidence_state",
+          "notes"
+        ],
+        "identity_attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:1a50f044d61e4805937612baaca84084",
+        "native_values_verified": true,
+        "revision": 8,
+        "row_count": 11,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "Incident Evidence Register"
+          }
+        ],
+        "title": "Project B — Incident and Evidence Register"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 8
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:a47a25a7ef07476091f2b46c0cf28fcf",
+    "content_hash": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b",
+    "content_type": "text/csv; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:capture:7a5c7ea461da4c24b94abe597276b5c3",
+    "local_reference": "sources/b3008a77f0b94438b03201da71441721.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk/gviz/tq?gid=0&headers=1&tqx=out:csv"
+    },
+    "summary": "Retained representation for EVIDENCE"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

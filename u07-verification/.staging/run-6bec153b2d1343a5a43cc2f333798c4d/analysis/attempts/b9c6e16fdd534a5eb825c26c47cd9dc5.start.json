@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "b9c6e16fdd534a5eb825c26c47cd9dc5",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:eda64fdf1bd2423085539ada81cc3e25",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T17:55:33.829011Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "EVIDENCE",
+    "started_at": "2026-10-08T17:55:33.828992Z",
+    "summary": "Read attempt for EVIDENCE",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

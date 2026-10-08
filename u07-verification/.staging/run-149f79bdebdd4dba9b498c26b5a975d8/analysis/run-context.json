@@ -1,0 +1,7 @@
+{
+  "change_reason": "Verify declared scope with separate fresh core reads",
+  "mode": "u07-capture-slice",
+  "run_id": "run-149f79bdebdd4dba9b498c26b5a975d8",
+  "started_at": "2026-10-08T17:56:12.234245Z",
+  "supersedes_run_id": "run-6bec153b2d1343a5a43cc2f333798c4d"
+}

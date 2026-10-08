@@ -1,0 +1,173 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "ca6cb7e26928488996583c75a757a5d5",
+    "content": "full",
+    "content_hash": "sha256:38962f75d85db183120d21c277d144fa1463b23525d1d2af20aa62109815d86e",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/edit",
+    "evidence_ids": [],
+    "id": "record:run-149f79bdebdd4dba9b498c26b5a975d8:02:attempt:88447d83946847108990047722166e27",
+    "identity_check": "verified",
+    "local_reference": "sources/ca6cb7e26928488996583c75a757a5d5.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T17:56:20.291941Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "CALENDAR",
+    "started_at": "2026-10-08T17:56:20.080301Z",
+    "summary": "Read attempt for CALENDAR",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous spreadsheet identity and tab inventory verified",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": "1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+        "native_rows": {
+          "0": [
+            [
+              "action_id",
+              "system_id",
+              "action",
+              "owner",
+              "due_date",
+              "status",
+              "approval_required",
+              "source_version"
+            ],
+            [
+              "ACT-001",
+              "AI-004",
+              "Add and verify first-interaction AI notice",
+              "Learning Experience",
+              "2026-09-04",
+              "planned",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-002",
+              "AI-007",
+              "Resolve disclosure evidence conflict",
+              "Marketing",
+              "2026-09-03",
+              "open",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-003",
+              "AI-002",
+              "Confirm recipient disclosure practice",
+              "Admissions",
+              "2026-09-08",
+              "open",
+              "legal",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-004",
+              "AI-003",
+              "Verify machine-readable provenance after publishing",
+              "Communications",
+              "2026-09-10",
+              "open",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-005",
+              "AI-005",
+              "Refresh provider-role and release evidence",
+              "Assessment Operations",
+              "2026-09-12",
+              "open",
+              "legal",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-006",
+              "AI-008",
+              "Complete provenance test",
+              "Communications",
+              "2026-09-09",
+              "open",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-007",
+              "AI-008",
+              "Review exception request",
+              "Legal",
+              "2026-09-15",
+              "blocked",
+              "legal",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-008",
+              "ALL",
+              "Quarterly AI register evidence review",
+              "Operations",
+              "2026-10-02",
+              "scheduled",
+              "operations",
+              "calendar-2026-08-26"
+            ]
+          ]
+        },
+        "revision": 9,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "Compliance Calendar"
+          }
+        ],
+        "title": "Project B — Compliance Calendar"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 9
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-149f79bdebdd4dba9b498c26b5a975d8:02:attempt:88447d83946847108990047722166e27",
+    "content_hash": "sha256:38962f75d85db183120d21c277d144fa1463b23525d1d2af20aa62109815d86e",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-149f79bdebdd4dba9b498c26b5a975d8:02:capture:73558d5f19704074abd8b8e4483c06e3",
+    "local_reference": "sources/ca6cb7e26928488996583c75a757a5d5.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/edit"
+    },
+    "summary": "Retained representation for CALENDAR"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-149f79bdebdd4dba9b498c26b5a975d8",
+  "schema_version": "rci-attempt-journal/1"
+}

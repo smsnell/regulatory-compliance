@@ -1,0 +1,23 @@
+{
+  "candidate": "u07-verification/.staging/run-2f538edac83640ea814d2af17a6a9963",
+  "capture_slice_complete": false,
+  "missing_artifacts": [
+    "impact-register.csv",
+    "compliance-brief.md",
+    "action-calendar.ics"
+  ],
+  "missing_snapshots": [
+    "snapshots/01-scope.json",
+    "snapshots/02-source-capture.json",
+    "snapshots/03-authority-and-timing.json",
+    "snapshots/04-evidence-reconciliation.json",
+    "snapshots/05-impact-analysis.json",
+    "snapshots/06-actions-and-approvals.json",
+    "snapshots/07-publication-validation.json"
+  ],
+  "package_acceptance": false,
+  "production_package": false,
+  "reason": "SYSTEMS scope discovery unavailable or identity unverified",
+  "run_id": "run-2f538edac83640ea814d2af17a6a9963",
+  "status": "blocked"
+}

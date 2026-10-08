@@ -1,0 +1,144 @@
+{
+  "consumed_record_ids": [],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-08T17:55:26.237026Z",
+  "decisions": [],
+  "predecessor": null,
+  "produced_record_ids": [
+    "record:run-6bec153b2d1343a5a43cc2f333798c4d:01:scope-basis:9df4f0df4d664538a114ba2b721f72e7"
+  ],
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 1,
+  "snapshot_id": "snapshot-16fb4f8ac05e452fa69be8325b2bf8e1",
+  "stage": "scope",
+  "state": {
+    "approval_gates": [
+      "Legal final interpretations and exceptions",
+      "Operations dates, activation and incident closure"
+    ],
+    "as_of": "2026-08-26T00:00:00Z",
+    "as_of_precision": "date",
+    "assigned_review_date": "2026-08-26",
+    "audiences": [
+      "Legal",
+      "Operations"
+    ],
+    "change_reason": "Fresh retry with network access after sandbox transport failure",
+    "code_fingerprint": "sha256:92ba7c690fc4f4b46ae3cffcdbec471de77a5188e22a96af292c38559732f3ee",
+    "config_fingerprint": "sha256:d042116660970ce66e3ae22acc897d8ef0c0d8cd4acc5dafbc69e84ffaea546c",
+    "extensions": {
+      "u07_sources": {
+        "schema_version": "rci-source-declarations/1",
+        "value": {
+          "sources": [
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "LAW",
+              "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "OJ",
+              "route": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "AMEND",
+              "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "CONSOLIDATED",
+              "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "TIME",
+              "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "FAQ",
+              "route": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "POLICY",
+              "route": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "SYSTEMS",
+              "route": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "EVIDENCE",
+              "route": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "CALENDAR",
+              "route": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA"
+            }
+          ]
+        }
+      }
+    },
+    "review_type": "Article 50 EU programme draft review",
+    "scope_basis": [
+      {
+        "attempt_key": "2a8661645b1a49dd833706f8d7cee456",
+        "authorized_by": "Interview 03:08/03:21 and authorized SYSTEMS route",
+        "basis_kind": "discovered",
+        "basis_version": "rci-scope-discovery/1",
+        "content_hash": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+        "evidence_ids": [],
+        "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:01:scope-basis:9df4f0df4d664538a114ba2b721f72e7",
+        "local_reference": "sources/2a8661645b1a49dd833706f8d7cee456.bin",
+        "record_type": "scope-basis",
+        "retrieved_at": "2026-10-08T17:55:25.715330Z",
+        "source_basis": [
+          "interviews/interview-B-3.md 03:08/03:21",
+          "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+          "SYSTEMS system_id column; complete identity-verified tab"
+        ],
+        "summary": "Eight actual requested system IDs; current operational facts require fresh corroboration.",
+        "system_ids": [
+          "AI-001",
+          "AI-002",
+          "AI-003",
+          "AI-004",
+          "AI-005",
+          "AI-006",
+          "AI-007",
+          "AI-008"
+        ]
+      }
+    ],
+    "supersedes_run_id": "run-2f538edac83640ea814d2af17a6a9963",
+    "systems_in_scope": [
+      "AI-001",
+      "AI-002",
+      "AI-003",
+      "AI-004",
+      "AI-005",
+      "AI-006",
+      "AI-007",
+      "AI-008"
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

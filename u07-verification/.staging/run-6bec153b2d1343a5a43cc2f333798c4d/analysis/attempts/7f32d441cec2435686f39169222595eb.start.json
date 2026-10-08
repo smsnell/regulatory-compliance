@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "7f32d441cec2435686f39169222595eb",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:08c9022dc233409494dea8f27eedf906",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T17:55:26.241109Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "LAW",
+    "started_at": "2026-10-08T17:55:26.241099Z",
+    "summary": "Read attempt for LAW",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

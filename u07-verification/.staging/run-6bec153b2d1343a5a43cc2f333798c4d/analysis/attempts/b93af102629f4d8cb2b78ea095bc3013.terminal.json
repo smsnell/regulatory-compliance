@@ -1,0 +1,73 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "b93af102629f4d8cb2b78ea095bc3013",
+    "content": "full",
+    "content_hash": "sha256:03edbd66e9534a4667a7dc6b8c6af0587a3873d3ab0d478ae0ec549640eed679",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:9ed90eb868f24feb9b48e69f7d0730d9",
+    "identity_check": "unverified",
+    "local_reference": "sources/b93af102629f4d8cb2b78ea095bc3013.bin",
+    "original_locator": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": "Missing document title/content identity; possible landing page",
+    "retrieval_status": "unverified",
+    "retrieved_at": "2026-10-08T17:55:32.586106Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "POLICY",
+    "started_at": "2026-10-08T17:55:32.165953Z",
+    "summary": "Read attempt for POLICY",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": "external-readonly-source-login",
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": "W/\"6e0f6f6e5a3740891c45a1eb4b2c6fb8\"",
+      "identity_reason": "Missing document title/content identity; possible landing page",
+      "last_modified": "Thu, 08 Oct 2026 17:19:59 GMT",
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "Notion"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:9ed90eb868f24feb9b48e69f7d0730d9",
+    "content_hash": "sha256:03edbd66e9534a4667a7dc6b8c6af0587a3873d3ab0d478ae0ec549640eed679",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:capture:dd681e8efb2948eb967a5b3a2f507753",
+    "local_reference": "sources/b93af102629f4d8cb2b78ea095bc3013.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856"
+    },
+    "summary": "Retained representation for POLICY"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "Missing document title/content identity; possible landing page",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "POLICY",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

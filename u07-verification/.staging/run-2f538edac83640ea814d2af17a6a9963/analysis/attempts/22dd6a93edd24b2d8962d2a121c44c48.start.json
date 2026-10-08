@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "22dd6a93edd24b2d8962d2a121c44c48",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-2f538edac83640ea814d2af17a6a9963:02:attempt:6e98579c46ef4751bc46cca34f285f77",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T17:54:31.451676Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "SYSTEMS",
+    "started_at": "2026-10-08T17:54:31.451656Z",
+    "summary": "Read attempt for SYSTEMS",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-2f538edac83640ea814d2af17a6a9963",
+  "schema_version": "rci-attempt-journal/1"
+}

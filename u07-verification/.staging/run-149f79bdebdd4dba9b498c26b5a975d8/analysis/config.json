@@ -1,0 +1,78 @@
+{
+  "schema_version": "rci-runtime-config/1",
+  "assigned_review_date": "2026-08-26",
+  "output_root": "u07-verification",
+  "expected_system_count": 8,
+  "recipients": [
+    "Legal",
+    "Operations"
+  ],
+  "host": {
+    "model": "gpt-6.1-sol",
+    "effort": "high",
+    "credential_ref": "host-managed-login",
+    "owner": "configure-operator-name"
+  },
+  "sources": [
+    {
+      "id": "LAW",
+      "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "adapter": "http-read",
+      "credential_ref": null
+    },
+    {
+      "id": "OJ",
+      "route": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "adapter": "http-read",
+      "credential_ref": null
+    },
+    {
+      "id": "AMEND",
+      "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+      "adapter": "http-read",
+      "credential_ref": null
+    },
+    {
+      "id": "CONSOLIDATED",
+      "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+      "adapter": "http-read",
+      "credential_ref": null
+    },
+    {
+      "id": "TIME",
+      "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+      "adapter": "http-read",
+      "credential_ref": null
+    },
+    {
+      "id": "FAQ",
+      "route": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+      "adapter": "http-read",
+      "credential_ref": null
+    },
+    {
+      "id": "POLICY",
+      "route": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856",
+      "adapter": "http-read",
+      "credential_ref": "external-readonly-source-login"
+    },
+    {
+      "id": "SYSTEMS",
+      "route": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+      "adapter": "google-sheets-read",
+      "credential_ref": "external-readonly-source-login"
+    },
+    {
+      "id": "EVIDENCE",
+      "route": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+      "adapter": "google-sheets-read",
+      "credential_ref": "external-readonly-source-login"
+    },
+    {
+      "id": "CALENDAR",
+      "route": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+      "adapter": "google-sheets-read",
+      "credential_ref": "external-readonly-source-login"
+    }
+  ]
+}

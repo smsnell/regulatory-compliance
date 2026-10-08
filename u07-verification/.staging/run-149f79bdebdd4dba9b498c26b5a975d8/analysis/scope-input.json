@@ -1,0 +1,18 @@
+{
+  "schema_version": "rci-scope-input/1",
+  "system_ids": [
+    "AI-001",
+    "AI-002",
+    "AI-003",
+    "AI-004",
+    "AI-005",
+    "AI-006",
+    "AI-007",
+    "AI-008"
+  ],
+  "basis_version": "u07-retained-discovery-scope/1",
+  "authorized_by": "U07 verification: scope retained from authorized SYSTEMS discovery",
+  "source_basis": [
+    "run-6bec153b2d1343a5a43cc2f333798c4d snapshots/01-scope.json; scope input only, operational facts require fresh reads"
+  ]
+}

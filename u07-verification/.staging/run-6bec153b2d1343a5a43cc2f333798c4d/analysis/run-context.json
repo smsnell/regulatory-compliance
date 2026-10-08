@@ -1,0 +1,7 @@
+{
+  "change_reason": "Fresh retry with network access after sandbox transport failure",
+  "mode": "u07-capture-slice",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "started_at": "2026-10-08T17:55:24.526105Z",
+  "supersedes_run_id": "run-2f538edac83640ea814d2af17a6a9963"
+}

@@ -1,0 +1,73 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "20515d7a7ecd4d60be853705f1e3fba6",
+    "content": "full",
+    "content_hash": "sha256:acae2f02fd1709377ae145dceda71f61fcca93c7388f63c0902960c10b1ace10",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:486624861e214b4097fa9758b4ae6218",
+    "identity_check": "unverified",
+    "local_reference": "sources/20515d7a7ecd4d60be853705f1e3fba6.bin",
+    "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": "Act identity/version and relevance require source inspection",
+    "retrieval_status": "unverified",
+    "retrieved_at": "2026-10-08T17:55:30.040179Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "AMEND",
+    "started_at": "2026-10-08T17:55:29.223593Z",
+    "summary": "Read attempt for AMEND",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Act identity/version and relevance require source inspection",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "Regulation - EU - 2026/1744 - EN - EUR-LexLog inEnglish"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:486624861e214b4097fa9758b4ae6218",
+    "content_hash": "sha256:acae2f02fd1709377ae145dceda71f61fcca93c7388f63c0902960c10b1ace10",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:capture:c02f2176258b45808913984395d1039a",
+    "local_reference": "sources/20515d7a7ecd4d60be853705f1e3fba6.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": null,
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744"
+    },
+    "summary": "Retained representation for AMEND"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "Act identity/version and relevance require source inspection",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "AMEND",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

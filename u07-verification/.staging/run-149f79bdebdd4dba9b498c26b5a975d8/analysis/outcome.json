@@ -1,0 +1,46 @@
+{
+  "candidate": "u07-verification/.staging/run-149f79bdebdd4dba9b498c26b5a975d8",
+  "capture_slice_complete": true,
+  "missing_artifacts": [
+    "impact-register.csv",
+    "compliance-brief.md",
+    "action-calendar.ics"
+  ],
+  "missing_snapshots": [
+    "snapshots/03-authority-and-timing.json",
+    "snapshots/04-evidence-reconciliation.json",
+    "snapshots/05-impact-analysis.json",
+    "snapshots/06-actions-and-approvals.json",
+    "snapshots/07-publication-validation.json"
+  ],
+  "package_acceptance": false,
+  "production_package": false,
+  "reason": "U07 slice finished; stages 03–07 and final artifacts are not implemented",
+  "run_id": "run-149f79bdebdd4dba9b498c26b5a975d8",
+  "scope_comparison": {
+    "additional_ids": [],
+    "current_ids": [
+      "AI-001",
+      "AI-002",
+      "AI-003",
+      "AI-004",
+      "AI-005",
+      "AI-006",
+      "AI-007",
+      "AI-008"
+    ],
+    "missing_ids": [],
+    "requested_ids": [
+      "AI-001",
+      "AI-002",
+      "AI-003",
+      "AI-004",
+      "AI-005",
+      "AI-006",
+      "AI-007",
+      "AI-008"
+    ],
+    "result": "matched"
+  },
+  "status": "blocked"
+}
