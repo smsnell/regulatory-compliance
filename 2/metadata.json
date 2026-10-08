@@ -1,0 +1,116 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4DXKRZQ7CP2D31D9K6330CG",
+  "session_id": "01a11bb1-b93f-7c63-a963-dde3e24b34bc",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-08T14:10:31.643997037Z",
+  "branch": "main",
+  "checkpoints_count": 3,
+  "save_step_count": 2,
+  "files_touched": [
+    "docs/u03-runtime.md",
+    "docs/verification/u03.md",
+    "docs/verification/u04.md",
+    "regulatory-change-impact-brief/scripts/rci/evidence.py",
+    "regulatory-change-impact-brief/scripts/rci/runtime.py",
+    "tests/runtime/test_u03.py",
+    "tests/runtime/test_u04.py"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6-luna",
+  "turn_id": "8e52d95ec9b6",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 404124,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 4134656,
+    "output_tokens": 38927,
+    "api_call_count": 44,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-08T14:10:31.49595916Z",
+    "agent_lines": 508,
+    "agent_removed": 0,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 508,
+    "total_lines_changed": 508,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 2946,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        ":memory:.ses": 2,
+        "config/review.example.json": 78,
+        "docs/u03-runtime.md": 78,
+        "docs/verification/u03.md": 146,
+        "docs/verification/u04.md": 145,
+        "pyproject.toml": 13,
+        "regulatory-change-impact-brief/SKILL.md": 47,
+        "regulatory-change-impact-brief/references/schemas/runtime-config.schema.json": 107,
+        "regulatory-change-impact-brief/references/schemas/runtime-proposal.schema.json": 33,
+        "regulatory-change-impact-brief/scripts/rci/evidence.py": 293,
+        "regulatory-change-impact-brief/scripts/rci/runtime.py": 201,
+        "regulatory-change-impact-brief/scripts/run.py": 26,
+        "regulatory-change-impact-brief/scripts/stage.py": 65,
+        "requirements.lock": 21,
+        "tests/fixtures/u03/README.md": 19,
+        "tests/fixtures/u03/host-exchange/analysis/agent-proposal.json": 26,
+        "tests/fixtures/u03/host-exchange/analysis/host-events.jsonl": 27,
+        "tests/fixtures/u03/host-exchange/analysis/host-invocation.json": 37,
+        "tests/fixtures/u03/host-exchange/analysis/host-prompt.txt": 1,
+        "tests/fixtures/u03/host-exchange/analysis/instructions.txt": 47,
+        "tests/fixtures/u03/host-exchange/analysis/outcome.json": 15,
+        "tests/fixtures/u03/host-exchange/analysis/proposal.json": 26,
+        "tests/fixtures/u03/host-exchange/analysis/reference.txt": 305,
+        "tests/fixtures/u03/host-exchange/analysis/request.json": 64,
+        "tests/fixtures/u03/host-exchange/analysis/response.json": 52,
+        "tests/fixtures/u03/host-exchange/snapshots/01-scope.json": 73,
+        "tests/fixtures/u03/host-exchange/snapshots/02-source-capture.json": 119,
+        "tests/fixtures/u03/host-exchange/sources/systems.txt": 3,
+        "tests/fixtures/u04/README.md": 10,
+        "tests/fixtures/u04/inspection/analysis/attempts/de4ebc64019544d5b45a9ba53516cc77.start.json": 31,
+        "tests/fixtures/u04/inspection/analysis/attempts/de4ebc64019544d5b45a9ba53516cc77.terminal.json": 50,
+        "tests/fixtures/u04/inspection/analysis/claim.json": 15,
+        "tests/fixtures/u04/inspection/sources/de4ebc64019544d5b45a9ba53516cc77.bin": 1,
+        "tests/fixtures/u04/responses.json": 12,
+        "tests/integration/u03_host.py": 18,
+        "tests/runtime/test_u03.py": 218,
+        "tests/runtime/test_u04.py": 313,
+        "tests/u03_harness.py": 121
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 88,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3038,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 88,
+      "user_lines_removed": 0,
+      "agent_lines_added": 3366,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88
+      }
+    }
+  ]
+}
