@@ -1,0 +1,119 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4E6SPZX6A1Z14Z65WZC85YP",
+  "session_id": "01a11c1d-7823-7562-bc02-b6eeb40ce870",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-08T16:51:04.101608689Z",
+  "branch": "main",
+  "checkpoints_count": 3,
+  "save_step_count": 2,
+  "files_touched": [
+    "docs/u06-normalization.md",
+    "docs/verification/u06.md",
+    "regulatory-change-impact-brief/references/field-dictionary.json",
+    "regulatory-change-impact-brief/references/schemas/field-dictionary.schema.json",
+    "regulatory-change-impact-brief/references/schemas/normalized-values.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/normalize.py",
+    "tests/fixtures/u06/README.md",
+    "tests/runtime/test_u06.py"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "841aeddf5467",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 123291,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 4125696,
+    "output_tokens": 31646,
+    "api_call_count": 50,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 3
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-08T16:51:04.006281995Z",
+    "agent_lines": 2146,
+    "agent_removed": 0,
+    "human_added": 57145,
+    "human_modified": 15,
+    "human_removed": 0,
+    "total_committed": 59306,
+    "total_lines_changed": 59306,
+    "agent_percentage": 3.6185208916467135,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 4730,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        ":memory:.ses": 2,
+        "docs/u05-source-access.md": 116,
+        "docs/verification/u05-live/analysis/attempts/1df3fd54f3dc42ff9918b9dee51c43ab.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/1df3fd54f3dc42ff9918b9dee51c43ab.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/51e703589806431eb1233ee75c1e15d4.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/51e703589806431eb1233ee75c1e15d4.terminal.json": 64,
+        "docs/verification/u05-live/analysis/attempts/5252f87ec8e04b05909d78b331b97b13.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/5252f87ec8e04b05909d78b331b97b13.terminal.json": 64,
+        "docs/verification/u05-live/analysis/attempts/547fd5c8732b4650b5ad63a699d0a121.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/547fd5c8732b4650b5ad63a699d0a121.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/56077a64290741229d95d5069b74adf2.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/56077a64290741229d95d5069b74adf2.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/7960d66f0dc24256abd514b4c26f93da.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/7960d66f0dc24256abd514b4c26f93da.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/7c4289cbe9a64eb6a7d41f39d3d4885c.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/7c4289cbe9a64eb6a7d41f39d3d4885c.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/af42d458c4a3432b8e836e4dd2b85be6.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/af42d458c4a3432b8e836e4dd2b85be6.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/d2cd381974094447a4752eb6258f17c1.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/d2cd381974094447a4752eb6258f17c1.terminal.json": 72,
+        "docs/verification/u05-live/analysis/attempts/fd025d96b97447a0aa1c1fe32c58944a.start.json": 31,
+        "docs/verification/u05-live/analysis/attempts/fd025d96b97447a0aa1c1fe32c58944a.terminal.json": 64,
+        "docs/verification/u05-live/analysis/source-access.json": 298,
+        "docs/verification/u05-live/sources/1df3fd54f3dc42ff9918b9dee51c43ab.bin": 7,
+        "docs/verification/u05-live/sources/51e703589806431eb1233ee75c1e15d4.bin": 937,
+        "docs/verification/u05-live/sources/5252f87ec8e04b05909d78b331b97b13.bin": 529,
+        "docs/verification/u05-live/sources/547fd5c8732b4650b5ad63a699d0a121.bin": 44,
+        "docs/verification/u05-live/sources/56077a64290741229d95d5069b74adf2.bin": 7,
+        "docs/verification/u05-live/sources/7960d66f0dc24256abd514b4c26f93da.bin": 42,
+        "docs/verification/u05-live/sources/7c4289cbe9a64eb6a7d41f39d3d4885c.bin": 7,
+        "docs/verification/u05-live/sources/af42d458c4a3432b8e836e4dd2b85be6.bin": 44,
+        "docs/verification/u05-live/sources/d2cd381974094447a4752eb6258f17c1.bin": 44,
+        "docs/verification/u05-live/sources/fd025d96b97447a0aa1c1fe32c58944a.bin": 847,
+        "docs/verification/u05.md": 113,
+        "regulatory-change-impact-brief/scripts/check_sources.py": 63,
+        "regulatory-change-impact-brief/scripts/rci/adapters/__init__.py": 4,
+        "regulatory-change-impact-brief/scripts/rci/adapters/reads.py": 239,
+        "regulatory-change-impact-brief/scripts/rci/source_manifest.py": 61,
+        "tests/runtime/test_u05.py": 232
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 441,
+      "user_lines_removed": 45,
+      "agent_lines_added": 61537,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        "docs/u05-source-access.md": 82,
+        "docs/verification/u05.md": 104,
+        "regulatory-change-impact-brief/scripts/check_sources.py": 11,
+        "regulatory-change-impact-brief/scripts/rci/adapters/reads.py": 19,
+        "tests/runtime/test_u05.py": 137
+      },
+      "user_removed_per_file": {
+        "docs/u05-source-access.md": 30,
+        "regulatory-change-impact-brief/scripts/check_sources.py": 6,
+        "regulatory-change-impact-brief/scripts/rci/adapters/reads.py": 7,
+        "tests/runtime/test_u05.py": 2
+      }
+    }
+  ]
+}

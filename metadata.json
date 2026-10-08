@@ -3,9 +3,10 @@
   "checkpoint_id": "01M4E6SPZX6A1Z14Z65WZC85YP",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 2,
+  "checkpoints_count": 5,
   "files_touched": [
     "docs/u05-source-access.md",
+    "docs/u06-normalization.md",
     "docs/verification/u05-anonymous-live/analysis/attempts/04798b159bd74ce6934597f75c8b34de.start.json",
     "docs/verification/u05-anonymous-live/analysis/attempts/04798b159bd74ce6934597f75c8b34de.terminal.json",
     "docs/verification/u05-anonymous-live/analysis/attempts/0565c603fd3d4711a0026d0a88cd684c.start.json",
@@ -105,13 +106,20 @@
     "docs/verification/u05-live/sources/d2cd381974094447a4752eb6258f17c1.bin",
     "docs/verification/u05-live/sources/fd025d96b97447a0aa1c1fe32c58944a.bin",
     "docs/verification/u05.md",
+    "docs/verification/u06.md",
+    "regulatory-change-impact-brief/references/field-dictionary.json",
+    "regulatory-change-impact-brief/references/schemas/field-dictionary.schema.json",
+    "regulatory-change-impact-brief/references/schemas/normalized-values.schema.json",
     "regulatory-change-impact-brief/scripts/check_sources.py",
     "regulatory-change-impact-brief/scripts/rci/adapters/__init__.py",
     "regulatory-change-impact-brief/scripts/rci/adapters/anonymous_sheets.py",
     "regulatory-change-impact-brief/scripts/rci/adapters/readiness.py",
     "regulatory-change-impact-brief/scripts/rci/adapters/reads.py",
+    "regulatory-change-impact-brief/scripts/rci/normalize.py",
     "regulatory-change-impact-brief/scripts/rci/source_manifest.py",
-    "tests/runtime/test_u05.py"
+    "tests/fixtures/u06/README.md",
+    "tests/runtime/test_u05.py",
+    "tests/runtime/test_u06.py"
   ],
   "sessions": [
     {
@@ -120,14 +128,21 @@
       "compact_transcript": "/0/transcript.jsonl",
       "content_hash": "/0/content_hash.txt",
       "prompt": "/0/prompt.txt"
+    },
+    {
+      "metadata": "/1/metadata.json",
+      "transcript": "/1/full.jsonl",
+      "compact_transcript": "/1/transcript.jsonl",
+      "content_hash": "/1/content_hash.txt",
+      "prompt": "/1/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 175337,
+    "input_tokens": 298628,
     "cache_creation_tokens": 0,
-    "cache_read_tokens": 7935104,
-    "output_tokens": 51112,
-    "api_call_count": 76,
+    "cache_read_tokens": 12060800,
+    "output_tokens": 82758,
+    "api_call_count": 126,
     "subagent_tokens_complete": true
   }
 }
