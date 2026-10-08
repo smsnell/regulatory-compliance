@@ -1,0 +1,138 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4CS2KS1P4K4W0PS5896GZSQ",
+  "session_id": "01a118f1-ab8e-7240-a6a7-18e3c9feff0c",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-08T03:31:59.179903883Z",
+  "branch": "main",
+  "checkpoints_count": 8,
+  "save_step_count": 3,
+  "files_touched": [
+    "docs/verification/u02-requirement-evidence.csv",
+    "docs/verification/u02.md",
+    "regulatory-change-impact-brief/references/contracts.md",
+    "regulatory-change-impact-brief/references/schemas/contracts.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/__init__.py",
+    "regulatory-change-impact-brief/scripts/rci/contracts.py",
+    "regulatory-change-impact-brief/scripts/rci/ids.py",
+    "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+    "tests/contracts/test_u02.py",
+    "tests/fixtures/u02/README.md",
+    "tests/fixtures/u02/package/.completion.json",
+    "tests/fixtures/u02/package/action-calendar.ics",
+    "tests/fixtures/u02/package/analysis/instructions.txt",
+    "tests/fixtures/u02/package/analysis/reference.txt",
+    "tests/fixtures/u02/package/analysis/request.json",
+    "tests/fixtures/u02/package/analysis/response.json",
+    "tests/fixtures/u02/package/compliance-brief.md",
+    "tests/fixtures/u02/package/impact-register.csv",
+    "tests/fixtures/u02/package/snapshots/01-scope.json",
+    "tests/fixtures/u02/package/snapshots/02-source-capture.json",
+    "tests/fixtures/u02/package/snapshots/03-authority-and-timing.json",
+    "tests/fixtures/u02/package/snapshots/04-evidence-reconciliation.json",
+    "tests/fixtures/u02/package/snapshots/05-impact-analysis.json",
+    "tests/fixtures/u02/package/snapshots/06-actions-and-approvals.json",
+    "tests/fixtures/u02/package/snapshots/07-publication-validation.json",
+    "tests/fixtures/u02/package/sources/systems.txt"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6-luna",
+  "turn_id": "e2b58a6d9673",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 776946,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 13074048,
+    "output_tokens": 168685,
+    "api_call_count": 137,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 8
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-08T03:31:58.80191398Z",
+    "agent_lines": 3827,
+    "agent_removed": 0,
+    "human_added": 1093,
+    "human_modified": 303,
+    "human_removed": 0,
+    "total_committed": 5116,
+    "total_lines_changed": 5223,
+    "agent_percentage": 73.27206586253111,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 88,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88
+      }
+    },
+    {
+      "checkpoint_number": 2,
+      "user_lines_added": 561,
+      "user_lines_removed": 39,
+      "agent_lines_added": 4207,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        "regulatory-change-impact-brief/references/schemas/contracts.schema.json": 221,
+        "regulatory-change-impact-brief/scripts/rci/ids.py": 13,
+        "regulatory-change-impact-brief/scripts/rci/snapshots.py": 122,
+        "tests/contracts/test_u02.py": 117
+      },
+      "user_removed_per_file": {
+        "regulatory-change-impact-brief/references/schemas/contracts.schema.json": 23,
+        "regulatory-change-impact-brief/scripts/rci/snapshots.py": 16
+      }
+    },
+    {
+      "checkpoint_number": 3,
+      "user_lines_added": 151,
+      "user_lines_removed": 50,
+      "agent_lines_added": 4691,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        "docs/verification/u02-requirement-evidence.csv": 50,
+        "regulatory-change-impact-brief/scripts/rci/ids.py": 13
+      },
+      "user_removed_per_file": {
+        "docs/verification/u02-requirement-evidence.csv": 50
+      }
+    },
+    {
+      "checkpoint_number": 4,
+      "user_lines_added": 518,
+      "user_lines_removed": 107,
+      "agent_lines_added": 4989,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88,
+        "docs/verification/u02-requirement-evidence.csv": 50,
+        "docs/verification/u02.md": 61,
+        "regulatory-change-impact-brief/references/contracts.md": 59,
+        "regulatory-change-impact-brief/references/schemas/contracts.schema.json": 93,
+        "regulatory-change-impact-brief/scripts/rci/contracts.py": 13,
+        "regulatory-change-impact-brief/scripts/rci/ids.py": 13,
+        "regulatory-change-impact-brief/scripts/rci/snapshots.py": 26,
+        "tests/contracts/test_u02.py": 109,
+        "tests/fixtures/u02/README.md": 6
+      },
+      "user_removed_per_file": {
+        "docs/verification/u02-requirement-evidence.csv": 50,
+        "docs/verification/u02.md": 5,
+        "regulatory-change-impact-brief/references/contracts.md": 24,
+        "regulatory-change-impact-brief/references/schemas/contracts.schema.json": 1,
+        "regulatory-change-impact-brief/scripts/rci/contracts.py": 2,
+        "regulatory-change-impact-brief/scripts/rci/snapshots.py": 23,
+        "tests/fixtures/u02/README.md": 2
+      }
+    }
+  ]
+}
