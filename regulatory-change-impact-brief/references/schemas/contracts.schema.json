@@ -1,0 +1,1887 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rci:contracts:1",
+  "$ref": "#/$defs/snapshot",
+  "$defs": {
+    "business-key": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "system_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "rule_basis": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "kind": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "distinguishing_scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "version": {"const": "rci-business-key/1"}
+      },
+      "required": ["system_id", "rule_basis", "kind", "distinguishing_scope", "version"]
+    },
+    "scope-basis": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "scope-basis"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "basis_kind": {"enum": ["declared", "discovered"]},
+        "system_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "basis_version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "authorized_by": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "attempt_key": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "retrieved_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "local_reference": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "content_hash": {"anyOf": [{"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, {"type": "null"}]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "basis_kind",
+        "system_ids",
+        "basis_version",
+        "authorized_by",
+        "source_basis",
+        "attempt_key",
+        "retrieved_at",
+        "local_reference",
+        "content_hash"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "source"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_role": {"enum": ["binding-regulation", "official-guidance", "internal-policy", "operational-record", "other"]},
+        "authority": {"enum": ["binding", "advisory", "internal-control", "operational-evidence", "unknown"]},
+        "locator": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "retrieval_status": {"enum": ["retrieved", "unavailable", "invalid", "unverified", "stale"]},
+        "content_type": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "version_metadata": {"anyOf": [{"type": "object", "minProperties": 1}, {"type": "null"}]},
+        "content_hash": {"anyOf": [{"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, {"type": "null"}]},
+        "local_reference": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "attempt_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_id",
+        "source_role",
+        "authority",
+        "locator",
+        "retrieved_at",
+        "retrieval_status",
+        "content_type",
+        "version_metadata",
+        "content_hash",
+        "local_reference",
+        "attempt_ids"
+      ]
+    },
+    "attempt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "attempt"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "attempt_key": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "original_locator": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "effective_locator": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "adapter": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "started_at": {"type": "string", "format": "date-time"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "outcome": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "retrieval_status": {"enum": ["retrieved", "unavailable", "invalid", "unverified", "stale"]},
+        "content_type": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "content_type_known": {"type": "boolean"},
+        "version_metadata": {"anyOf": [{"type": "object", "minProperties": 1}, {"type": "null"}]},
+        "content": {"anyOf": [{"enum": ["full", "extract"]}, {"type": "null"}]},
+        "content_hash": {"anyOf": [{"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}, {"type": "null"}]},
+        "local_reference": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "identity_check": {"enum": ["verified", "unverified", "mismatch"]},
+        "date_suitability": {"enum": ["suitable", "unsuitable", "unresolved"]},
+        "selected": {"type": "boolean"},
+        "selection_reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "recoverable_failure": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "scope_basis_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_id",
+        "attempt_key",
+        "original_locator",
+        "effective_locator",
+        "adapter",
+        "started_at",
+        "retrieved_at",
+        "outcome",
+        "retrieval_status",
+        "content_type",
+        "content_type_known",
+        "version_metadata",
+        "content",
+        "content_hash",
+        "local_reference",
+        "identity_check",
+        "date_suitability",
+        "selected",
+        "selection_reason",
+        "recoverable_failure"
+      ]
+    },
+    "capture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "capture"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "attempt_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "representation": {"enum": ["full", "extract"]},
+        "local_reference": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "content_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "content_type": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "representation_metadata": {"type": "object", "minProperties": 1},
+        "derived_from_capture_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]},
+        "derivation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "method": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "processed_at": {"type": "string", "format": "date-time"}
+          },
+          "required": ["method", "processed_at"]
+        }
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "attempt_id",
+        "representation",
+        "local_reference",
+        "content_hash",
+        "content_type",
+        "representation_metadata"
+      ],
+      "allOf": [{
+        "if": {"required": ["derived_from_capture_id"]},
+        "then": {"required": ["derivation"], "properties": {"representation": {"const": "extract"}}},
+        "else": {"not": {"required": ["derivation"]}}
+      }]
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "evidence"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "capture_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "local_reference": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "content_hash": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {"enum": ["section", "paragraph", "sheet", "image", "extract"]},
+            "value": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "required": ["kind", "value"]
+        },
+        "assertion": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "quoted_support": {"type": "string", "minLength": 1, "pattern": "\\S"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "capture_id",
+        "local_reference",
+        "content_hash",
+        "locator",
+        "assertion",
+        "quoted_support"
+      ]
+    },
+    "normalized-row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "normalized-row"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_business_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "system_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "locator": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "kind": {"enum": ["section", "paragraph", "sheet", "image", "extract"]},
+            "value": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "required": ["kind", "value"]
+        },
+        "values": {"type": "object", "minProperties": 1},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_id",
+        "source_business_id",
+        "system_id",
+        "locator",
+        "values"
+      ]
+    },
+    "mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "mapping"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "mapping_version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "fields": {"type": "object", "minProperties": 1}
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "source_id", "mapping_version", "fields"]
+    },
+    "diagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "diagnostic"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": "string", "minLength": 1, "pattern": "\\S"}
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "source_basis", "reason", "owner", "resolution_need"]
+    },
+    "rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "rule"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "version_key": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "basis_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "meaning_key": {"type": "string", "minLength": 1, "pattern": "\\S"}
+          },
+          "required": ["basis_id", "meaning_key"]
+        },
+        "rule_version_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "supersedes_rule_version_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "basis_type": {"enum": ["binding-legal", "internal-control", "guidance", "factual", "operational"]},
+        "obligation": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "predicates": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "applicability": {"enum": ["established", "unresolved"]},
+        "source_versions": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "version_key",
+        "rule_version_id",
+        "supersedes_rule_version_id",
+        "basis_type",
+        "obligation",
+        "predicates",
+        "applicability",
+        "source_versions"
+      ]
+    },
+    "timing-rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "timing-rule"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "rule_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "timing_basis": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "precision": {"enum": ["date", "instant", "unknown"]},
+        "boundary_timezone": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "applicability": {"enum": ["established", "unresolved"]},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "rule_id",
+        "timing_basis",
+        "precision",
+        "boundary_timezone",
+        "applicability"
+      ]
+    },
+    "guidance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "guidance"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "basis_type": {"const": "guidance"},
+        "context": {"type": "string", "minLength": 1, "pattern": "\\S"}
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "basis_type", "context"]
+    },
+    "blocker": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "blocker"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": "string", "minLength": 1, "pattern": "\\S"}
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "source_basis", "reason", "owner", "resolution_need"]
+    },
+    "fact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "fact"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "system_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "predicate": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "value": {},
+        "state": {"enum": ["supported", "conflicting", "unresolved"]},
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "system_id",
+        "predicate",
+        "value",
+        "state",
+        "source_basis",
+        "reason",
+        "owner",
+        "resolution_need"
+      ]
+    },
+    "policy-control": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "policy-control"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "version_key": {"$ref": "#/$defs/rule/properties/version_key"},
+        "rule_version_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "supersedes_rule_version_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "basis_type": {"const": "internal-control"},
+        "control": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "system_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "basis_type", "control", "system_ids", "version_key", "rule_version_id", "supersedes_rule_version_id"]
+    },
+    "incident": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "incident"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_business_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "system_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_native_status": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "details": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "source_revision_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_publication_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_from": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "effective_until": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observed_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "source_revision_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "source_publication_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_from_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_until_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "effective_precision": {"enum": ["date", "instant", "unknown"]},
+        "observed_on": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "observation_precision": {"enum": ["date", "instant", "unknown"]}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_business_id",
+        "system_id",
+        "source_native_status",
+        "details"
+      ]
+    },
+    "conflict": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "conflict"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "subject_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "state": {"const": "conflicting"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_basis",
+        "reason",
+        "owner",
+        "resolution_need",
+        "subject_ids",
+        "state"
+      ]
+    },
+    "gap": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "gap"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "subject_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "state": {"const": "unresolved"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_basis",
+        "reason",
+        "owner",
+        "resolution_need",
+        "subject_ids",
+        "state"
+      ]
+    },
+    "impact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "impact"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "identity_key": {"$ref": "#/$defs/business-key"},
+        "impact_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "system_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "rule_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "fact_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "state": {"enum": ["supported-impact", "supported-no-impact", "conflicting", "unresolved"]},
+        "basis_type": {"enum": ["binding-legal", "internal-control", "guidance", "factual", "operational"]},
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "identity_key",
+        "impact_id",
+        "system_id",
+        "rule_id",
+        "fact_ids",
+        "state",
+        "basis_type",
+        "source_basis",
+        "reason",
+        "owner",
+        "resolution_need"
+      ]
+    },
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "action"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "identity_key": {"$ref": "#/$defs/business-key"},
+        "action_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "system_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "impact_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "action_kind": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "distinguishing_scope": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "proposed_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "existing_due_date": {"anyOf": [{"type": "string", "format": "date"}, {"type": "null"}]},
+        "date_basis": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "approval_status": {"enum": ["pending", "approved", "rejected", "not-required"]},
+        "state": {"enum": ["proposed", "unresolved"]},
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": "string", "minLength": 1, "pattern": "\\S"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "identity_key",
+        "action_id",
+        "system_id",
+        "impact_ids",
+        "action_kind",
+        "distinguishing_scope",
+        "owner",
+        "proposed_due_date",
+        "existing_due_date",
+        "date_basis",
+        "approval_status"
+      ]
+    },
+    "approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "approval"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "subject_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "required_reviewer": {"enum": ["Legal", "Operations", "system-owner"]},
+        "status": {"enum": ["pending", "approved", "rejected", "not-required"]},
+        "request_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "feedback_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "condition_evidence_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "uniqueItems": true},
+        "conditions_satisfied": {"type": "boolean"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "subject_ids",
+        "required_reviewer",
+        "status",
+        "request_id",
+        "feedback_ids"
+      ]
+    },
+    "escalation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "escalation"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "owner": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "resolution_need": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "subject_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "required_reviewer": {"enum": ["Legal", "Operations", "system-owner"]},
+        "state": {"const": "unresolved"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "source_basis",
+        "reason",
+        "owner",
+        "resolution_need",
+        "subject_ids",
+        "required_reviewer",
+        "state"
+      ]
+    },
+    "review-request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "review-request"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "request_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "subject_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "subject_system_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "draft_version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "source_versions": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "question": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "required_reviewer": {"enum": ["Legal", "Operations", "system-owner"]},
+        "delivery_status": {"enum": ["not-sent", "sent"]},
+        "delivery_evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "request_id",
+        "subject_ids",
+        "subject_system_ids",
+        "run_id",
+        "draft_version",
+        "source_versions",
+        "question",
+        "required_reviewer",
+        "delivery_status",
+        "delivery_evidence_ids"
+      ]
+    },
+    "snapshot-binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "snapshot_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+      },
+      "required": ["snapshot_id", "path", "sha256"]
+    },
+    "revalidation-check": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "result": {"enum": ["passed", "failed", "unresolved"]},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reason": {"type": "string", "minLength": 1, "pattern": "\\S"}
+      },
+      "required": ["result", "evidence_ids", "reason"]
+    },
+    "reviewed-draft": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "root": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "stage06": {"$ref": "#/$defs/snapshot-binding"},
+        "stage07": {"$ref": "#/$defs/snapshot-binding"}
+      },
+      "required": ["root", "stage06", "stage07"]
+    },
+    "review-revalidation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "current_run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "current_request_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "current_draft_version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "current_source_versions": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "reviewed_stage07_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "upstream": {"type": "array", "items": {"$ref": "#/$defs/snapshot-binding"}, "minItems": 1, "uniqueItems": true},
+        "subject_bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "reviewed_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "current_id": {"type": "string", "minLength": 1, "pattern": "\\S"}
+            },
+            "required": ["reviewed_id", "current_id"]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "checks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "facts": {"$ref": "#/$defs/revalidation-check"},
+            "source_versions": {"$ref": "#/$defs/revalidation-check"},
+            "scope": {"$ref": "#/$defs/revalidation-check"},
+            "conditions": {"$ref": "#/$defs/revalidation-check"}
+          },
+          "required": ["facts", "source_versions", "scope", "conditions"]
+        }
+      },
+      "required": [
+        "current_run_id",
+        "current_request_id",
+        "current_draft_version",
+        "current_source_versions",
+        "reviewed_stage07_sha256",
+        "upstream",
+        "subject_bindings",
+        "checks"
+      ]
+    },
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "feedback"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "responder_identity": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "responder_role": {"enum": ["Legal", "Operations", "system-owner"]},
+        "reviewer_response_at": {"anyOf": [{"type": "string", "format": "date-time"}, {"type": "null"}]},
+        "outcome": {"enum": ["approved", "rejected", "conditional", "unresolved"]},
+        "reasons": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "conditions": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "authentication": {"enum": ["unverified", "verified"]},
+        "authentication_basis": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "claimed_subject_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "uniqueItems": true},
+        "claimed_request_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "claimed_run_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "claimed_draft_version": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "claimed_source_versions": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "uniqueItems": true},
+        "subject_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "request_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "match_status": {"enum": ["matched", "unresolved"]},
+        "reviewed_draft": {"$ref": "#/$defs/reviewed-draft"},
+        "revalidation": {"$ref": "#/$defs/review-revalidation"},
+        "claimed_artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+            },
+            "required": ["path", "sha256"]
+          }
+        }
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "responder_identity",
+        "responder_role",
+        "claimed_subject_ids",
+        "claimed_request_id",
+        "claimed_run_id",
+        "claimed_draft_version",
+        "claimed_source_versions",
+        "reviewer_response_at",
+        "outcome",
+        "reasons",
+        "conditions",
+        "authentication",
+        "authentication_basis",
+        "subject_ids",
+        "request_id",
+        "match_status",
+        "claimed_artifacts"
+      ]
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "artifact"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "validation_status": {"enum": ["valid", "invalid"]},
+        "subject_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "path", "sha256", "validation_status", "subject_ids"]
+    },
+    "validation-check": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "validation-check"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "check_kind": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "result": {"enum": ["passed", "failed"]},
+        "expected": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "observed": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "subject_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        }
+      },
+      "required": ["id", "record_type", "summary", "evidence_ids", "check_kind", "result", "expected", "observed", "subject_ids"]
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "record_type": {"const": "decision"},
+        "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "evidence_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "concern": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "options_considered": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "source_basis": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "chosen_behavior": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "rationale": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "tradeoffs": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+        "downstream_effect": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "decision_basis": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "status": {"const": "provisional-engineering"}
+      },
+      "required": [
+        "id",
+        "record_type",
+        "summary",
+        "evidence_ids",
+        "concern",
+        "options_considered",
+        "source_basis",
+        "chosen_behavior",
+        "rationale",
+        "tradeoffs",
+        "downstream_effect",
+        "decision_basis",
+        "status"
+      ]
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {"const": "regulatory-compliance-stage-snapshot/2"},
+        "contract_version": {"const": "rci-contracts/1"},
+        "snapshot_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "stage": {
+          "enum": [
+            "scope",
+            "source-capture",
+            "authority-and-timing",
+            "evidence-reconciliation",
+            "impact-analysis",
+            "actions-and-approvals",
+            "publication-validation"
+          ]
+        },
+        "sequence": {"type": "integer", "minimum": 1, "maximum": 7},
+        "created_at": {"type": "string", "format": "date-time"},
+        "status": {"enum": ["complete", "partial", "blocked", "failed"]},
+        "predecessor": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "snapshot_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+              },
+              "required": ["snapshot_id", "path", "sha256"]
+            },
+            {"type": "null"}
+          ]
+        },
+        "consumed_record_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "produced_record_ids": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+          "minItems": 0,
+          "uniqueItems": true
+        },
+        "state": {"type": "object"},
+        "unresolved": {"type": "array", "items": {"$ref": "#/$defs/gap"}, "minItems": 0},
+        "decisions": {"type": "array", "items": {"$ref": "#/$defs/decision"}, "minItems": 0},
+        "interpretation_bindings": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "request": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                  "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                },
+                "required": ["path", "sha256"]
+              },
+              "response": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                  "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                },
+                "required": ["path", "sha256"]
+              }
+            },
+            "required": ["request", "response"]
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "status",
+        "stage",
+        "predecessor",
+        "sequence",
+        "snapshot_id",
+        "run_id",
+        "consumed_record_ids",
+        "decisions",
+        "unresolved",
+        "created_at",
+        "produced_record_ids",
+        "contract_version",
+        "state",
+        "schema_version"
+      ],
+      "allOf": [
+        {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "scope"},
+                "sequence": {"const": 1},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "scope_basis": {"type": "array", "items": {"$ref": "#/$defs/scope-basis"}, "minItems": 1},
+                    "as_of": {"const": "2026-08-26T00:00:00Z"},
+                    "assigned_review_date": {"const": "2026-08-26"},
+                    "as_of_precision": {"const": "date"},
+                    "review_type": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                    "systems_in_scope": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+                    "audiences": {"type": "array", "items": {"enum": ["Legal", "Operations"]}, "minItems": 2},
+                    "approval_gates": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1},
+                    "supersedes_run_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+                    "change_reason": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+                    "config_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+                    "code_fingerprint": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": [
+                    "scope_basis",
+                    "as_of",
+                    "assigned_review_date",
+                    "as_of_precision",
+                    "review_type",
+                    "systems_in_scope",
+                    "audiences",
+                    "approval_gates",
+                    "supersedes_run_id",
+                    "change_reason",
+                    "config_fingerprint",
+                    "code_fingerprint"
+                  ]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "source-capture"},
+                "sequence": {"const": 2},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "sources": {"type": "array", "items": {"$ref": "#/$defs/source"}, "minItems": 1},
+                    "attempts": {"type": "array", "items": {"$ref": "#/$defs/attempt"}, "minItems": 0},
+                    "captures": {"type": "array", "items": {"$ref": "#/$defs/capture"}, "minItems": 0},
+                    "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}, "minItems": 0},
+                    "normalized_rows": {"type": "array", "items": {"$ref": "#/$defs/normalized-row"}, "minItems": 0},
+                    "mappings": {"type": "array", "items": {"$ref": "#/$defs/mapping"}, "minItems": 0},
+                    "diagnostics": {"type": "array", "items": {"$ref": "#/$defs/diagnostic"}, "minItems": 0},
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": ["sources", "attempts", "captures", "evidence", "normalized_rows", "mappings", "diagnostics"]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "authority-and-timing"},
+                "sequence": {"const": 3},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "binding_rules": {"type": "array", "items": {"$ref": "#/$defs/rule"}, "minItems": 0},
+                    "timing_rules": {"type": "array", "items": {"$ref": "#/$defs/timing-rule"}, "minItems": 0},
+                    "guidance_context": {"type": "array", "items": {"$ref": "#/$defs/guidance"}, "minItems": 0},
+                    "authority_blockers": {"type": "array", "items": {"$ref": "#/$defs/blocker"}, "minItems": 0},
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": ["binding_rules", "timing_rules", "guidance_context", "authority_blockers"]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "evidence-reconciliation"},
+                "sequence": {"const": 4},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "system_facts": {"type": "array", "items": {"$ref": "#/$defs/fact"}, "minItems": 0},
+                    "policy_controls": {"type": "array", "items": {"$ref": "#/$defs/policy-control"}, "minItems": 0},
+                    "incident_evidence": {"type": "array", "items": {"$ref": "#/$defs/incident"}, "minItems": 0},
+                    "conflicts": {"type": "array", "items": {"$ref": "#/$defs/conflict"}, "minItems": 0},
+                    "evidence_gaps": {"type": "array", "items": {"$ref": "#/$defs/gap"}, "minItems": 0},
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": ["system_facts", "policy_controls", "incident_evidence", "conflicts", "evidence_gaps"]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "impact-analysis"},
+                "sequence": {"const": 5},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "impacts": {"type": "array", "items": {"$ref": "#/$defs/impact"}, "minItems": 0},
+                    "unaffected_items": {"type": "array", "items": {"$ref": "#/$defs/impact"}, "minItems": 0},
+                    "conflicts": {"type": "array", "items": {"$ref": "#/$defs/conflict"}, "minItems": 0},
+                    "unresolved_items": {"type": "array", "items": {"$ref": "#/$defs/impact"}, "minItems": 0},
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": ["impacts", "unaffected_items", "conflicts", "unresolved_items"]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "actions-and-approvals"},
+                "sequence": {"const": 6},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "proposed_actions": {"type": "array", "items": {"$ref": "#/$defs/action"}, "minItems": 0},
+                    "approval_requirements": {"type": "array", "items": {"$ref": "#/$defs/approval"}, "minItems": 0},
+                    "escalations": {"type": "array", "items": {"$ref": "#/$defs/escalation"}, "minItems": 0},
+                    "review_requests": {"type": "array", "items": {"$ref": "#/$defs/review-request"}, "minItems": 0},
+                    "feedback": {"type": "array", "items": {"$ref": "#/$defs/feedback"}, "minItems": 0},
+                    "export_model": {"type": "object", "minProperties": 1},
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": ["proposed_actions", "approval_requirements", "escalations", "review_requests", "feedback"]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "stage": {"const": "publication-validation"},
+                "sequence": {"const": 7},
+                "state": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "artifacts": {"type": "array", "items": {"$ref": "#/$defs/artifact"}, "minItems": 0},
+                    "validation_checks": {"type": "array", "items": {"$ref": "#/$defs/validation-check"}, "minItems": 0},
+                    "publication_status": {"enum": ["validated", "blocked", "failed"]},
+                    "missing_artifacts": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                          "reason": {"type": "string", "minLength": 1, "pattern": "\\S"}
+                        },
+                        "required": ["path", "reason"]
+                      },
+                      "minItems": 0
+                    },
+                    "review_bindings": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                          "request_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                          "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                          "draft_version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                          "artifacts": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                                "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                              },
+                              "required": ["path", "sha256"]
+                            },
+                            "minItems": 1
+                          }
+                        },
+                        "required": ["request_id", "run_id", "draft_version", "artifacts"]
+                      },
+                      "minItems": 0
+                    },
+                    "extensions": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": ["schema_version", "value"],
+                        "properties": {"schema_version": {"type": "string", "minLength": 1}, "value": {"type": "object"}}
+                      }
+                    }
+                  },
+                  "required": ["artifacts", "validation_checks", "publication_status", "missing_artifacts", "review_bindings"]
+                }
+              },
+              "required": ["stage", "sequence", "state"]
+            }
+          ]
+        }
+      ]
+    },
+    "interpretation-request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {"const": "rci-interpretation-request/1"},
+        "packet_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "stage": {"enum": ["authority-and-timing", "evidence-reconciliation", "impact-analysis", "actions-and-approvals"]},
+        "created_at": {"type": "string", "format": "date-time"},
+        "assigned_review_date": {"const": "2026-08-26"},
+        "upstream": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "snapshot_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "sequence": {"type": "integer", "minimum": 1, "maximum": 7},
+              "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+            },
+            "required": ["snapshot_id", "sequence", "path", "sha256"]
+          },
+          "minItems": 1
+        },
+        "extracts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "evidence_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "capture_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+              "locator": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {"enum": ["section", "paragraph", "sheet", "image", "extract"]},
+                  "value": {"type": "string", "minLength": 1, "pattern": "\\S"}
+                },
+                "required": ["kind", "value"]
+              },
+              "text": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "text_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+            },
+            "required": ["evidence_id", "capture_id", "path", "sha256", "locator", "text", "text_sha256"]
+          },
+          "minItems": 1
+        },
+        "field_dictionary": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "version": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+            "fields": {"type": "object", "minProperties": 1}
+          },
+          "required": ["version", "sha256", "fields"]
+        },
+        "expected_response_schema": {"const": "rci-interpretation-response/1"},
+        "metadata": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "host_version": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+            "requested_model": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "requested_effort": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "reported_model": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+            "reported_effort": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+            "usage": {"anyOf": [{"type": "object"}, {"type": "null"}]},
+            "instruction_versions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                  "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                },
+                "required": ["path", "sha256"]
+              },
+              "minItems": 1
+            },
+            "reference_versions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                  "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                },
+                "required": ["path", "sha256"]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "host_version",
+            "requested_model",
+            "requested_effort",
+            "reported_model",
+            "reported_effort",
+            "usage",
+            "instruction_versions",
+            "reference_versions"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "packet_id",
+        "run_id",
+        "stage",
+        "created_at",
+        "assigned_review_date",
+        "upstream",
+        "extracts",
+        "field_dictionary",
+        "expected_response_schema",
+        "metadata"
+      ]
+    },
+    "interpretation-response": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {"const": "rci-interpretation-response/1"},
+        "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "stage": {"enum": ["authority-and-timing", "evidence-reconciliation", "impact-analysis", "actions-and-approvals"]},
+        "packet_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "packet_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "responded_at": {"type": "string", "format": "date-time"},
+        "disposition": {"enum": ["proposed", "refused", "truncated", "unsupported", "ambiguous"]},
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "summary": {"type": "string", "minLength": 1, "pattern": "\\S"},
+              "basis_type": {"enum": ["binding-legal", "internal-control", "guidance", "factual", "operational"]},
+              "citations": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                    "quote": {"type": "string", "minLength": 1, "pattern": "\\S"}
+                  },
+                  "required": ["evidence_id", "quote"]
+                },
+                "minItems": 1
+              },
+              "conditions": {
+                "type": "array",
+                "items": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "minItems": 0,
+                "uniqueItems": true
+              },
+              "role": {"enum": ["provider", "deployer", "unknown"]},
+              "timing_candidates": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 0},
+              "exception_candidates": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 0},
+              "uncertainty": {"anyOf": [{"type": "string", "minLength": 1, "pattern": "\\S"}, {"type": "null"}]},
+              "system_ids": {"type": "array", "items": {"type": "string", "minLength": 1, "pattern": "\\S"}, "minItems": 1}
+            },
+            "required": [
+              "summary",
+              "basis_type",
+              "citations",
+              "conditions",
+              "role",
+              "timing_candidates",
+              "exception_candidates",
+              "uncertainty",
+              "system_ids"
+            ]
+          },
+          "minItems": 0
+        },
+        "diagnostic": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "metadata": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "host_version": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+            "requested_model": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "requested_effort": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "reported_model": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+            "reported_effort": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+            "usage": {"anyOf": [{"type": "object"}, {"type": "null"}]},
+            "instruction_versions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                  "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                },
+                "required": ["path", "sha256"]
+              },
+              "minItems": 1
+            },
+            "reference_versions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "path": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                  "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+                },
+                "required": ["path", "sha256"]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "host_version",
+            "requested_model",
+            "requested_effort",
+            "reported_model",
+            "reported_effort",
+            "usage",
+            "instruction_versions",
+            "reference_versions"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "run_id",
+        "stage",
+        "packet_id",
+        "packet_sha256",
+        "responded_at",
+        "disposition",
+        "candidates",
+        "diagnostic",
+        "metadata"
+      ]
+    },
+    "incomplete-marker": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {"const": "rci-incomplete-replacement/1"},
+        "old_run_id": {"type": ["string", "null"], "minLength": 1, "pattern": "\\S"},
+        "new_run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "created_at": {"type": "string", "format": "date-time"},
+        "archive": {
+          "anyOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "root": {"type": "string", "minLength": 1, "pattern": "\\S"},
+                "inventory_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+                "verified": {"const": true}
+              },
+              "required": ["root", "inventory_sha256", "verified"]
+            },
+            {"type": "null"}
+          ]
+        },
+        "candidate": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "root": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "stage07_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+            "verified": {"const": true}
+          },
+          "required": ["root", "stage07_sha256", "verified"]
+        }
+      },
+      "required": ["schema_version", "old_run_id", "new_run_id", "created_at", "archive", "candidate"]
+    },
+    "completion-marker": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {"const": "rci-completion/1"},
+        "run_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+        "completed_at": {"type": "string", "format": "date-time"},
+        "stage07": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "snapshot_id": {"type": "string", "minLength": 1, "pattern": "\\S"},
+            "path": {"const": "snapshots/07-publication-validation.json"},
+            "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+          },
+          "required": ["snapshot_id", "path", "sha256"]
+        }
+      },
+      "required": ["schema_version", "run_id", "completed_at", "stage07"]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "consumed_record_ids": [
+    "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-07T15:03:00Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/02-source-capture.json",
+    "sha256": "sha256:8cb5f721a6755d0e0df9c5b343c7bae2c6f71461038eccfb9bdca835d04901cd",
+    "snapshot_id": "snapshot-u02-02"
+  },
+  "produced_record_ids": [
+    "record:run-u02-synthetic:03:rule:00000000000000000000000000000006"
+  ],
+  "run_id": "run-u02-synthetic",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 3,
+  "snapshot_id": "snapshot-u02-03",
+  "stage": "authority-and-timing",
+  "state": {
+    "authority_blockers": [],
+    "binding_rules": [
+      {
+        "applicability": "established",
+        "basis_type": "internal-control",
+        "effective_from": "2026-08-01",
+        "effective_until": null,
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "id": "record:run-u02-synthetic:03:rule:00000000000000000000000000000006",
+        "obligation": "Provide a notice before first interaction.",
+        "predicates": [
+          "Learner-facing assistant is in scope."
+        ],
+        "record_type": "rule",
+        "rule_version_id": "rule:v1:13135477e899314031893d00138674f4975fa39b192290eb67567dde26c1603b",
+        "source_publication_date": "2026-07-01",
+        "source_versions": [
+          "synthetic-policy/1"
+        ],
+        "summary": "Synthetic internal policy requires a learner-facing notice before first interaction.",
+        "supersedes_rule_version_id": null,
+        "version_key": {
+          "basis_id": "SYNTHETIC-POLICY",
+          "meaning_key": "notice-before-first-interaction/v1"
+        }
+      }
+    ],
+    "guidance_context": [],
+    "timing_rules": []
+  },
+  "status": "complete",
+  "unresolved": []
+}

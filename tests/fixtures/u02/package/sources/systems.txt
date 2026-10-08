@@ -1,0 +1,2 @@
+Synthetic fixture: the learner-facing assistant requires a notice before first interaction.
+Synthetic observation: the notice is absent in the retained test page.

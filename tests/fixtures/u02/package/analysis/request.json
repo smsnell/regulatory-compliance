@@ -1,0 +1,64 @@
+{
+  "assigned_review_date": "2026-08-26",
+  "created_at": "2026-10-07T15:02:30Z",
+  "expected_response_schema": "rci-interpretation-response/1",
+  "extracts": [
+    {
+      "capture_id": "record:run-u02-synthetic:02:capture:00000000000000000000000000000003",
+      "evidence_id": "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004",
+      "locator": {
+        "kind": "paragraph",
+        "value": "1–2"
+      },
+      "path": "sources/systems.txt",
+      "sha256": "sha256:383afcdbcea48ce4997fdbb414dee48aba9b8a203fba29517d7de292a1fed88c",
+      "text": "Synthetic fixture: the learner-facing assistant requires a notice before first interaction.\nSynthetic observation: the notice is absent in the retained test page.\n",
+      "text_sha256": "sha256:383afcdbcea48ce4997fdbb414dee48aba9b8a203fba29517d7de292a1fed88c"
+    }
+  ],
+  "field_dictionary": {
+    "fields": {
+      "notice": "explicit statement"
+    },
+    "sha256": "sha256:a37365f8b848a3f289aff4a3caf9e1cc22e6ea8cacaaaa1fb21faf1cc9d86695",
+    "version": "synthetic-fields/1"
+  },
+  "metadata": {
+    "host_version": null,
+    "instruction_versions": [
+      {
+        "path": "analysis/instructions.txt",
+        "sha256": "sha256:585a78087e3a5baf48753aa15950f351abcab18b1cffa2e67aeb38c0d5ce716d"
+      }
+    ],
+    "reference_versions": [
+      {
+        "path": "analysis/reference.txt",
+        "sha256": "sha256:56bdf2bc3e1c33780dbecd4b80ef71212cbde3c74a8efb7c59f54d184f171c0c"
+      }
+    ],
+    "reported_effort": null,
+    "reported_model": null,
+    "requested_effort": "test-only",
+    "requested_model": "synthetic-test",
+    "usage": null
+  },
+  "packet_id": "packet-u02-synthetic",
+  "run_id": "run-u02-synthetic",
+  "schema_version": "rci-interpretation-request/1",
+  "stage": "authority-and-timing",
+  "upstream": [
+    {
+      "path": "snapshots/01-scope.json",
+      "sequence": 1,
+      "sha256": "sha256:7732dafdfcd704f10f13b7d36ebdb211c15633226087427e0295ef854d07f814",
+      "snapshot_id": "snapshot-u02-01"
+    },
+    {
+      "path": "snapshots/02-source-capture.json",
+      "sequence": 2,
+      "sha256": "sha256:8cb5f721a6755d0e0df9c5b343c7bae2c6f71461038eccfb9bdca835d04901cd",
+      "snapshot_id": "snapshot-u02-02"
+    }
+  ]
+}

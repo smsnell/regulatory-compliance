@@ -1,0 +1,62 @@
+{
+  "consumed_record_ids": [
+    "record:run-u02-synthetic:03:rule:00000000000000000000000000000006",
+    "record:run-u02-synthetic:04:fact:00000000000000000000000000000007",
+    "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-07T15:05:00Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/04-evidence-reconciliation.json",
+    "sha256": "sha256:432f2d6208f4c08a9bf7112e0ab074f3b2741808c755ce86d9c3df1bedba2f4e",
+    "snapshot_id": "snapshot-u02-04"
+  },
+  "produced_record_ids": [
+    "record:run-u02-synthetic:05:impact:00000000000000000000000000000008"
+  ],
+  "run_id": "run-u02-synthetic",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 5,
+  "snapshot_id": "snapshot-u02-05",
+  "stage": "impact-analysis",
+  "state": {
+    "conflicts": [],
+    "impacts": [
+      {
+        "basis_type": "internal-control",
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "fact_ids": [
+          "record:run-u02-synthetic:04:fact:00000000000000000000000000000007"
+        ],
+        "id": "record:run-u02-synthetic:05:impact:00000000000000000000000000000008",
+        "identity_key": {
+          "distinguishing_scope": "learner-support-chat",
+          "kind": "notice-obligation",
+          "rule_basis": "rule:v1:13135477e899314031893d00138674f4975fa39b192290eb67567dde26c1603b",
+          "system_id": "SYNTHETIC-SYS-01",
+          "version": "rci-business-key/1"
+        },
+        "impact_id": "impact:v1:2c0c86b1b207b5e2f2d31f12874c4c5cfc2801e434028bf7a78ef05264d711d4",
+        "owner": "synthetic-system-owner",
+        "reason": "Explicit notice requirement and absent notice support this fixture draft finding.",
+        "record_type": "impact",
+        "resolution_need": null,
+        "rule_id": "record:run-u02-synthetic:03:rule:00000000000000000000000000000006",
+        "source_basis": [
+          "synthetic-policy/1",
+          "synthetic page paragraph 2"
+        ],
+        "state": "supported-impact",
+        "summary": "Synthetic policy impact: notice gap affects the learner support chat.",
+        "system_id": "SYNTHETIC-SYS-01"
+      }
+    ],
+    "unaffected_items": [],
+    "unresolved_items": []
+  },
+  "status": "complete",
+  "unresolved": []
+}

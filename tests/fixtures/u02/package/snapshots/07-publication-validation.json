@@ -1,0 +1,120 @@
+{
+  "consumed_record_ids": [
+    "record:run-u02-synthetic:05:impact:00000000000000000000000000000008",
+    "record:run-u02-synthetic:06:action:00000000000000000000000000000009",
+    "record:run-u02-synthetic:06:review-request:0000000000000000000000000000000a",
+    "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-07T15:07:00Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/06-actions-and-approvals.json",
+    "sha256": "sha256:25fd075074d616650be60955c618ef38cb0de2f1aa1ae7ea89ab0f85ac39faaf",
+    "snapshot_id": "snapshot-u02-06"
+  },
+  "produced_record_ids": [
+    "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000c",
+    "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000d",
+    "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000e",
+    "record:run-u02-synthetic:07:validation-check:0000000000000000000000000000000f"
+  ],
+  "run_id": "run-u02-synthetic",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 7,
+  "snapshot_id": "snapshot-u02-07",
+  "stage": "publication-validation",
+  "state": {
+    "artifacts": [
+      {
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "id": "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000c",
+        "path": "impact-register.csv",
+        "record_type": "artifact",
+        "sha256": "sha256:7313974f8be3972ea1a225e21e33fa15f8aaa5bf1b75959288cb8718270fbed7",
+        "subject_ids": [
+          "record:run-u02-synthetic:05:impact:00000000000000000000000000000008",
+          "record:run-u02-synthetic:06:action:00000000000000000000000000000009"
+        ],
+        "summary": "Retained synthetic artifact bytes for contract binding only.",
+        "validation_status": "valid"
+      },
+      {
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "id": "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000d",
+        "path": "compliance-brief.md",
+        "record_type": "artifact",
+        "sha256": "sha256:6a7442b5f781fa28821e1052a9045c6b19341511d96ce66405a8281b15488911",
+        "subject_ids": [
+          "record:run-u02-synthetic:05:impact:00000000000000000000000000000008",
+          "record:run-u02-synthetic:06:action:00000000000000000000000000000009"
+        ],
+        "summary": "Retained synthetic artifact bytes for contract binding only.",
+        "validation_status": "valid"
+      },
+      {
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "id": "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000e",
+        "path": "action-calendar.ics",
+        "record_type": "artifact",
+        "sha256": "sha256:3f310d5f055e32660c84c53c7a2c9abf76eea262be68b337b5d865888972bdd1",
+        "subject_ids": [
+          "record:run-u02-synthetic:05:impact:00000000000000000000000000000008",
+          "record:run-u02-synthetic:06:action:00000000000000000000000000000009"
+        ],
+        "summary": "Retained synthetic artifact bytes for contract binding only.",
+        "validation_status": "valid"
+      }
+    ],
+    "missing_artifacts": [],
+    "publication_status": "validated",
+    "review_bindings": [
+      {
+        "artifacts": [
+          {
+            "path": "impact-register.csv",
+            "sha256": "sha256:7313974f8be3972ea1a225e21e33fa15f8aaa5bf1b75959288cb8718270fbed7"
+          },
+          {
+            "path": "compliance-brief.md",
+            "sha256": "sha256:6a7442b5f781fa28821e1052a9045c6b19341511d96ce66405a8281b15488911"
+          },
+          {
+            "path": "action-calendar.ics",
+            "sha256": "sha256:3f310d5f055e32660c84c53c7a2c9abf76eea262be68b337b5d865888972bdd1"
+          }
+        ],
+        "draft_version": "synthetic-draft/1",
+        "request_id": "request-u02-date",
+        "run_id": "run-u02-synthetic"
+      }
+    ],
+    "validation_checks": [
+      {
+        "check_kind": "synthetic-contract-byte-binding",
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "expected": "Three exact fixture byte hashes.",
+        "id": "record:run-u02-synthetic:07:validation-check:0000000000000000000000000000000f",
+        "observed": "All three fixture byte hashes match.",
+        "record_type": "validation-check",
+        "result": "passed",
+        "subject_ids": [
+          "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000c",
+          "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000d",
+          "record:run-u02-synthetic:07:artifact:0000000000000000000000000000000e"
+        ],
+        "summary": "Synthetic exact-byte artifact bindings match the retained fixture files."
+      }
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

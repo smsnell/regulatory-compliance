@@ -1,0 +1,10 @@
+{
+  "completed_at": "2026-10-07T15:08:00Z",
+  "run_id": "run-u02-synthetic",
+  "schema_version": "rci-completion/1",
+  "stage07": {
+    "path": "snapshots/07-publication-validation.json",
+    "sha256": "sha256:f7e7d90b39fe07e776299caf797764e0e086ffdedccca728310c4cf92c2de690",
+    "snapshot_id": "snapshot-u02-07"
+  }
+}

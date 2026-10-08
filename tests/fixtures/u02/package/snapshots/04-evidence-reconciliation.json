@@ -1,0 +1,52 @@
+{
+  "consumed_record_ids": [
+    "record:run-u02-synthetic:03:rule:00000000000000000000000000000006",
+    "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-07T15:04:00Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/03-authority-and-timing.json",
+    "sha256": "sha256:80b13e339b3e09b50c60ca4032dd1d626c7a5193970a515614ac9f1c711ebcd4",
+    "snapshot_id": "snapshot-u02-03"
+  },
+  "produced_record_ids": [
+    "record:run-u02-synthetic:04:fact:00000000000000000000000000000007"
+  ],
+  "run_id": "run-u02-synthetic",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 4,
+  "snapshot_id": "snapshot-u02-04",
+  "stage": "evidence-reconciliation",
+  "state": {
+    "conflicts": [],
+    "evidence_gaps": [],
+    "incident_evidence": [],
+    "policy_controls": [],
+    "system_facts": [
+      {
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "id": "record:run-u02-synthetic:04:fact:00000000000000000000000000000007",
+        "observed_at": "2026-08-26T09:00:00+02:00",
+        "owner": "synthetic-system-owner",
+        "predicate": "notice-before-first-interaction",
+        "reason": "Fixture explicitly records an absent notice.",
+        "record_type": "fact",
+        "resolution_need": null,
+        "source_basis": [
+          "synthetic page paragraph 2"
+        ],
+        "source_revision_at": "2026-10-01T09:00:00Z",
+        "state": "supported",
+        "summary": "Synthetic retained page reports no notice before first learner interaction.",
+        "system_id": "SYNTHETIC-SYS-01",
+        "value": false
+      }
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

@@ -1,0 +1,102 @@
+{
+  "consumed_record_ids": [
+    "record:run-u02-synthetic:05:impact:00000000000000000000000000000008",
+    "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-07T15:06:00Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/05-impact-analysis.json",
+    "sha256": "sha256:f0b0f92d206b16ef08029928aec8064150bb759ab91c37953f02c9187151034f",
+    "snapshot_id": "snapshot-u02-05"
+  },
+  "produced_record_ids": [
+    "record:run-u02-synthetic:06:action:00000000000000000000000000000009",
+    "record:run-u02-synthetic:06:approval:0000000000000000000000000000000b",
+    "record:run-u02-synthetic:06:review-request:0000000000000000000000000000000a"
+  ],
+  "run_id": "run-u02-synthetic",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 6,
+  "snapshot_id": "snapshot-u02-06",
+  "stage": "actions-and-approvals",
+  "state": {
+    "approval_requirements": [
+      {
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "feedback_ids": [],
+        "id": "record:run-u02-synthetic:06:approval:0000000000000000000000000000000b",
+        "record_type": "approval",
+        "request_id": "request-u02-date",
+        "required_reviewer": "Operations",
+        "status": "pending",
+        "subject_ids": [
+          "record:run-u02-synthetic:06:action:00000000000000000000000000000009"
+        ],
+        "summary": "Synthetic action date remains pending Operations review."
+      }
+    ],
+    "escalations": [],
+    "feedback": [],
+    "proposed_actions": [
+      {
+        "action_id": "action:v1:7c44812e540ce6c23fa48d9269085101c27e79eb893ff2e46f50eb18fe537b08",
+        "action_kind": "verify-notice",
+        "approval_status": "pending",
+        "date_basis": "No new date is authorized in this synthetic test.",
+        "distinguishing_scope": "learner-support-chat",
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "existing_due_date": "2026-09-01",
+        "id": "record:run-u02-synthetic:06:action:00000000000000000000000000000009",
+        "identity_key": {
+          "distinguishing_scope": "learner-support-chat",
+          "kind": "verify-notice",
+          "rule_basis": "rule:v1:13135477e899314031893d00138674f4975fa39b192290eb67567dde26c1603b",
+          "system_id": "SYNTHETIC-SYS-01",
+          "version": "rci-business-key/1"
+        },
+        "impact_ids": [
+          "record:run-u02-synthetic:05:impact:00000000000000000000000000000008"
+        ],
+        "owner": "synthetic-system-owner",
+        "proposed_due_date": null,
+        "record_type": "action",
+        "summary": "Propose owner verification of the synthetic notice gap; date awaits Operations.",
+        "system_id": "SYNTHETIC-SYS-01"
+      }
+    ],
+    "review_requests": [
+      {
+        "delivery_evidence_ids": [],
+        "delivery_status": "not-sent",
+        "draft_version": "synthetic-draft/1",
+        "evidence_ids": [
+          "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004"
+        ],
+        "id": "record:run-u02-synthetic:06:review-request:0000000000000000000000000000000a",
+        "question": "Which proposed date should be considered for this draft action?",
+        "record_type": "review-request",
+        "request_id": "request-u02-date",
+        "required_reviewer": "Operations",
+        "run_id": "run-u02-synthetic",
+        "source_versions": [
+          "synthetic-policy/1"
+        ],
+        "subject_ids": [
+          "record:run-u02-synthetic:06:action:00000000000000000000000000000009"
+        ],
+        "subject_system_ids": [
+          "SYNTHETIC-SYS-01"
+        ],
+        "summary": "Prepared synthetic Operations question about the proposed action date; not sent."
+      }
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

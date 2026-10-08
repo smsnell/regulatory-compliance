@@ -1,0 +1,52 @@
+{
+  "candidates": [
+    {
+      "basis_type": "internal-control",
+      "citations": [
+        {
+          "evidence_id": "record:run-u02-synthetic:02:evidence:00000000000000000000000000000004",
+          "quote": "the learner-facing assistant requires a notice before first interaction"
+        }
+      ],
+      "conditions": [
+        "Learner-facing interaction."
+      ],
+      "exception_candidates": [],
+      "role": "unknown",
+      "summary": "Synthetic notice rule candidate for structural testing.",
+      "system_ids": [
+        "SYNTHETIC-SYS-01"
+      ],
+      "timing_candidates": [],
+      "uncertainty": null
+    }
+  ],
+  "diagnostic": null,
+  "disposition": "proposed",
+  "metadata": {
+    "host_version": null,
+    "instruction_versions": [
+      {
+        "path": "analysis/instructions.txt",
+        "sha256": "sha256:585a78087e3a5baf48753aa15950f351abcab18b1cffa2e67aeb38c0d5ce716d"
+      }
+    ],
+    "reference_versions": [
+      {
+        "path": "analysis/reference.txt",
+        "sha256": "sha256:56bdf2bc3e1c33780dbecd4b80ef71212cbde3c74a8efb7c59f54d184f171c0c"
+      }
+    ],
+    "reported_effort": null,
+    "reported_model": null,
+    "requested_effort": "test-only",
+    "requested_model": "synthetic-test",
+    "usage": null
+  },
+  "packet_id": "packet-u02-synthetic",
+  "packet_sha256": "sha256:bf90a7c96d9a7a83eb1fa16350109ca5acd5c0a20592b079d655ac66f40ed6ea",
+  "responded_at": "2026-10-07T15:02:45Z",
+  "run_id": "run-u02-synthetic",
+  "schema_version": "rci-interpretation-response/1",
+  "stage": "authority-and-timing"
+}
