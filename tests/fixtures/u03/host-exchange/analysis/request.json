@@ -1,0 +1,64 @@
+{
+  "assigned_review_date": "2026-08-26",
+  "created_at": "2026-10-08T04:09:05.853790Z",
+  "expected_response_schema": "rci-interpretation-response/1",
+  "extracts": [
+    {
+      "capture_id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:capture:00000000000000000000000000000003",
+      "evidence_id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:evidence:00000000000000000000000000000004",
+      "locator": {
+        "kind": "paragraph",
+        "value": "1–2"
+      },
+      "path": "sources/systems.txt",
+      "sha256": "sha256:d520d2a40a01c6a577d7994a9590c49c19180fd3a6af3557e3f9c0ad985cb062",
+      "text": "Synthetic fixture: the learner-facing assistant requires a notice before first interaction.\nSynthetic observation: the notice is absent in the retained test page.\nSynthetic mapping: SYNTHETIC-SYS-01 is the learner-facing assistant. The stated notice requirement is an internal control for this system only. Its exact required notice text is: You are interacting with an AI assistant. The notice appears visibly before the first assistant interaction. This synthetic control has no exceptions or additional conditions.\n",
+      "text_sha256": "sha256:d520d2a40a01c6a577d7994a9590c49c19180fd3a6af3557e3f9c0ad985cb062"
+    }
+  ],
+  "field_dictionary": {
+    "fields": {
+      "notice": "explicit statement"
+    },
+    "sha256": "sha256:a37365f8b848a3f289aff4a3caf9e1cc22e6ea8cacaaaa1fb21faf1cc9d86695",
+    "version": "synthetic-fields/1"
+  },
+  "metadata": {
+    "host_version": "codex-cli 0.161.0",
+    "instruction_versions": [
+      {
+        "path": "analysis/instructions.txt",
+        "sha256": "sha256:1515a6d6db6c034a378bb915cf216c80552cb4d0f20ff5cbe38635841acf9aac"
+      }
+    ],
+    "reference_versions": [
+      {
+        "path": "analysis/reference.txt",
+        "sha256": "sha256:9e42a48b9a4149cce7f9004bbd0f742cb7243bfee052d1ffdf1d72e53c2efa47"
+      }
+    ],
+    "reported_effort": null,
+    "reported_model": null,
+    "requested_effort": "high",
+    "requested_model": "gpt-6.1-sol",
+    "usage": null
+  },
+  "packet_id": "packet-run-42e1dc101d724f92aa718a76961a78f3",
+  "run_id": "run-42e1dc101d724f92aa718a76961a78f3",
+  "schema_version": "rci-interpretation-request/1",
+  "stage": "authority-and-timing",
+  "upstream": [
+    {
+      "path": "snapshots/01-scope.json",
+      "sequence": 1,
+      "sha256": "sha256:b0c93ee165462435125e6269840ba47d173491398edf6477e446e30be08e6dd7",
+      "snapshot_id": "snapshot-run-42e1dc101d724f92aa718a76961a78f3-1"
+    },
+    {
+      "path": "snapshots/02-source-capture.json",
+      "sequence": 2,
+      "sha256": "sha256:f84b9a78bf15a0fad6163eb377892c93532b8876157848edd80be324d9c80c53",
+      "snapshot_id": "snapshot-run-42e1dc101d724f92aa718a76961a78f3-2"
+    }
+  ]
+}

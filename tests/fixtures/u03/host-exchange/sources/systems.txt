@@ -1,0 +1,3 @@
+Synthetic fixture: the learner-facing assistant requires a notice before first interaction.
+Synthetic observation: the notice is absent in the retained test page.
+Synthetic mapping: SYNTHETIC-SYS-01 is the learner-facing assistant. The stated notice requirement is an internal control for this system only. Its exact required notice text is: You are interacting with an AI assistant. The notice appears visibly before the first assistant interaction. This synthetic control has no exceptions or additional conditions.

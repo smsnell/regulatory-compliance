@@ -1,0 +1,15 @@
+{
+  "production_package": false,
+  "reason": "bounded synthetic host exchange verified; not a production package",
+  "run_id": "run-42e1dc101d724f92aa718a76961a78f3",
+  "status": "complete",
+  "visible_usage": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 127744,
+      "input_tokens": 146462,
+      "output_tokens": 1310,
+      "reasoning_output_tokens": 109
+    }
+  ]
+}

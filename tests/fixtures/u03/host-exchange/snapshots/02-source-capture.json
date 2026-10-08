@@ -1,0 +1,119 @@
+{
+  "consumed_record_ids": [
+    "record:run-42e1dc101d724f92aa718a76961a78f3:01:scope-basis:00000000000000000000000000000001"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-07T15:02:00Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/01-scope.json",
+    "sha256": "sha256:b0c93ee165462435125e6269840ba47d173491398edf6477e446e30be08e6dd7",
+    "snapshot_id": "snapshot-run-42e1dc101d724f92aa718a76961a78f3-1"
+  },
+  "produced_record_ids": [
+    "record:run-42e1dc101d724f92aa718a76961a78f3:02:source:00000000000000000000000000000005",
+    "record:run-42e1dc101d724f92aa718a76961a78f3:02:attempt:00000000000000000000000000000002",
+    "record:run-42e1dc101d724f92aa718a76961a78f3:02:capture:00000000000000000000000000000003",
+    "record:run-42e1dc101d724f92aa718a76961a78f3:02:evidence:00000000000000000000000000000004"
+  ],
+  "run_id": "run-42e1dc101d724f92aa718a76961a78f3",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 2,
+  "snapshot_id": "snapshot-run-42e1dc101d724f92aa718a76961a78f3-2",
+  "stage": "source-capture",
+  "state": {
+    "attempts": [
+      {
+        "adapter": "synthetic-contract-fixture",
+        "attempt_key": "attempt-u02-scope",
+        "content": "full",
+        "content_hash": "sha256:d520d2a40a01c6a577d7994a9590c49c19180fd3a6af3557e3f9c0ad985cb062",
+        "content_type": "text/plain",
+        "content_type_known": true,
+        "date_suitability": "unresolved",
+        "effective_locator": "fixture://SYSTEMS",
+        "evidence_ids": [],
+        "id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:attempt:00000000000000000000000000000002",
+        "identity_check": "verified",
+        "local_reference": "sources/systems.txt",
+        "original_locator": "fixture://SYSTEMS",
+        "outcome": "fixture bytes obtained",
+        "record_type": "attempt",
+        "recoverable_failure": null,
+        "retrieval_status": "retrieved",
+        "retrieved_at": "2026-10-07T15:00:00Z",
+        "scope_basis_id": "record:run-42e1dc101d724f92aa718a76961a78f3:01:scope-basis:00000000000000000000000000000001",
+        "selected": true,
+        "selection_reason": "Synthetic scope evidence only; historical applicability is not asserted.",
+        "source_id": "SYSTEMS",
+        "started_at": "2026-10-07T14:59:00Z",
+        "summary": "Original synthetic discovery attempt retained once with its actual fixture time.",
+        "version_metadata": {
+          "version": "fixture/1"
+        }
+      }
+    ],
+    "captures": [
+      {
+        "attempt_id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:attempt:00000000000000000000000000000002",
+        "content_hash": "sha256:d520d2a40a01c6a577d7994a9590c49c19180fd3a6af3557e3f9c0ad985cb062",
+        "content_type": "text/plain",
+        "evidence_ids": [],
+        "id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:capture:00000000000000000000000000000003",
+        "local_reference": "sources/systems.txt",
+        "record_type": "capture",
+        "representation": "full",
+        "representation_metadata": {
+          "encoding": "utf-8",
+          "fixture": true
+        },
+        "summary": "Full synthetic text representation retained independently of its attempt."
+      }
+    ],
+    "diagnostics": [],
+    "evidence": [
+      {
+        "assertion": "The fixture describes a notice requirement and an absent notice.",
+        "capture_id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:capture:00000000000000000000000000000003",
+        "content_hash": "sha256:d520d2a40a01c6a577d7994a9590c49c19180fd3a6af3557e3f9c0ad985cb062",
+        "evidence_ids": [],
+        "id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:evidence:00000000000000000000000000000004",
+        "local_reference": "sources/systems.txt",
+        "locator": {
+          "kind": "paragraph",
+          "value": "1–2"
+        },
+        "quoted_support": "the learner-facing assistant requires a notice before first interaction",
+        "record_type": "evidence",
+        "summary": "Synthetic text supports a test notice obligation and absent-notice observation."
+      }
+    ],
+    "mappings": [],
+    "normalized_rows": [],
+    "sources": [
+      {
+        "attempt_ids": [
+          "record:run-42e1dc101d724f92aa718a76961a78f3:02:attempt:00000000000000000000000000000002"
+        ],
+        "authority": "operational-evidence",
+        "content_hash": "sha256:d520d2a40a01c6a577d7994a9590c49c19180fd3a6af3557e3f9c0ad985cb062",
+        "content_type": "text/plain",
+        "evidence_ids": [],
+        "id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:source:00000000000000000000000000000005",
+        "local_reference": "sources/systems.txt",
+        "locator": "fixture://SYSTEMS",
+        "record_type": "source",
+        "retrieval_status": "retrieved",
+        "retrieved_at": "2026-10-07T15:00:00Z",
+        "source_id": "SYSTEMS",
+        "source_role": "operational-record",
+        "summary": "SYSTEMS is a synthetic declaration linked to its one original attempt.",
+        "version_metadata": {
+          "version": "fixture/1"
+        }
+      }
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

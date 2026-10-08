@@ -1,0 +1,50 @@
+{
+  "attempt": {
+    "adapter": "synthetic",
+    "attempt_key": "de4ebc64019544d5b45a9ba53516cc77",
+    "content": "extract",
+    "content_hash": "sha256:a47aa864fccefb1a9171e41f9eda152db2c904804ced2d33c5694873c12acd60",
+    "content_type": "text/plain; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "suitable",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-u04-inspection:02:attempt:01e05127811c4dcf8300652938fe1a0b",
+    "identity_check": "verified",
+    "local_reference": "sources/de4ebc64019544d5b45a9ba53516cc77.bin",
+    "original_locator": "synthetic:permitted-report",
+    "outcome": "synthetic tool success",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T04:00:00Z",
+    "selected": true,
+    "selection_reason": "Synthetic claim-bearing paragraph",
+    "source_id": "SYNTHETIC-REPORT",
+    "started_at": "2026-10-08T04:00:00Z",
+    "summary": "Read attempt for SYNTHETIC-REPORT",
+    "version_metadata": {
+      "version": "synthetic-v1"
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-u04-inspection:02:attempt:01e05127811c4dcf8300652938fe1a0b",
+    "content_hash": "sha256:a47aa864fccefb1a9171e41f9eda152db2c904804ced2d33c5694873c12acd60",
+    "content_type": "text/plain; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-u04-inspection:02:capture:32d9f9d4cf674baeb665f6614a33e781",
+    "local_reference": "sources/de4ebc64019544d5b45a9ba53516cc77.bin",
+    "record_type": "capture",
+    "representation": "extract",
+    "representation_metadata": {
+      "locator": "paragraph 2",
+      "method": "permitted UTF-8 extract",
+      "permission": "synthetic owner authorization"
+    },
+    "summary": "Retained representation for SYNTHETIC-REPORT"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-u04-inspection",
+  "schema_version": "rci-attempt-journal/1"
+}

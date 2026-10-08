@@ -1,0 +1,12 @@
+{
+  "schema_version": "u04-synthetic-responses/1",
+  "cases": [
+    {"name": "success", "text": "Synthetic paragraph 1: notice is visible.\n", "status": "retrieved", "selected": true},
+    {"name": "zero", "text": "", "status": "retrieved", "selected": false},
+    {"name": "none", "text": null, "status": "unavailable", "selected": false},
+    {"name": "unused", "text": "Synthetic unused report.\n", "status": "retrieved", "selected": false},
+    {"name": "login", "text": "Synthetic login page, not the requested report.\n", "status": "invalid", "selected": false},
+    {"name": "unverified", "text": "Synthetic unknown document.\n", "status": "unverified", "selected": false},
+    {"name": "stale", "text": "Synthetic superseded report.\n", "status": "stale", "selected": false}
+  ]
+}

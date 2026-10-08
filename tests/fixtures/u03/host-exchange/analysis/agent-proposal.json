@@ -1,0 +1,26 @@
+{
+  "disposition": "proposed",
+  "diagnostic": "Interpretation is limited to the explicit synthetic internal notice control for SYNTHETIC-SYS-01. The stated control is unambiguous. Legal applicability, effective dates and provider/deployer classification are outside this test; role is unknown because no classification is made.",
+  "candidates": [
+    {
+      "summary": "The internal control for SYNTHETIC-SYS-01, the learner-facing assistant, requires the exact notice text \"You are interacting with an AI assistant.\" to appear visibly before the first assistant interaction. The control applies only to this system and has no exceptions or additional conditions.",
+      "basis_type": "internal-control",
+      "citations": [
+        {
+          "evidence_id": "record:run-42e1dc101d724f92aa718a76961a78f3:02:evidence:00000000000000000000000000000004",
+          "quote": "Synthetic mapping: SYNTHETIC-SYS-01 is the learner-facing assistant. The stated notice requirement is an internal control for this system only. Its exact required notice text is: You are interacting with an AI assistant. The notice appears visibly before the first assistant interaction. This synthetic control has no exceptions or additional conditions."
+        }
+      ],
+      "conditions": [],
+      "role": "unknown",
+      "timing_candidates": [
+        "The notice appears visibly before the first assistant interaction."
+      ],
+      "exception_candidates": [],
+      "uncertainty": null,
+      "system_ids": [
+        "SYNTHETIC-SYS-01"
+      ]
+    }
+  ]
+}

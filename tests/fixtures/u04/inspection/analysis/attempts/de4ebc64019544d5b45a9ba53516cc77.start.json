@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "synthetic",
+    "attempt_key": "de4ebc64019544d5b45a9ba53516cc77",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-u04-inspection:02:attempt:01e05127811c4dcf8300652938fe1a0b",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "synthetic:permitted-report",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T04:00:00Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "SYNTHETIC-REPORT",
+    "started_at": "2026-10-08T04:00:00Z",
+    "summary": "Read attempt for SYNTHETIC-REPORT",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-u04-inspection",
+  "schema_version": "rci-attempt-journal/1"
+}
