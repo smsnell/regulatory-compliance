@@ -1,0 +1,107 @@
+IMPLEMENT U05 — Read adapters and source identity checks
+
+Work only on U05 from TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md.
+Do not begin later units.
+
+Before editing, read:
+
+- the complete U05 task card;
+- the requirement sections and interview excerpts it explicitly references;
+- the contracts/interfaces produced by its prerequisite units;
+- relevant existing tests, fixtures, and decisions.
+
+Treat previously passed gates and frozen contracts as stable. Do not change them
+for convenience. If you find a concrete contradiction requiring a frozen
+contract or architectural decision to change, stop and report it before making
+that change.
+
+Use additional repository context only when needed to resolve a concrete
+dependency or discrepancy.
+
+Before implementation, briefly state:
+- the objective;
+- interfaces/invariants being preserved;
+- files expected to change;
+- any blocking ambiguity.
+
+Then implement U05.
+
+Run every applicable check specified in its task card:
+A — automated logic
+S — schema/format
+I — integration
+R — requirement acceptance
+M — manual inspection
+
+For each applicable category, compare expected versus observed behavior.
+
+If a check fails, diagnose and fix it within U[XX] where justified. Do not
+weaken a requirement, invariant, or test merely to make it pass. Follow the
+unit's documented model/effort escalation trigger if the failure indicates
+additional reasoning is required.
+
+Stop when U05 is complete or genuinely blocked. Do not continue to U06.
+
+At the end report:
+
+STATUS: complete / incomplete / blocked
+
+FILES CHANGED:
+...
+
+CHECKS:
+A:
+S:
+I:
+R:
+M:
+
+COMPLETION CRITERIA:
+...
+
+EXPECTED VS OBSERVED:
+...
+
+UNRESOLVED ISSUES:
+...
+
+CONTRACT/ARCHITECTURE CHANGES:
+none / proposed change requiring review
+
+ESCALATION:
+not required / trigger and recommended model-effort
+
+NEXT ACTION:
+review diff / resolve blocker
+
+Do not commit. Stop so I can review the diff.
+
+---
+
+Using this diagnostic, fix the issues preventing a hand off to U06. **U06 is blocked because U05 captured no usable data from any of the three registers.** The confirmed cause is missing API caller authentication—not a demonstrated spreadsheet permission problem.
+
+| Source | U05 observation | Effect on U06 |
+|---|---|---|
+| SYSTEMS | HTTP 403; no spreadsheet identity, tabs, headers or rows | Cannot establish system-field mappings or actual IDs |
+| EVIDENCE | Same HTTP 403 | Cannot map evidence states, record IDs or report links |
+| CALENDAR | Same HTTP 403 | Cannot map actions, deadlines, statuses or review paths |
+
+Google’s retained response says: “Method doesn't allow unregistered callers (callers without established identity).” All three attempts record `authenticated: false` and `credential_inventory: null`. The adapter supports bearer authentication, but no credential inventory was supplied for these reads.
+
+I verified the retained hashes and replayed the responses through U05’s identity checker. All three remain unverified, and the U06 register-readiness check fails. There is no evidence yet that the spreadsheet IDs are wrong, that authenticated access would be denied, or that actual register data would be malformed.
+
+**Why U05 nevertheless passed:** its task card explicitly permits blocked sources as honest adapter outcomes. It demonstrated attempted reads, response retention and truthful diagnostics. It did **not** demonstrate successful register access. Likewise, `check_sources.py` returns zero when it writes the report—even when sources are unavailable. That exit status cannot establish readiness for U06.
+
+Other U05 limitations—Notion returning an application shell and EUR-Lex returning challenge pages—do not directly cause this U06 blocker.
+
+To unblock U06:
+
+1. Configure the external credential inventory and token using the U05 connection guide (docs/u05-source-access.md), with read-only Sheets scope and access to all three spreadsheets.
+2. Run the documented connection check to retain fresh responses.
+3. Confirm matching spreadsheet IDs and complete tab/header/row data before establishing mappings.
+
+An authenticated retry may expose a further sharing or API configuration problem; the current evidence cannot resolve that. No files were changed during this diagnostic.
+
+---
+
+Do you mean the sources require credentials? Use anonymous access.
