@@ -1,0 +1,56 @@
+GATE REVIEW — G2
+
+Perform the G2 verification defined in
+TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md.
+
+This is a review-only checkpoint.
+
+Do not begin the next implementation unit.
+Do not modify files unless I explicitly ask after reviewing your findings.
+
+Read:
+- the G2 definition;
+- the implementation units completed since the previous gate;
+- their referenced requirements and contracts;
+- the relevant tests, fixtures, verification reports, and current diff/state.
+
+Verify the gate independently. Do not assume that individual U-unit PASS
+reports imply the gate passes.
+
+For each gate criterion report:
+
+- criterion;
+- evidence inspected;
+- expected behavior;
+- observed behavior;
+- PASS / FAIL / UNCERTAIN.
+
+Also look for:
+- contradictions between completed units;
+- interfaces that are not actually frozen or consistently implemented;
+- tests that pass individually but fail to demonstrate the cross-unit invariant;
+- missing negative/adversarial cases required by the gate;
+- provenance, identity, state, authority, or failure-path issues that would
+  make later implementation unsafe.
+
+If a problem is found, identify:
+- severity;
+- affected files/components;
+- requirement/invariant affected;
+- earliest unit that should be corrected;
+- whether downstream completed work is affected.
+
+FINAL VERDICT:
+- G2 PASS — safe to continue
+- G2 FAIL — fixes required before continuing
+- G2 UNCERTAIN — specific evidence/verification still required
+
+Do not begin the next unit and do not commit.
+
+---
+
+Make the correction to U07, distinguishing source-access, limitations from technical persistance/integrity failures and propagate failure into stage and supervisor outcomes. Do a focuses verification on the fix to determine if G2 now passes.
+
+---
+
+I miss read about the other two issues. Make the fixes to normalized provenance not being independently verified, and the required source declarations are disconnected from actual capture completeness issue as well.
