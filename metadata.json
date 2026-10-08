@@ -1,0 +1,31 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4CTC2GPXTBM5RTZT6QB9NW4",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 2,
+  "files_touched": [
+    "docs/verification/g1.md",
+    "docs/verification/u02.md",
+    "regulatory-change-impact-brief/references/contracts.md",
+    "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+    "tests/contracts/test_u02.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 497593,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 3860736,
+    "output_tokens": 20087,
+    "api_call_count": 36,
+    "subagent_tokens_complete": true
+  }
+}
