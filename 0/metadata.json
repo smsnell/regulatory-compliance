@@ -1,0 +1,80 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4DXKRZQ7CP2D31D9K6330CG",
+  "session_id": "01a119a8-3993-73f3-8eeb-2892104b970c",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-08T14:10:29.172876066Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "config/review.example.json",
+    "docs/u03-runtime.md",
+    "docs/verification/u03.md",
+    "pyproject.toml",
+    "regulatory-change-impact-brief/SKILL.md",
+    "regulatory-change-impact-brief/references/schemas/runtime-config.schema.json",
+    "regulatory-change-impact-brief/references/schemas/runtime-proposal.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/runtime.py",
+    "regulatory-change-impact-brief/scripts/run.py",
+    "regulatory-change-impact-brief/scripts/stage.py",
+    "requirements.lock",
+    "tests/fixtures/u03/README.md",
+    "tests/fixtures/u03/host-exchange/analysis/agent-proposal.json",
+    "tests/fixtures/u03/host-exchange/analysis/host-events.jsonl",
+    "tests/fixtures/u03/host-exchange/analysis/host-invocation.json",
+    "tests/fixtures/u03/host-exchange/analysis/host-prompt.txt",
+    "tests/fixtures/u03/host-exchange/analysis/host-stderr.txt",
+    "tests/fixtures/u03/host-exchange/analysis/instructions.txt",
+    "tests/fixtures/u03/host-exchange/analysis/outcome.json",
+    "tests/fixtures/u03/host-exchange/analysis/proposal.json",
+    "tests/fixtures/u03/host-exchange/analysis/reference.txt",
+    "tests/fixtures/u03/host-exchange/analysis/request.json",
+    "tests/fixtures/u03/host-exchange/analysis/response.json",
+    "tests/fixtures/u03/host-exchange/snapshots/01-scope.json",
+    "tests/fixtures/u03/host-exchange/snapshots/02-source-capture.json",
+    "tests/fixtures/u03/host-exchange/sources/systems.txt",
+    "tests/integration/u03_host.py",
+    "tests/runtime/test_u03.py",
+    "tests/u03_harness.py"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "47b21aa26d7f",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 109453,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 2758272,
+    "output_tokens": 26806,
+    "api_call_count": 35,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-08T14:10:29.076091312Z",
+    "agent_lines": 2166,
+    "agent_removed": 0,
+    "human_added": 932,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 3098,
+    "total_lines_changed": 3098,
+    "agent_percentage": 69.91607488702388,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 88,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ".codex/hooks.json": 88
+      }
+    }
+  ]
+}

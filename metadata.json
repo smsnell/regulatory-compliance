@@ -1,0 +1,55 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4DXKRZQ7CP2D31D9K6330CG",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "config/review.example.json",
+    "docs/u03-runtime.md",
+    "docs/verification/u03.md",
+    "pyproject.toml",
+    "regulatory-change-impact-brief/SKILL.md",
+    "regulatory-change-impact-brief/references/schemas/runtime-config.schema.json",
+    "regulatory-change-impact-brief/references/schemas/runtime-proposal.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/runtime.py",
+    "regulatory-change-impact-brief/scripts/run.py",
+    "regulatory-change-impact-brief/scripts/stage.py",
+    "requirements.lock",
+    "tests/fixtures/u03/README.md",
+    "tests/fixtures/u03/host-exchange/analysis/agent-proposal.json",
+    "tests/fixtures/u03/host-exchange/analysis/host-events.jsonl",
+    "tests/fixtures/u03/host-exchange/analysis/host-invocation.json",
+    "tests/fixtures/u03/host-exchange/analysis/host-prompt.txt",
+    "tests/fixtures/u03/host-exchange/analysis/host-stderr.txt",
+    "tests/fixtures/u03/host-exchange/analysis/instructions.txt",
+    "tests/fixtures/u03/host-exchange/analysis/outcome.json",
+    "tests/fixtures/u03/host-exchange/analysis/proposal.json",
+    "tests/fixtures/u03/host-exchange/analysis/reference.txt",
+    "tests/fixtures/u03/host-exchange/analysis/request.json",
+    "tests/fixtures/u03/host-exchange/analysis/response.json",
+    "tests/fixtures/u03/host-exchange/snapshots/01-scope.json",
+    "tests/fixtures/u03/host-exchange/snapshots/02-source-capture.json",
+    "tests/fixtures/u03/host-exchange/sources/systems.txt",
+    "tests/integration/u03_host.py",
+    "tests/runtime/test_u03.py",
+    "tests/u03_harness.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 109453,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 2758272,
+    "output_tokens": 26806,
+    "api_call_count": 35,
+    "subagent_tokens_complete": true
+  }
+}
