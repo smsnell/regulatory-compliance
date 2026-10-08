@@ -3,15 +3,17 @@
   "checkpoint_id": "01M4DXKRZQ7CP2D31D9K6330CG",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 1,
+  "checkpoints_count": 2,
   "files_touched": [
     "config/review.example.json",
     "docs/u03-runtime.md",
     "docs/verification/u03.md",
+    "docs/verification/u04.md",
     "pyproject.toml",
     "regulatory-change-impact-brief/SKILL.md",
     "regulatory-change-impact-brief/references/schemas/runtime-config.schema.json",
     "regulatory-change-impact-brief/references/schemas/runtime-proposal.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/evidence.py",
     "regulatory-change-impact-brief/scripts/rci/runtime.py",
     "regulatory-change-impact-brief/scripts/run.py",
     "regulatory-change-impact-brief/scripts/stage.py",
@@ -31,8 +33,15 @@
     "tests/fixtures/u03/host-exchange/snapshots/01-scope.json",
     "tests/fixtures/u03/host-exchange/snapshots/02-source-capture.json",
     "tests/fixtures/u03/host-exchange/sources/systems.txt",
+    "tests/fixtures/u04/README.md",
+    "tests/fixtures/u04/inspection/analysis/attempts/de4ebc64019544d5b45a9ba53516cc77.start.json",
+    "tests/fixtures/u04/inspection/analysis/attempts/de4ebc64019544d5b45a9ba53516cc77.terminal.json",
+    "tests/fixtures/u04/inspection/analysis/claim.json",
+    "tests/fixtures/u04/inspection/sources/de4ebc64019544d5b45a9ba53516cc77.bin",
+    "tests/fixtures/u04/responses.json",
     "tests/integration/u03_host.py",
     "tests/runtime/test_u03.py",
+    "tests/runtime/test_u04.py",
     "tests/u03_harness.py"
   ],
   "sessions": [
@@ -42,14 +51,21 @@
       "compact_transcript": "/0/transcript.jsonl",
       "content_hash": "/0/content_hash.txt",
       "prompt": "/0/prompt.txt"
+    },
+    {
+      "metadata": "/1/metadata.json",
+      "transcript": "/1/full.jsonl",
+      "compact_transcript": "/1/transcript.jsonl",
+      "content_hash": "/1/content_hash.txt",
+      "prompt": "/1/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 109453,
+    "input_tokens": 176163,
     "cache_creation_tokens": 0,
-    "cache_read_tokens": 2758272,
-    "output_tokens": 26806,
-    "api_call_count": 35,
+    "cache_read_tokens": 3969408,
+    "output_tokens": 43953,
+    "api_call_count": 59,
     "subagent_tokens_complete": true
   }
 }
