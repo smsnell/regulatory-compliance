@@ -1,0 +1,98 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "259b7feb192d4117a822850e99f979af",
+    "content": "full",
+    "content_hash": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+    "content_type": "text/csv; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU/gviz/tq?gid=0&headers=1&tqx=out:csv",
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:17a51ab8bd384064aa55c336f9269b53",
+    "identity_check": "verified",
+    "local_reference": "sources/259b7feb192d4117a822850e99f979af.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T15:43:41.086971Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "SYSTEMS",
+    "started_at": "2026-10-08T15:43:40.954188Z",
+    "summary": "Read attempt for SYSTEMS",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous unfiltered tab CSV captured with raw row/cell locators",
+      "last_modified": null,
+      "returned_identity": {
+        "column_count": 13,
+        "document_id": "10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+        "headers": [
+          "system_id",
+          "system_name",
+          "use_case",
+          "owner",
+          "provider_role",
+          "deployer_role",
+          "exposed_group",
+          "output_type",
+          "current_notice",
+          "human_review",
+          "evidence_status",
+          "evidence_updated_at",
+          "record_version"
+        ],
+        "identity_attempt_id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:8cd04161bc5b4caeb5526733039e19fa",
+        "native_values_verified": true,
+        "revision": 8,
+        "row_count": 9,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "AI System Register"
+          }
+        ],
+        "title": "Project B — AI System Register"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 8
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:17a51ab8bd384064aa55c336f9269b53",
+    "content_hash": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+    "content_type": "text/csv; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:capture:5e35656594524ef88d02a8bf9ab47fd4",
+    "local_reference": "sources/259b7feb192d4117a822850e99f979af.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU/gviz/tq?gid=0&headers=1&tqx=out:csv"
+    },
+    "summary": "Retained representation for SYSTEMS"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd",
+  "schema_version": "rci-attempt-journal/1"
+}

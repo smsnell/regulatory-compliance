@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        body {
+            font-family: "Arial";
+        }
+    </style>
+    <script type="text/javascript">
+    window.awsWafCookieDomainList = [];
+    window.gokuProps = {
+"key":"AQIDAHjcYu/GjX+QlghicBgQ/7bFaQZ+m5FKCMDnO+vTbNg96AE5iWoKrnZOGCkRCVldfX2zAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMQsYK0YXAADpWwT3pAgEQgDszGw2MMMKDDdyD7R4g+1hQnUO4E+ToEZGw1Vovod66QRnVjGf7rblAJcJDpukpGBtuNhU43qX1mOJ2bA==",
+          "iv":"D57XbQD7PwAAZ1iA",
+          "context":"8gP+V5fOEotvUkdhSvDHCXEmD+bNP2Z3szhvZjhKUO8PYfYYEFHY3H0oRMlp3EsOLPbNXN3bHBfC+fyERu4MnCy6IsjwT+0LpnYBm8ekp8AbVDEyy4BH3M97Wf2KOHzvZHR4bZjGxO9bx4rkEis5HDgt1nFUpKcoagDDk18qZ3mfttihz++ODvtnsEitU5/Ji3TmKSQJ0tKdh9ym3bh7fGo/Xfnha+5Yt+UzDgOUzj/y1nhFfJ7EM9/fSTHHNUsP5BDFI+AM4h31LanTK794/1ngLeP9vcq0/Oa1SWkgmxPaQ2wKspX1tDF4Cqzij0gYis3Q9tFwTZMaL7LcDf1AOgt3V7fdUuerv0F/PqDx2rK57+HICj65M5q2IoCLq4+oWwJh1+J1SJeeyenOxjvk9Z6srdaRae+E5w=="
+};
+    </script>
+    <script src="https://3e3378af7cd0.299dfecb.us-east-1.token.awswaf.com/3e3378af7cd0/b8f8ae018166/c9ffa032f402/challenge.js"></script>
+</head>
+<body>
+    <div id="challenge-container"></div>
+    <script type="text/javascript">
+        AwsWafIntegration.saveReferrer();
+        AwsWafIntegration.checkForceRefresh().then((forceRefresh) => {
+            if (forceRefresh) {
+                AwsWafIntegration.forceRefreshToken().then(() => {
+                    window.location.reload(true);
+                });
+            } else {
+                AwsWafIntegration.getToken().then(() => {
+                    window.location.reload(true);
+                });
+            }
+        });
+    </script>
+    <noscript>
+        <h1>JavaScript is disabled</h1>
+        In order to continue, we need to verify that you're not a robot.
+        This requires JavaScript. Enable JavaScript and then reload the page.
+    </noscript>
+</body>
+</html>

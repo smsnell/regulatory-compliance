@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "76f2b53b10e149df8fe7cdf0cf6a9317",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:f3c0f01e1bed4387873d03ce1d5b6dcc",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T15:43:34.729281Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "OJ",
+    "started_at": "2026-10-08T15:43:34.729266Z",
+    "summary": "Read attempt for OJ",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd",
+  "schema_version": "rci-attempt-journal/1"
+}

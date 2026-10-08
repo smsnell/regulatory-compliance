@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "af42d458c4a3432b8e836e4dd2b85be6",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:d801a63d431e49689d80f207f6295443",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T14:52:48.341289Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "AMEND",
+    "started_at": "2026-10-08T14:52:48.341255Z",
+    "summary": "Read attempt for AMEND",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}

@@ -1,0 +1,64 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "fd025d96b97447a0aa1c1fe32c58944a",
+    "content": "full",
+    "content_hash": "sha256:792b673040b148fbaa57878b2fd4a27d161af8bff10ec0485dcb30a598a2fe00",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:d1b17009dafb429284d288da67f6e613",
+    "identity_check": "verified",
+    "local_reference": "sources/fd025d96b97447a0aa1c1fe32c58944a.bin",
+    "original_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T14:52:48.241971Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "LAW",
+    "started_at": "2026-10-08T14:52:47.903597Z",
+    "summary": "Read attempt for LAW",
+    "version_metadata": {
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": "\"1791184296-gzip\"",
+      "identity_reason": "Returned title and visible document content match requested source",
+      "last_modified": "Mon, 05 Oct 2026 07:11:36 GMT",
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "Article 50: Transparency obligations for providers and deployers of certain AI systems | AI Act Service Desk"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:d1b17009dafb429284d288da67f6e613",
+    "content_hash": "sha256:792b673040b148fbaa57878b2fd4a27d161af8bff10ec0485dcb30a598a2fe00",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:capture:beb74c86833c48ac98b3596c8e86e079",
+    "local_reference": "sources/fd025d96b97447a0aa1c1fe32c58944a.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50"
+    },
+    "summary": "Retained representation for LAW"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}

@@ -1,0 +1,72 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "d2cd381974094447a4752eb6258f17c1",
+    "content": "full",
+    "content_hash": "sha256:e2f8f4e3d88d7cde554e20aee4030f3107da4772e572477aa03a17809763e093",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:df5c380d368b42f98d0ad10400b44854",
+    "identity_check": "unverified",
+    "local_reference": "sources/d2cd381974094447a4752eb6258f17c1.bin",
+    "original_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "outcome": "HTTP 202",
+    "record_type": "attempt",
+    "recoverable_failure": "HTTP 202; requested content unavailable",
+    "retrieval_status": "invalid",
+    "retrieved_at": "2026-10-08T14:52:48.334654Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "OJ",
+    "started_at": "2026-10-08T14:52:48.244406Z",
+    "summary": "Read attempt for OJ",
+    "version_metadata": {
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "HTTP 202; requested content unavailable",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:df5c380d368b42f98d0ad10400b44854",
+    "content_hash": "sha256:e2f8f4e3d88d7cde554e20aee4030f3107da4772e572477aa03a17809763e093",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:capture:2dbc1e48e09f4582b87899e536b5b979",
+    "local_reference": "sources/d2cd381974094447a4752eb6258f17c1.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": null,
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    "summary": "Retained representation for OJ"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "HTTP 202; requested content unavailable",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "OJ",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}

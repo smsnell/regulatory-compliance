@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "5252f87ec8e04b05909d78b331b97b13",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:4a31f24215f54ddf85e8020f57e9aa8b",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T14:52:48.398103Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "TIME",
+    "started_at": "2026-10-08T14:52:48.398087Z",
+    "summary": "Read attempt for TIME",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}

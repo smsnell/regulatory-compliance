@@ -1,0 +1,73 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "16c391d0b80b4f96931a0e83e3dd3a15",
+    "content": "full",
+    "content_hash": "sha256:26f32c72e620b8999cbcab737eecbf481ddb2bd311a96649ffea70e69e682ad7",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:3d1a8a24ff6940cd83ebb768282903a9",
+    "identity_check": "unverified",
+    "local_reference": "sources/16c391d0b80b4f96931a0e83e3dd3a15.bin",
+    "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": "Act identity/version and relevance require source inspection",
+    "retrieval_status": "unverified",
+    "retrieved_at": "2026-10-08T15:43:39.227360Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "CONSOLIDATED",
+    "started_at": "2026-10-08T15:43:38.107717Z",
+    "summary": "Read attempt for CONSOLIDATED",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Act identity/version and relevance require source inspection",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "EUR-Lex - 02024R1689-20260727 - EN - EUR-LexLog inEnglish"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:3d1a8a24ff6940cd83ebb768282903a9",
+    "content_hash": "sha256:26f32c72e620b8999cbcab737eecbf481ddb2bd311a96649ffea70e69e682ad7",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:capture:ae01a40aaa614494903aa3eb27fc783a",
+    "local_reference": "sources/16c391d0b80b4f96931a0e83e3dd3a15.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": null,
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727"
+    },
+    "summary": "Retained representation for CONSOLIDATED"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "Act identity/version and relevance require source inspection",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "CONSOLIDATED",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd",
+  "schema_version": "rci-attempt-journal/1"
+}

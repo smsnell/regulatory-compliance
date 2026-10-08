@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "google-sheets-read",
+    "attempt_key": "56077a64290741229d95d5069b74adf2",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:960419ee031f4c159fc48a54f5bd90b5",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T14:52:49.494748Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "SYSTEMS",
+    "started_at": "2026-10-08T14:52:49.494718Z",
+    "summary": "Read attempt for SYSTEMS",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}

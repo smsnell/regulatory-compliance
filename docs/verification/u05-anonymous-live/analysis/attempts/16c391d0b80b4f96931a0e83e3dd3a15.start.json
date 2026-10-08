@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "16c391d0b80b4f96931a0e83e3dd3a15",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:3d1a8a24ff6940cd83ebb768282903a9",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T15:43:38.107735Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "CONSOLIDATED",
+    "started_at": "2026-10-08T15:43:38.107717Z",
+    "summary": "Read attempt for CONSOLIDATED",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd",
+  "schema_version": "rci-attempt-journal/1"
+}

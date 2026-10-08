@@ -1,0 +1,298 @@
+{
+  "assigned_review_date": "2026-08-26",
+  "production_package": false,
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-source-access/1",
+  "sources": [
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:d1b17009dafb429284d288da67f6e613"
+      ],
+      "content_hash": "sha256:792b673040b148fbaa57878b2fd4a27d161af8bff10ec0485dcb30a598a2fe00",
+      "date_suitability": "unresolved",
+      "identity_check": "verified",
+      "local_reference": "sources/fd025d96b97447a0aa1c1fe32c58944a.bin",
+      "reason": null,
+      "requested_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50",
+      "retrieval_status": "retrieved",
+      "source_id": "LAW",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": null,
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": "\"1791184296-gzip\"",
+        "identity_reason": "Returned title and visible document content match requested source",
+        "last_modified": "Mon, 05 Oct 2026 07:11:36 GMT",
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": "Article 50: Transparency obligations for providers and deployers of certain AI systems | AI Act Service Desk"
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:df5c380d368b42f98d0ad10400b44854"
+      ],
+      "content_hash": "sha256:e2f8f4e3d88d7cde554e20aee4030f3107da4772e572477aa03a17809763e093",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/d2cd381974094447a4752eb6258f17c1.bin",
+      "reason": "HTTP 202; requested content unavailable",
+      "requested_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "retrieval_status": "invalid",
+      "source_id": "OJ",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": null,
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": null,
+        "identity_reason": "HTTP 202; requested content unavailable",
+        "last_modified": null,
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": null
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:d801a63d431e49689d80f207f6295443"
+      ],
+      "content_hash": "sha256:3f2de6b809905e9289949bef285ff9dea78bfa424ea20184520bc8a1edf6f068",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/af42d458c4a3432b8e836e4dd2b85be6.bin",
+      "reason": "HTTP 202; requested content unavailable",
+      "requested_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+      "retrieval_status": "invalid",
+      "source_id": "AMEND",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": null,
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": null,
+        "identity_reason": "HTTP 202; requested content unavailable",
+        "last_modified": null,
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": null
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:53985be6c5a3478e91353010f519ee40"
+      ],
+      "content_hash": "sha256:ccaa2a62d93ff7a184490f262e09b4b05eaaf5811d4c459f52dff4f73cc65752",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/547fd5c8732b4650b5ad63a699d0a121.bin",
+      "reason": "HTTP 202; requested content unavailable",
+      "requested_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+      "retrieval_status": "invalid",
+      "source_id": "CONSOLIDATED",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": null,
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": null,
+        "identity_reason": "HTTP 202; requested content unavailable",
+        "last_modified": null,
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": null
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:4a31f24215f54ddf85e8020f57e9aa8b"
+      ],
+      "content_hash": "sha256:0a0f4470e0d6d44f398ea78bce698c61c5c3fa5d130c55630b1d26a1394e245a",
+      "date_suitability": "unresolved",
+      "identity_check": "verified",
+      "local_reference": "sources/5252f87ec8e04b05909d78b331b97b13.bin",
+      "reason": null,
+      "requested_locator": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline",
+      "retrieval_status": "retrieved",
+      "source_id": "TIME",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": null,
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": "\"1791185883-gzip\"",
+        "identity_reason": "Returned title and visible document content match requested source",
+        "last_modified": "Mon, 05 Oct 2026 07:38:03 GMT",
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": "Timeline for the Implementation of the EU AI Act | AI Act Service Desk"
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:4086b14012394e7cad692d77654fabc6"
+      ],
+      "content_hash": "sha256:523217e3eb36849b2963266fe718fe56479be8832ae455bc69a8c0b4947c9989",
+      "date_suitability": "unresolved",
+      "identity_check": "verified",
+      "local_reference": "sources/51e703589806431eb1233ee75c1e15d4.bin",
+      "reason": null,
+      "requested_locator": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+      "retrieval_status": "retrieved",
+      "source_id": "FAQ",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": null,
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": "\"1791468624-gzip\"",
+        "identity_reason": "Returned title and visible document content match requested source",
+        "last_modified": "Thu, 08 Oct 2026 14:10:24 GMT",
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": "Transparency obligations under Article 50 of the AI Act | Shaping Europe’s digital future"
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "http-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:96c24d9c7e7e45e5b6f725d45ac41214"
+      ],
+      "content_hash": "sha256:90ba5427dfc67c3bdd2e33ea1931d355ce780a39fc782a6165bc6cafdaf15183",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/7960d66f0dc24256abd514b4c26f93da.bin",
+      "reason": "Missing document title/content identity; possible landing page",
+      "requested_locator": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856",
+      "retrieval_status": "unverified",
+      "source_id": "POLICY",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": "external-readonly-source-login",
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": "W/\"f0d942a1a31e3ff112135ef45123b013\"",
+        "identity_reason": "Missing document title/content identity; possible landing page",
+        "last_modified": "Thu, 08 Oct 2026 14:18:52 GMT",
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": "Notion"
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "google-sheets-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:960419ee031f4c159fc48a54f5bd90b5"
+      ],
+      "content_hash": "sha256:da4b1ce0a6833588f4a9bd24350c9f16c31426d439f92b3342b43bffec6667c2",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/56077a64290741229d95d5069b74adf2.bin",
+      "reason": "HTTP 403; requested content unavailable",
+      "requested_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+      "retrieval_status": "unavailable",
+      "source_id": "SYSTEMS",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": "external-readonly-source-login",
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": null,
+        "identity_reason": "HTTP 403; requested content unavailable",
+        "last_modified": null,
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": null
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "google-sheets-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:0b66ed9afa8f4060b2bc7171b6f142ce"
+      ],
+      "content_hash": "sha256:da4b1ce0a6833588f4a9bd24350c9f16c31426d439f92b3342b43bffec6667c2",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/7c4289cbe9a64eb6a7d41f39d3d4885c.bin",
+      "reason": "HTTP 403; requested content unavailable",
+      "requested_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+      "retrieval_status": "unavailable",
+      "source_id": "EVIDENCE",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": "external-readonly-source-login",
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": null,
+        "identity_reason": "HTTP 403; requested content unavailable",
+        "last_modified": null,
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": null
+        },
+        "version": null
+      }
+    },
+    {
+      "adapter": "google-sheets-read",
+      "attempt_ids": [
+        "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:a0d1cf44356c4434906bd68d79ef1830"
+      ],
+      "content_hash": "sha256:da4b1ce0a6833588f4a9bd24350c9f16c31426d439f92b3342b43bffec6667c2",
+      "date_suitability": "unresolved",
+      "identity_check": "unverified",
+      "local_reference": "sources/1df3fd54f3dc42ff9918b9dee51c43ab.bin",
+      "reason": "HTTP 403; requested content unavailable",
+      "requested_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+      "retrieval_status": "unavailable",
+      "source_id": "CALENDAR",
+      "version_metadata": {
+        "authenticated": false,
+        "credential_inventory": null,
+        "credential_ref": "external-readonly-source-login",
+        "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+        "etag": null,
+        "identity_reason": "HTTP 403; requested content unavailable",
+        "last_modified": null,
+        "returned_identity": {
+          "document_id": null,
+          "tabs": null,
+          "title": null
+        },
+        "version": null
+      }
+    }
+  ]
+}

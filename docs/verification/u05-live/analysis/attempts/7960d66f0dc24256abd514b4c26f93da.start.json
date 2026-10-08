@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "7960d66f0dc24256abd514b4c26f93da",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:96c24d9c7e7e45e5b6f725d45ac41214",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T14:52:49.240895Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "POLICY",
+    "started_at": "2026-10-08T14:52:49.240878Z",
+    "summary": "Read attempt for POLICY",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}

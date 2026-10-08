@@ -1,0 +1,72 @@
+{
+  "attempt": {
+    "adapter": "google-sheets-read",
+    "attempt_key": "7c4289cbe9a64eb6a7d41f39d3d4885c",
+    "content": "full",
+    "content_hash": "sha256:da4b1ce0a6833588f4a9bd24350c9f16c31426d439f92b3342b43bffec6667c2",
+    "content_type": "application/json; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://sheets.googleapis.com/v4/spreadsheets/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk?includeGridData=true",
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:0b66ed9afa8f4060b2bc7171b6f142ce",
+    "identity_check": "unverified",
+    "local_reference": "sources/7c4289cbe9a64eb6a7d41f39d3d4885c.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+    "outcome": "HTTP 403",
+    "record_type": "attempt",
+    "recoverable_failure": "HTTP 403; requested content unavailable",
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-08T14:52:49.787984Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "EVIDENCE",
+    "started_at": "2026-10-08T14:52:49.682815Z",
+    "summary": "Read attempt for EVIDENCE",
+    "version_metadata": {
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": "external-readonly-source-login",
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "HTTP 403; requested content unavailable",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:attempt:0b66ed9afa8f4060b2bc7171b6f142ce",
+    "content_hash": "sha256:da4b1ce0a6833588f4a9bd24350c9f16c31426d439f92b3342b43bffec6667c2",
+    "content_type": "application/json; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-41444f1f6cf24f5e86242651d707c66b:02:capture:1c5ba68d70044d2799fe12bd0c2cde43",
+    "local_reference": "sources/7c4289cbe9a64eb6a7d41f39d3d4885c.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://sheets.googleapis.com/v4/spreadsheets/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk?includeGridData=true"
+    },
+    "summary": "Retained representation for EVIDENCE"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "HTTP 403; requested content unavailable",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "EVIDENCE",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-41444f1f6cf24f5e86242651d707c66b",
+  "schema_version": "rci-attempt-journal/1"
+}
