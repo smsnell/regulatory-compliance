@@ -1,52 +1,10 @@
-GATE REVIEW — G1
+G1 has passed its required checks and I have reviewed the diff.
 
-Perform the G1 verification defined in
-TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md.
+Create the git commit for this passed gate review.
 
-This is a review-only checkpoint.
+Commit message:
 
-Do not begin the next implementation unit.
-Do not modify files unless I explicitly ask after reviewing your findings.
+G1: First gate review 
 
-Read:
-- the G1 definition;
-- the implementation units completed since the previous gate;
-- their referenced requirements and contracts;
-- the relevant tests, fixtures, verification reports, and current diff/state.
-
-Verify the gate independently. Do not assume that individual U-unit PASS
-reports imply the gate passes.
-
-For each gate criterion report:
-
-- criterion;
-- evidence inspected;
-- expected behavior;
-- observed behavior;
-- PASS / FAIL / UNCERTAIN.
-
-Also look for:
-- contradictions between completed units;
-- interfaces that are not actually frozen or consistently implemented;
-- tests that pass individually but fail to demonstrate the cross-unit invariant;
-- missing negative/adversarial cases required by the gate;
-- provenance, identity, state, authority, or failure-path issues that would
-  make later implementation unsafe.
-
-If a problem is found, identify:
-- severity;
-- affected files/components;
-- requirement/invariant affected;
-- earliest unit that should be corrected;
-- whether downstream completed work is affected.
-
-FINAL VERDICT:
-- G1 PASS — safe to continue
-- G1 FAIL — fixes required before continuing
-- G1 UNCERTAIN — specific evidence/verification still required
-
-Do not begin the next unit and do not commit.
-
----
-
-Based on G1 review's findings, make the necessary changes in U02 to fix findings 1-3. Keep the scope to only U02, do not implement further units. Repeat the G1 review after your changes.
+Do not make additional code changes before committing.
+After the commit, report the commit hash and confirm the working tree state.
