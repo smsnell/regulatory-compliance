@@ -1,0 +1,23 @@
+title = "regulatory-compliance secret guard"
+
+[extend]
+useDefault = true
+
+# No entropy threshold: captured third-party Google frontend keys also count.
+[[rules]]
+id = "rci-google-api-key"
+description = "Google API key in any retained content"
+regex = '''AIza[0-9A-Za-z_-]{35}'''
+
+[[rules]]
+id = "rci-private-key-header"
+description = "Private key material, including incomplete pastes"
+regex = '''-----BEGIN (?:[A-Z0-9]+ )?PRIVATE KEY-----'''
+
+# U04 attempt_key is a random local capture filename, not authentication.
+# Exempt only this exact field/value shape from the generic heuristic.
+[[rules]]
+id = "generic-api-key"
+[[rules.allowlists]]
+regexTarget = "match"
+regexes = ['''^attempt_key"\s*:\s*"[0-9a-f]{32}"$''']

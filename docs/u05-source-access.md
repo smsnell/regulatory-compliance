@@ -1,5 +1,10 @@
 # U05 source connection preflight
 
+> Security remediation (2026-10-08): original live bundles referenced below
+> are now in controlled storage outside Git. Offline tests use labeled
+> `tests/fixtures/sanitized/` derivatives. Links to retained material now open labeled sanitized derivatives.
+> Historical verification statements describe the originals; see [evidence access and verification](secret-safety.md).
+
 U05 supplies callable read adapters and a separate connection check. It does not
 produce snapshots or implement U06 normalization, scope discovery or later engines.
 The production supervisor's U03 skeleton still reports blocked until those units
@@ -119,9 +124,9 @@ is available. A successful read is unselected pending later-stage assessment.
 
 ## Original API access spike (2026-10-08; historical)
 
-Retained [machine report](verification/u05-live/analysis/source-access.json),
-[journals](verification/u05-live/analysis/attempts/) and
-[response bodies](verification/u05-live/sources/) are an access spike, not fixtures
+Retained [machine report](../tests/fixtures/sanitized/u05-errors/analysis/source-access.json),
+[journals](../tests/fixtures/sanitized/u05-errors/analysis/attempts/) and
+[response bodies](../tests/fixtures/sanitized/u05-errors/sources/) are an access spike, not fixtures
 or a production package. Every success claim below has a retained body/hash.
 
 | Route | Observed result | Identity/version and blocker | Next owner |
@@ -146,7 +151,7 @@ must be documented and authorized before use.
 
 ## Anonymous register handoff (2026-10-08)
 
-The [fresh report](verification/u05-anonymous-live/analysis/source-access.json)
+The [fresh report](../tests/fixtures/sanitized/u05/analysis/source-access.json)
 supersedes the original API spike for register access. Original failures remain
 preserved. All ten core routes were attempted; the run contains 22 distinct
 attempts, including register redirects, per-tab CSV reads and final identity reads.

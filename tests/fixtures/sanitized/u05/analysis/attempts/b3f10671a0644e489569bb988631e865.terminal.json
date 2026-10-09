@@ -1,0 +1,203 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "b3f10671a0644e489569bb988631e865",
+    "content": "extract",
+    "content_hash": "sha256:de70bc5a2393d8028dbaf9c5afc90e12ebcbbd1ab9b5d7b512bb0883bc6891b3",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk/edit",
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:71faaafa438c4bf88d9250231fd9c53b",
+    "identity_check": "verified",
+    "local_reference": "sources/b3f10671a0644e489569bb988631e865.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T15:43:42.543211Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "EVIDENCE",
+    "started_at": "2026-10-08T15:43:41.846074Z",
+    "summary": "Read attempt for EVIDENCE",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous spreadsheet identity and tab inventory verified",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": "19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+        "native_rows": {
+          "0": [
+            [
+              "record_id",
+              "system_id",
+              "record_type",
+              "reported_at",
+              "owner",
+              "status",
+              "evidence_ref",
+              "evidence_state",
+              "notes"
+            ],
+            [
+              "REC-001",
+              "AI-001",
+              "evidence",
+              "2026-08-20",
+              "Learner Operations",
+              "closed",
+              "notice-screen-v3",
+              "complete",
+              "Notice screenshot and release record agree"
+            ],
+            [
+              "REC-002",
+              "AI-002",
+              "evidence_gap",
+              "2026-08-23",
+              "Admissions",
+              "open",
+              "applicant-email-sample",
+              "missing",
+              "No evidence that recipients are told when generated text is used"
+            ],
+            [
+              "REC-003",
+              "AI-003",
+              "incident",
+              "2026-08-24",
+              "Communications",
+              "open",
+              "social-post-884",
+              "conflicting",
+              "Visible label exists but exported platform copy may have lost metadata"
+            ],
+            [
+              "REC-004",
+              "AI-004",
+              "incident",
+              "2026-08-18",
+              "Learning Experience",
+              "open",
+              "coach-onboarding-v2",
+              "complete",
+              "First interaction contains no AI notice"
+            ],
+            [
+              "REC-005",
+              "AI-005",
+              "evidence_gap",
+              "2026-08-25",
+              "Assessment Operations",
+              "open",
+              "provider-role-questionnaire",
+              "stale",
+              "Provider role questionnaire predates the current release"
+            ],
+            [
+              "REC-006",
+              "AI-005",
+              "evidence",
+              "2026-08-25",
+              "Assessment Operations",
+              "open",
+              "human-review-sop-v4",
+              "complete",
+              "Flag never makes the final assessment decision"
+            ],
+            [
+              "REC-007",
+              "AI-006",
+              "evidence",
+              "2026-08-14",
+              "People Operations",
+              "closed",
+              "internal-use-review",
+              "complete",
+              "Tool is restricted to staff workspace"
+            ],
+            [
+              "REC-008",
+              "AI-007",
+              "incident",
+              "2026-08-21",
+              "Marketing",
+              "open",
+              "avatar-page-capture",
+              "conflicting",
+              "Owner says a banner exists but the current capture shows none"
+            ],
+            [
+              "REC-009",
+              "AI-008",
+              "evidence",
+              "2026-08-19",
+              "Communications",
+              "open",
+              "localisation-export-test",
+              "partial",
+              "Visible label verified but machine-readable provenance not checked"
+            ],
+            [
+              "REC-010",
+              "AI-008",
+              "exception_request",
+              "2026-08-26",
+              "Communications",
+              "draft",
+              "exception-draft-008",
+              "missing",
+              "No Legal approval or expiry date recorded"
+            ]
+          ]
+        },
+        "revision": 8,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "Incident Evidence Register"
+          }
+        ],
+        "title": "Project B — Incident and Evidence Register"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 8
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:attempt:71faaafa438c4bf88d9250231fd9c53b",
+    "content_hash": "sha256:de70bc5a2393d8028dbaf9c5afc90e12ebcbbd1ab9b5d7b512bb0883bc6891b3",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-c7a557fb88fa45b3a27b016e264f51fd:02:capture:9eb518e6f89f40e28202db95fa8fee32",
+    "local_reference": "sources/b3f10671a0644e489569bb988631e865.bin",
+    "record_type": "capture",
+    "representation": "extract",
+    "representation_metadata": {
+      "locator": "sources/b3f10671a0644e489569bb988631e865.bin",
+      "method": "Test-only API key/frontend token redaction; not an untouched HTTP response",
+      "original_sha256": "sha256:1087414a2d6e27abdb47b2cdf68fa7ff3d064cc79bdfea0b05baaba749cad74c",
+      "permission": "Repository security remediation for offline tests"
+    },
+    "summary": "Sanitized test derivative; see fixture manifest"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd",
+  "schema_version": "rci-attempt-journal/1"
+}

@@ -1,0 +1,217 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "545e9a18bd94451c8d7b1dd35016e0c5",
+    "content": "extract",
+    "content_hash": "sha256:ff2311cac0600a9d39aafebdabb5c426cec35689b10eea27943e387744ddc9f1",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU/edit",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:53b647bc66c3487bb02506aa7484980f",
+    "identity_check": "verified",
+    "local_reference": "sources/545e9a18bd94451c8d7b1dd35016e0c5.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-08T17:55:26.028639Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "SYSTEMS",
+    "started_at": "2026-10-08T17:55:25.756114Z",
+    "summary": "Read attempt for SYSTEMS",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous spreadsheet identity and tab inventory verified",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": "10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+        "native_rows": {
+          "0": [
+            [
+              "system_id",
+              "system_name",
+              "use_case",
+              "owner",
+              "provider_role",
+              "deployer_role",
+              "exposed_group",
+              "output_type",
+              "current_notice",
+              "human_review",
+              "evidence_status",
+              "evidence_updated_at",
+              "record_version"
+            ],
+            [
+              "AI-001",
+              "Learner Support Chat",
+              "Answers routine learner questions",
+              "Learner Operations",
+              "no",
+              "yes",
+              "learners",
+              "direct_interaction",
+              "yes",
+              "staff escalation",
+              "complete",
+              "2026-08-20",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-002",
+              "Admissions Draft Assistant",
+              "Drafts applicant email replies",
+              "Admissions",
+              "no",
+              "yes",
+              "applicants",
+              "text",
+              "unknown",
+              "advisor approval",
+              "partial",
+              "2026-07-01",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-003",
+              "Campaign Image Studio",
+              "Creates public campaign images",
+              "Communications",
+              "no",
+              "yes",
+              "public",
+              "synthetic_image",
+              "visible_label",
+              "communications approval",
+              "complete",
+              "2026-08-22",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-004",
+              "Pronunciation Coach",
+              "Provides spoken practice feedback",
+              "Learning Experience",
+              "no",
+              "yes",
+              "learners",
+              "direct_interaction",
+              "no",
+              "instructor escalation",
+              "complete",
+              "2026-08-18",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-005",
+              "Remote Proctor Signal",
+              "Flags assessment sessions for review",
+              "Assessment Operations",
+              "unknown",
+              "yes",
+              "learners",
+              "classification",
+              "yes",
+              "human adjudication",
+              "stale",
+              "2026-04-15",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-006",
+              "Staff Summary Assistant",
+              "Summarizes internal meeting notes",
+              "People Operations",
+              "no",
+              "yes",
+              "staff",
+              "text",
+              "not_applicable",
+              "author review",
+              "complete",
+              "2026-08-14",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-007",
+              "Website Guide Avatar",
+              "Answers public programme questions",
+              "Marketing",
+              "no",
+              "yes",
+              "public",
+              "direct_interaction",
+              "no",
+              "marketing escalation",
+              "conflicting",
+              "2026-08-21",
+              "register-2026-08-26"
+            ],
+            [
+              "AI-008",
+              "Video Localisation Tool",
+              "Generates dubbed public programme videos",
+              "Communications",
+              "no",
+              "yes",
+              "public",
+              "synthetic_audio_video",
+              "visible_label",
+              "communications approval",
+              "partial",
+              "2026-08-19",
+              "register-2026-08-26"
+            ]
+          ]
+        },
+        "revision": 8,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "AI System Register"
+          }
+        ],
+        "title": "Project B — AI System Register"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 8
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:attempt:53b647bc66c3487bb02506aa7484980f",
+    "content_hash": "sha256:ff2311cac0600a9d39aafebdabb5c426cec35689b10eea27943e387744ddc9f1",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-6bec153b2d1343a5a43cc2f333798c4d:02:capture:bcd6e74bf83b4c38ae82a8df3010a16e",
+    "local_reference": "sources/545e9a18bd94451c8d7b1dd35016e0c5.bin",
+    "record_type": "capture",
+    "representation": "extract",
+    "representation_metadata": {
+      "locator": "sources/545e9a18bd94451c8d7b1dd35016e0c5.bin",
+      "method": "Test-only API key/frontend token redaction; not an untouched HTTP response",
+      "original_sha256": "sha256:0babedb815c1a1267878a275315c1bc196c798e444f9b32918b9fc1be10750f2",
+      "permission": "Repository security remediation for offline tests"
+    },
+    "summary": "Sanitized test derivative; see fixture manifest"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d",
+  "schema_version": "rci-attempt-journal/1"
+}

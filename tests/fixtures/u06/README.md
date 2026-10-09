@@ -1,9 +1,9 @@
 # U06 source fixtures and acceptance oracle
 
 The tests use the explicitly retained U05 anonymous source observations in
-`docs/verification/u05-anonymous-live/`, including their immutable journals and
-response bodies. No new live reads or production local-file fallback are implied.
-The original `docs/verification/u05-live/` API errors are negative fixtures.
+`tests/fixtures/sanitized/u05/`, with explicitly derivative journals and
+redacted response bodies (see ../sanitized/manifest.json). No new live reads or production local-file fallback are implied.
+The original `tests/fixtures/sanitized/u05-errors/` API errors are negative fixtures.
 
 Actual captured registers: SYSTEMS has 13 headers / 8 rows, EVIDENCE 9 / 10,
 CALENDAR 8 / 8. Each has one tab, gid 0. Independently verified U05 native HTML
@@ -26,6 +26,6 @@ Negative cases mutate individual captured fields/layouts and require visible
 diagnostics, unchanged raw cells, and unresolved/excluded normalized rows rather
 than invented values. Both duplicate-identity rows remain unresolved. Missing
 identity never receives a row-number identity. Unknown aliases are rejected for
-every required header. The replay integration supplies actual captured HTTP
+every required header. The replay integration supplies sanitized captured HTTP
 bodies through HTTPX MockTransport into U05's real adapter and a fresh U04 store;
 it performs no network calls and binds new-run evidence through the normalizer.

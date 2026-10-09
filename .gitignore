@@ -1,0 +1,17 @@
+# Raw HTTP evidence belongs in controlled storage outside this repository.
+/docs/verification/u05-anonymous-live/
+/docs/verification/u05-live/
+/u07-verification/
+**/.staging/
+!tests/fixtures/sanitized/u07/.staging/
+.evidence/
+.env
+.env.*
+!.env.example
+.aws/
+.ssh/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+:memory:.ses

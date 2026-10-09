@@ -20,7 +20,7 @@ from rci.runtime import Providers
 from rci.snapshots import accept_package, read_chain, validate_snapshot
 
 ROOT = Path(__file__).resolve().parents[2]
-CAPTURES = ROOT / 'docs/verification/u05-anonymous-live'
+CAPTURES = ROOT / 'tests/fixtures/sanitized/u05'
 REPORT = parse_json((CAPTURES / 'analysis/source-access.json').read_bytes())
 OLD = EvidenceStore(CAPTURES, REPORT['run_id']).inventory()
 RESPONSES = {e['attempt']['effective_locator']:e for e in OLD}
@@ -289,7 +289,7 @@ def test_new_schema_format_and_frozen_fingerprints():
 
 @pytest.fixture
 def retained_slice(tmp_path):
-    original = ROOT / 'u07-verification/.staging/run-6bec153b2d1343a5a43cc2f333798c4d'
+    original = ROOT / 'tests/fixtures/sanitized/u07/.staging/run-6bec153b2d1343a5a43cc2f333798c4d'
     root = tmp_path / 'retained'
     shutil.copytree(original, root)
     second = parse_json((root / SNAPSHOT_PATHS[1]).read_bytes())

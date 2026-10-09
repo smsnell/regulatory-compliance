@@ -18,7 +18,7 @@ from rci.source_manifest import disclosed_manifest
 
 
 ROOT = Path(__file__).resolve().parents[2]
-CAPTURES = ROOT / 'docs/verification/u05-anonymous-live'
+CAPTURES = ROOT / 'tests/fixtures/sanitized/u05'
 REPORT = json.loads((CAPTURES / 'analysis/source-access.json').read_bytes())
 REGISTERS = REPORT['register_readiness']['registers']
 
@@ -337,7 +337,7 @@ def test_read_adapter_capture_normalizer_with_actual_response_replay(tmp_path):
 
 
 def test_unavailable_capture_yields_visible_issues_without_fallback():
-    root = ROOT / 'docs/verification/u05-live'
+    root = ROOT / 'tests/fixtures/sanitized/u05-errors'
     report = json.loads((root / 'analysis/source-access.json').read_bytes())
     result = normalize_registers(EvidenceStore(root, report['run_id']))
     assert result['status'] == 'partial'

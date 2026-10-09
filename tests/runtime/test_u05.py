@@ -235,7 +235,7 @@ def test_matching_title_alone_does_not_verify_landing_page(tmp_path):
 def test_register_handoff_rejects_retained_unregistered_callers():
     from pathlib import Path
     from rci.adapters.readiness import register_readiness
-    root = Path(__file__).resolve().parents[2]/'docs/verification/u05-live'
+    root = Path(__file__).resolve().parents[2]/'tests/fixtures/sanitized/u05-errors'
     report = json.loads((root/'analysis/source-access.json').read_bytes())
     result = register_readiness(EvidenceStore(root, report['run_id']))
     assert result['status'] == 'blocked'
