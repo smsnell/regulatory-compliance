@@ -1,13 +1,15 @@
 {
   "cli_version": "0.11.4",
   "checkpoint_id": "01M4FDZZYKBKGNHM6MV7JRMSJ7",
+  "session_id": "01a11ec0-0138-7bf1-9b1d-46dd66b41b99",
   "strategy": "manual-commit",
+  "created_at": "2026-10-09T04:16:05.278048107Z",
   "branch": "main",
-  "checkpoints_count": 4,
+  "checkpoints_count": 1,
+  "save_step_count": 1,
   "files_touched": [
     ".gitignore",
     ".gitleaks.toml",
-    "SECURITY-NOTES.md",
     "docs/secret-safety.md",
     "docs/u05-source-access.md",
     "docs/verification/g2.md",
@@ -525,28 +527,51 @@
     "u07-verification/.staging/run-6bec153b2d1343a5a43cc2f333798c4d/sources/f719dc4e0bf647ea983f08f6bf86afde.bin",
     "u07-verification/.writer.lock"
   ],
-  "sessions": [
+  "agent": "Codex",
+  "model": "gpt-6-luna",
+  "turn_id": "8db4d27b3eab",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 204222,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 5310208,
+    "output_tokens": 27480,
+    "api_call_count": 68,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-09T04:16:05.218661606Z",
+    "agent_lines": 188308,
+    "agent_removed": 185774,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 188308,
+    "total_lines_changed": 374082,
+    "agent_percentage": 100,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
     {
-      "metadata": "/0/metadata.json",
-      "transcript": "/0/full.jsonl",
-      "compact_transcript": "/0/transcript.jsonl",
-      "content_hash": "/0/content_hash.txt",
-      "prompt": "/0/prompt.txt"
+      "checkpoint_number": 1,
+      "user_lines_added": 157,
+      "user_lines_removed": 0,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        ":memory:.ses": 2,
+        "SECURITY-NOTES.md": 155
+      }
     },
     {
-      "metadata": "/1/metadata.json",
-      "transcript": "/1/full.jsonl",
-      "compact_transcript": "/1/transcript.jsonl",
-      "content_hash": "/1/content_hash.txt",
-      "prompt": "/1/prompt.txt"
+      "checkpoint_number": 2,
+      "user_lines_added": 0,
+      "user_lines_removed": 0,
+      "agent_lines_added": 188493,
+      "agent_lines_removed": 185774
     }
-  ],
-  "token_usage": {
-    "input_tokens": 920054,
-    "cache_creation_tokens": 0,
-    "cache_read_tokens": 12230400,
-    "output_tokens": 71814,
-    "api_call_count": 136,
-    "subagent_tokens_complete": true
-  }
+  ]
 }

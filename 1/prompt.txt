@@ -1,0 +1,1 @@
+Implement the fixes recommended in SECURITY-NOTES.md and create a minimal maintainable pre-commit guardrail for this project, regulatory-compliance, that prevents future secret leaks.
