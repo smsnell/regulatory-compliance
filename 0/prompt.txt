@@ -1,0 +1,32 @@
+U07 and G2 have passed their required checks and I have reviewed the diff.
+
+Create the git commit for this completed implementation unit.
+
+Commit message:
+
+U07 + G2: Stage 1 and 2 vertical slice w/ Gate 2 Pass
+
+Do not make additional code changes before committing.
+After the commit, report the commit hash and confirm the working tree state.
+
+---
+
+I got a warning from GitHub about Google API secrets being committed. Do we need this secret with anonymous access?
+
+---
+
+What do I need to do to fix this secrets issue?
+
+---
+
+Investigate the Google API keys flagged by GitHub in docs/verification/u05-anonymous-live/sources/.
+
+Determine whether the .bin files are raw downloaded Google document or website responses, rather than application-generated credentials. Trace how they were created, determine their original source URLs and content types, and count distinct detected keys without displaying their values.
+
+Check whether our implementation uses any of those keys, or whether they are merely embedded in third-party content. Determine whether these files are required as verification evidence and recommend how to sanitize or exclude them without breaking U05 verification or later work.
+
+Keep this strictly read-only. Do not print keys, make authenticated API requests, modify commits, or rewrite history. Report findings and the safest next steps.
+
+---
+
+Document this for a future pass. Store it as SECURITY-NOTES.md
