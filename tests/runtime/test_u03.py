@@ -12,7 +12,7 @@ import pytest
 from jsonschema import Draft202012Validator
 from rci.contracts import ContractError, json_bytes, parse_json, sha256_bytes
 from rci.runtime import (REPO, SKILL, host_command, invoke_host, preflight,
-                         production, validate_config, verify_final, writer_lock)
+                         production_skeleton as production, validate_config, verify_final, writer_lock)
 from u03_harness import FakeProviders, prepare, verify_exchange
 
 CONFIG = parse_json((REPO/'config/review.example.json').read_bytes())

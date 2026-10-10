@@ -31,6 +31,34 @@ Scope is an exact captured string, not a token to expand to other audiences.
 | `human_review_path` | Captured description of staff verification before delivery in that scope; the description alone does not establish compliance with a rule. |
 | `exception_claim` | A retained claimed exception, unresolved until an authorized Legal decision is verified. |
 
+The owner approved a narrow U10 gap-resolution amendment on 2026-10-10.
+`exception_claim` remains text/null. An explicit assessment may record the exact
+captured text `No exception claimed` with `exception_disposition: none-claimed`.
+With the usual system, scope, owner and review-date evidence, this establishes
+absence of a claimed exception only. A textual claim without this disposition,
+an unknown, or a competing claim remains unresolved/conflicting; source approval
+language never authenticates Legal authorization. This branch grants no exception.
+
+The same amendment permits resolving a U10 report-review gap after an explicit
+captured completeness declaration enumerates every assessed scope and all nine
+predicates have supported assertions from that report in each scope. Preserve
+the report, declaration candidates, evidence and resolved scopes in accounting.
+Incomplete declarations, unknowns, conflicting assertions or unassessed scopes
+retain the gap. Original acquisition diagnostics and snapshots remain immutable.
+
+The owner subsequently approved a bounded aggregate-status amendment on the
+same date: fully supported report declarations may resolve only the exact U08
+pending report-inspection diagnostics. U09's verified identity/version/relevance
+assessments may resolve the exact pending-inspection diagnostics for AMEND and
+CONSOLIDATED. U10 records every resolved original diagnostic ID and its report
+or legal assessment basis. All other diagnostics and any authority blocker,
+technical failure, factual gap or conflict continue to determine the aggregate.
+Stage 04 onward may become complete while the retained Stage 02/03 statuses stay
+partial. Stage 07 and historical review validation independently reconstruct this
+exception from the first four snapshots; a success flag cannot establish it.
+The approved scope and acceptance evidence are tracked in
+[the status amendment](../../docs/verification/report-resolution-proposal.md).
+
 False means evidence affirmatively supports the absence of the named boolean
 property; null means unknown. These meanings require inspection of the captured
 paragraph, including negation and qualifiers. Predicate names do not create law.

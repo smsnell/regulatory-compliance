@@ -37,7 +37,7 @@ def submit(root, proposal_path):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('operation',choices=['submit','submit-report','submit-authority','submit-reconciliation','block'])
+    parser.add_argument('operation',choices=['submit','submit-report','submit-authority','submit-reconciliation','submit-impact','block'])
     parser.add_argument('--root',type=Path,required=True)
     parser.add_argument('--proposal',type=Path)
     args=parser.parse_args()
@@ -53,7 +53,12 @@ def main():
                 stream.write(json_bytes(result))
         else:
             require(args.proposal is not None,'proposal required for submit')
-            if args.operation == 'submit-reconciliation':
+            if args.operation == 'submit-impact':
+                require(os.environ.get('RCI_CHILD_RUN') == root.name, 'stage requires active host run')
+                from rci.evidence import EvidenceStore
+                from rci.impacts import submit_impact
+                result = submit_impact(EvidenceStore(root, root.name), args.proposal.read_bytes())
+            elif args.operation == 'submit-reconciliation':
                 require(os.environ.get('RCI_CHILD_RUN') == root.name, 'stage requires active host run')
                 from rci.evidence import EvidenceStore
                 from rci.reconcile import submit_reconciliation

@@ -2,6 +2,7 @@
 
 These validate structure and provenance, not legal meaning or human authorization.
 """
+from collections import OrderedDict
 from dataclasses import dataclass
 from enum import StrEnum
 from datetime import date, datetime
@@ -212,20 +213,47 @@ def _datetime_format(value):
 
 
 
+# Cache only pure structural checks on exact JSON values. File hashes, graph links,
+# source quotations and interpretation provenance are still checked on every call.
+_SCHEMA_SUCCESS = OrderedDict()
+_SCHEMA_VALIDATORS = {}
+
+
+def _plain_json(value):
+    if type(value) is dict:
+        return all(type(k) is str and _plain_json(v) for k, v in value.items())
+    if type(value) is list:
+        return all(_plain_json(v) for v in value)
+    return type(value) in (str, int, float, bool, type(None))
+
+
 def validate_schema(value: dict, definition: str = "snapshot") -> None:
     require_finite_numbers(value)
     require(definition in _SCHEMA["$defs"], "unknown contract definition")
-    schema = {**_SCHEMA, "$ref": "#/$defs/" + definition}
-    errors = sorted(Draft202012Validator(schema, format_checker=_FORMATS).iter_errors(value),
-                    key=lambda e: (str(list(e.path)), e.message))
+    raw_public = None
+    if definition == "snapshot":
+        raw_public = _PUBLIC_FILE.read_bytes()
+        require(sha256_bytes(raw_public) == PUBLIC_SCHEMA_HASH, "supplied schema changed")
+    cacheable = _plain_json(value)
+    key = (definition, json.dumps(value, ensure_ascii=False, separators=(",", ":"), allow_nan=False)) if cacheable else None
+    if key is not None and key in _SCHEMA_SUCCESS:
+        _SCHEMA_SUCCESS.move_to_end(key)
+        return
+    validator = _SCHEMA_VALIDATORS.get(definition)
+    if validator is None:
+        validator = Draft202012Validator({**_SCHEMA, "$ref": "#/$defs/" + definition}, format_checker=_FORMATS)
+        _SCHEMA_VALIDATORS[definition] = validator
+    errors = sorted(validator.iter_errors(value), key=lambda e: (str(list(e.path)), e.message))
     if errors:
         error = errors[0]
         raise ContractError(f"{definition} {list(error.path)}: {error.message}")
-    if definition == "snapshot":
-        raw = _PUBLIC_FILE.read_bytes()
-        require(sha256_bytes(raw) == PUBLIC_SCHEMA_HASH, "supplied schema changed")
-        errors = list(Draft202012Validator(parse_json(raw), format_checker=_FORMATS).iter_errors(value))
+    if raw_public is not None:
+        errors = list(Draft202012Validator(parse_json(raw_public), format_checker=_FORMATS).iter_errors(value))
         require(not errors, "public snapshot schema: " + (errors[0].message if errors else ""))
+    if key is not None:
+        _SCHEMA_SUCCESS[key] = True
+        if len(_SCHEMA_SUCCESS) > 128:
+            _SCHEMA_SUCCESS.popitem(last=False)
 
 
 def reduce_states(states) -> RunState:

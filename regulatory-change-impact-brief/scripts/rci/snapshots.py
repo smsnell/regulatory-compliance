@@ -215,9 +215,13 @@ def _reviewed_request(feedback, root, current_run):
         chain.append(prior); previous_raw = raw
     require(len({s['snapshot_id'] for s in chain}) == 7, 'duplicate reviewed snapshot identity')
     final = chain[-1]
+    aggregate = reduce_states(s['status'] for s in chain)
+    if aggregate != final['status']:
+        from .reconcile import resolved_run_status
+        aggregate = resolved_run_status(archive,chain)
     require(final['state']['publication_status'] == 'validated' and
             final['status'] in {'complete','partial'} and
-            reduce_states(s['status'] for s in chain) == final['status'], 'reviewed draft is not validated')
+            aggregate == final['status'], 'reviewed draft is not validated')
     requests = [r for r in stage_records(chain[5]) if r['record_type'] == 'review-request' and
                 r['request_id'] == feedback['claimed_request_id']]
     bindings = [b for b in final['state']['review_bindings'] if b['request_id'] == feedback['claimed_request_id']]
@@ -519,7 +523,11 @@ def _validate_snapshot(snapshot: dict, *, root: Path, upstream: list[dict],
                                     ('unresolved_items', {'unresolved', 'conflicting'})]:
             require(all(r['state'] in allowed for r in snapshot['state'][collection]), 'impact collection/state mismatch')
     if seq == 7:
-        require(snapshot['status'] == reduce_states([s['status'] for s in upstream] + [snapshot['status']]),
+        aggregate = reduce_states([s['status'] for s in upstream] + [snapshot['status']])
+        if aggregate != snapshot['status']:
+            from .reconcile import resolved_run_status
+            aggregate = reduce_states([resolved_run_status(root,upstream),snapshot['status']])
+        require(snapshot['status'] == aggregate,
                 'publication status loses an upstream run outcome')
         state = snapshot['state']
         paths = [a['path'] for a in state['artifacts']]

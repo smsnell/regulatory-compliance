@@ -83,7 +83,7 @@ def preflight(config):
     require(host is not None, 'Codex host unavailable')
     try:
         version = subprocess.run([host,'--version'], capture_output=True, text=True, timeout=15)
-        require(version.returncode == 0 and version.stdout.strip() == 'codex-cli 0.161.0',
+        require(version.returncode == 0 and version.stdout.strip() in {'codex-cli 0.161.0', 'codex-cli 0.162.1'},
                 'unsupported host version; review capability profile')
         auth = subprocess.run([host,'login','status'], capture_output=True, timeout=15)
         require(auth.returncode == 0, 'host authentication unavailable')
@@ -187,7 +187,7 @@ def visible_usage(root, *, analysis_directory='analysis'):
     return usage or None
 
 
-def production(config_path):
+def production_skeleton(config_path):
     config = validate_config(parse_json(config_path.read_bytes()))
     root = output_directory(config['output_root'], config_path)
     host,version=preflight(config)
@@ -228,3 +228,9 @@ def production(config_path):
         outcome['visible_usage']=visible_usage(candidate) if (candidate/'analysis/host-events.jsonl').exists() else None
         (candidate/'analysis/outcome.json').write_bytes(json_bytes(outcome))
         return outcome
+
+
+def production(config_path, **options):
+    """Complete public workflow; the U03 skeleton remains a historical harness."""
+    from .pipeline import run
+    return run(config_path, **options)

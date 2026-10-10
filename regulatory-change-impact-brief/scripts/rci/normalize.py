@@ -7,6 +7,7 @@ Unknown or invalid meanings remain raw with diagnostics, never guessed values.
 from collections import Counter
 from copy import deepcopy
 from datetime import date
+from functools import lru_cache
 from pathlib import Path
 import re
 
@@ -23,12 +24,18 @@ DICTIONARY_PATH = REFERENCES / 'field-dictionary.json'
 VALUES_SCHEMA_PATH = REFERENCES / 'schemas/normalized-values.schema.json'
 
 
+@lru_cache(maxsize=16)
+def _checked_validator(raw):
+    schema = parse_json(raw)
+    Draft202012Validator.check_schema(schema)
+    return Draft202012Validator(schema, format_checker=FormatChecker())
+
+
 def load_dictionary():
     """Only reviewed exact headers are supported; this version declares no aliases."""
     dictionary = parse_json(DICTIONARY_PATH.read_bytes())
-    schema = parse_json((REFERENCES / 'schemas/field-dictionary.schema.json').read_bytes())
-    Draft202012Validator.check_schema(schema)
-    require(Draft202012Validator(schema).is_valid(dictionary), 'invalid dictionary schema')
+    validator = _checked_validator((REFERENCES / 'schemas/field-dictionary.schema.json').read_bytes())
+    require(validator.is_valid(dictionary), 'invalid dictionary schema')
     require(dictionary['schema_version'] == 'rci-field-dictionary/1', 'unknown dictionary version')
     require(set(dictionary['registers']) == {'SYSTEMS', 'EVIDENCE', 'CALENDAR'}, 'invalid register dictionary')
     for spec in dictionary['registers'].values():
@@ -46,9 +53,8 @@ def load_dictionary():
 
 def validate_values(value):
     """Supplement the frozen normalized-row values object; never alter G1."""
-    schema = parse_json(VALUES_SCHEMA_PATH.read_bytes())
-    Draft202012Validator.check_schema(schema)
-    errors = list(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(value))
+    validator = _checked_validator(VALUES_SCHEMA_PATH.read_bytes())
+    errors = list(validator.iter_errors(value))
     require(not errors, 'invalid normalized values: ' + (errors[0].message if errors else ''))
 
 

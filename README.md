@@ -25,3 +25,18 @@ Create the Skill, implementation and outputs described in the formal assignment.
 - Use an Agent Skills-capable coding environment. Choose and document your implementation runtime and dependencies; no runtime or install command is supplied here.
 - Follow the [shared course guide for session capture](https://classroom.google.com/c/ODcyMjA4NTkwNDk2/m/ODc0NzI2NzQzMzQ2/details) and verify capture is active before implementation. Keep credentials out of the repository.
 - Meet the [stakeholder](https://work-sim.catalyte.ai/s/project-b-regulatory-compliance) to understand the work and relevant business sources. Read those online sources through their intended access route; an unavailable source is not permission to substitute repository data.
+
+## Implemented workflow
+
+The seven-stage draft workflow is in `regulatory-change-impact-brief/`. Start with
+[the operating guide](docs/operating-guide.md) for pinned setup, Codex/source access,
+authorized scope, authenticated feedback, output statuses and fresh recovery.
+
+```sh
+python3 regulatory-change-impact-brief/scripts/run.py --config config/review.json
+```
+
+Every production invocation performs fresh source attempts. The generated register,
+brief and tentative calendar are drafts for human review. Verification fixtures
+are explicitly synthetic. [Canonical evaluations](docs/evaluations.md) explain
+how to reproduce implementation checks; U20 remains an independent final audit.

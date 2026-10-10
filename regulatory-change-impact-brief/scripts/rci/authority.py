@@ -194,7 +194,7 @@ def _assessment(candidate, chain):
 def evaluate(root, request_bytes, response_bytes):
     chain = read_chain(root, count=2)
     require(isinstance(parse_json(request_bytes), dict) and isinstance(parse_json(response_bytes), dict), 'exchange must be objects')
-    result = validate_interpretation(request_bytes, response_bytes, root=root, run_id=root.name,
+    result = validate_interpretation(request_bytes, response_bytes, root=root, run_id=chain[0]['run_id'],
         stage='authority-and-timing', upstream=chain)
     problems = prerequisites(chain)
     shared_failure = bool(problems)

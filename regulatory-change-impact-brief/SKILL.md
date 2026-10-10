@@ -6,13 +6,19 @@ compatibility: Python 3.12+, pinned dependencies and authenticated Codex CLI. Su
 
 # Regulatory change impact brief
 
-The U03 loader, U08 report branch and U09 authority branch provide bounded host
-exchanges. Authority analysis ends at Stage 03; final outputs require later units.
+The supervisor performs fresh source acquisition, invokes bounded interpretation
+branches, and validates seven snapshots and three draft artifacts. It owns all
+publication, history and fresh recovery operations. Each host call completes only
+the supplied interpretation branch.
 
 When the supervisor supplies a U10 reconciliation packet and
 `submit-reconciliation` command, follow [factual and policy reconciliation](references/reconciliation.md).
 Inspect all scoped facts against their captures, retain each contradictory value,
-and submit once. Python writes Stage 04; stop before impact analysis.
+and submit once. The supervisor writes Stage 04 and starts the next branch.
+
+When supplied `submit-impact`, follow [scoped impact interpretation](references/impacts.md).
+Bind the established rule conditions to the frozen scoped predicates, retain unknowns,
+and submit once. The supervisor writes Stage 05, proposals, draft outputs and validation.
 
 The operator starts the workflow with:
 
@@ -59,5 +65,8 @@ Only write proposal/response analysis files in this isolated workspace. Leave
 captured sources, snapshots, request, loader and helper bytes immutable.
 The supervisor independently revalidates the exchange. A host exit of zero
 never establishes package completion. Production exit meanings are 0 complete,
-2 partial, 3 blocked, 1 failed. U03 has no current-output promotion or recovery;
-failed candidates stay available for inspection and a retry gets a fresh run.
+2 partial, 3 blocked, 1 failed. Inspect the reported outcome and exact current files.
+Failed candidates remain available; recovery requires a fresh invocation with new
+source attempts. See [operating instructions](references/operations.md),
+[review protocol](references/review-protocol.md), and
+[history and recovery](references/history-recovery.md).

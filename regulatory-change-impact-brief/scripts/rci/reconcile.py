@@ -13,6 +13,7 @@ from uuid import uuid4
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from .validation_cache import disk_verified
 from .adapters.reports import text_representation
 from .contracts import (ASSIGNED_REVIEW_DATE, ContractError, SNAPSHOT_PATHS, json_bytes,
     package_path, parse_json, reduce_states, require, sha256_bytes, validate_interpretation,
@@ -30,6 +31,7 @@ PREDICATES = ('notice_present', 'notice_before_first_interaction',
     'machine_readable_provenance', 'provider_role', 'deployer_role', 'output_scope',
     'exposed_group', 'human_review_path', 'exception_claim')
 REGISTERS = ('SYSTEMS', 'EVIDENCE', 'CALENDAR')
+NO_EXCEPTION_CLAIM = 'No exception claimed'
 POLICY_BOUNDARY = dict(schema_version='rci-u10-policy-extracts/1',
     value={'boundary':'Captured before Stage 02 freeze; internal policy meaning and activation require U10 assessment'})
 
@@ -148,7 +150,7 @@ def _assessment(candidate, chain):
     quote = descriptor['quote']
     capture = index[evidence['capture_id']]; attempt = index[capture['attempt_id']]
     require(descriptor['identity_quote'] in quote, 'identity support absent from assessment quote')
-    if descriptor['kind'] == 'fact':
+    if descriptor['kind'] in {'fact', 'report-review'}:
         require(candidate['basis_type'] == 'factual' and len(candidate['system_ids']) == 1,
                 'factual assessment requires one system')
         system, = candidate['system_ids']
@@ -160,6 +162,15 @@ def _assessment(candidate, chain):
                         descriptor['evidence_id'] in r['evidence_ids'] and r['owner'] is not None}
         require(descriptor['owner'] is None or descriptor['owner'] in known_owners or descriptor['owner'] in quote,
                 'claimed factual owner lacks captured support')
+        if descriptor['kind'] == 'report-review':
+            require(candidate['uncertainty'] is None, 'uncertain report completeness remains unresolved')
+            require(descriptor['completeness_quote'] in quote and
+                    all(scope in descriptor['completeness_quote'] for scope in descriptor['scopes']),
+                    'report completeness lacks quoted exact scopes')
+            require(descriptor['review_date_quote'] in quote and
+                    ASSIGNED_REVIEW_DATE in descriptor['review_date_quote'],
+                    'report completeness lacks assigned-review-date support')
+            return descriptor, attempt
         require(descriptor['value_quote'] in quote and descriptor['scope'] in quote,
                 'factual value/scope lacks quoted support')
         require(descriptor['observed_on'] is None or descriptor['observed_on'] in quote,
@@ -176,6 +187,11 @@ def _assessment(candidate, chain):
         require(descriptor['predicate'] in bool_predicates or descriptor['value'] is None or
                 isinstance(descriptor['value'], str) and descriptor['value'].strip(),
                 'descriptive predicate requires nonempty text or unknown')
+        if 'exception_disposition' in descriptor:
+            require(descriptor['predicate'] == 'exception_claim' and
+                    descriptor['value'] == descriptor['value_quote'] == NO_EXCEPTION_CLAIM and
+                    candidate['uncertainty'] is None,
+                    'no-claim disposition requires the exact quoted textual absence assertion')
         if descriptor['predicate'] == 'machine_readable_provenance':
             require(descriptor['observation_kind'] == 'export-test', 'provenance requires export-test support; visible label is insufficient')
         if descriptor['predicate'] == 'notice_before_first_interaction':
@@ -268,6 +284,148 @@ def _submission(store, chain):
     require(raws['request'] == _read(store.root, 'analysis/reconciliation/request.json'), 'another reconciliation packet')
     result, assessments, reviews = _evaluate(store, raws['request'], raws['response'], chain)
     return pointers, result, assessments, reviews
+
+
+def _report_resolved(report, declarations, assessments, reviews, facts):
+    """A declaration binds completeness; own-report facts establish its coverage.
+
+    Original capture diagnostics remain immutable. A separate, narrowly guarded
+    ledger determines whether their pending inspection has been completed.
+    """
+    if not declarations or not report['evidence_ids']:
+        return False
+    if any(not d['complete'] for _,d in declarations):
+        return False
+    scopes = set(declarations[0][1]['scopes'])
+    if any(set(d['scopes']) != scopes for _,d in declarations):
+        return False
+    evidence = set(report['evidence_ids'])
+    system = report['system_id']
+    own = [d for _,c,d,_ in assessments if d['kind']=='fact' and
+        c['system_ids']==[system] and d['evidence_id'] in evidence]
+    # An assessment outside the declared inventory contradicts completeness.
+    if not own or any(d['scope'] not in scopes for d in own):
+        return False
+    if any(r['disposition']=='unresolved' and
+            evidence.intersection(c['evidence_id'] for c in r['candidate'].get('citations',[]))
+            for r in reviews):
+        return False
+    for scope in scopes:
+        for predicate in PREDICATES:
+            if not any(d['scope']==scope and d['predicate']==predicate for d in own):
+                return False
+            matching = [f for f in facts if f['system_id']==system and f['predicate']==predicate and
+                f['value'] is not None and f['value'].get('scope')==scope]
+            if len(matching)!=1 or matching[0]['state']!='supported':
+                return False
+            assertions = [a for a in matching[0]['value']['assertions'] if evidence.intersection(a['evidence_ids'])]
+            if not assertions or any(not a['usable'] or a['value'] is None for a in assertions):
+                return False
+    return True
+
+
+def _resolved_report_diagnostics(second, reports):
+    """Recognize only the adapter's exact pending-report-inspection cases."""
+    attempts = {a['id']:a for a in second['state']['attempts']}
+    resolved = set()
+    for entry in reports:
+        report = entry['report']
+        if entry['gap_id'] is not None or 'resolution' not in entry or not report['authorized']:
+            continue
+        reads = [attempts[rid] for rid in report['attempt_ids']]
+        if not reads or not report['evidence_ids'] or report['result']!='captured-unverified':
+            continue
+        if any(a['adapter']!='http-read' or a['outcome']!='HTTP 200' or
+                a['identity_check']!='unverified' or a['retrieval_status']!='unverified' or
+                a['recoverable_failure']!='Report identity/version require inspection' or
+                a['version_metadata'].get('identity_reason')!='Report identity/version require inspection' or
+                a['original_locator']!=report['reference'] or a['effective_locator']!=report['reference'] or
+                not a['local_reference'] or not a['content_hash'] or
+                a['content_type'].split(';')[0].strip().lower() not in {'text/plain','text/csv','text/html'}
+                for a in reads):
+            continue
+        expected = [(report['source_business_id'],report['reference'],
+            'Report bytes retained; identity, date, meaning and contradictions require inspection')]
+        expected += [(a['original_locator'],a['attempt_key'],
+            a['source_id']+': Retained for identity/access review; downstream selection deferred (unverified)')
+            for a in reads]
+        for diagnostic in second['state']['diagnostics']:
+            if any(diagnostic['source_basis']==[first,last] and diagnostic['summary']==reason and
+                    diagnostic['reason']==reason for first,last,reason in expected):
+                resolved.add(diagnostic['id'])
+    return resolved
+
+
+def _capture_resolution(chain, state, accounting):
+    """Keep historical outcomes and account for exact completed inspections."""
+    if not any(r['gap_id'] is None for r in accounting['reports']):
+        return None
+    first,second,third = chain
+    resolved = _resolved_report_diagnostics(second, accounting['reports'])
+    legal_assessments = []
+    if not third['state']['authority_blockers']:
+        index = {r['id']:r for r in stage_records(second)}
+        candidates = third['state']['extensions']['u09_authority']['value']['candidates']
+        for source in ('AMEND','CONSOLIDATED'):
+            bases = [(c['rule_id'],a) for c in candidates for a in c['assessment']['sources']
+                if a['source_id']==source and a['assessment']=='consistent']
+            if not bases:
+                continue
+            supported_attempts = {}
+            for rule_id,assessment in bases:
+                evidence = index[assessment['evidence_id']]
+                capture = index[evidence['capture_id']]
+                attempt = index[capture['attempt_id']]
+                if (attempt['source_id']==source and attempt['adapter']=='http-read' and
+                    attempt['outcome']=='HTTP 200' and attempt['identity_check']=='unverified' and
+                    attempt['retrieval_status']=='unverified' and
+                    attempt['recoverable_failure']=='Act identity/version and relevance require source inspection' and
+                    attempt['version_metadata'].get('identity_reason')=='Act identity/version and relevance require source inspection' and
+                    attempt['version_metadata']['returned_identity']['document_id']==assessment['document_id'] and
+                    attempt['content_type'].split(';')[0].strip().lower()=='text/html' and
+                    attempt['local_reference'] and attempt['content_hash']):
+                    supported_attempts[attempt['id']] = attempt
+            ids = []
+            for diagnostic in second['state']['diagnostics']:
+                reason = source+': Retained for identity/access review; downstream selection deferred (unverified)'
+                if diagnostic['summary']==diagnostic['reason']==reason and any(
+                    diagnostic['source_basis']==[a['original_locator'],a['attempt_key']]
+                    for a in supported_attempts.values()):
+                    resolved.add(diagnostic['id']);ids.append(diagnostic['id'])
+            if ids:
+                legal_assessments.append(dict(source_id=source,diagnostic_ids=sorted(ids),
+                    rule_ids=sorted({rid for rid,_ in bases}),evidence_ids=sorted({a['evidence_id'] for _,a in bases})))
+    remaining = {d['id'] for d in second['state']['diagnostics']} - resolved
+    original = reduce_states(s['status'] for s in chain)
+    authority = third['state']
+    eligible = (original=='partial' and first['status']=='complete' and
+        second['status']=='partial' and third['status']=='partial' and not remaining and bool(resolved) and
+        not authority['authority_blockers'] and bool(authority['binding_rules']) and bool(authority['timing_rules']) and
+        not state['evidence_gaps'] and not state['conflicts'] and
+        all(r['gap_id'] is None for r in accounting['reports']))
+    return dict(original_upstream_status=original,effective_upstream_status='complete' if eligible else original,
+        resolved_diagnostic_ids=sorted(resolved),unresolved_diagnostic_ids=sorted(remaining),
+        report_source_ids=sorted(r['report']['source_id'] for r in accounting['reports'] if r['gap_id'] is None),
+        legal_assessments=legal_assessments)
+
+
+def resolved_run_status(root, chain):
+    """Reconstruct the U10 ledger before relaxing historical partial reduction.
+
+    Read only the first four snapshots, so Stage 07 and retained-review callers
+    cannot recurse through their own publication validation.
+    """
+    original = reduce_states(s['status'] for s in chain)
+    if original!='partial' or len(chain)<4:
+        return original
+    fourth = chain[3]
+    resolution = fourth['state']['extensions']['u10_reconciliation']['value'].get('capture_resolution')
+    if fourth['status']!='complete' or not resolution or resolution['effective_upstream_status']!='complete':
+        return original
+    from .evidence import EvidenceStore
+    verified = validate_reconciliation(EvidenceStore(root,chain[0]['run_id']))
+    require(verified==fourth,'Resolved report ledger differs from retained Stage 04')
+    return reduce_states([chain[0]['status']]+[s['status'] for s in chain[3:]])
 
 
 def project(store):
@@ -405,14 +563,16 @@ def project(store):
             predicate = descriptor['predicate']
             usable = descriptor['value'] is not None and descriptor['review_date_quote'] is not None and \
                 (descriptor['observed_on'] is None or descriptor['observed_on'] <= ASSIGNED_REVIEW_DATE)
-            if predicate == 'exception_claim': usable = False
+            if predicate == 'exception_claim' and descriptor.get('exception_disposition') != 'none-claimed':
+                usable = False
             if predicate in {'provider_role','deployer_role'} and not descriptor['role_current']: usable = False
-            reason = (None if usable else 'Exception has no authorized Legal decision' if predicate == 'exception_claim' else
+            reason = (None if usable else 'Exception has no authorized Legal decision' if
+                predicate == 'exception_claim' and descriptor.get('exception_disposition') != 'none-claimed' else
                 'Role is stale or unverified' if predicate in {'provider_role','deployer_role'} and not descriptor['role_current'] else
                 'Report value or suitability for assigned review date is unverified')
             assertion(system, predicate, descriptor['scope'], descriptor['value'], [eid], basis,
                 'candidate:' + str(number), descriptor['owner'], usable, reason, descriptor['observed_on'],attempt['retrieved_at'])
-        else:
+        elif descriptor['kind'] == 'policy-control':
             possibly_applicable = (descriptor['effective_from'] is None or
                 descriptor['effective_from'] <= ASSIGNED_REVIEW_DATE) and (descriptor['effective_until'] is None or
                 ASSIGNED_REVIEW_DATE < descriptor['effective_until'])
@@ -514,10 +674,19 @@ def project(store):
         accounting['normalized_rows'].append(dict(source_row_id=row['id'],output_record_ids=sorted(set(outputs[row['id']]))))
     for report in second['state'].get('extensions',{}).get('u08_reports',{}).get('value',{}).get('reports',[]):
         numbers = [n for n,_,d,_ in assessments if d['kind']=='fact' and d['evidence_id'] in report['evidence_ids']]
-        gap = issue(report['system_id'],'report-review',report['source_business_id'],
+        declarations = [(n,d) for n,c,d,_ in assessments if d['kind']=='report-review' and
+            c['system_ids']==[report['system_id']] and d['evidence_id'] in report['evidence_ids']]
+        resolved = _report_resolved(report, declarations, assessments, reviews, state['system_facts'])
+        gap = None if resolved else issue(report['system_id'],'report-review',report['source_business_id'],
             'Report retained for bounded assessment; completeness, identity/date and remaining meanings need owner review',
             [report['source_id'], report['reference'] or 'Missing reference'],report['evidence_ids'],known_owner=report['owner'])
-        accounting['reports'].append(dict(report=deepcopy(report), candidate_numbers=numbers, gap_id=gap))
+        entry = dict(report=deepcopy(report), candidate_numbers=numbers, gap_id=gap)
+        if resolved:
+            entry['resolution'] = dict(declaration_candidate_numbers=sorted(n for n,_ in declarations),
+                scopes=sorted(declarations[0][1]['scopes']),
+                evidence_ids=sorted(report['evidence_ids']),
+                reason='Explicit report completeness declaration and supported own-report predicates in every declared scope')
+        accounting['reports'].append(entry)
     policy_evidence = [e['id'] for e in second['state']['evidence'] if e['assertion'].startswith('Captured internal policy body')]
     accounting['policy_context'] = [dict(source_id='POLICY',evidence_ids=policy_evidence,
         candidate_numbers=[n for n,_,d,_ in assessments if d['kind']=='policy-control'])]
@@ -545,9 +714,13 @@ def project(store):
     if not meaningful:
         issue(None,'deferral','company','No meaningful scoped company facts or established controls remain; defer reconciliation pending source-owner evidence',
             [sources[register]['id'] for register in REGISTERS]+[sources['POLICY']['id']],known_owner='Operations')
+    resolution = _capture_resolution(chain,state,accounting)
+    if resolution is not None:
+        accounting['capture_resolution'] = resolution
     _schema(accounting, 'reconciliation-accounting')
     state['extensions'] = {'u10_reconciliation':dict(schema_version=VERSION,value=accounting)}
-    status = reduce_states([third['status'], 'blocked' if not meaningful else
+    upstream_status = resolution['effective_upstream_status'] if resolution is not None else third['status']
+    status = reduce_states([upstream_status, 'blocked' if not meaningful else
         'partial' if state['evidence_gaps'] or state['conflicts'] else 'complete'])
     return chain,state,sorted(consumed),status,pointers,result
 
@@ -565,6 +738,7 @@ def freeze_reconciliation(store, *, write=True):
     return fourth
 
 
+@disk_verified
 def validate_reconciliation(store):
     """Rebuild from journal, rows and exchange; coherent on-disk edits still fail."""
     actual = read_chain(store.root,count=4)[3]

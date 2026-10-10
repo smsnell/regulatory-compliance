@@ -119,8 +119,12 @@ the stable action identity plus `@regulatory-change-impact-brief`.
 Run, retrieval, impact, approval and publication are separate exact enums.
 `reduce_states(nonempty_states)` uses failed > blocked > partial > complete; it
 does not convert source-native states or approval into run states. A Stage 03
-required-authority blocker cannot be complete/partial. Stage 07 cannot discard an
-upstream blocked/failed/partial outcome. Supported impacts and supported no-impact
+required-authority blocker cannot be complete/partial. Stage 07 preserves upstream
+blocked/failed outcomes and unresolved partial outcomes. The approved
+[G3 pending-inspection exception](g3-fact-and-impact-contract.md) permits an
+independently reconstructed resolution ledger for exact report and
+AMEND/CONSOLIDATED inspection diagnostics; original snapshots remain immutable.
+`reduce_states` itself is unchanged. Supported impacts and supported no-impact
 both require affirmative evidence, an established rule and supported facts.
 Predicate completeness and authority meaning remain U09/U11 responsibilities.
 
