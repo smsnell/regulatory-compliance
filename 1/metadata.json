@@ -1,0 +1,85 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4HX413J05F4X5BE5C80SAYE",
+  "session_id": "01a1222a-dcb2-7461-a25a-af359c42d11b",
+  "strategy": "manual-commit",
+  "created_at": "2026-10-10T03:18:52.095179687Z",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "save_step_count": 1,
+  "files_touched": [
+    "docs/u09-authority.md",
+    "docs/verification/u09-inspection.json",
+    "docs/verification/u09-skill-scan.md",
+    "docs/verification/u09.md",
+    "regulatory-change-impact-brief/SKILL.md",
+    "regulatory-change-impact-brief/references/authority-policy.md",
+    "regulatory-change-impact-brief/references/schemas/authority-basis.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/authority.py",
+    "regulatory-change-impact-brief/scripts/rci/runner.py",
+    "regulatory-change-impact-brief/scripts/run.py",
+    "regulatory-change-impact-brief/scripts/stage.py",
+    "tests/runtime/test_u09.py",
+    "tests/runtime/test_u09_projection.py",
+    "tests/runtime/test_u09_timing.py"
+  ],
+  "agent": "Codex",
+  "model": "gpt-6.1-sol",
+  "turn_id": "be6a387bd55d",
+  "compact_transcript_start": 0,
+  "token_usage": {
+    "input_tokens": 407743,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 7493120,
+    "output_tokens": 78400,
+    "api_call_count": 58,
+    "subagent_tokens_complete": true
+  },
+  "session_metrics": {
+    "turn_count": 1
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-10-10T03:18:51.984157585Z",
+    "agent_lines": 2017,
+    "agent_removed": 0,
+    "human_added": 3948,
+    "human_modified": 21,
+    "human_removed": 0,
+    "total_committed": 5986,
+    "total_lines_changed": 5992,
+    "agent_percentage": 33.661548731642185,
+    "metric_version": 2
+  },
+  "prompt_attributions": [
+    {
+      "checkpoint_number": 1,
+      "user_lines_added": 1403,
+      "user_lines_removed": 20,
+      "agent_lines_added": 0,
+      "agent_lines_removed": 0,
+      "user_added_per_file": {
+        "docs/u08-linked-reports.md": 75,
+        "docs/verification/u08-inspection.json": 38,
+        "docs/verification/u08-skill-scan.md": 109,
+        "docs/verification/u08.md": 148,
+        "regulatory-change-impact-brief/SKILL.md": 7,
+        "regulatory-change-impact-brief/references/interpretation.md": 34,
+        "regulatory-change-impact-brief/references/schemas/linked-reports.schema.json": 95,
+        "regulatory-change-impact-brief/references/schemas/u08-capture-accounting.schema.json": 160,
+        "regulatory-change-impact-brief/scripts/rci/adapters/reports.py": 148,
+        "regulatory-change-impact-brief/scripts/rci/interpretation.py": 198,
+        "regulatory-change-impact-brief/scripts/rci/runner.py": 67,
+        "regulatory-change-impact-brief/scripts/run.py": 6,
+        "regulatory-change-impact-brief/scripts/stage.py": 7,
+        "tests/integration/u08_host.py": 40,
+        "tests/runtime/test_u08.py": 271
+      },
+      "user_removed_per_file": {
+        "regulatory-change-impact-brief/SKILL.md": 2,
+        "regulatory-change-impact-brief/scripts/rci/runner.py": 14,
+        "regulatory-change-impact-brief/scripts/run.py": 2,
+        "regulatory-change-impact-brief/scripts/stage.py": 2
+      }
+    }
+  ]
+}
