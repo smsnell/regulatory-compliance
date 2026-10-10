@@ -1,0 +1,304 @@
+# U11–U19: Coordinated Implementation, Optimization, and Retrospective
+
+Take ownership of implementation from the completed G3 checkpoint through U19, including G4 and G5.
+
+Your goal is to complete this remaining work in **one coordinated, autonomous execution**, using intelligent delegation where beneficial, while preserving the correctness, evidence integrity, and auditability established in U01–U10.
+
+The existing requirements, stakeholder interview decisions, frozen contracts, accepted gate results, and completed implementation are authoritative.
+
+**Do not restart, replace, or substantially redesign the existing system. Build on what already works.**
+
+Do not implement U20; that is reserved for a separate final independent audit.
+
+Do not commit or push changes. I will inspect and commit the completed work afterward.
+
+## 1. Establish the execution strategy
+
+First, inspect the repository and identify:
+
+- What U01–U10 and G1–G3 have established.
+- The remaining requirements and dependencies for U11–U19.
+- Which interfaces and architectural decisions are already frozen.
+- Existing testing infrastructure, its execution costs, and any avoidable overhead.
+- Work that can be combined or delegated without compromising correctness.
+
+Read relevant context selectively. Do not repeatedly consume the full requirements, interview, architecture plan, or previous implementation history when focused references are sufficient.
+
+Produce a brief execution plan describing your phases, delegation strategy, integration checkpoints, and intended efficiency improvements.
+
+**Then begin implementation immediately. Do not wait for approval of the execution plan.**
+
+Continue automatically between phases unless an actual blocking decision requires my involvement.
+
+## 2. Use Astra as the implementation orchestrator
+
+You are responsible for:
+
+- Overall architectural consistency.
+- Requirements compliance and interpretation of existing stakeholder decisions.
+- Coordinating implementation and delegated tasks.
+- Integrating and verifying completed work.
+- Resolving cross-unit defects and inconsistencies.
+- Determining when deeper reasoning or broader verification is justified.
+
+Use subagents when they provide a practical efficiency or quality benefit.
+
+Prefer the following model allocations when the available Codex tools and configuration support them:
+
+- **Luna Low:** Mechanical implementation, straightforward serializers, isolated fixtures, and routine tasks.
+- **Sol Medium:** Most bounded implementation, tests, and defect repairs.
+- **Sol High:** Difficult debugging, sensitive business-rule implementation, and complex isolated problems.
+- **Astra:** Architectural judgment, integration decisions, genuinely difficult cross-unit problems, and orchestration.
+
+Do not automatically delegate every unit or spawn agents merely because concurrency is available.
+
+Give delegated agents bounded objectives, relevant contracts, explicit completion criteria, and clearly owned files. Minimize redundant context.
+
+Parallelize genuinely independent work, particularly where different agents can operate on separate modules or renderers. Avoid concurrent edits to the same files or overlapping repository operations.
+
+Aim for a small number of productive concurrent agents rather than maximum parallelism.
+
+If model overrides or delegation are unavailable, adapt using the supported tools and continue. Do not introduce an external model API, credentials, or a new orchestration framework solely for this workflow.
+
+## 3. Consolidate implementation into coherent phases
+
+Use the following as the preferred execution structure, adjusting only when actual dependencies justify it.
+
+**Phase A — U11–U13: Impact, actions, and review workflow**
+
+Complete Stage 05 impact determination, Stage 06 actions and deduplication, review requests, feedback authentication, and associated business rules.
+
+Preserve evidence-backed conclusions, unresolved/conflicting states, authority boundaries, and human approval requirements.
+
+**Phase B — U14–U16: Output rendering**
+
+Implement the CSV impact register, Markdown compliance brief, and RFC 5545 calendar.
+
+These may be delegated independently where their interfaces and file ownership permit.
+
+**Phase C — U17 and G4: Complete vertical integration**
+
+Implement Stage 07 validation and verify the complete seven-stage pipeline and three required outputs.
+
+Execute G4 against its explicit acceptance criteria. Address defects before proceeding.
+
+**Phase D — U18 and G5: History and recovery**
+
+Implement the required history, supersession, retry, and simplified recovery behavior.
+
+Preserve previous-run evidence and established failure semantics. Do not introduce speculative production-grade recovery infrastructure beyond the approved design.
+
+Execute G5 and correct findings.
+
+**Phase E — U19: Skill packaging and completion**
+
+Finish skill packaging, documentation, evaluation coverage, and operational instructions.
+
+Perform final integration verification needed to leave the implementation ready for the independent U20 audit.
+
+Maintain the original unit completion criteria and requirement traceability even when implementation sessions are combined.
+
+Do not create artificial unit boundaries or repeat expensive integration work merely to follow the original numbering.
+
+## 4. Optimize testing without sacrificing coverage
+
+The existing implementation has accumulated substantial test infrastructure, with some test suites taking a long time to execute.
+
+Evaluate the testing workflow and improve its efficiency.
+
+Specifically:
+
+- Identify the slowest suites and the actual causes of their cost.
+- Measure representative test durations where practical rather than guessing.
+- Use focused tests after isolated changes instead of repeatedly running the entire suite.
+- Consolidate genuinely redundant fixtures, setup work, or overlapping checks when safe.
+- Reuse deterministic fixtures and avoid unnecessary repeated source retrieval during isolated unit tests.
+- Preserve mandatory live-source verification for actual runs and relevant acceptance checks.
+- Run broader integration and acceptance tests at meaningful checkpoints, especially G4, G5, and final U19 verification.
+- Keep all required negative tests, schema checks, provenance checks, failure-path checks, and acceptance criteria.
+
+**Do not weaken test assertions, suppress failures, or remove meaningful coverage simply to reduce runtime.**
+
+Favor optimizing test execution and removing proven duplication over eliminating legitimate tests.
+
+Avoid repeatedly running large suites with identical inputs when the earlier results remain valid and the changes cannot affect those tests.
+
+Document significant testing improvements and their observed effects when measurable.
+
+## 5. Review and repair continuously, without recursive audit cycles
+
+Review completed work at natural integration boundaries.
+
+If you discover an actionable implementation defect, fix it within the approved architecture, add or adjust appropriate regression coverage, and rerun affected checks.
+
+Do not stop merely to ask permission for routine corrections.
+
+Avoid the previous workflow of repeatedly conducting broad reviews of the same implementation after every small fix.
+
+Instead, use:
+
+**Implementation → focused verification → integration checkpoint → targeted repair when needed.**
+
+Expand review scope when actual evidence reveals a wider problem.
+
+Preserve all mandatory requirements and previously accepted contracts.
+
+If a correction requires a material change to a frozen contract, an unresolved stakeholder decision, or an incompatible change to a previously accepted gate, document the contradiction and request approval before making that particular change. Continue independent safe work where possible.
+
+Do not claim a gate passes when mandatory evidence or checks are missing.
+
+## 6. Clean up unnecessary temporary files and infrastructure
+
+The earlier implementation process produced numerous temporary files, generated outputs, caches, logs, and test artifacts. Some may no longer be necessary.
+
+Perform a careful repository cleanup as part of this task.
+
+First inventory likely cleanup candidates and determine whether each is:
+
+- Required project evidence, deliverable, history, or source capture.
+- A necessary test fixture or reproducibility artifact.
+- A disposable generated file, cache, redundant temporary output, or obsolete development artifact.
+- Uncertain and requiring preservation.
+
+Remove only files confirmed to be disposable and no longer referenced or required.
+
+**Explicitly preserve:**
+
+- Required evidence captures and source-attempt records.
+- Seven-stage snapshots, artifact manifests, and necessary hashes.
+- Historical runs, previous-run evidence, and retry/supersession records.
+- Original interview material and project requirements.
+- Required test fixtures, audit evidence, and acceptance artifacts.
+- Entire session/checkpoint data and configuration.
+- Codex workspace configuration and other unrelated development-environment state.
+
+Do not indiscriminately delete untracked files, staging directories, or captured source responses merely because they appear temporary.
+
+Where useful, improve temporary-directory handling and `.gitignore` rules so future tests do not repeatedly pollute the working tree. Do not hide required deliverables or evidence with broad ignore patterns.
+
+Avoid building a new cleanup subsystem unless necessary. Prefer a straightforward one-time cleanup and simple preventative adjustments.
+
+Report the important cleanup actions, their rationale, and any ambiguous candidates intentionally retained.
+
+## 7. Create EXPERIMENT-NOTES.md
+
+Create `EXPERIMENT-NOTES.md` in the repository as a concise but meaningful engineering retrospective.
+
+The document should explain the original implementation experiment, what was observed, and why the execution strategy changed after G3.
+
+Include the following:
+
+### Original hypothesis
+
+The project was deliberately decomposed into approximately twenty independently implementable, testable units with major verification gates.
+
+The intention was to reduce total token consumption and potentially implementation time by:
+
+- Assigning less expensive models to straightforward work.
+- Reserving more capable reasoning for difficult architectural and semantic decisions.
+- Restricting each implementation session to a smaller context.
+- Establishing stable contracts early to reduce downstream rework.
+- Detecting mistakes at unit boundaries rather than during final integration.
+
+### Initial execution strategy
+
+Explain the use of Astra for architectural planning, Sol/Luna for bounded implementation, independent diff reviews, correction cycles, and formal gate verification.
+
+Explain what this approach was expected to improve.
+
+### Observations through G3
+
+Discuss the actual experience, including:
+
+- Significant context reacquisition and coordination between units.
+- Repeated reading of interfaces, requirements, and related implementation files.
+- Costly independent review, correction, and re-verification cycles.
+- Long-running test suites and repeated fixture/setup work.
+- Accumulation of temporary files and development artifacts.
+- Some unexpectedly lengthy implementation tasks, including U10 taking approximately 80 minutes for its initial implementation.
+- Benefits gained from strong contracts, early verification, traceability, and explicit failure handling.
+
+Distinguish observed facts, approximate timings, and subjective assessments.
+
+Where reliable usage/timing data is available, include it. Do not invent token counts or claim statistically proven savings or regressions.
+
+### Assessment of the experiment
+
+Explain that the initial approach did not demonstrate the anticipated reduction in total implementation time or resource consumption by G3.
+
+Discuss the likely tradeoff: smaller implementation tasks may reduce local complexity while increasing orchestration, context-transfer, verification, and integration overhead.
+
+Acknowledge that the projects and alternative workflows were not evaluated under controlled conditions, so the comparison is qualitative rather than a definitive benchmark.
+
+### Revised strategy
+
+Document the decision after G3 to retain the established architecture but move to Astra-led orchestration with bounded delegation, coherent implementation phases, targeted testing, and integrated verification.
+
+Explain why this represents a change in execution strategy rather than abandonment of mandatory requirements or established engineering safeguards.
+
+### Outcome and lessons
+
+After U19, update the notes with results actually observed during the revised approach, including whether integration was smoother, what overhead remained, and what you would change for future projects.
+
+Do not overstate success. Include limitations and any unfinished verification reserved for U20.
+
+Write this as a professional engineering retrospective, not promotional material or criticism of other developers.
+
+## 8. Completion and reporting
+
+Continue through U19 autonomously. Do not pause between normal phases for routine permission or status approval.
+
+Only request intervention when a mandatory unresolved decision, unsafe action, missing authorization, or unavoidable environmental blocker genuinely prevents correct progress.
+
+If a phase is blocked, continue independent feasible work without fabricating success or silently bypassing the blocker.
+
+Before declaring completion:
+
+- Verify U11–U19 against their respective completion criteria.
+- Confirm G4 and G5 outcomes.
+- Run the necessary final integration and acceptance checks.
+- Validate required artifact formats, provenance links, state handling, and cross-file consistency.
+- Confirm required evidence and history have been preserved.
+- Verify that `EXPERIMENT-NOTES.md` accurately reflects the observed experience.
+- Check the final working-tree state and identify all intended changes.
+
+Provide a final report containing:
+
+1. **Implementation summary:** completed phases and units.
+2. **Delegation summary:** major subagent tasks, models/efforts used where observable, and integration outcomes.
+3. **Verification:** tests executed, results, gate outcomes, and remaining limitations.
+4. **Efficiency improvements:** measurable test/runtime changes and avoided or removed overhead.
+5. **Cleanup:** important files/directories removed, changes to temporary-file handling, and preserved uncertain artifacts.
+6. **Experiment notes:** document created and updated.
+7. **Remaining issues:** unresolved defects, blockers, or required manual validation.
+8. **Final readiness:** READY FOR COMMIT / NEEDS FURTHER WORK / BLOCKED.
+
+A READY FOR COMMIT verdict means U11–U19 and their required gates are satisfactorily complete. It does not substitute for the independent U20 final audit.
+
+**Do not commit, push, or start U20. Stop once the completed implementation and final report are ready for my review.**
+
+Prioritize a complete, defensible implementation with efficient execution over unnecessary process ceremony. Preserve the project's required rigor without reproducing the overhead that motivated this strategy change.
+
+---
+
+<send_user_message_question_reply>
+[{"answer":"Approve narrowly scoped correction","question":"U17 requires a genuinely complete end-to-end fixture, but accepted U10 always creates an unresolved exception gap and an unresolved review gap for every linked report, even when assessed. May I correct those U10 gap-resolution rules within the existing architecture, preserving the requirement for authenticated Legal approval of any claimed exception? This revisits accepted G3 behavior, so your instruction requires approval before that change.","questionItemId":"[\"request_user_input_async\",\"call_c5109bc7e09f4f7288e02b33437af3bf\",0]"}]
+</send_user_message_question_reply>
+
+---
+
+<send_user_message_question_reply>
+[{"answer":"See if your narrow scoped fix solves the issue.","question":"The complete-fixture blocker reaches two frozen contracts: exception claims are text/null and always unresolved without verified Legal decisions; report accounting requires an unresolved gap ID for every report. This replaces my earlier, narrower approval question. Should I preserve those contracts and leave this U17 criterion explicitly blocked, or prepare a concrete contract amendment for your approval before implementing it?","questionItemId":"[\"request_user_input_async\",\"call_40fd5ee8b1a748f2ad6c592f0e87d385\",0]"}]
+</send_user_message_question_reply>
+
+---
+
+<send_user_message_question_reply>
+[{"answer":"Approve bounded status amendment","question":"The approved narrow U10 fix resolves its own gaps, but COMPLETE remains unreachable because U08 always marks linked reports partial and frozen propagation preserves that forever. I documented a bounded amendment in docs/verification/report-resolution-proposal.md: retain every original snapshot/diagnostic, but let independently verified, explicitly resolved report issues stop carrying partial status forward; other gaps, authority blockers and failures still propagate. May I implement this additional status-c","questionItemId":"[\"request_user_input_async\",\"call_38ea4c56a7374fc18eeeca9f5e7a4730\",0]"}]
+</send_user_message_question_reply>
+
+---
+
+<send_user_message_question_reply>
+[{"answer":"Approve these two verified-source cases","question":"The full fixture now isolates the remaining issue: AMEND and CONSOLIDATED are also unconditionally marked “identity/version/relevance needs inspection” at capture, even after U09 verifies them. May the approved status amendment resolve these two exact diagnostics using U09’s validated source assessments? Uncertain authority and actual authority blockers will remain blocked. All original evidence and diagnostics stay retained; details are appended to docs/verification/report-resolution-proposal.md.","questionItemId":"[\"request_user_input_async\",\"call_996413382e5246bc857ba8ce553d4b1e\",0]"}]
+</send_user_message_question_reply>
