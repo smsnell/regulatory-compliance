@@ -1,0 +1,77 @@
+IMPLEMENT U10 — Stage 04 factual and policy reconciliation
+
+Work only on U10 from TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md.
+Do not begin later units.
+
+Before editing, read:
+
+- the complete U10 task card;
+- the requirement sections and interview excerpts it explicitly references;
+- the contracts/interfaces produced by its prerequisite units;
+- relevant existing tests, fixtures, and decisions.
+
+Treat previously passed gates and frozen contracts as stable. Do not change them
+for convenience. If you find a concrete contradiction requiring a frozen
+contract or architectural decision to change, stop and report it before making
+that change.
+
+Use additional repository context only when needed to resolve a concrete
+dependency or discrepancy.
+
+Before implementation, briefly state:
+- the objective;
+- interfaces/invariants being preserved;
+- files expected to change;
+- any blocking ambiguity.
+
+Then implement U10.
+
+Run every applicable check specified in its task card:
+A — automated logic
+S — schema/format
+I — integration
+R — requirement acceptance
+M — manual inspection
+
+For each applicable category, compare expected versus observed behavior.
+
+If a check fails, diagnose and fix it within U10 where justified. Do not
+weaken a requirement, invariant, or test merely to make it pass. Follow the
+unit's documented model/effort escalation trigger if the failure indicates
+additional reasoning is required.
+
+Stop when U10 is complete or genuinely blocked. Do not continue to U11.
+
+At the end report:
+
+STATUS: complete / incomplete / blocked
+
+FILES CHANGED:
+...
+
+CHECKS:
+A:
+S:
+I:
+R:
+M:
+
+COMPLETION CRITERIA:
+...
+
+EXPECTED VS OBSERVED:
+...
+
+UNRESOLVED ISSUES:
+...
+
+CONTRACT/ARCHITECTURE CHANGES:
+none / proposed change requiring review
+
+ESCALATION:
+not required / trigger and recommended model-effort
+
+NEXT ACTION:
+review diff / resolve blocker
+
+Do not commit. Stop so I can review the diff.

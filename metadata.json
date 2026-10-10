@@ -3,33 +3,45 @@
   "checkpoint_id": "01M4HX413J05F4X5BE5C80SAYE",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 2,
+  "checkpoints_count": 3,
   "files_touched": [
     "docs/u08-linked-reports.md",
     "docs/u09-authority.md",
+    "docs/u10-reconciliation.md",
+    "docs/verification/check-u10.py",
     "docs/verification/u08-inspection.json",
     "docs/verification/u08-skill-scan.md",
     "docs/verification/u08.md",
     "docs/verification/u09-inspection.json",
     "docs/verification/u09-skill-scan.md",
     "docs/verification/u09.md",
+    "docs/verification/u10-inspection.json",
+    "docs/verification/u10-skill-scan.md",
+    "docs/verification/u10.md",
     "regulatory-change-impact-brief/SKILL.md",
     "regulatory-change-impact-brief/references/authority-policy.md",
+    "regulatory-change-impact-brief/references/g3-fact-and-impact-contract.md",
     "regulatory-change-impact-brief/references/interpretation.md",
+    "regulatory-change-impact-brief/references/reconciliation.md",
     "regulatory-change-impact-brief/references/schemas/authority-basis.schema.json",
     "regulatory-change-impact-brief/references/schemas/linked-reports.schema.json",
+    "regulatory-change-impact-brief/references/schemas/reconciliation-accounting.schema.json",
+    "regulatory-change-impact-brief/references/schemas/reconciliation-basis.schema.json",
     "regulatory-change-impact-brief/references/schemas/u08-capture-accounting.schema.json",
     "regulatory-change-impact-brief/scripts/rci/adapters/reports.py",
     "regulatory-change-impact-brief/scripts/rci/authority.py",
     "regulatory-change-impact-brief/scripts/rci/interpretation.py",
+    "regulatory-change-impact-brief/scripts/rci/reconcile.py",
     "regulatory-change-impact-brief/scripts/rci/runner.py",
+    "regulatory-change-impact-brief/scripts/rci/runtime.py",
     "regulatory-change-impact-brief/scripts/run.py",
     "regulatory-change-impact-brief/scripts/stage.py",
     "tests/integration/u08_host.py",
     "tests/runtime/test_u08.py",
     "tests/runtime/test_u09.py",
     "tests/runtime/test_u09_projection.py",
-    "tests/runtime/test_u09_timing.py"
+    "tests/runtime/test_u09_timing.py",
+    "tests/runtime/test_u10.py"
   ],
   "sessions": [
     {
@@ -45,14 +57,21 @@
       "compact_transcript": "/1/transcript.jsonl",
       "content_hash": "/1/content_hash.txt",
       "prompt": "/1/prompt.txt"
+    },
+    {
+      "metadata": "/2/metadata.json",
+      "transcript": "/2/full.jsonl",
+      "compact_transcript": "/2/transcript.jsonl",
+      "content_hash": "/2/content_hash.txt",
+      "prompt": "/2/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 553457,
+    "input_tokens": 914832,
     "cache_creation_tokens": 0,
-    "cache_read_tokens": 12302464,
-    "output_tokens": 113480,
-    "api_call_count": 105,
+    "cache_read_tokens": 31067392,
+    "output_tokens": 246709,
+    "api_call_count": 259,
     "subagent_tokens_complete": true
   }
 }
