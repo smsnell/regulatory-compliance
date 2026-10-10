@@ -3,12 +3,15 @@
   "checkpoint_id": "01M4HX413J05F4X5BE5C80SAYE",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 3,
+  "checkpoints_count": 4,
   "files_touched": [
     "docs/u08-linked-reports.md",
     "docs/u09-authority.md",
     "docs/u10-reconciliation.md",
+    "docs/verification/check-g3.py",
     "docs/verification/check-u10.py",
+    "docs/verification/g3-inspection.json",
+    "docs/verification/g3.md",
     "docs/verification/u08-inspection.json",
     "docs/verification/u08-skill-scan.md",
     "docs/verification/u08.md",
@@ -37,6 +40,7 @@
     "regulatory-change-impact-brief/scripts/run.py",
     "regulatory-change-impact-brief/scripts/stage.py",
     "tests/integration/u08_host.py",
+    "tests/runtime/test_g3.py",
     "tests/runtime/test_u08.py",
     "tests/runtime/test_u09.py",
     "tests/runtime/test_u09_projection.py",
@@ -64,14 +68,21 @@
       "compact_transcript": "/2/transcript.jsonl",
       "content_hash": "/2/content_hash.txt",
       "prompt": "/2/prompt.txt"
+    },
+    {
+      "metadata": "/3/metadata.json",
+      "transcript": "/3/full.jsonl",
+      "compact_transcript": "/3/transcript.jsonl",
+      "content_hash": "/3/content_hash.txt",
+      "prompt": "/3/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 914832,
+    "input_tokens": 1411005,
     "cache_creation_tokens": 0,
-    "cache_read_tokens": 31067392,
-    "output_tokens": 246709,
-    "api_call_count": 259,
+    "cache_read_tokens": 45809536,
+    "output_tokens": 322529,
+    "api_call_count": 359,
     "subagent_tokens_complete": true
   }
 }

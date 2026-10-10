@@ -1,0 +1,140 @@
+# U08–U10 Review, Remediation, and G3 Verification
+
+Review the completed U08–U10 implementation, correct any actionable defects you discover, and then execute the G3 gate review defined in `TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md`.
+
+**You are authorized to make necessary fixes within the scope of U08–U10 and G3, without waiting for approval on each individual correction.**
+
+Do not begin U11. Do not commit or push changes.
+
+## 1. Establish review scope
+
+Before reviewing:
+
+- Read the U08, U09, U10, and G3 definitions in the technical plan.
+- Read the directly relevant requirements, interview decisions, frozen contracts, and previous gate criteria.
+- Identify the actual implementation changes to review, including relevant staged, unstaged, newly created, or already committed files. Do not assume that `git diff` alone captures all U08–U10 work.
+- Inspect the tests, fixtures, and verification evidence relevant to these units.
+
+Avoid unrelated repository exploration or rereading the entire project unless a concrete dependency requires it.
+
+## 2. Review U08–U10
+
+Evaluate each unit individually and their integration against:
+
+- its purpose and completion criteria;
+- referenced requirements and interview semantics;
+- specified checks and failure cases;
+- previously frozen contracts and passed gates;
+- expected versus observed implementation results.
+
+Look specifically for:
+
+- incomplete or incorrectly interpreted requirements;
+- unsupported assumptions or invented business semantics;
+- accidental scope expansion;
+- frozen-contract changes introduced for convenience;
+- weakened invariants or fail-closed behavior;
+- missing negative/failure-path coverage;
+- tests that merely mirror implementation instead of validating meaningful behavior;
+- provenance, identity, hashing, state, authority, timing, or reconciliation errors;
+- cross-unit integration inconsistencies;
+- unnecessary complexity or unrelated refactoring.
+
+Classify findings as CRITICAL, HIGH, MEDIUM, or LOW.
+
+For each actionable finding, record its file/location, issue, affected requirement or invariant, why it matters, and corrective action.
+
+## 3. Correct findings as you go
+
+**Fix actionable defects when discovered. Do not merely report them.**
+
+For each correction:
+
+1. Identify the smallest change that resolves the underlying issue.
+2. Implement it without unrelated refactoring.
+3. Add or adjust tests where the existing coverage would not detect the defect.
+4. Run the relevant affected checks.
+5. Verify that the original finding is resolved and that no directly related invariant was weakened.
+
+Preserve existing required behavior, provenance, snapshots, evidence, and verification contracts.
+
+Do not weaken requirements, disable tests, replace meaningful assertions with superficial checks, or introduce speculative hardening to obtain a passing result.
+
+If a correction requires changing a frozen architectural contract, contradicts an authoritative requirement, or requires a new stakeholder decision, **stop that correction and report the blocker**. Continue independent work where safe.
+
+Avoid recursive full reviews. Perform one comprehensive U08–U10 review, then use targeted verification for subsequent fixes. Expand the review only when a correction introduces a concrete new risk.
+
+## 4. Execute G3
+
+Once U08–U10 are corrected and their relevant checks pass, proceed directly to the **G3 gate review** in the technical plan.
+
+Do not require another prompt to start G3.
+
+Treat G3 as an independent cross-unit verification checkpoint, not an automatic pass because U08–U10 tests succeeded.
+
+Verify every explicit G3 criterion, especially the integrity of the authority, legal timing, evidence interpretation, and factual/policy reconciliation across U08–U10.
+
+For each gate criterion, identify:
+
+- the required behavior;
+- evidence and tests inspected;
+- expected result;
+- observed result;
+- PASS / FAIL / UNCERTAIN.
+
+Run the applicable gate checks and relevant adversarial/negative cases. Distinguish automated verification from manual checks that cannot be completed in the current environment.
+
+## 5. Repair G3 failures
+
+If G3 identifies additional actionable defects:
+
+- trace each defect to its earliest affected implementation unit or contract;
+- implement an appropriately scoped correction where authorized;
+- rerun the affected tests and failed G3 criteria;
+- check for direct downstream consequences.
+
+Do not restart the entire broad review cycle unless the findings reveal a genuinely wider architectural problem.
+
+Do not declare G3 passed while known blocking criteria remain unsatisfied.
+
+## 6. Final report
+
+Provide a concise but evidence-backed report with these sections:
+
+**U08–U10 REVIEW**
+- Initial findings by severity and file/location
+- Corrections implemented
+- Findings resolved, unresolved, or deferred with justification
+
+**UNIT COMPLETION**
+- U08: PASS / FAIL / UNCERTAIN
+- U09: PASS / FAIL / UNCERTAIN
+- U10: PASS / FAIL / UNCERTAIN
+- Completion criteria not satisfied, if any
+
+**VERIFICATION**
+- Checks executed and observed results
+- Negative/failure-path coverage
+- Any checks not performed and why
+
+**G3 GATE RESULTS**
+- Criterion-by-criterion assessment
+- Additional findings and corrections
+- Final G3 verdict: PASS / FAIL / UNCERTAIN
+
+**SCOPE AND CONTRACT INTEGRITY**
+- Files changed
+- Any unrelated changes
+- Frozen-contract modifications, if any
+- Outstanding architectural or stakeholder blockers
+
+**FINAL STATUS**
+- READY FOR COMMIT — U08–U10 and G3 passed
+- NEEDS FURTHER WORK — unresolved actionable failures
+- BLOCKED — requires a decision or approved contract change
+
+Prioritize correctness and meeting the established requirements, but favor the simplest sufficient correction.
+
+Do not implement U11, do not commit, and do not push.
+
+Stop after reporting the final results.
