@@ -1,0 +1,41 @@
+{
+  "cli_version": "0.11.4",
+  "checkpoint_id": "01M4HX413J05F4X5BE5C80SAYE",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "docs/u08-linked-reports.md",
+    "docs/verification/u08-inspection.json",
+    "docs/verification/u08-skill-scan.md",
+    "docs/verification/u08.md",
+    "regulatory-change-impact-brief/SKILL.md",
+    "regulatory-change-impact-brief/references/interpretation.md",
+    "regulatory-change-impact-brief/references/schemas/linked-reports.schema.json",
+    "regulatory-change-impact-brief/references/schemas/u08-capture-accounting.schema.json",
+    "regulatory-change-impact-brief/scripts/rci/adapters/reports.py",
+    "regulatory-change-impact-brief/scripts/rci/interpretation.py",
+    "regulatory-change-impact-brief/scripts/rci/runner.py",
+    "regulatory-change-impact-brief/scripts/run.py",
+    "regulatory-change-impact-brief/scripts/stage.py",
+    "tests/integration/u08_host.py",
+    "tests/runtime/test_u08.py"
+  ],
+  "sessions": [
+    {
+      "metadata": "/0/metadata.json",
+      "transcript": "/0/full.jsonl",
+      "compact_transcript": "/0/transcript.jsonl",
+      "content_hash": "/0/content_hash.txt",
+      "prompt": "/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 145714,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 4809344,
+    "output_tokens": 35080,
+    "api_call_count": 47,
+    "subagent_tokens_complete": true
+  }
+}
