@@ -1,12 +1,18 @@
 ---
 name: regulatory-change-impact-brief
 description: Interpret a bounded regulatory change evidence packet for a Quillhaven Academy draft review. Use when invoked by the regulatory review supervisor with an isolated run root.
+compatibility: Python 3.12+, pinned dependencies and authenticated Codex CLI. Supervisor adapters require HTTPS GET access to disclosed sources and direct authorized report URLs; the interpretation host has networking disabled.
 ---
 
 # Regulatory change impact brief
 
-This U03 loader proves the host exchange. The live source engines and final
-CSV, Markdown and iCalendar outputs will be implemented in later units.
+The U03 loader, U08 report branch and U09 authority branch provide bounded host
+exchanges. Authority analysis ends at Stage 03; final outputs require later units.
+
+When the supervisor supplies a U10 reconciliation packet and
+`submit-reconciliation` command, follow [factual and policy reconciliation](references/reconciliation.md).
+Inspect all scoped facts against their captures, retain each contradictory value,
+and submit once. Python writes Stage 04; stop before impact analysis.
 
 The operator starts the workflow with:
 
@@ -22,6 +28,16 @@ and Operations owns activation, dates and incident closure.
 For a production skeleton run, read `analysis/run-context.json` and execute
 the supplied `scripts/stage.py block --root` command once. Its exit 3 records
 the explicit blocked outcome because live stage engines are absent. Report it.
+
+When the supervisor supplies a U08 captured report run and `submit-report`
+command, follow [report interpretation](references/interpretation.md). That
+branch ends with retained draft candidates and never evaluates legal authority.
+
+When the supervisor supplies a U09 authority run and `submit-authority` command,
+follow [authority and timing](references/authority-policy.md). Inspect every
+legal predicate, exception, role and timing basis against the captured paragraphs.
+Submit once; Python writes Stage 03. Retain unresolved questions for Legal in
+the draft and stop before Stage 04. No question has been delivered.
 
 When the supervisor supplies a U03 synthetic run root:
 

@@ -1,0 +1,336 @@
+{
+  "unit": "U09",
+  "basis": "Independent built-in json/hashlib/XML inspection; no test helper or authority validator imported",
+  "root": "/tmp/rci-u09-recovered/test_supported_draft_exact_ver0/run-775734a924b04b5db46850bbf80301cb",
+  "run_id": "run-775734a924b04b5db46850bbf80301cb",
+  "synthetic_only": true,
+  "stage03_sha256": "sha256:e346c89b2602485545fad0de2efcedbe710205b00d819ba3e361134399943eaa",
+  "predecessor_matches": true,
+  "components": [
+    {
+      "component": "obligation",
+      "value": "Deployers disclose synthetic AI output.",
+      "quote": "Deployers disclose synthetic AI output.",
+      "source_id": "OJ",
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible body of OJ; quote locates paragraph"
+      },
+      "path": "sources/d41d88167fca4775911d104e6b1947f6.legal.txt",
+      "sha256": "sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+      "expected": "Literal draft component in captured synthetic paragraph",
+      "observed": "Exact support; no real legal meaning or system role established"
+    },
+    {
+      "component": "predicate",
+      "value": "synthetic public output",
+      "quote": "synthetic public output",
+      "source_id": "OJ",
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible body of OJ; quote locates paragraph"
+      },
+      "path": "sources/d41d88167fca4775911d104e6b1947f6.legal.txt",
+      "sha256": "sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+      "expected": "Literal draft component in captured synthetic paragraph",
+      "observed": "Exact support; no real legal meaning or system role established"
+    },
+    {
+      "component": "role",
+      "value": "deployer",
+      "quote": "Deployers disclose synthetic AI output.",
+      "source_id": "OJ",
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible body of OJ; quote locates paragraph"
+      },
+      "path": "sources/d41d88167fca4775911d104e6b1947f6.legal.txt",
+      "sha256": "sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+      "expected": "Literal draft component in captured synthetic paragraph",
+      "observed": "Exact support; no real legal meaning or system role established"
+    },
+    {
+      "component": "exception-scope",
+      "value": "except synthetic editorial review",
+      "quote": "except synthetic editorial review",
+      "source_id": "OJ",
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible body of OJ; quote locates paragraph"
+      },
+      "path": "sources/d41d88167fca4775911d104e6b1947f6.legal.txt",
+      "sha256": "sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+      "expected": "Literal draft component in captured synthetic paragraph",
+      "observed": "Exact support; no real legal meaning or system role established"
+    },
+    {
+      "component": "exception",
+      "value": "except synthetic editorial review",
+      "quote": "except synthetic editorial review",
+      "source_id": "OJ",
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible body of OJ; quote locates paragraph"
+      },
+      "path": "sources/d41d88167fca4775911d104e6b1947f6.legal.txt",
+      "sha256": "sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+      "expected": "Literal draft component in captured synthetic paragraph",
+      "observed": "Exact support; no real legal meaning or system role established"
+    },
+    {
+      "component": "timing",
+      "value": "Synthetic rule applies from 2026-08-02 until 2027-01-01 exclusively.",
+      "quote": "Synthetic rule applies from 2026-08-02 until 2027-01-01 exclusively.",
+      "source_id": "OJ",
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible body of OJ; quote locates paragraph"
+      },
+      "path": "sources/d41d88167fca4775911d104e6b1947f6.legal.txt",
+      "sha256": "sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+      "expected": "Literal draft component in captured synthetic paragraph",
+      "observed": "Exact support; no real legal meaning or system role established"
+    }
+  ],
+  "source_assessments": [
+    {
+      "assessment": "consistent",
+      "document_id": "Article 50",
+      "effective_from": null,
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:43dc58e5ef41460bb8078b94290734fe",
+      "identity_quote": "Article 50",
+      "publication_date": "2026-07-01",
+      "relationship": "reproduction",
+      "relationship_quote": "Reproduction of regulation 2024/1689",
+      "source_id": "LAW",
+      "version": "LAW-v1",
+      "version_quote": "LAW-v1 2026-07-01"
+    },
+    {
+      "assessment": "consistent",
+      "document_id": "2024/1689",
+      "effective_from": null,
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:d53745f225214a40ae853fe76ef6e1c5",
+      "identity_quote": "2024/1689",
+      "publication_date": "2026-07-01",
+      "relationship": "base",
+      "relationship_quote": "Base regulation 2024/1689",
+      "source_id": "OJ",
+      "version": "OJ-v1",
+      "version_quote": "OJ-v1 2026-07-01"
+    },
+    {
+      "assessment": "consistent",
+      "document_id": "OJ:L_202601744",
+      "effective_from": null,
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:2cfc54a06e3047d6958f977d2a4a2872",
+      "identity_quote": "OJ:L_202601744",
+      "publication_date": "2026-07-01",
+      "relationship": "unrelated",
+      "relationship_quote": "Unrelated synthetic agricultural instrument",
+      "source_id": "AMEND",
+      "version": "AMEND-v1",
+      "version_quote": "AMEND-v1 2026-07-01"
+    },
+    {
+      "assessment": "consistent",
+      "document_id": "CELEX:02024R1689-20260727",
+      "effective_from": null,
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:97ee4c6aa9434beab604251f9365ba9c",
+      "identity_quote": "CELEX:02024R1689-20260727",
+      "publication_date": "2026-07-27",
+      "relationship": "consolidates",
+      "relationship_quote": "Consolidates regulation 2024/1689",
+      "source_id": "CONSOLIDATED",
+      "version": "CONSOLIDATED-v1",
+      "version_quote": "CONSOLIDATED-v1 2026-07-27"
+    },
+    {
+      "assessment": "consistent",
+      "document_id": "Implementation timeline",
+      "effective_from": null,
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:9b18ef11c2ba4d17a5d42feb4941c9f5",
+      "identity_quote": "Implementation timeline",
+      "publication_date": "2026-07-01",
+      "relationship": "context",
+      "relationship_quote": "Explanatory context only",
+      "source_id": "TIME",
+      "version": "TIME-v1",
+      "version_quote": "TIME-v1 2026-07-01"
+    },
+    {
+      "assessment": "consistent",
+      "document_id": "Transparency obligations under Article 50",
+      "effective_from": null,
+      "evidence_id": "record:run-775734a924b04b5db46850bbf80301cb:02:evidence:ade0450b9f8346f79a42525771b6ac63",
+      "identity_quote": "Transparency obligations under Article 50",
+      "publication_date": "2026-07-01",
+      "relationship": "context",
+      "relationship_quote": "Explanatory context only",
+      "source_id": "FAQ",
+      "version": "FAQ-v1",
+      "version_quote": "FAQ-v1 2026-07-01"
+    }
+  ],
+  "official_origins": [
+    {
+      "source_id": "OJ",
+      "original_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+      "effective_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    {
+      "source_id": "AMEND",
+      "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+      "effective_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744"
+    },
+    {
+      "source_id": "CONSOLIDATED",
+      "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+      "effective_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727"
+    }
+  ],
+  "assigned_review_date": "2026-08-26",
+  "effective_interval": [
+    "2026-08-02",
+    "2027-01-01"
+  ],
+  "draft_only": true,
+  "final_interpretation_owner": "Legal",
+  "real_legal_applicability": "not demonstrated",
+  "guidance_fail_closed": {
+    "root": "/tmp/rci-u09-recovered/test_unsupported_formal_conclu0/run-775734a924b04b5db46850bbf80301cb",
+    "observed_status": "blocked",
+    "binding_rule_count": 0,
+    "timing_rule_count": 0,
+    "candidate_reviews": [
+      {
+        "blocker_ids": [
+          "record:run-775734a924b04b5db46850bbf80301cb:03:blocker:36bcfd2b3d3747d6940419a1bae8ca06",
+          "record:run-775734a924b04b5db46850bbf80301cb:03:blocker:1d30486016fa4827b8a75a150048d435"
+        ],
+        "claimed_summary": "Deployers disclose synthetic AI output.",
+        "claimed_system_ids": [
+          "AI-001"
+        ],
+        "disposition": "blocked",
+        "number": 1
+      }
+    ],
+    "blockers": [
+      {
+        "evidence_ids": [],
+        "id": "record:run-775734a924b04b5db46850bbf80301cb:03:blocker:36bcfd2b3d3747d6940419a1bae8ca06",
+        "owner": "Legal",
+        "reason": "Candidate 1: guidance cannot establish binding law",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ",
+          "analysis/authority/exchanges/95f9e2659b174bd0b44f25836aa7546f/response.json"
+        ],
+        "summary": "Candidate 1: guidance cannot establish binding law"
+      },
+      {
+        "evidence_ids": [],
+        "id": "record:run-775734a924b04b5db46850bbf80301cb:03:blocker:1d30486016fa4827b8a75a150048d435",
+        "owner": "Legal",
+        "reason": "No supported binding rule candidates; Legal must resolve the authority scope",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ",
+          "analysis/authority/exchanges/95f9e2659b174bd0b44f25836aa7546f/response.json"
+        ],
+        "summary": "No supported binding rule candidates; Legal must resolve the authority scope"
+      }
+    ]
+  },
+  "mirror_fail_closed": {
+    "root": "/tmp/rci-u09-recovered/test_authorized_mirror_route_d0/run-ed81cd9fa1c04c5a902632bd138a6151",
+    "observed_status": "blocked",
+    "binding_rule_count": 0,
+    "timing_rule_count": 0,
+    "candidate_reviews": [
+      {
+        "blocker_ids": [
+          "record:run-ed81cd9fa1c04c5a902632bd138a6151:03:blocker:d25c15fa04404cb9b4233278221e1b0e",
+          "record:run-ed81cd9fa1c04c5a902632bd138a6151:03:blocker:5b8990284df4492fa4aebaa0fd349d9c"
+        ],
+        "claimed_summary": "Deployers disclose synthetic AI output.",
+        "claimed_system_ids": [
+          "AI-001"
+        ],
+        "disposition": "blocked",
+        "number": 1
+      }
+    ],
+    "blockers": [
+      {
+        "evidence_ids": [],
+        "id": "record:run-ed81cd9fa1c04c5a902632bd138a6151:03:blocker:d25c15fa04404cb9b4233278221e1b0e",
+        "owner": "Legal",
+        "reason": "Candidate 1: formal authority requires official EUR-Lex origin; a source label or authorized mirror is insufficient",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ",
+          "analysis/authority/exchanges/ad084d0e817b456a821cd79f37a51203/response.json"
+        ],
+        "summary": "Candidate 1: formal authority requires official EUR-Lex origin; a source label or authorized mirror is insufficient"
+      },
+      {
+        "evidence_ids": [],
+        "id": "record:run-ed81cd9fa1c04c5a902632bd138a6151:03:blocker:5b8990284df4492fa4aebaa0fd349d9c",
+        "owner": "Legal",
+        "reason": "No supported binding rule candidates; Legal must resolve the authority scope",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ",
+          "analysis/authority/exchanges/ad084d0e817b456a821cd79f37a51203/response.json"
+        ],
+        "summary": "No supported binding rule candidates; Legal must resolve the authority scope"
+      }
+    ]
+  },
+  "later_outputs_absent": true,
+  "automated_results": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "47",
+    "time": "659.161",
+    "timestamp": "2026-10-09T16:16:32.356394-04:00",
+    "hostname": "MikeysMac",
+    "path": "/tmp/rci-u09-recovered-results.xml",
+    "sha256": "sha256:718aba3fe14aefb7069a280e90c06576e536f6fea303b959b673cbd44941e9d8"
+  },
+  "authority_code_sha256": "sha256:adb20c54a4db61799e9a3ebec6a6010a9ca989d35c72c5526de5339ee9a27cfe"
+}

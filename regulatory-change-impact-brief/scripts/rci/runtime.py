@@ -14,7 +14,7 @@ from uuid import uuid4
 from urllib.parse import parse_qsl, urlsplit
 
 from jsonschema import Draft202012Validator, FormatChecker
-from .contracts import ContractError, json_bytes, parse_json, require, sha256_bytes
+from .contracts import ContractError, json_bytes, package_path, parse_json, require, sha256_bytes
 from .snapshots import accept_package
 
 SKILL = Path(__file__).resolve().parents[2]
@@ -116,12 +116,14 @@ def host_command(host, workspace, model, effort):
             '-c','features.multi_agent=false','-c','features.web_search=false','-']
 
 
-def invoke_host(command, prompt, workspace, timeout):
+def invoke_host(command, prompt, workspace, timeout, *, analysis_directory='analysis'):
     env = {k:v for k,v in os.environ.items() if not k.startswith('CODEX_THREAD')}
     env['RCI_CHILD_RUN'] = workspace.name
     env['PYTHONDONTWRITEBYTECODE'] = '1'
-    with (workspace/'analysis/host-events.jsonl').open('wb') as out, \
-            (workspace/'analysis/host-stderr.txt').open('wb') as err:
+    log_root = package_path(workspace, analysis_directory + '/host-events.jsonl').parent
+    log_root.mkdir(parents=True, exist_ok=True)
+    with (log_root/'host-events.jsonl').open('wb') as out, \
+            (log_root/'host-stderr.txt').open('wb') as err:
         process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=out, stderr=err,
                                    env=env, start_new_session=True)
         try:
@@ -173,9 +175,9 @@ def verify_inventory(root, inventory):
         require(sha256_bytes((root/path).read_bytes())==digest,'host altered immutable input: '+path)
 
 
-def visible_usage(root):
+def visible_usage(root, *, analysis_directory='analysis'):
     usage=[]
-    for line in (root/'analysis/host-events.jsonl').read_bytes().splitlines():
+    for line in package_path(root, analysis_directory + '/host-events.jsonl').read_bytes().splitlines():
         try:
             event=parse_json(line)
         except ContractError:

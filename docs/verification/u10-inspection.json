@@ -1,0 +1,427 @@
+{
+  "run_id": "run-d0052892f3b7466a8f48b04f51d6de7a",
+  "root": "/home/mike/regulatory-compliance/.evidence/u10-recovery/status-field-final/test_owner_capture_conflict_fi0/run-d0052892f3b7466a8f48b04f51d6de7a",
+  "inspector": "stdlib independent byte/CSV/JSON inspector plus synthetic notice semantic oracle",
+  "snapshot_hashes": {
+    "snapshots/01-scope.json": "sha256:24086b497dc7b6bbb1fb88de8e3c52b9a5688d1867090abba95d28bf8a7ae2ab",
+    "snapshots/02-source-capture.json": "sha256:3d496ee5b69a9e51bd50bbf1fc00e44459f6b13415973fc990f189f132fe69bc",
+    "snapshots/03-authority-and-timing.json": "sha256:42906dd67b650ac468b33f407ff1975cc2ccf8261106397c6f7a39e319f795a8",
+    "snapshots/04-evidence-reconciliation.json": "sha256:dc2c8b833bb6bdca0bdcd90e3657f9e701ed8787254c9539a5ab8114dabaabf9"
+  },
+  "status": "partial",
+  "scope": [
+    "AI-001",
+    "AI-002",
+    "AI-003",
+    "AI-004",
+    "AI-005",
+    "AI-006",
+    "AI-007",
+    "AI-008"
+  ],
+  "raw_rows": 26,
+  "normalized_rows": 26,
+  "reports": 10,
+  "system_membership": [
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Learner Operations"
+      ],
+      "registers": {
+        "CALENDAR": [],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:3e6db4fbb2ff400b9292112035f06607"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:6e7bfa9af739448faf5d5c17ba47c5da"
+        ]
+      },
+      "system_id": "AI-001"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Admissions"
+      ],
+      "registers": {
+        "CALENDAR": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:5a5ee02bda16456c864265dca290fddc"
+        ],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:ef85cc8dcb1f4b42a17b8837306503f6"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:b5bdc80994df457fb05df5ee9358d0d5"
+        ]
+      },
+      "system_id": "AI-002"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Communications"
+      ],
+      "registers": {
+        "CALENDAR": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:f3595fd28aca45aab6113f2914c0d272"
+        ],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:9e806132eb334f9c842154060e54e127"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:d85571e1e02545308a26a966798d5ac8"
+        ]
+      },
+      "system_id": "AI-003"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Learning Experience"
+      ],
+      "registers": {
+        "CALENDAR": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:0950588f27c5429fa1dc023d5821f5bf"
+        ],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:cc2bf5c0bb5a4af4bd98f5917d839d1e"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:44ee6ad9e4de4baaa768f79bd24ccbca"
+        ]
+      },
+      "system_id": "AI-004"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Assessment Operations"
+      ],
+      "registers": {
+        "CALENDAR": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:1eae6bdf3c884ae4bf49e6a5b8e57222"
+        ],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:ee196b0ab4044f21a19c5ca86098a4bd",
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:9a0ab6a430604f19a1699b2e0a9e144b"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:944f7bd2c1f147a5afd3f15eb535b606"
+        ]
+      },
+      "system_id": "AI-005"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "People Operations"
+      ],
+      "registers": {
+        "CALENDAR": [],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:1b4b50565b9b4a769d1cabf5678cc3ae"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:6cba12811688499c99f543daa6100cb2"
+        ]
+      },
+      "system_id": "AI-006"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Marketing"
+      ],
+      "registers": {
+        "CALENDAR": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:a64ffff90f7943628cefc5f13473e66e"
+        ],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:d8c4ac77c5344bae91fb111925b20f4c"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:9291cfd588654dc48b998815d864d31c"
+        ]
+      },
+      "system_id": "AI-007"
+    },
+    {
+      "all_calendar_rows": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:e64108d14f9446e494b56c283911cb17"
+      ],
+      "owner_candidates": [
+        "Communications"
+      ],
+      "registers": {
+        "CALENDAR": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:7afdbe1b83f54bbcb2a8187b14e2abae",
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:df5829b663f74c198972e98374836133"
+        ],
+        "EVIDENCE": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:d8a4fa6da12c45dab04edc930054093c",
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:c1049c901b774ada89f843d7ee9677f8"
+        ],
+        "SYSTEMS": [
+          "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:normalized-row:29c15ce7ed854e80b05cbacb95391ea5"
+        ]
+      },
+      "system_id": "AI-008"
+    }
+  ],
+  "observations": [
+    {
+      "system_id": "AI-007",
+      "predicate": "notice_present",
+      "state": "conflicting",
+      "value": {
+        "assertions": [
+          {
+            "evidence_ids": [
+              "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731"
+            ],
+            "observed_on": "2026-08-26",
+            "origin": "candidate:1",
+            "owner": "Marketing",
+            "reason": null,
+            "retrieved_at": "2026-10-09T21:42:29.400863Z",
+            "source_basis": [
+              "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+              "analysis/reconciliation candidate 1"
+            ],
+            "usable": true,
+            "value": true
+          },
+          {
+            "evidence_ids": [
+              "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731"
+            ],
+            "observed_on": "2026-08-26",
+            "origin": "candidate:2",
+            "owner": "Marketing",
+            "reason": null,
+            "retrieved_at": "2026-10-09T21:42:29.400863Z",
+            "source_basis": [
+              "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+              "analysis/reconciliation candidate 2"
+            ],
+            "usable": true,
+            "value": false
+          }
+        ],
+        "resolved_value": null,
+        "scope": "learner chat"
+      }
+    },
+    {
+      "system_id": "AI-007",
+      "predicate": "notice_present",
+      "state": "supported",
+      "value": {
+        "assertions": [
+          {
+            "evidence_ids": [
+              "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731"
+            ],
+            "observed_on": "2026-08-26",
+            "origin": "candidate:3",
+            "owner": "Marketing",
+            "reason": null,
+            "retrieved_at": "2026-10-09T21:42:29.400863Z",
+            "source_basis": [
+              "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+              "analysis/reconciliation candidate 3"
+            ],
+            "usable": true,
+            "value": true
+          }
+        ],
+        "resolved_value": true,
+        "scope": "public"
+      }
+    }
+  ],
+  "conflicts": [
+    {
+      "id": "record:run-d0052892f3b7466a8f48b04f51d6de7a:04:conflict:bb40c0d61c8a46ec94648f8a77b7bf9e",
+      "reason": "Scoped assertions disagree; every value retained; values and bases: {\n  \"assertions\": [\n    {\n      \"evidence_ids\": [\n        \"record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731\"\n      ],\n      \"observed_on\": \"2026-08-26\",\n      \"origin\": \"candidate:1\",\n      \"owner\": \"Marketing\",\n      \"reason\": null,\n      \"retrieved_at\": \"2026-10-09T21:42:29.400863Z\",\n      \"source_basis\": [\n        \"record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731\",\n        \"analysis/reconciliation candidate 1\"\n      ],\n      \"usable\": true,\n      \"value\": true\n    },\n    {\n      \"evidence_ids\": [\n        \"record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731\"\n      ],\n      \"observed_on\": \"2026-08-26\",\n      \"origin\": \"candidate:2\",\n      \"owner\": \"Marketing\",\n      \"reason\": null,\n      \"retrieved_at\": \"2026-10-09T21:42:29.400863Z\",\n      \"source_basis\": [\n        \"record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731\",\n        \"analysis/reconciliation candidate 2\"\n      ],\n      \"usable\": true,\n      \"value\": false\n    }\n  ],\n  \"resolved_value\": null,\n  \"scope\": \"learner chat\"\n}\n",
+      "owner": "Marketing",
+      "values": [
+        {
+          "assertions": [
+            {
+              "evidence_ids": [
+                "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731"
+              ],
+              "observed_on": "2026-08-26",
+              "origin": "candidate:1",
+              "owner": "Marketing",
+              "reason": null,
+              "retrieved_at": "2026-10-09T21:42:29.400863Z",
+              "source_basis": [
+                "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+                "analysis/reconciliation candidate 1"
+              ],
+              "usable": true,
+              "value": true
+            },
+            {
+              "evidence_ids": [
+                "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731"
+              ],
+              "observed_on": "2026-08-26",
+              "origin": "candidate:2",
+              "owner": "Marketing",
+              "reason": null,
+              "retrieved_at": "2026-10-09T21:42:29.400863Z",
+              "source_basis": [
+                "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+                "analysis/reconciliation candidate 2"
+              ],
+              "usable": true,
+              "value": false
+            }
+          ],
+          "resolved_value": null,
+          "scope": "learner chat"
+        }
+      ],
+      "evidence_ids": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731"
+      ],
+      "resolution_need": "System owner must verify/correct the scoped facts; Operations must resolve operational questions. Preserve all records; no request has been sent."
+    }
+  ],
+  "policy_controls": [
+    {
+      "basis_type": "internal-control",
+      "control": "Staff review AI outputs before learner delivery.",
+      "effective_from": "2026-08-01",
+      "effective_precision": "date",
+      "effective_until": "2027-01-01",
+      "evidence_ids": [
+        "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:2da5ec0eacc745cbbd83ce56e24e8eaa"
+      ],
+      "id": "record:run-d0052892f3b7466a8f48b04f51d6de7a:04:policy-control:ec7ef2afbacb49c5a183460cac99c044",
+      "record_type": "policy-control",
+      "retrieved_at": "2026-10-09T21:42:25.460000Z",
+      "rule_version_id": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8",
+      "summary": "Staff review AI outputs before learner delivery.",
+      "supersedes_rule_version_id": null,
+      "system_ids": [
+        "AI-001",
+        "AI-002",
+        "AI-003",
+        "AI-004",
+        "AI-005",
+        "AI-006",
+        "AI-007",
+        "AI-008"
+      ],
+      "version_key": {
+        "basis_id": "POLICY:synthetic-human-review",
+        "meaning_key": "synthetic-learner-review/v1"
+      }
+    }
+  ],
+  "inspected_quotes": [
+    {
+      "assessment": {
+        "evidence_id": "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+        "identity_quote": "AI-007",
+        "kind": "fact",
+        "observation_kind": "owner-statement",
+        "observed_on": "2026-08-26",
+        "owner": "Marketing",
+        "predicate": "notice_present",
+        "quote": "SYNTHETIC TEST ONLY. AI-007 learner chat owner says notice is present on 2026-08-26.",
+        "review_date_quote": "2026-08-26",
+        "role_current": true,
+        "schema_version": "rci-u10-basis/1",
+        "scope": "learner chat",
+        "value": true,
+        "value_quote": "SYNTHETIC TEST ONLY. AI-007 learner chat owner says notice is present on 2026-08-26."
+      },
+      "source_path": "sources/cb433e7211694867a93eaccbb901babb.bin",
+      "source_sha256": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+    },
+    {
+      "assessment": {
+        "evidence_id": "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+        "identity_quote": "AI-007",
+        "kind": "fact",
+        "observation_kind": "page-capture",
+        "observed_on": "2026-08-26",
+        "owner": "Marketing",
+        "predicate": "notice_present",
+        "quote": "AI-007 learner chat page capture shows notice is absent on 2026-08-26.",
+        "review_date_quote": "2026-08-26",
+        "role_current": true,
+        "schema_version": "rci-u10-basis/1",
+        "scope": "learner chat",
+        "value": false,
+        "value_quote": "AI-007 learner chat page capture shows notice is absent on 2026-08-26."
+      },
+      "source_path": "sources/cb433e7211694867a93eaccbb901babb.bin",
+      "source_sha256": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+    },
+    {
+      "assessment": {
+        "evidence_id": "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:e8b4ea02b589458d83bb03391a8eb731",
+        "identity_quote": "AI-007",
+        "kind": "fact",
+        "observation_kind": "page-capture",
+        "observed_on": "2026-08-26",
+        "owner": "Marketing",
+        "predicate": "notice_present",
+        "quote": "AI-007 public page capture shows visible label present on 2026-08-26.",
+        "review_date_quote": "2026-08-26",
+        "role_current": true,
+        "schema_version": "rci-u10-basis/1",
+        "scope": "public",
+        "value": true,
+        "value_quote": "AI-007 public page capture shows visible label present on 2026-08-26."
+      },
+      "source_path": "sources/cb433e7211694867a93eaccbb901babb.bin",
+      "source_sha256": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+    },
+    {
+      "assessment": {
+        "activation": "active",
+        "activation_quote": "active",
+        "basis_id": "synthetic-human-review",
+        "control": "Staff review AI outputs before learner delivery.",
+        "effective_from": "2026-08-01",
+        "effective_until": "2027-01-01",
+        "evidence_id": "record:run-d0052892f3b7466a8f48b04f51d6de7a:02:evidence:2da5ec0eacc745cbbd83ce56e24e8eaa",
+        "identity_quote": "Quillhaven",
+        "kind": "policy-control",
+        "meaning_key": "synthetic-learner-review/v1",
+        "quote": "SYNTHETIC POLICY ONLY. Quillhaven ALL systems internal policy P-v1 effective from 2026-08-01 active through 2027-01-01 exclusively. Staff review AI outputs before learner delivery.",
+        "schema_version": "rci-u10-basis/1",
+        "scope_kind": "all-scoped",
+        "scope_quote": "ALL",
+        "version": "P-v1",
+        "version_quote": "P-v1"
+      },
+      "source_path": "sources/40679a119a21411fb50fafce25501253.policy.txt",
+      "source_sha256": "sha256:e7da4fb7da707e522d65075745df5f63f50b53188fb30fc6ea85e1cf2d082c9c"
+    }
+  ],
+  "later_outputs_absent": true,
+  "live_company_or_legal_acceptance": false
+}

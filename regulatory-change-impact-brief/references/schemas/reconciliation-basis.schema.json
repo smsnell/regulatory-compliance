@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "rci-u10-basis/1"
+        },
+        "kind": {
+          "const": "fact"
+        },
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "identity_quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "predicate": {
+          "enum": [
+            "notice_present",
+            "notice_before_first_interaction",
+            "machine_readable_provenance",
+            "provider_role",
+            "deployer_role",
+            "output_scope",
+            "exposed_group",
+            "human_review_path",
+            "exception_claim"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "string",
+            "null"
+          ]
+        },
+        "value_quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "observed_on": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "review_date_quote": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "observation_kind": {
+          "enum": [
+            "owner-statement",
+            "page-capture",
+            "interaction-test",
+            "export-test"
+          ]
+        },
+        "role_current": {
+          "type": "boolean"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "evidence_id",
+        "quote",
+        "identity_quote",
+        "predicate",
+        "scope",
+        "value",
+        "value_quote",
+        "observed_on",
+        "review_date_quote",
+        "observation_kind",
+        "role_current",
+        "owner"
+      ]
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "schema_version": {
+          "const": "rci-u10-basis/1"
+        },
+        "kind": {
+          "const": "policy-control"
+        },
+        "evidence_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "identity_quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "basis_id": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "meaning_key": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "control": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "version_quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "activation": {
+          "enum": [
+            "active",
+            "pending",
+            "unknown"
+          ]
+        },
+        "activation_quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "effective_from": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_until": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "scope_kind": {
+          "enum": [
+            "all-scoped",
+            "systems"
+          ]
+        },
+        "scope_quote": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "schema_version",
+        "kind",
+        "evidence_id",
+        "quote",
+        "identity_quote",
+        "basis_id",
+        "meaning_key",
+        "control",
+        "version",
+        "version_quote",
+        "activation",
+        "activation_quote",
+        "effective_from",
+        "effective_until",
+        "scope_kind",
+        "scope_quote"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,599 @@
+{
+  "schema_version": "rci-g3-review/1",
+  "baseline_head": "476cc14",
+  "verdict": "PASS",
+  "unit_verdicts": {
+    "U08": "PASS",
+    "U09": "PASS",
+    "U10": "PASS"
+  },
+  "findings_resolved": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6"
+  ],
+  "verification_runs": [
+    {
+      "name": "units",
+      "tests": 141,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 2475.7,
+      "path": ".evidence/g3-review/units.xml",
+      "sha256": "sha256:1afd9b327bb1edf39f220430f9e8deae3b886de59ed2e1d8d5dbb634521a7bbb"
+    },
+    {
+      "name": "prerequisites",
+      "tests": 205,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 257.595,
+      "path": ".evidence/g3-review/prerequisites.xml",
+      "sha256": "sha256:0da7125e41d04015aedf0bfe57c318a6753da3e7e6a28140cbcd90b6fd871570"
+    },
+    {
+      "name": "green",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 646.032,
+      "path": ".evidence/g3-review/green.xml",
+      "sha256": "sha256:ef0986d50e239e6dcbe0f0ba7fdb04d4b74e19f4421ea86cf92bdb309bc1e91d"
+    },
+    {
+      "name": "authority-final",
+      "tests": 29,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 464.37,
+      "path": ".evidence/g3-review/authority-final.xml",
+      "sha256": "sha256:4d4d2d577fc62be3f6f7b10ab3f6c35ef3a13c241c08489cf4d1c78d3bbca0ea"
+    },
+    {
+      "name": "gate",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 298.266,
+      "path": ".evidence/g3-review/gate.xml",
+      "sha256": "sha256:5068e0082edbe6c05e78bbcfca00be23508458464792d04abdccdad6559a80f0"
+    },
+    {
+      "name": "gate-capture",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 29.266,
+      "path": ".evidence/g3-review/gate-capture.xml",
+      "sha256": "sha256:81781b0227001043d9cacbf161d94dc9c3b33c1d617cef0a6474cb98b0616c06"
+    },
+    {
+      "name": "routing-final",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 208.24,
+      "path": ".evidence/g3-review/routing-final.xml",
+      "sha256": "sha256:4b86637b501e4107806a2711696113decd0bbdcaf5d148dca1ad1fcb9078d3de"
+    }
+  ],
+  "verification_notes": [
+    "units is the existing suite begun before remediation; affected final behavior is established by the targeted reruns.",
+    "prerequisites XML counts 166 top-level tests plus 39 subtests as 205 cases.",
+    "G3 seven cases were run as six plus the targeted two-capture case; no impact engine was implemented.",
+    "Intentional red reproductions are preserved separately and are not accepted checks."
+  ],
+  "independent": {
+    "specimens": [
+      {
+        "root": "/home/mike/regulatory-compliance/.evidence/g3-review/green/test_owner_capture_conflict_fi0/run-ffb714f3780f49ef98a39ffd4112d685",
+        "run_id": "run-ffb714f3780f49ef98a39ffd4112d685",
+        "snapshot_hashes": {
+          "snapshots/01-scope.json": "sha256:5ba0f27bc27b5416e228b0a3221623f5c6f99dcc462077549543f795b9820862",
+          "snapshots/02-source-capture.json": "sha256:d15f2ea756e4d010439b38b77ae6f4a74a7bed62588b0b2f63f4035543bcd0b9",
+          "snapshots/03-authority-and-timing.json": "sha256:b205737b19178cabb5aa9f3832b838e8e6302ebd9a100b1ebbcb593a7297596b",
+          "snapshots/04-evidence-reconciliation.json": "sha256:ab14fd9188908790f22fa925b6e976b3cb884a9648170a9d6e443dccde762a10"
+        },
+        "status": "partial",
+        "components": [
+          {
+            "component": "obligation",
+            "value": "Deployers disclose synthetic AI output.",
+            "quote": "Deployers disclose synthetic AI output.",
+            "source": "OJ",
+            "path": "sources/26021c16f3954fc2aebf4e941f23fcbd.legal.txt"
+          },
+          {
+            "component": "predicate",
+            "value": "synthetic public output",
+            "quote": "synthetic public output",
+            "source": "OJ",
+            "path": "sources/26021c16f3954fc2aebf4e941f23fcbd.legal.txt"
+          },
+          {
+            "component": "role",
+            "value": "deployer",
+            "quote": "Deployers disclose synthetic AI output.",
+            "source": "OJ",
+            "path": "sources/26021c16f3954fc2aebf4e941f23fcbd.legal.txt"
+          },
+          {
+            "component": "exception-scope",
+            "value": "except synthetic editorial review",
+            "quote": "except synthetic editorial review",
+            "source": "OJ",
+            "path": "sources/26021c16f3954fc2aebf4e941f23fcbd.legal.txt"
+          },
+          {
+            "component": "exception",
+            "value": "except synthetic editorial review",
+            "quote": "except synthetic editorial review",
+            "source": "OJ",
+            "path": "sources/26021c16f3954fc2aebf4e941f23fcbd.legal.txt"
+          },
+          {
+            "component": "timing",
+            "value": "Synthetic rule applies from 2026-08-02 until 2027-01-01 exclusively.",
+            "quote": "Synthetic rule applies from 2026-08-02 until 2027-01-01 exclusively.",
+            "source": "OJ",
+            "path": "sources/26021c16f3954fc2aebf4e941f23fcbd.legal.txt"
+          }
+        ],
+        "source_assessments": [
+          {
+            "source": "LAW",
+            "document": "Article 50",
+            "version": "LAW-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "reproduction",
+            "identity_quote": "Article 50",
+            "version_quote": "LAW-v1 2026-07-01",
+            "relationship_quote": "Reproduction of regulation 2024/1689"
+          },
+          {
+            "source": "OJ",
+            "document": "2024/1689",
+            "version": "OJ-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "base",
+            "identity_quote": "2024/1689",
+            "version_quote": "OJ-v1 2026-07-01",
+            "relationship_quote": "Base regulation 2024/1689"
+          },
+          {
+            "source": "AMEND",
+            "document": "OJ:L_202601744",
+            "version": "AMEND-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "unrelated",
+            "identity_quote": "OJ:L_202601744",
+            "version_quote": "AMEND-v1 2026-07-01",
+            "relationship_quote": "Unrelated synthetic agricultural instrument"
+          },
+          {
+            "source": "CONSOLIDATED",
+            "document": "CELEX:02024R1689-20260727",
+            "version": "CONSOLIDATED-v1",
+            "publication_date": "2026-07-27",
+            "relationship": "consolidates",
+            "identity_quote": "CELEX:02024R1689-20260727",
+            "version_quote": "CONSOLIDATED-v1 2026-07-27",
+            "relationship_quote": "Consolidates regulation 2024/1689"
+          },
+          {
+            "source": "TIME",
+            "document": "Implementation timeline",
+            "version": "TIME-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "context",
+            "identity_quote": "Implementation timeline",
+            "version_quote": "TIME-v1 2026-07-01",
+            "relationship_quote": "Explanatory context only"
+          },
+          {
+            "source": "FAQ",
+            "document": "Transparency obligations under Article 50",
+            "version": "FAQ-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "context",
+            "identity_quote": "Transparency obligations under Article 50",
+            "version_quote": "FAQ-v1 2026-07-01",
+            "relationship_quote": "Explanatory context only"
+          }
+        ],
+        "semantic_scope": "Synthetic clauses inspected; no real legal applicability asserted"
+      },
+      {
+        "root": "/home/mike/regulatory-compliance/.evidence/g3-review/green/test_independent_supported_rul0/run-901d251f5b2d4ece97d9b70ea7a2fc8a",
+        "run_id": "run-901d251f5b2d4ece97d9b70ea7a2fc8a",
+        "snapshot_hashes": {
+          "snapshots/01-scope.json": "sha256:b629f5794b37c971abe597711570ad01174b51f5c8c139131cdac7b7233b2329",
+          "snapshots/02-source-capture.json": "sha256:fd47c4d28f961b1f1f72b8555d68b538add476e45cd34f21cd547c77af8b3c2b",
+          "snapshots/03-authority-and-timing.json": "sha256:bd05870eb25d87faf77bcf9b439fe9bf8cb99847d7c826075bc00a136ace26f9"
+        },
+        "status": "blocked",
+        "components": [
+          {
+            "component": "obligation",
+            "value": "Deployers disclose synthetic AI output.",
+            "quote": "Deployers disclose synthetic AI output.",
+            "source": "OJ",
+            "path": "sources/8c33f2f6785746cca48efecf5fb417ed.legal.txt"
+          },
+          {
+            "component": "predicate",
+            "value": "synthetic public output",
+            "quote": "synthetic public output",
+            "source": "OJ",
+            "path": "sources/8c33f2f6785746cca48efecf5fb417ed.legal.txt"
+          },
+          {
+            "component": "role",
+            "value": "deployer",
+            "quote": "Deployers disclose synthetic AI output.",
+            "source": "OJ",
+            "path": "sources/8c33f2f6785746cca48efecf5fb417ed.legal.txt"
+          },
+          {
+            "component": "exception-scope",
+            "value": "except synthetic editorial review",
+            "quote": "except synthetic editorial review",
+            "source": "OJ",
+            "path": "sources/8c33f2f6785746cca48efecf5fb417ed.legal.txt"
+          },
+          {
+            "component": "exception",
+            "value": "except synthetic editorial review",
+            "quote": "except synthetic editorial review",
+            "source": "OJ",
+            "path": "sources/8c33f2f6785746cca48efecf5fb417ed.legal.txt"
+          },
+          {
+            "component": "timing",
+            "value": "Synthetic rule applies from 2026-08-02 until 2027-01-01 exclusively.",
+            "quote": "Synthetic rule applies from 2026-08-02 until 2027-01-01 exclusively.",
+            "source": "OJ",
+            "path": "sources/8c33f2f6785746cca48efecf5fb417ed.legal.txt"
+          }
+        ],
+        "source_assessments": [
+          {
+            "source": "LAW",
+            "document": "Article 50",
+            "version": "LAW-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "reproduction",
+            "identity_quote": "Article 50",
+            "version_quote": "LAW-v1 2026-07-01",
+            "relationship_quote": "Reproduction of regulation 2024/1689"
+          },
+          {
+            "source": "OJ",
+            "document": "2024/1689",
+            "version": "OJ-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "base",
+            "identity_quote": "2024/1689",
+            "version_quote": "OJ-v1 2026-07-01",
+            "relationship_quote": "Base regulation 2024/1689"
+          },
+          {
+            "source": "AMEND",
+            "document": "OJ:L_202601744",
+            "version": "AMEND-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "unrelated",
+            "identity_quote": "OJ:L_202601744",
+            "version_quote": "AMEND-v1 2026-07-01",
+            "relationship_quote": "Unrelated synthetic agricultural instrument"
+          },
+          {
+            "source": "CONSOLIDATED",
+            "document": "CELEX:02024R1689-20260727",
+            "version": "CONSOLIDATED-v1",
+            "publication_date": "2026-07-27",
+            "relationship": "consolidates",
+            "identity_quote": "CELEX:02024R1689-20260727",
+            "version_quote": "CONSOLIDATED-v1 2026-07-27",
+            "relationship_quote": "Consolidates regulation 2024/1689"
+          },
+          {
+            "source": "TIME",
+            "document": "Implementation timeline",
+            "version": "TIME-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "context",
+            "identity_quote": "Implementation timeline",
+            "version_quote": "TIME-v1 2026-07-01",
+            "relationship_quote": "Explanatory context only"
+          },
+          {
+            "source": "FAQ",
+            "document": "Transparency obligations under Article 50",
+            "version": "FAQ-v1",
+            "publication_date": "2026-07-01",
+            "relationship": "context",
+            "identity_quote": "Transparency obligations under Article 50",
+            "version_quote": "FAQ-v1 2026-07-01",
+            "relationship_quote": "Explanatory context only"
+          }
+        ],
+        "semantic_scope": "Synthetic clauses inspected; no real legal applicability asserted"
+      }
+    ],
+    "adversarial": [
+      {
+        "case": "invented legal role",
+        "result": "PASS",
+        "observed": "Stage 03 differs from verified authority interpretation and prerequisites",
+        "structurally_valid": true
+      },
+      {
+        "case": "changed supported notice value",
+        "result": "PASS",
+        "observed": "Stage 04 differs from verified reconciliation and row accounting",
+        "structurally_valid": true
+      },
+      {
+        "case": "silently dropped raw-row accounting",
+        "result": "PASS",
+        "observed": "Stage 04 differs from verified reconciliation and row accounting",
+        "structurally_valid": true
+      }
+    ],
+    "originals_unchanged": true,
+    "production_acceptance": false
+  },
+  "factual": {
+    "path": ".evidence/g3-review/factual-inspection.json",
+    "sha256": "sha256:a485f28d3fae985d34274cef4c9332f5146b1ead78c714652aa0d96c0e20317b",
+    "root": "/home/mike/regulatory-compliance/.evidence/g3-review/green/test_owner_capture_conflict_fi0/run-ffb714f3780f49ef98a39ffd4112d685",
+    "scope": [
+      "AI-001",
+      "AI-002",
+      "AI-003",
+      "AI-004",
+      "AI-005",
+      "AI-006",
+      "AI-007",
+      "AI-008"
+    ],
+    "raw_rows": 26,
+    "normalized_rows": 26,
+    "reports": 10,
+    "observations": [
+      {
+        "system_id": "AI-007",
+        "predicate": "notice_present",
+        "state": "conflicting",
+        "value": {
+          "assertions": [
+            {
+              "evidence_ids": [
+                "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6"
+              ],
+              "observed_on": "2026-08-26",
+              "origin": "candidate:1",
+              "owner": "Marketing",
+              "reason": null,
+              "retrieved_at": "2026-10-10T02:22:39.508373Z",
+              "source_basis": [
+                "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6",
+                "analysis/reconciliation candidate 1"
+              ],
+              "usable": true,
+              "value": true
+            },
+            {
+              "evidence_ids": [
+                "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6"
+              ],
+              "observed_on": "2026-08-26",
+              "origin": "candidate:2",
+              "owner": "Marketing",
+              "reason": null,
+              "retrieved_at": "2026-10-10T02:22:39.508373Z",
+              "source_basis": [
+                "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6",
+                "analysis/reconciliation candidate 2"
+              ],
+              "usable": true,
+              "value": false
+            }
+          ],
+          "resolved_value": null,
+          "scope": "learner chat"
+        }
+      },
+      {
+        "system_id": "AI-007",
+        "predicate": "notice_present",
+        "state": "supported",
+        "value": {
+          "assertions": [
+            {
+              "evidence_ids": [
+                "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6"
+              ],
+              "observed_on": "2026-08-26",
+              "origin": "candidate:3",
+              "owner": "Marketing",
+              "reason": null,
+              "retrieved_at": "2026-10-10T02:22:39.508373Z",
+              "source_basis": [
+                "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6",
+                "analysis/reconciliation candidate 3"
+              ],
+              "usable": true,
+              "value": true
+            }
+          ],
+          "resolved_value": true,
+          "scope": "public"
+        }
+      }
+    ],
+    "policy_controls": [
+      {
+        "basis_type": "internal-control",
+        "control": "Staff review AI outputs before learner delivery.",
+        "effective_from": "2026-08-01",
+        "effective_precision": "date",
+        "effective_until": "2027-01-01",
+        "evidence_ids": [
+          "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:f699e409d7c54bbf873e4e74c5a4e878"
+        ],
+        "id": "record:run-ffb714f3780f49ef98a39ffd4112d685:04:policy-control:cbdfced418434af985c7c3004ef07a99",
+        "record_type": "policy-control",
+        "retrieved_at": "2026-10-10T02:22:36.135454Z",
+        "rule_version_id": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8",
+        "summary": "Staff review AI outputs before learner delivery.",
+        "supersedes_rule_version_id": null,
+        "system_ids": [
+          "AI-001",
+          "AI-002",
+          "AI-003",
+          "AI-004",
+          "AI-005",
+          "AI-006",
+          "AI-007",
+          "AI-008"
+        ],
+        "version_key": {
+          "basis_id": "POLICY:synthetic-human-review",
+          "meaning_key": "synthetic-learner-review/v1"
+        }
+      }
+    ],
+    "inspected_quotes": [
+      {
+        "assessment": {
+          "evidence_id": "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6",
+          "identity_quote": "AI-007",
+          "kind": "fact",
+          "observation_kind": "owner-statement",
+          "observed_on": "2026-08-26",
+          "owner": "Marketing",
+          "predicate": "notice_present",
+          "quote": "SYNTHETIC TEST ONLY. AI-007 learner chat owner says notice is present on 2026-08-26.",
+          "review_date_quote": "2026-08-26",
+          "role_current": true,
+          "schema_version": "rci-u10-basis/1",
+          "scope": "learner chat",
+          "value": true,
+          "value_quote": "SYNTHETIC TEST ONLY. AI-007 learner chat owner says notice is present on 2026-08-26."
+        },
+        "source_path": "sources/20e13c5e423149e381911cefd9dc1624.bin",
+        "source_sha256": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+      },
+      {
+        "assessment": {
+          "evidence_id": "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6",
+          "identity_quote": "AI-007",
+          "kind": "fact",
+          "observation_kind": "page-capture",
+          "observed_on": "2026-08-26",
+          "owner": "Marketing",
+          "predicate": "notice_present",
+          "quote": "AI-007 learner chat page capture shows notice is absent on 2026-08-26.",
+          "review_date_quote": "2026-08-26",
+          "role_current": true,
+          "schema_version": "rci-u10-basis/1",
+          "scope": "learner chat",
+          "value": false,
+          "value_quote": "AI-007 learner chat page capture shows notice is absent on 2026-08-26."
+        },
+        "source_path": "sources/20e13c5e423149e381911cefd9dc1624.bin",
+        "source_sha256": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+      },
+      {
+        "assessment": {
+          "evidence_id": "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:ca6c290c40c44bf0b50b481ce3b7c7b6",
+          "identity_quote": "AI-007",
+          "kind": "fact",
+          "observation_kind": "page-capture",
+          "observed_on": "2026-08-26",
+          "owner": "Marketing",
+          "predicate": "notice_present",
+          "quote": "AI-007 public page capture shows visible label present on 2026-08-26.",
+          "review_date_quote": "2026-08-26",
+          "role_current": true,
+          "schema_version": "rci-u10-basis/1",
+          "scope": "public",
+          "value": true,
+          "value_quote": "AI-007 public page capture shows visible label present on 2026-08-26."
+        },
+        "source_path": "sources/20e13c5e423149e381911cefd9dc1624.bin",
+        "source_sha256": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+      },
+      {
+        "assessment": {
+          "activation": "active",
+          "activation_quote": "active",
+          "basis_id": "synthetic-human-review",
+          "control": "Staff review AI outputs before learner delivery.",
+          "effective_from": "2026-08-01",
+          "effective_until": "2027-01-01",
+          "evidence_id": "record:run-ffb714f3780f49ef98a39ffd4112d685:02:evidence:f699e409d7c54bbf873e4e74c5a4e878",
+          "identity_quote": "Quillhaven",
+          "kind": "policy-control",
+          "meaning_key": "synthetic-learner-review/v1",
+          "quote": "SYNTHETIC POLICY ONLY. Quillhaven ALL systems internal policy P-v1 effective from 2026-08-01 active through 2027-01-01 exclusively. Staff review AI outputs before learner delivery.",
+          "schema_version": "rci-u10-basis/1",
+          "scope_kind": "all-scoped",
+          "scope_quote": "ALL",
+          "version": "P-v1",
+          "version_quote": "P-v1"
+        },
+        "source_path": "sources/43c5d5593ae141a98a9947cd50e6ffea.policy.txt",
+        "source_sha256": "sha256:e7da4fb7da707e522d65075745df5f63f50b53188fb30fc6ea85e1cf2d082c9c"
+      }
+    ],
+    "later_outputs_absent": true
+  },
+  "manual_semantic_findings": [
+    "Synthetic obligation/predicate/deployer/exception/timing paragraphs agree with the retained draft components; source roles and six version/relationship assessments inspected.",
+    "AI-007 learner chat has affirmative presence and absence claims: conflicting, both retained; the public-page claim has a separate supported scope.",
+    "Synthetic ALL policy is an internal control, not law or a new approval; pending activation belongs to Operations, policy disputes to Legal.",
+    "Four-state table and all nine predicate definitions reviewed against requirements/interview; before-or-at timing and true/false/null distinctions explicit.",
+    "Actual retained U08 host exchange hashes rechecked; uncertainty prevented acceptance despite syntactically proposed output."
+  ],
+  "reviewed_file_hashes": {
+    "regulatory-change-impact-brief/scripts/rci/authority.py": "sha256:a9681ddf075b305200a1d6be52f002063e79931b2bc8be66252987301c4ab44e",
+    "regulatory-change-impact-brief/scripts/rci/reconcile.py": "sha256:c2c51d3260388d91edcd50c9c9ab359a490bb7804edeaf746c480a7a90968b85",
+    "regulatory-change-impact-brief/references/authority-policy.md": "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc",
+    "regulatory-change-impact-brief/references/reconciliation.md": "sha256:8a1318513a4a044b2ecda86a5e5c0478dd10651ed0cfb2fd1934794864254e3b",
+    "regulatory-change-impact-brief/references/g3-fact-and-impact-contract.md": "sha256:1c1140024f65d7e6a92485e2f0f0d5b2782457d2db34bc3de1f735a4479dfc48",
+    "tests/runtime/test_u09.py": "sha256:bbe894faa0ec198a2d7f394895a9ce583a185745a8261bac6111a5786289674a",
+    "tests/runtime/test_u10.py": "sha256:febec667bc483662b4decaffb3b3ed1b901e37c3d6d5d17b862acd13c6a4a052",
+    "tests/runtime/test_g3.py": "sha256:e3441b015876a73c2f31d0b4950aaa60af928354f19063fb3abc38fb28eb1419",
+    "docs/u09-authority.md": "sha256:903ae2d7be0b5f2057e660562d95554213d2d0ef07baffc6aec6e7221b18520c",
+    "docs/verification/check-g3.py": "sha256:6b787aed656f1f0a15a2b737299a9881c3e152782199ca079a6a84f27fc17235"
+  },
+  "frozen_hashes": {
+    "snapshot.schema.json": "sha256:8de9874ded18fa97294e83012796e4c386aa60ccfd30f8eca89cabdf2a267ac3",
+    "regulatory-change-impact-brief/references/schemas/contracts.schema.json": "sha256:946d7fa46c18373f01313e1c2aab7b48b25b296527cbae0cf138f31f9c8915ec",
+    "regulatory-change-impact-brief/scripts/rci/snapshots.py": "sha256:35052f18b4dce2dc9c728f32ddbdd62d74e63d0055b21290bafaff8679733510"
+  },
+  "scan": {
+    "path": ".evidence/g3-review/skill-scan-gate-final.md",
+    "sha256": "sha256:ef208f22510d381d82112512e30d370abb367f44403163101596693e3da44c10",
+    "exit_code": 1,
+    "disposition": "Four inspected false positives (one High, three Medium) and existing unspecified license (Info); no new actionable security finding."
+  },
+  "live_company_or_legal_acceptance": false,
+  "new_live_model_calls": false,
+  "u11_started": false,
+  "committed": false,
+  "pushed": false
+}

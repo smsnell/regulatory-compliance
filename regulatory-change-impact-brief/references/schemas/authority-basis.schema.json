@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "rci-u09-authority-basis/1"
+    },
+    "basis_id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "meaning_key": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "supersedes_rule_version_id": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "exception_scope": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source_id": {
+            "enum": [
+              "LAW",
+              "OJ",
+              "AMEND",
+              "CONSOLIDATED",
+              "TIME",
+              "FAQ"
+            ]
+          },
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "document_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "version": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "publication_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "effective_from": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "identity_quote": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "version_quote": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "relationship_quote": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "relationship": {
+            "enum": [
+              "base",
+              "reproduction",
+              "amends",
+              "consolidates",
+              "unrelated",
+              "future",
+              "context"
+            ]
+          },
+          "assessment": {
+            "enum": [
+              "consistent",
+              "conflicting",
+              "unknown"
+            ]
+          }
+        },
+        "required": [
+          "source_id",
+          "evidence_id",
+          "document_id",
+          "version",
+          "publication_date",
+          "effective_from",
+          "identity_quote",
+          "version_quote",
+          "relationship_quote",
+          "relationship",
+          "assessment"
+        ]
+      },
+      "minItems": 6,
+      "maxItems": 6
+    },
+    "support": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "component": {
+            "enum": [
+              "obligation",
+              "predicate",
+              "exception",
+              "exception-scope",
+              "role",
+              "timing"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "evidence_id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "component",
+          "value",
+          "evidence_id",
+          "quote"
+        ]
+      },
+      "minItems": 4
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "basis": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "precision": {
+          "enum": [
+            "date",
+            "instant",
+            "unknown"
+          ]
+        },
+        "boundary_timezone": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_from": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "effective_until": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "until_exclusive": {
+          "const": true
+        }
+      },
+      "required": [
+        "basis",
+        "precision",
+        "boundary_timezone",
+        "effective_from",
+        "effective_until",
+        "until_exclusive"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "basis_id",
+    "meaning_key",
+    "supersedes_rule_version_id",
+    "exception_scope",
+    "sources",
+    "support",
+    "timing"
+  ]
+}

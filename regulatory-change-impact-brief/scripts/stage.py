@@ -37,7 +37,7 @@ def submit(root, proposal_path):
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('operation',choices=['submit','block'])
+    parser.add_argument('operation',choices=['submit','submit-report','submit-authority','submit-reconciliation','block'])
     parser.add_argument('--root',type=Path,required=True)
     parser.add_argument('--proposal',type=Path)
     args=parser.parse_args()
@@ -53,7 +53,21 @@ def main():
                 stream.write(json_bytes(result))
         else:
             require(args.proposal is not None,'proposal required for submit')
-            result=submit(root,args.proposal)
+            if args.operation == 'submit-reconciliation':
+                require(os.environ.get('RCI_CHILD_RUN') == root.name, 'stage requires active host run')
+                from rci.evidence import EvidenceStore
+                from rci.reconcile import submit_reconciliation
+                result = submit_reconciliation(EvidenceStore(root, root.name), args.proposal.read_bytes())
+            elif args.operation == 'submit-authority':
+                require(os.environ.get('RCI_CHILD_RUN') == root.name, 'stage requires active host run')
+                from rci.authority import submit_authority
+                result = submit_authority(root, args.proposal.read_bytes())
+            elif args.operation == 'submit-report':
+                require(os.environ.get('RCI_CHILD_RUN') == root.name, 'stage requires active host run')
+                from rci.interpretation import submit_report
+                result = submit_report(root, args.proposal.read_bytes())
+            else:
+                result=submit(root,args.proposal)
     except (ValueError,OSError) as error:
         print(json.dumps({'status':'failed','reason':str(error)}))
         return 1

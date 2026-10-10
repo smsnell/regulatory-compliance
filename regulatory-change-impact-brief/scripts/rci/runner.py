@@ -17,7 +17,7 @@ from .ids import new_record_id, new_snapshot_id
 from .normalize import load_dictionary, normalize_registers, validate_values
 from .runtime import Providers, SKILL, output_directory, validate_config, writer_lock
 from .snapshots import read_chain, stage_records, write_snapshot
-from .source_manifest import disclosed_manifest, manifest
+from .source_manifest import Source, disclosed_manifest, manifest
 
 
 SCOPE_SCHEMA = SKILL / 'references/schemas/scope-input.schema.json'
@@ -143,7 +143,8 @@ def _record_values(records, evidence):
 
 
 def run_stages(store, config, sources, reader, *, config_bytes, providers,
-               scope_bytes=None, supersedes_run_id=None, change_reason=None):
+               scope_bytes=None, supersedes_run_id=None, change_reason=None, linked_reports=False, legal_extracts=False,
+               policy_extracts=False):
     """Injectable execution seam; production supplies live adapters only."""
     discovery = None
     if scope_bytes is None:
@@ -177,22 +178,38 @@ def run_stages(store, config, sources, reader, *, config_bytes, providers,
     for source in sources:
         if discovery is None or source.id != 'SYSTEMS':
             reader.read(source)
-    events = store.inventory()  # Every start must be terminal and bytes independently verified.
-    require({e['attempt']['source_id'] for e in events} == {s.id for s in sources}, 'missing core source attempts')
     normalized = normalize_registers(store)
+    reports = None
+    if linked_reports:
+        from .adapters.reports import read_reports, project_reports
+        specs = read_reports(store, reader, normalized)
+        reports = project_reports(store, specs, persist=True)
+    legal = None
+    if legal_extracts:
+        from .authority import project_legal
+        legal = project_legal(store, persist=True)
+    policy = None
+    if policy_extracts:
+        from .reconcile import project_policy
+        policy = project_policy(store, persist=True)
+    events = store.inventory()  # Every start must be terminal and bytes independently verified.
+    require({s.id for s in sources} <= {e['attempt']['source_id'] for e in events}, 'missing core source attempts')
     attempts = [deepcopy(e['attempt']) for e in events]
     if discovery is not None:
         attempt = next(a for a in attempts if a['attempt_key'] == basis['attempt_key'])
         attempt['scope_basis_id'] = basis['id']  # Projection only; immutable original journal stays unchanged.
     captures = [e['capture'] for e in events if e['capture'] is not None]
     records = []
-    for source in sources:
+    report_sources = [] if reports is None else [
+        Source(r['source_id'], r['reference'], 'http-read', None)
+        for r in reports['reports'] if r['authorized']]
+    for source in (*sources, *report_sources):
         reads = sorted((a for a in attempts if a['source_id'] == source.id), key=lambda a: a['started_at'])
         last = reads[-1]
         # Route role is a declaration; actual authority is deliberately unknown until U09.
         records.append(dict(id=new_record_id(store.run_id, 2, 'source'), record_type='source',
             summary=f'{source.id}: {len(reads)} fresh attempts retained; identity and date checks remain separate.',
-            evidence_ids=[], source_id=source.id, source_role=_source_role(source.id), authority='unknown', locator=source.route,
+            evidence_ids=[], source_id=source.id, source_role='other' if source.id.startswith('REPORT-') else _source_role(source.id), authority='unknown', locator=source.route,
             attempt_ids=[a['id'] for a in reads], **{k:last[k] for k in (
                 'retrieved_at','retrieval_status','content_type','version_metadata','local_reference','content_hash')}))
     scope_reason = None
@@ -209,6 +226,25 @@ def run_stages(store, config, sources, reader, *, config_bytes, providers,
             'required_source_ids':[s.id for s in sources], 'scope_comparison':comparison,
             'raw_tables':normalized['raw_tables'], 'technical_diagnostics':[e['diagnostic'] for e in events if e['diagnostic']],
             'boundary':'U07 core capture only; linked reports and interpretation require a subsequent U08 run'}}})
+    if reports is not None:
+        state['captures'] += reports['captures']
+        state['evidence'] += reports['evidence']
+        state['diagnostics'] += reports['diagnostics']
+        diagnostics = state['diagnostics']
+        state['extensions']['u08_reports'] = {'schema_version':'rci-linked-reports/1', 'value':{'reports':reports['reports']}}
+        core = state['extensions'].pop('u07_capture')['value']
+        core['boundary'] = 'U08 linked reads complete before Stage 02 freeze; interpretation is separate derived analysis; authority remains U09'
+        state['extensions']['u08_capture'] = {'schema_version':'rci-u08-capture-accounting/1', 'value':core}
+    if legal is not None:
+        state['captures'] += legal['captures']
+        state['evidence'] += legal['evidence']
+        state['extensions']['u09_legal'] = {'schema_version':'rci-u09-legal-extracts/1',
+            'value':{'boundary':'Captured before Stage 02 freeze; legal meaning remains U09 interpretation'}}
+    if policy is not None:
+        from .reconcile import POLICY_BOUNDARY
+        state['captures'] += policy['captures']
+        state['evidence'] += policy['evidence']
+        state['extensions']['u10_policy'] = deepcopy(POLICY_BOUNDARY)
     second = _snapshot(store, 2, state, _capture_status(events, diagnostics), providers,
                        predecessor={k:pointer[k] for k in ('snapshot_id','path','sha256')}, consumed=[basis['id']])
     write_snapshot(store.root, second, upstream=read_chain(store.root, count=1))
@@ -225,20 +261,53 @@ def validate_slice(store):
     declared = first['state']['extensions']['u07_sources']
     require(declared == {'schema_version':'rci-source-declarations/1', 'value':{'sources':config['sources']}},
             'source declaration accounting changed')
-    extension = second['state']['extensions']['u07_capture']
-    schema = parse_json((SKILL / 'references/schemas/capture-accounting.schema.json').read_bytes())
-    require(extension['schema_version'] == 'rci-capture-accounting/1' and
+    is_report_run = 'u08_reports' in second['state']['extensions']
+    extension = second['state']['extensions']['u08_capture' if is_report_run else 'u07_capture']
+    schema_name = 'u08-capture-accounting.schema.json' if is_report_run else 'capture-accounting.schema.json'
+    schema = parse_json((SKILL / ('references/schemas/' + schema_name)).read_bytes())
+    require(extension['schema_version'] == ('rci-u08-capture-accounting/1' if is_report_run else 'rci-capture-accounting/1') and
             Draft202012Validator(schema).is_valid(extension['value']), 'invalid capture accounting')
     accounting = extension['value']
     require(accounting['required_source_ids'] == [s['id'] for s in config['sources']], 'required source inventory changed')
     events = store.inventory()
     sources = {s['id']: s for s in config['sources']}
+    reports = None
+    legal = None
+    policy = None
+    if 'u10_policy' in second['state']['extensions']:
+        from .reconcile import project_policy, POLICY_BOUNDARY
+        require(second['state']['extensions']['u10_policy'] == POLICY_BOUNDARY, 'invalid policy extraction accounting')
+        policy = project_policy(store, retained_captures=second['state']['captures'])
+    if 'u09_legal' in second['state']['extensions']:
+        from .authority import project_legal
+        require(second['state']['extensions']['u09_legal'] == {'schema_version':'rci-u09-legal-extracts/1',
+            'value':{'boundary':'Captured before Stage 02 freeze; legal meaning remains U09 interpretation'}}, 'invalid legal extraction accounting')
+        legal = project_legal(store, retained_captures=second['state']['captures'])
+    if 'u08_reports' in second['state']['extensions']:
+        from .adapters.reports import declarations, project_reports
+        specs = declarations(normalize_registers(store))
+        reports = project_reports(store, specs, retained_captures=second['state']['captures'])
+        extension = second['state']['extensions']['u08_reports']
+        report_schema = parse_json((SKILL/'references/schemas/linked-reports.schema.json').read_bytes())
+        require(extension['schema_version'] == 'rci-linked-reports/1' and
+                Draft202012Validator(report_schema).is_valid(extension['value']), 'invalid report accounting')
+        actual = extension['value']['reports']
+        require(len(actual) == len(reports['reports']), 'report accounting incomplete')
+        for a, expected_report in zip(actual, reports['reports']):
+            require(json_bytes({k:v for k,v in a.items() if k != 'evidence_ids'}) ==
+                    json_bytes({k:v for k,v in expected_report.items() if k != 'evidence_ids'}), 'report accounting differs')
+            require(_record_values([e for e in second['state']['evidence'] if e['id'] in a['evidence_ids']], []) ==
+                    _record_values([e for e in reports['evidence'] if e['id'] in expected_report['evidence_ids']], []),
+                    'report evidence accounting differs')
+        for spec in specs:
+            if spec['authorized']:
+                sources[spec['source_id']] = dict(id=spec['source_id'], route=spec['reference'], adapter='http-read')
     require({s['source_id'] for s in second['state']['sources']} == set(sources) and
             {e['attempt']['source_id'] for e in events} == set(sources), 'missing required source attempts')
     for source in second['state']['sources']:
         declaration = sources[source['source_id']]
         require(source['locator'] == declaration['route'] and source['authority'] == 'unknown' and
-                source['source_role'] == _source_role(source['source_id']), 'source record differs from authorized declaration')
+                source['source_role'] == ('other' if source['source_id'].startswith('REPORT-') else _source_role(source['source_id'])), 'source record differs from authorized declaration')
     for event in events:
         attempt = event['attempt']
         declaration = sources[attempt['source_id']]
@@ -253,7 +322,7 @@ def validate_slice(store):
         projection = dict(attempt)
         projection.pop('scope_basis_id', None)
         require(projection == originals[attempt['id']]['attempt'], 'original journal provenance changed')
-    require(second['state']['captures'] == [e['capture'] for e in events if e['capture']],
+    require(second['state']['captures'] == [e['capture'] for e in events if e['capture']] + ([] if reports is None else reports['captures']) + ([] if legal is None else legal['captures']) + ([] if policy is None else policy['captures']),
             'journal capture inventory differs')
     require(accounting['technical_diagnostics'] == [e['diagnostic'] for e in events if e['diagnostic']],
             'technical diagnostic accounting differs')
@@ -271,8 +340,12 @@ def validate_slice(store):
     for row in second['state']['normalized_rows']:
         validate_values(row['values'])
     for collection in ('evidence', 'normalized_rows', 'mappings'):
+        report_evidence = [] if reports is None or collection != 'evidence' else reports['evidence']
+        legal_evidence = [] if legal is None or collection != 'evidence' else legal['evidence']
+        policy_evidence = [] if policy is None or collection != 'evidence' else policy['evidence']
         require(_record_values(second['state'][collection], second['state']['evidence']) ==
-                _record_values(normalized[collection], normalized['evidence']),
+                _record_values(normalized[collection] + report_evidence + legal_evidence + policy_evidence,
+                               normalized['evidence'] + report_evidence + legal_evidence + policy_evidence),
                 collection + ' differ from retained register normalization')
     scope_reason = None
     try:
@@ -293,6 +366,8 @@ def validate_slice(store):
     expected = _scope_comparison(ids, current)
     require(accounting['scope_comparison'] == expected, 'scope comparison differs from retained IDs')
     diagnostics = _capture_diagnostics(store, normalized, events, basis, expected, scope_reason)
+    if reports is not None:
+        diagnostics += reports['diagnostics']
     require(_record_values(second['state']['diagnostics'], second['state']['evidence']) ==
             _record_values(diagnostics, normalized['evidence']), 'capture diagnostics differ from retained inputs')
     require(second['status'] == _capture_status(events, diagnostics), 'capture stage conceals failure or limitations')
@@ -305,8 +380,12 @@ def _code_fingerprint():
 
 
 def capture_slice(config_path, *, scope_path=None, supersedes_run_id=None, change_reason=None,
-                  providers=None, reader_factory=ReadAdapters):
+                  providers=None, reader_factory=ReadAdapters, linked_reports=False, interpretation=False, authority=False,
+                  reconciliation=False):
     require(not os.environ.get('RCI_CHILD_RUN'), 'recursive supervisor launch rejected')
+    authority = authority or reconciliation
+    require(not (authority and interpretation), 'report and authority interpretation require distinct fresh exchange runs')
+    linked_reports = linked_reports or interpretation or authority
     config_bytes = config_path.read_bytes()
     config = validate_config(parse_json(config_bytes))
     root = output_directory(config['output_root'], config_path)
@@ -349,7 +428,8 @@ def capture_slice(config_path, *, scope_path=None, supersedes_run_id=None, chang
         reader = reader_factory(store)
         try:
             comparison, status = run_stages(store, config, sources, reader, config_bytes=config_bytes,
-                providers=providers, scope_bytes=scope_bytes, supersedes_run_id=supersedes_run_id, change_reason=change_reason)
+                providers=providers, scope_bytes=scope_bytes, supersedes_run_id=supersedes_run_id, change_reason=change_reason,
+                linked_reports=linked_reports, legal_extracts=authority, policy_extracts=reconciliation)
             outcome = dict(status='failed' if status == 'failed' else 'blocked',
                 reason='Technical source capture failure; preserve this occurrence and rerun after repair' if status == 'failed' else
                        'U07 slice finished; stages 03–07 and final artifacts are not implemented',
@@ -361,6 +441,33 @@ def capture_slice(config_path, *, scope_path=None, supersedes_run_id=None, chang
                 reason='Capture interrupted' if isinstance(error, KeyboardInterrupt) else str(error), capture_slice_complete=False)
         finally:
             reader.close()
+        if interpretation and outcome['capture_slice_complete']:
+            from .interpretation import interpret_reports
+            try:
+                result = interpret_reports(candidate, config)
+                outcome['interpretation_disposition'] = result
+                if result == 'failed':
+                    outcome.update(status='failed', reason='U08 interpretation failed; exact analysis retained')
+            except (ValueError, OSError) as error:
+                outcome.update(status='failed', reason=str(error))
+        if authority and outcome['capture_slice_complete']:
+            from .authority import interpret_authority
+            try:
+                third = interpret_authority(store, config)
+                outcome.update(authority_stage_complete=True, authority_status=third['status'],
+                    status='failed' if third['status'] == 'failed' else 'blocked',
+                    reason='U09 Stage 03 finished; stages 04–07 and final artifacts remain later units')
+            except (ValueError, OSError) as error:
+                outcome.update(status='failed', authority_stage_complete=False, reason=str(error))
+        if reconciliation and outcome.get('authority_stage_complete'):
+            from .reconcile import interpret_reconciliation
+            try:
+                fourth = interpret_reconciliation(store, config)
+                outcome.update(reconciliation_stage_complete=True, reconciliation_status=fourth['status'],
+                    status='failed' if fourth['status'] == 'failed' else 'blocked',
+                    reason='U10 Stage 04 finished; stages 05–07 and final artifacts remain later units')
+            except (ValueError, OSError) as error:
+                outcome.update(status='failed', reconciliation_stage_complete=False, reason=str(error))
         outcome.update(run_id=run_id, candidate=candidate.relative_to(root.parent).as_posix(),
             production_package=False, package_acceptance=False,
             missing_snapshots=[p for p in SNAPSHOT_PATHS if not (candidate/p).is_file()],
