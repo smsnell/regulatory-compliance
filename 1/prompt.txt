@@ -1,0 +1,19 @@
+Perform a final submission-artifact refresh only.
+
+The U20 remediation has been completed and verified. The original live deliverables predate the E04 runtime decision-emission repair.
+
+Using the documented public launcher and current review configuration, perform one fresh live execution under the final implementation. Preserve the assigned business review date, identify the correct current predecessor run, and use the established supersession/history mechanism.
+
+Preserve all historical evidence and original audit records. Do not rewrite existing bound artifacts in place.
+
+Validate that the new occurrence produces the required seven snapshots and three draft artifacts, with genuine run-bound decisions propagated into the relevant snapshots and compliance brief. Validate hashes, graph links, artifact consistency, and accurate blocked/unresolved states.
+
+Do not fabricate inaccessible source evidence, legal interpretations, approvals, or proposed actions.
+
+If the execution is blocked by known external source or Legal dependencies, retain the correctly blocked package and document that result.
+
+Do not rerun the full regression suite, redesign anything, or conduct another broad audit. Fix code only if the fresh run demonstrates a concrete defect; otherwise stop.
+
+Report the new run ID, resulting state, artifact paths, decision counts, validation results, and whether the deliverables are ready for commit.
+
+Do not commit or push.
