@@ -1,0 +1,72 @@
+# Final Submission Review, Commit, and Push
+
+The U20 remediation and final live artifact refresh are complete.
+
+Perform a final Git and submission-readiness inspection, then commit and push the intended project changes to `origin/main`.
+
+Do not implement new functionality, refactor, run the full test suite, or repeat the U20 audit.
+
+## 1. Inspect before staging
+
+Review:
+
+- `git status`
+- Tracked and untracked changes
+- `git diff --stat`
+- `git diff --check`
+- The U20 remediation and submission-refresh reports
+- The required project deliverables and verification documentation
+
+Confirm the refreshed package belongs to `run-b38ca2b36e1044bbba572399b41bf5ae` and includes seven snapshots, three artifacts, and the reported decision trail.
+
+Perform one focused semantic sanity check: the refreshed package contains eight unresolved coverage rows versus 56 in the previous live package. Verify that this difference is justified by the current evidence/coverage representation, with all eight systems and required coverage preserved. If the difference indicates an actual omission, stop and report it rather than committing.
+
+Confirm that known external blockers are documented and that no false compliance or approval claim is made.
+
+## 2. Stage intended files only
+
+Include required changes to:
+
+- Application and skill implementation
+- Tests and fixtures
+- Project requirements, design, and interview records where applicable
+- `EXPERIMENT-NOTES.md`
+- Updated documentation and requirement traceability
+- U20 verification and remediation records
+- Final refreshed deliverables, snapshots, and required history metadata
+
+Do not blindly stage every untracked file.
+
+Exclude unrelated environment state, disposable temporary files, caches, virtual environments, `.codex/`, local Entire logs, and unnecessary `.evidence/` scratch trees.
+
+Preserve required historical evidence and Entire checkpoints. Do not delete or rewrite them.
+
+Check for accidentally staged credentials, oversized temporary artifacts, missing required files, or unintended deletions.
+
+## 3. Commit and push
+
+If the submission sanity checks pass:
+
+1. Stage the intended files.
+2. Inspect `git diff --cached --stat` and `git diff --cached --check`.
+3. Create one descriptive final commit, such as:
+   `Finalize compliance pipeline and U20 remediation`
+4. Push to `origin main`.
+5. Verify the remote push succeeded.
+6. Run `entire status` to confirm checkpoint synchronization.
+
+If staging, submission integrity, or remote synchronization encounters a genuine issue, report it accurately and do not claim success.
+
+## 4. Report
+
+Provide:
+
+- Final commit hash
+- Commit and push status
+- Files included and excluded
+- Coverage-row sanity-check result
+- Working-tree status
+- Entire checkpoint synchronization status
+- Any remaining submission concern
+
+Do not make unrelated changes or begin further implementation.
