@@ -1,0 +1,141 @@
+{
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "candidate_to_published_snapshots_and_artifacts": "byte-identical",
+  "file_count": 10,
+  "reports": [
+    {
+      "reference": "notice-screen-v3",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R2C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Learner Operations",
+      "system_id": "AI-001"
+    },
+    {
+      "reference": "applicant-email-sample",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R3C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Admissions",
+      "system_id": "AI-002"
+    },
+    {
+      "reference": "social-post-884",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R4C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Communications",
+      "system_id": "AI-003"
+    },
+    {
+      "reference": "coach-onboarding-v2",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R5C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Learning Experience",
+      "system_id": "AI-004"
+    },
+    {
+      "reference": "provider-role-questionnaire",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R6C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Assessment Operations",
+      "system_id": "AI-005"
+    },
+    {
+      "reference": "human-review-sop-v4",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R7C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Assessment Operations",
+      "system_id": "AI-005"
+    },
+    {
+      "reference": "internal-use-review",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R8C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "People Operations",
+      "system_id": "AI-006"
+    },
+    {
+      "reference": "avatar-page-capture",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R9C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Marketing",
+      "system_id": "AI-007"
+    },
+    {
+      "reference": "localisation-export-test",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R10C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Communications",
+      "system_id": "AI-008"
+    },
+    {
+      "reference": "exception-draft-008",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R11C7"
+      },
+      "result": "unresolved",
+      "authorized": false,
+      "attempt_ids": [],
+      "capture_ids": [],
+      "owner": "Communications",
+      "system_id": "AI-008"
+    }
+  ],
+  "launcher_exit_code": 3,
+  "launcher_stdout_sha256": "sha256:e781e55fc6b0bf5014d026139cc6233e22eac918c7deec37de26bf98db1dde29",
+  "underlying_reports_without_fetchable_routes": 10,
+  "report_validation": "Passed: locators identify reference cells only; no underlying report attempts or captures claimed."
+}

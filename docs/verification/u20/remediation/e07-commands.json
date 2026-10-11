@@ -1,0 +1,49 @@
+{
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "TMPDIR": "/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp"
+  },
+  "synthetic_only": true,
+  "organizational_authorization_claimed": false,
+  "commands": [
+    {
+      "purpose": "Focused final regression",
+      "command": ".evidence/u20/venv/bin/python -m pytest tests/runtime/test_u13.py tests/runtime/test_u14_u16.py tests/runtime/test_u17_artifacts.py tests/runtime/test_feedback_remediation.py::test_dated_action_basis_remaps_only_its_generated_source_row_pointer tests/runtime/test_feedback_remediation.py::test_changed_date_retains_verified_prior_binding_without_current_authorization -q",
+      "log": ".evidence/u20-remediation/e07/final-focused.log",
+      "result": "107 passed in 1.95s"
+    },
+    {
+      "purpose": "Minimized red and green prior-pointer reproduction on actual changed-date package",
+      "command": ".evidence/u20/venv/bin/python .evidence/u20-remediation/e07/review-pointer-regression.py .evidence/u20-remediation/e07/final-runs/e07-date0/out",
+      "red_log": ".evidence/u20-remediation/e07/red-pointer.log",
+      "green_log": ".evidence/u20-remediation/e07/green-pointer.log",
+      "red_result": "AssertionError: Quarantine lost verified prior-draft pointer",
+      "green_result": "passed"
+    },
+    {
+      "purpose": "Complete public conditional, changed-date and changed-content replay from retained accepted baseline",
+      "command": ".evidence/u20/venv/bin/python .evidence/u20-remediation/e07/public-feedback-replay.py --baseline .evidence/u20-remediation/e07/final-runs/e07-prior0/out --work-root .evidence/u20-remediation/e07/replay-runs --results .evidence/u20-remediation/e07/replay-results.json",
+      "log": ".evidence/u20-remediation/e07/replay.log",
+      "results": ".evidence/u20-remediation/e07/replay-results.json",
+      "portable_script": "docs/verification/u20/remediation/public-feedback-replay.py"
+    },
+    {
+      "purpose": "Complete public scoped rejection replay from the same accepted retained baseline",
+      "command": ".evidence/u20/venv/bin/python .evidence/u20-remediation/e07/public-rejection.py --baseline .evidence/u20-remediation/e07/final-runs/e07-prior0/out --work-root .evidence/u20-remediation/e07/rejection-run --results .evidence/u20-remediation/e07/rejection-results.json",
+      "log": ".evidence/u20-remediation/e07/rejection.log",
+      "results": ".evidence/u20-remediation/e07/rejection-results.json",
+      "portable_script": "docs/verification/u20/remediation/public-rejection.py",
+      "result": "run-445e7f696781415684f2201e827b9e16 accepted partial; all assertions passed"
+    }
+  ],
+  "retained_prior_evidence": {
+    "legacy_validation_log": ".evidence/u20-remediation/e07/legacy-validation.log",
+    "rejection_final_code_validation_log": ".evidence/u20-remediation/e07/rejection-final-code.log",
+    "dated_basis_red_log": ".evidence/u20-remediation/e07/red-basis.log",
+    "public_pointer_red_log": ".evidence/u20-remediation/e07/final.log",
+    "interrupted_projection_run_logs": [
+      ".evidence/u20-remediation/e07/red-case.log",
+      ".evidence/u20-remediation/e07/green.log"
+    ]
+  }
+}

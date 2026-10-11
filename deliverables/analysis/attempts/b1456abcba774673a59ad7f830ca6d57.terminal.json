@@ -1,0 +1,65 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "b1456abcba774673a59ad7f830ca6d57",
+    "content": "full",
+    "content_hash": "sha256:5c205c9b6f71711037045e92a8ef192adc9944c9f82806b68ac0c5ebfe74be72",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:2c2d69b170064bed82f7ad96c42434e7",
+    "identity_check": "verified",
+    "local_reference": "sources/b1456abcba774673a59ad7f830ca6d57.bin",
+    "original_locator": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-10T21:09:52.227759Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "FAQ",
+    "started_at": "2026-10-10T21:09:51.906048Z",
+    "summary": "Read attempt for FAQ",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": "\"1791666053-gzip\"",
+      "identity_reason": "Returned title and visible document content match requested source",
+      "last_modified": "Sat, 10 Oct 2026 21:00:53 GMT",
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "Transparency obligations under Article 50 of the AI Act | Shaping Europe’s digital future"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:2c2d69b170064bed82f7ad96c42434e7",
+    "content_hash": "sha256:5c205c9b6f71711037045e92a8ef192adc9944c9f82806b68ac0c5ebfe74be72",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:4da98d63d38d4308b046c8af011af47b",
+    "local_reference": "sources/b1456abcba774673a59ad7f830ca6d57.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+    },
+    "summary": "Retained representation for FAQ"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-attempt-journal/1"
+}

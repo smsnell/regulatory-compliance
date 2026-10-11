@@ -1,0 +1,31 @@
+{
+  "results": {
+    "installed_pre_commit": {
+      "command": [
+        ".git/hooks/pre-commit"
+      ],
+      "exit_code": 1,
+      "seconds": 218.35,
+      "diagnostic_bytes": 107
+    },
+    "complete_index": {
+      "command": [
+        "python3",
+        "scripts/secret_guard.py",
+        "--all"
+      ],
+      "exit_code": 1,
+      "seconds": 326.852,
+      "diagnostic_bytes": 107
+    }
+  },
+  "index_unchanged": true,
+  "index_listing_sha256": "ccdc4086d9fb36074e96bfa63f999e1332072bb6c4f0afacb92551eb88728d40",
+  "indexed_files": 990,
+  "staged_changed_files": 569,
+  "temporary_directory": "/home/mike/.cache/rci-secret-scan",
+  "guard_sha256": "e4031726abb4ccdb35a5ad59b3023ec0ecc43cb686c98fb47a6e9f594cfc19c8",
+  "config_sha256": "6c447ca1deea50ab131a408d953b45b20de47a00f5ca4500acdf09d0e0cd2817",
+  "hook_sha256": "9ee41301de6c758af3c8b82abc651e49df1128d5b6727b7890525b38c9d9f9a3",
+  "finding_scope": "Only publication-tests.xml: five generated synthetic credential parameter IDs; redacted in publication derivative"
+}

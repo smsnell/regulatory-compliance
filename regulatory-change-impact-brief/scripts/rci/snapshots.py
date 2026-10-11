@@ -356,6 +356,8 @@ def _validate_snapshot(snapshot: dict, *, root: Path, upstream: list[dict],
     validate_schema(snapshot)
     seq, run = snapshot['sequence'], snapshot['run_id']
     require(len(upstream) == seq - 1, 'snapshot requires immediate full upstream prefix')
+    from .decisions import validate as validate_decisions
+    validate_decisions(snapshot, upstream)
     index: dict[str, tuple[int, dict]] = {}
     snapshot_ids = {snapshot['snapshot_id']}
     scope = snapshot['state']['systems_in_scope'] if seq == 1 else upstream[0]['state']['systems_in_scope']

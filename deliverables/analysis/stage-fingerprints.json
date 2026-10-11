@@ -1,0 +1,49 @@
+{
+  "contract_version": "rci-contracts/1",
+  "dependencies": {
+    "actions-and-approvals": [
+      "scope",
+      "source-capture",
+      "authority-and-timing",
+      "evidence-reconciliation",
+      "impact-analysis"
+    ],
+    "authority-and-timing": [
+      "scope",
+      "source-capture"
+    ],
+    "evidence-reconciliation": [
+      "scope",
+      "source-capture",
+      "authority-and-timing"
+    ],
+    "impact-analysis": [
+      "scope",
+      "source-capture",
+      "authority-and-timing",
+      "evidence-reconciliation"
+    ],
+    "publication-validation": [
+      "scope",
+      "source-capture",
+      "authority-and-timing",
+      "evidence-reconciliation",
+      "impact-analysis",
+      "actions-and-approvals"
+    ],
+    "scope": [],
+    "source-capture": [
+      "scope"
+    ]
+  },
+  "fingerprints": {
+    "actions-and-approvals": "sha256:aaf06d0458c12da90c94c3f8d54c8ea33e30de83b851614a03e626cb0386808c",
+    "authority-and-timing": "sha256:f8df52211fae45980b40410e32f92c67141441cc061b34e6588f7d464c008004",
+    "evidence-reconciliation": "sha256:88ec5ea1c4499403ee50f00335042aa75988a6a7169bd48583ff4e184c34861e",
+    "impact-analysis": "sha256:b6f12ab1485d7c9aa823302397ea5ccaf3212aa6d7ea15ca0c6885ac47a0ab07",
+    "publication-validation": "sha256:062a150d1cdc9d33a590fd98eb1fa69330f6f0fc2da1c7068b5300f73528f983",
+    "scope": "sha256:90c395df3be8d062f454576aeba690bf1d0b5170f7a7ef795ae398ec2f29689c",
+    "source-capture": "sha256:b049315da28dd88f8bdab292b73b1569db72416ccb81d147269bc14903dbc054"
+  },
+  "schema_version": "rci-stage-fingerprints/1"
+}

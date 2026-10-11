@@ -44,7 +44,10 @@ def main():
                 authentication_path=args.authentication)
     except (ImportError, OSError, ValueError, TimeoutError) as error:
         # Config values/credentials are never echoed by validation.
-        outcome = {'status':'failed','reason':str(error),'production_package':False}
+        outcome = {'status':'failed','reason':str(error),'production_package':False,
+                   'affected_stage':'launcher-preflight','affected_outputs':[],
+                   'recovery_action':'Correct the reported runtime, configuration or access prerequisite; preserve any existing package and rerun the documented launcher.',
+                   'next_owner':'Operator'}
     print(json.dumps(outcome))
     return {'complete':0,'partial':2,'blocked':3,'failed':1}[outcome['status']]
 

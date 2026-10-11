@@ -1,0 +1,482 @@
+{
+  "scope": "Focused E04 deterministic runtime engineering decisions; synthetic source and host seams exercise the actual launcher, producers, graph validators and artifacts.",
+  "requirements": [
+    "R0-010",
+    "R6-001",
+    "R6-002",
+    "R6-003",
+    "R6-004",
+    "R6-005",
+    "R6-006",
+    "R6-007",
+    "R6-008"
+  ],
+  "scenarios": [
+    "T27",
+    "T32"
+  ],
+  "implementation": [
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/decisions.py",
+      "sha256": "sha256:0b1c0accba97464447dfbfb627eaa3be3046c550449aba0366fdb0d7ef85bdff"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/runner.py",
+      "sha256": "sha256:eaee3e5923187d332fa866d079e31c5226b5bd37b4e5b138851ea7db8c3988ee"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+      "sha256": "sha256:cbb640b9cf165851fd5675b55a246a2f7b5fc1b2545717c7b12c8b6e95ad1ee8"
+    },
+    {
+      "path": "tests/runtime/test_u20_decisions.py",
+      "sha256": "sha256:fd80901ac00e2f72a7e29964ac69adbf916a04ea04cfd2714a6da4ff04196b18"
+    }
+  ],
+  "profile": {
+    "scope_extension": "u20_decisions",
+    "schema_version": "rci-engineering-decisions/1",
+    "decision_stages": [
+      1,
+      2,
+      5
+    ],
+    "legacy_behavior": "Generic snapshot schema/graph validation unchanged. Production markerless prefixes require a verified matching retained old skill bundle or both an exact pre-remediation producer fingerprint and its canonical Stage01 scope witness hash. Unbundled compatibility is limited to the four exact witnessed scopes. Unknown markerless prefixes without proof fail closed. Marked intermediate packages remain readable without retroactive producer inventory."
+  },
+  "verification": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u20_decisions.py -k scope_date --tb=short",
+      "log": ".evidence/u20-remediation/e04/red.log",
+      "exit_code": 1,
+      "result": "2 failed, 9 deselected in 9.65s; missing Scope input selection decision reproduced before implementation."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u20_decisions.py -k 'scope_date or tampering' --tb=short",
+      "log": ".evidence/u20-remediation/e04/focused-frozen.log",
+      "exit_code": 0,
+      "result": "7 passed, 4 deselected in 36.09s"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u20_decisions.py -k 'launcher or recovery' --tb=short",
+      "log": ".evidence/u20-remediation/e04/launcher-frozen.log",
+      "exit_code": 1,
+      "result": "3 passed, 1 failed, 7 deselected in 684.62s; COMPLETE, PARTIAL and recovery passed; BLOCKED failure was an obsolete test assertion that blocked drafts emit no brief."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q 'tests/runtime/test_u20_decisions.py::test_partial_and_blocked_launcher_export_actual_disposition[True]' --tb=short",
+      "node": "tests/runtime/test_u20_decisions.py::test_partial_and_blocked_launcher_export_actual_disposition[True]",
+      "log": ".evidence/u20-remediation/e04/blocked-final.log",
+      "exit_code": 0,
+      "result": "1 passed in 151.17s (0:02:31)",
+      "correction": "Uses validate_package and checks rendered decisions in the honest blocked draft, blocked publication status, package_acceptance=false and absent completion marker."
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/contracts/test_u02.py --tb=short",
+      "log": ".evidence/u20-remediation/e04/contracts.log",
+      "exit_code": 0,
+      "result": "58 passed, 39 subtests passed in 9.34s"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u07.py --tb=short",
+      "log": ".evidence/u20-remediation/e04/u07.log",
+      "exit_code": 0,
+      "result": "57 passed in 103.90s (0:01:43)"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u20_decisions.py -k 'not launcher and not recovery' --basetemp=.evidence/u20-remediation/e04/profile-final --junitxml=.evidence/u20-remediation/e04/profile-final.xml --tb=short",
+      "log": ".evidence/u20-remediation/e04/profile-final.log",
+      "junit": ".evidence/u20-remediation/e04/profile-final.xml",
+      "exit_code": 0,
+      "result": "20 passed, 4 deselected in 84.89s"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/contracts/test_u02.py tests/runtime/test_u03.py tests/runtime/test_u07.py --basetemp=.evidence/u20-remediation/e04/legacy-final --junitxml=.evidence/u20-remediation/e04/legacy-final.xml --tb=short",
+      "log": ".evidence/u20-remediation/e04/legacy-final.log",
+      "junit": ".evidence/u20-remediation/e04/legacy-final.xml",
+      "exit_code": 0,
+      "result": "166 passed, 39 subtests passed in 104.65s"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u20_decisions.py -k 'not launcher and not recovery' --basetemp=.evidence/u20-remediation/e04/exact-witness-final --junitxml=.evidence/u20-remediation/e04/exact-witness-final.xml --tb=short",
+      "log": ".evidence/u20-remediation/e04/exact-witness-final.log",
+      "junit": ".evidence/u20-remediation/e04/exact-witness-final.xml",
+      "exit_code": 0,
+      "result": "24 passed, 4 deselected in 102.57s"
+    }
+  ],
+  "current_e04_case_coverage": "All 11 new E04 cases covered by final focused results plus integration results and the exact corrected BLOCKED rerun; no claim that the obsolete-assertion integration invocation exited successfully.",
+  "retained_runs": {
+    "complete": {
+      "root": ".evidence/u20-remediation/e04/retained/complete",
+      "run_id": "run-25dfc8518d384594b11d1ee460626971",
+      "status": "complete",
+      "publication_status": "validated",
+      "package_acceptance": true,
+      "completion_marker_present": true,
+      "decision_counts_by_stage": [
+        2,
+        18,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "decision_ids": [
+        "record:run-25dfc8518d384594b11d1ee460626971:01:decision:e28e1d1bc418b68054172bcac03f84c7",
+        "record:run-25dfc8518d384594b11d1ee460626971:01:decision:5521016c4c70ca51f6cce33fda44320e",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:8c1d5fa9991aa3d22a4c5a75733aa967",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:37336aa721b3a5c20afa43f919b0875d",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:7d20b800bc72218f76a67b128466b6b1",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:df9d44bf5d5ef74010fc16e2543c12f3",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:72091c608cea1c22f0d7b31fe6e8b2d8",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:42ca0d3cb53d83c80666ad9f2e0104c2",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:acbd2a69a74142f177a21104b122f3a0",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:9addab81b096b63e17e6e82c8a69d9f1",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:07549f95045f22e10b0d57815ec6ceed",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:308e87f5c4be2ae3aedc985ea6740e7f",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:e59bd2e0720a7e60cb92c42637e27600",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:562c62e9a9fc7fe95feb26452dd4aedb",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:e1e64e5716aa796b886198e703b189ee",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:bfba6dc342056232acea5f6800dd393b",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:5d8185def2468987bcce7b53062a7a6b",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:643299437f1b39c387506c944050c265",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:88a752bec06a69ba0ca475c383949355",
+        "record:run-25dfc8518d384594b11d1ee460626971:02:decision:3a2c9eeecfd2e943fd817bcbf4e1cb4a",
+        "record:run-25dfc8518d384594b11d1ee460626971:05:decision:6940f703df048fc18b9fe803ad9a8004"
+      ],
+      "files": [
+        {
+          "path": "snapshots/01-scope.json",
+          "sha256": "sha256:c1ec685f5e1cb8c7a781d2fc8e9763a4825089f5a36b8591a2d6c8722837f17c"
+        },
+        {
+          "path": "snapshots/02-source-capture.json",
+          "sha256": "sha256:9565df912c5aa5a4cc3d55e7ca71af724c964a75d81d71982d4c0e4eee767456"
+        },
+        {
+          "path": "snapshots/03-authority-and-timing.json",
+          "sha256": "sha256:7fe559b718f518e040815631265a5636f943fa766998d6014e1ab186f5021b29"
+        },
+        {
+          "path": "snapshots/04-evidence-reconciliation.json",
+          "sha256": "sha256:ef6af0c50041e7cc9dcaaf3a873bfbf61613d62a2f86f4e4c2ff23ff0d8dd4bf"
+        },
+        {
+          "path": "snapshots/05-impact-analysis.json",
+          "sha256": "sha256:c5ea8524ebdc225bfefae13e23938166256a5279703d61df0990bc73e0a51fc3"
+        },
+        {
+          "path": "snapshots/06-actions-and-approvals.json",
+          "sha256": "sha256:b3c7b71a860005dfe591e7a1b0e88665406e52521ff93c1ecfc82ed22f5fd853"
+        },
+        {
+          "path": "snapshots/07-publication-validation.json",
+          "sha256": "sha256:b0d42f415fe28fa8efe482b433c9fc02def0c86bc63f305a6c6c7ce505243ac4"
+        },
+        {
+          "path": "impact-register.csv",
+          "sha256": "sha256:5b0ae80c487a28d0c1549dbde91f3424afc9e67ade41ef441a650d17cdfc7078"
+        },
+        {
+          "path": "compliance-brief.md",
+          "sha256": "sha256:29c6af1f691b1e3c3c8f748d3eb0fe9ee8857c3bd8af9fd3a29b88ceea43a9ac"
+        },
+        {
+          "path": "action-calendar.ics",
+          "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+        },
+        {
+          "path": "analysis/outcome.json",
+          "sha256": "sha256:375e1b4c494fea73b14e18b453bcb3e972c7df68d5348a3f1c1cc34e99f96f66"
+        },
+        {
+          "path": "analysis/stage-fingerprints.json",
+          "sha256": "sha256:f5e365cb32ec12de162c398f0ba9096c062360a2c090dc046711e0ff827235af"
+        },
+        {
+          "path": "analysis/recomputation.json",
+          "sha256": "sha256:3af83145d528e46d2db16231725232f0ba5b91b24c42e191dd7d8b626a3292cf"
+        },
+        {
+          "path": ".completion.json",
+          "sha256": "sha256:d19c0a14c021e73e4ee10c2ef00862bdfdd038f82fecd2fa939a06fa014ff226"
+        }
+      ]
+    },
+    "partial": {
+      "root": ".evidence/u20-remediation/e04/retained/partial",
+      "run_id": "run-6d852e3dee914a238c1bdb549338f6c0",
+      "status": "partial",
+      "publication_status": "validated",
+      "package_acceptance": true,
+      "completion_marker_present": true,
+      "decision_counts_by_stage": [
+        2,
+        11,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "decision_ids": [
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:01:decision:e28e1d1bc418b68054172bcac03f84c7",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:01:decision:5521016c4c70ca51f6cce33fda44320e",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:8c1d5fa9991aa3d22a4c5a75733aa967",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:37336aa721b3a5c20afa43f919b0875d",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:7d20b800bc72218f76a67b128466b6b1",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:df9d44bf5d5ef74010fc16e2543c12f3",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:72091c608cea1c22f0d7b31fe6e8b2d8",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:42ca0d3cb53d83c80666ad9f2e0104c2",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:acbd2a69a74142f177a21104b122f3a0",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:9addab81b096b63e17e6e82c8a69d9f1",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:643299437f1b39c387506c944050c265",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:88a752bec06a69ba0ca475c383949355",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:02:decision:3a2c9eeecfd2e943fd817bcbf4e1cb4a",
+        "record:run-6d852e3dee914a238c1bdb549338f6c0:05:decision:6940f703df048fc18b9fe803ad9a8004"
+      ],
+      "files": [
+        {
+          "path": "snapshots/01-scope.json",
+          "sha256": "sha256:4b4a1d44b11c23218716a48994e4d04035a4f911ad265d15d7def8efc34fbd2d"
+        },
+        {
+          "path": "snapshots/02-source-capture.json",
+          "sha256": "sha256:9189953f60bcce9b005c5143b3cd9afe39f42695e53ef9ec2e702bce59d6846a"
+        },
+        {
+          "path": "snapshots/03-authority-and-timing.json",
+          "sha256": "sha256:d5f5f4ffc9e0b9ed8ecbab35e37bb45938980e045ab35d1bdd8bc378af94a4af"
+        },
+        {
+          "path": "snapshots/04-evidence-reconciliation.json",
+          "sha256": "sha256:1e8d62de432ce63d88d202b25eae030e618fe307f091df1177b912d66ca7275d"
+        },
+        {
+          "path": "snapshots/05-impact-analysis.json",
+          "sha256": "sha256:80da35bd18711193d59a429855c6ea43388f0dd919be6176786ee1dc06303db9"
+        },
+        {
+          "path": "snapshots/06-actions-and-approvals.json",
+          "sha256": "sha256:b254a04904c38f0476e66e4f457e13c61a8965fa42aa23b97e3303d695e235e1"
+        },
+        {
+          "path": "snapshots/07-publication-validation.json",
+          "sha256": "sha256:d7a30aeb0e7a615e2c0168f8e63860cc91a06fae4183c8476abd831c45b28fb4"
+        },
+        {
+          "path": "impact-register.csv",
+          "sha256": "sha256:c4fedfdcb24cc3243c597d35c60f83f55bace01e1859d1748b2d7199dc2240dc"
+        },
+        {
+          "path": "compliance-brief.md",
+          "sha256": "sha256:5cfe7652c2e1a4a0a667a849604cd60ea2ffec000c156d8b6db46ec9e4e74c94"
+        },
+        {
+          "path": "action-calendar.ics",
+          "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+        },
+        {
+          "path": "analysis/outcome.json",
+          "sha256": "sha256:9c4ff522183635e52a2c84c76efcea6f36eddd3404d6ab16cbee0ef5cae7feb6"
+        },
+        {
+          "path": "analysis/stage-fingerprints.json",
+          "sha256": "sha256:c0fa8eb79c3bcfa94c4ddc3630810a248583d75a1129d6a3d914e69d703fce09"
+        },
+        {
+          "path": "analysis/recomputation.json",
+          "sha256": "sha256:3af83145d528e46d2db16231725232f0ba5b91b24c42e191dd7d8b626a3292cf"
+        },
+        {
+          "path": ".completion.json",
+          "sha256": "sha256:bb91f37d61189017ea65f5dd9afdf74b30f3f62cd4ecf69d7f657f781455e5b0"
+        }
+      ]
+    },
+    "blocked": {
+      "root": ".evidence/u20-remediation/e04/retained/blocked",
+      "run_id": "run-07c8a3ec84034f2ab14ceab46e9c0cb3",
+      "status": "blocked",
+      "publication_status": "blocked",
+      "package_acceptance": false,
+      "completion_marker_present": false,
+      "decision_counts_by_stage": [
+        2,
+        11,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "decision_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:01:decision:e28e1d1bc418b68054172bcac03f84c7",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:01:decision:5521016c4c70ca51f6cce33fda44320e",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:8c1d5fa9991aa3d22a4c5a75733aa967",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:37336aa721b3a5c20afa43f919b0875d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:7d20b800bc72218f76a67b128466b6b1",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:df9d44bf5d5ef74010fc16e2543c12f3",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:72091c608cea1c22f0d7b31fe6e8b2d8",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:42ca0d3cb53d83c80666ad9f2e0104c2",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:acbd2a69a74142f177a21104b122f3a0",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:9addab81b096b63e17e6e82c8a69d9f1",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:643299437f1b39c387506c944050c265",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:88a752bec06a69ba0ca475c383949355",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:decision:3a2c9eeecfd2e943fd817bcbf4e1cb4a",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:05:decision:6940f703df048fc18b9fe803ad9a8004"
+      ],
+      "files": [
+        {
+          "path": "snapshots/01-scope.json",
+          "sha256": "sha256:88081adde0f95507559a0fbb0fc2f7988c75c38e20077ce83e8dee3af9ef6101"
+        },
+        {
+          "path": "snapshots/02-source-capture.json",
+          "sha256": "sha256:20bbce9c5d8713cbdba50d3be4d9515c07ef532d6ab0f5bcf9334e89dc020a4f"
+        },
+        {
+          "path": "snapshots/03-authority-and-timing.json",
+          "sha256": "sha256:d89a79835fd3352f2075e32345599e6b16dd2163acc8de704353000e72afd7ab"
+        },
+        {
+          "path": "snapshots/04-evidence-reconciliation.json",
+          "sha256": "sha256:22024502c9e7fa3217b4333c6d027e00bfaa3d82d774ae212a5427f17484c55d"
+        },
+        {
+          "path": "snapshots/05-impact-analysis.json",
+          "sha256": "sha256:4e1af806e3160dfd919b37f500de83ed9a4284c9971a45ae2600060b78435057"
+        },
+        {
+          "path": "snapshots/06-actions-and-approvals.json",
+          "sha256": "sha256:16a2f0b2081ab1fb9cbc39f1963fdd5acf40f6de4b002731eaa20baedec7379e"
+        },
+        {
+          "path": "snapshots/07-publication-validation.json",
+          "sha256": "sha256:86a53ad7bb764dc9a79aeabd5d70b6669869895899c4c7d286aede3d75dfd36e"
+        },
+        {
+          "path": "impact-register.csv",
+          "sha256": "sha256:9501645956ffc69008f04ad684f4a9caceb0005940cb7ced3982154926dc172a"
+        },
+        {
+          "path": "compliance-brief.md",
+          "sha256": "sha256:9d868cd18fbe82d4e0e92a9e90aba0262fb9142929c4fa832ec6e32f8acb61c8"
+        },
+        {
+          "path": "action-calendar.ics",
+          "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+        },
+        {
+          "path": "analysis/outcome.json",
+          "sha256": "sha256:965d077b0c6c63cd216772c49873aafeea806ec0c404f5236a3148431045b759"
+        },
+        {
+          "path": "analysis/stage-fingerprints.json",
+          "sha256": "sha256:e137971507d97815f7789b527b70ea8f5fa00efb1162620429321df53d23b71a"
+        },
+        {
+          "path": "analysis/recomputation.json",
+          "sha256": "sha256:3af83145d528e46d2db16231725232f0ba5b91b24c42e191dd7d8b626a3292cf"
+        }
+      ]
+    }
+  },
+  "recovery": {
+    "status": "passed",
+    "node": "tests/runtime/test_u20_decisions.py::test_recovery_decision_bound_to_preserved_occurrence",
+    "log": ".evidence/u20-remediation/e04/launcher-frozen.log",
+    "assertions": [
+      "Corrupt current brief preserved byte-for-byte in prior history",
+      "New run supersedes the retained prior occurrence with recorded recovery reason",
+      "Fresh attempt identities disjoint from prior run",
+      "Recovery decision exported and rendered in repaired brief",
+      "Independent package validation passes"
+    ],
+    "retention_limitation": "Concurrent pytest cleanup removed the completed scratch directory before a recovery package copy could be made. The passing execution log is retained. Preserve the final broad-regression recovery artifact under its durable basetemp rather than add duplicate workflows solely for copying."
+  },
+  "limits": [
+    "Sources and host proposals are synthetic test inputs; no live legal or operational approval is asserted.",
+    "Stage 05 continuation/deferral decision records the impact-stage assessment; Stage 06 can worsen final status for unresolved actions and Stage 07 independently gates validated publication.",
+    "Full required decision fields live in snapshots and Stage 06 export model; the existing brief view renders summary, chosen behavior, rationale and evidence.",
+    "E01/E05/E06/E07 and final project readiness are outside this E04 result."
+  ],
+  "implementation_before_provenance_guard": [
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/decisions.py",
+      "sha256": "sha256:006bc52e0594ac03467a26a6bce4bfbd666ba38f5f979112c1258625e92826b2"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/runner.py",
+      "sha256": "sha256:600bd5d2840dfa004f12405bcd0134bbb9336c9f36ea8d4e79d5f408022bd306"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+      "sha256": "sha256:cbb640b9cf165851fd5675b55a246a2f7b5fc1b2545717c7b12c8b6e95ad1ee8"
+    },
+    {
+      "path": "tests/runtime/test_u20_decisions.py",
+      "sha256": "sha256:0b6539c68c8730ad53316bcb54fd0611b577da4acab015d56edeb8043bb5c6ea"
+    }
+  ],
+  "provenance_guard": {
+    "reproduction": "profile-downgrade-red.log: coherent profile and decision removal originally accepted, DID NOT RAISE ContractError (1 failed /6.28s)",
+    "initial_fix_verification": "profile-downgrade-green.log: 11 passed, 1 failed /36.49s; malformed JSON correctly rejected but lacked contextual diagnostic expected by test; corrected before final focused run.",
+    "retained_preimage": "analysis/producer-code.json: canonical relative path to SHA-256 inventory hashed by unchanged Stage01 code_fingerprint algorithm",
+    "permanent_witnesses": "docs/verification/u20/remediation/legacy-producers/provenance.json",
+    "no_production_dependency_on_witness_files": true,
+    "cases": [
+      "remove marker plus decisions with retained producer inventory",
+      "remove marker plus decisions plus inventory under current code",
+      "remove marker plus decisions plus inventory under simulated later code without bundle",
+      "remove marker plus decisions plus inventory under simulated later code with original new bundle",
+      "malformed inventory",
+      "mismatched inventory digest",
+      "pinned claimed hash with contradictory inventory",
+      "pinned claimed hash with contradictory bundle",
+      "four byte-exact portable pre-remediation scope witnesses",
+      "marked intermediate package without retroactive inventory",
+      "four fresh prefixes claim each pinned fingerprint after stripping profile, decisions and inventory; each rejects because canonical scope differs from exact legacy witness"
+    ],
+    "original_packages_read_only_producer_validation": {
+      "log": ".evidence/u20-remediation/e04/legacy-package-provenance.log",
+      "exit_code": 0,
+      "result": "four original legacy producer witnesses and retained COMPLETE/PARTIAL/BLOCKED intermediate packages passed"
+    },
+    "original_u07_full_slice_validation": {
+      "log": ".evidence/u20-remediation/e04/legacy-slice-readability.log",
+      "exit_code": 0,
+      "run_id": "run-6bec153b2d1343a5a43cc2f333798c4d"
+    },
+    "limitation": "Markerless packages without a verified matching retained old skill bundle require both an exact pinned producer fingerprint and its exact canonical Stage01 witness hash. Other unbundled legacy scopes fail closed because they cannot be distinguished from newly fabricated scopes claiming old producer hashes. No historical bytes or schema were rewritten.",
+    "claimed_fingerprint_reproduction": {
+      "log": ".evidence/u20-remediation/e04/claimed-legacy-red.log",
+      "result": "Before the final correction, full validate_slice accepted a copied new prefix after removing profile, decisions and inventory and claiming a known legacy code fingerprint. All four original scopes were verified to equal their canonical JSON SHA-256 witnesses."
+    },
+    "exact_scope_correction": "No-bundle fallback requires the claimed producer fingerprint and sha256(json_bytes(Stage01)) to match the same exact pre-remediation witness; fingerprint membership alone is insufficient.",
+    "post_correction_legacy_checks": {
+      "log": ".evidence/u20-remediation/e04/exact-witness-legacy.log",
+      "exit_code": 0,
+      "result": "All four original legacy producer witnesses passed; original unmodified U07 full validate_slice passed; retained COMPLETE/PARTIAL/BLOCKED intermediate producer checks passed."
+    }
+  },
+  "implementation_before_exact_scope_guard": [
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/decisions.py",
+      "sha256": "sha256:4e80ebc47a287f7a6e0567316b7e08b7c99b127202141e91c9dbd663e32d653c"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/runner.py",
+      "sha256": "sha256:eaee3e5923187d332fa866d079e31c5226b5bd37b4e5b138851ea7db8c3988ee"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+      "sha256": "sha256:cbb640b9cf165851fd5675b55a246a2f7b5fc1b2545717c7b12c8b6e95ad1ee8"
+    },
+    {
+      "path": "tests/runtime/test_u20_decisions.py",
+      "sha256": "sha256:261f925bcbdfc522b27ab6720152ff73f9b2c851b90929a9722a6ef194da6ffa"
+    }
+  ]
+}

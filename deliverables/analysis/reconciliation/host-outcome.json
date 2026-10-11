@@ -1,0 +1,12 @@
+{
+  "production_package": false,
+  "visible_usage": [
+    {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 227584,
+      "input_tokens": 265863,
+      "output_tokens": 2922,
+      "reasoning_output_tokens": 164
+    }
+  ]
+}

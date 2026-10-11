@@ -1,0 +1,1003 @@
+.EEEEEEEEE                                                               [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_conditional_feedback_and_changed_basis_are_scoped[same] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[same]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...fc6fa400330/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-same0/out/.staging/run-2535c41ae01f4987a3a85fc6fa400330')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_all_artifacts_preserve_date_and_unmet_conditional_outcome[same] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[same]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...fc6fa400330/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-same0/out/.staging/run-2535c41ae01f4987a3a85fc6fa400330')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_exact_prior_artifacts_and_history_remain_intact[same] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[same]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...fc6fa400330/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-same0/out/.staging/run-2535c41ae01f4987a3a85fc6fa400330')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_conditional_feedback_and_changed_basis_are_scoped[date] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[date]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...b5faf732795/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-date0/out/.staging/run-428d5da7f5564aec885fcb5faf732795')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_all_artifacts_preserve_date_and_unmet_conditional_outcome[date] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[date]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...b5faf732795/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-date0/out/.staging/run-428d5da7f5564aec885fcb5faf732795')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_exact_prior_artifacts_and_history_remain_intact[date] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[date]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...b5faf732795/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-date0/out/.staging/run-428d5da7f5564aec885fcb5faf732795')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_conditional_feedback_and_changed_basis_are_scoped[content] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[content]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...487d487a8fd/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-content0/out/.staging/run-7d88dfe785f04de78527b487d487a8fd')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_all_artifacts_preserve_date_and_unmet_conditional_outcome[content] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[content]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...487d487a8fd/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-content0/out/.staging/run-7d88dfe785f04de78527b487d487a8fd')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+_ ERROR at setup of test_exact_prior_artifacts_and_history_remain_intact[content] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[content]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs')...ome/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-prior0'), {'run_id': 'run-f4...ized-row:d7ec7765ec58454598c22733b4b04e98 and its evidence supply the date; Operations approval remains pending', ...})
+
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+        reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+        identity = 'legal@synthetic.example'
+        payload = dict(responder_identity=identity, responder_role='Legal',
+            claimed_request_id=old_request['request_id'], claimed_run_id=first['run_id'],
+            claimed_draft_version=old_request['draft_version'], claimed_subject_ids=[target['id']],
+            claimed_source_versions=old_request['source_versions'], claimed_artifacts=binding['artifacts'],
+            reviewer_response_at=datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z'),
+            outcome='conditional', reasons=['Synthetic reviewer requires readiness evidence for the exact proposed date.'],
+            conditions=[CONDITION], reviewed_draft=reviewed)
+        paths = {key:parent / (key + '.json') for key in ('feedback', 'policy', 'auth')}
+        paths['feedback'].write_bytes(json_bytes(dict(feedback=[payload], carry_forward=True)))
+        paths['policy'].write_bytes(json_bytes(dict(reviewers=[dict(identity=identity, roles=['Legal'],
+            channels=['authenticated-operator'], system_ids=old_request['subject_system_ids'])])))
+        paths['auth'].write_bytes(json_bytes(dict(identity=identity, channel='authenticated-operator',
+            basis='Synthetic local operator proof only; no organizational authorization or real identity asserted.')))
+>       outcome, root, current = _run(parent, request.param, feedback_path=paths['feedback'],
+            reviewer_policy_path=paths['policy'], authentication_path=paths['auth'])
+
+tests/runtime/test_feedback_remediation.py:102: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:61: in _run
+    result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    affected_stage='feedback-archive';affected_outputs=['history/'+prior]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/authority.py:458: in interpret_authority
+    invoke_host(command,prompt,root,timeout)
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...487d487a8fd/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/green-runs/e07-content0/out/.staging/run-7d88dfe785f04de78527b487d487a8fd')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+=========================== short test summary info ============================
+ERROR tests/runtime/test_feedback_remediation.py::test_conditional_feedback_and_changed_basis_are_scoped[same]
+ERROR tests/runtime/test_feedback_remediation.py::test_all_artifacts_preserve_date_and_unmet_conditional_outcome[same]
+ERROR tests/runtime/test_feedback_remediation.py::test_exact_prior_artifacts_and_history_remain_intact[same]
+ERROR tests/runtime/test_feedback_remediation.py::test_conditional_feedback_and_changed_basis_are_scoped[date]
+ERROR tests/runtime/test_feedback_remediation.py::test_all_artifacts_preserve_date_and_unmet_conditional_outcome[date]
+ERROR tests/runtime/test_feedback_remediation.py::test_exact_prior_artifacts_and_history_remain_intact[date]
+ERROR tests/runtime/test_feedback_remediation.py::test_conditional_feedback_and_changed_basis_are_scoped[content]
+ERROR tests/runtime/test_feedback_remediation.py::test_all_artifacts_preserve_date_and_unmet_conditional_outcome[content]
+ERROR tests/runtime/test_feedback_remediation.py::test_exact_prior_artifacts_and_history_remain_intact[content]
+1 passed, 9 errors in 171.06s (0:02:51)

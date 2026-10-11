@@ -1,0 +1,38 @@
+{
+  "requirements": {
+    "blocked": 28,
+    "demonstrated": 470,
+    "not-applicable-with-basis": 4
+  },
+  "scenarios": {
+    "demonstrated": 31,
+    "blocked": 1
+  },
+  "closed_leaves": [
+    "INT-082",
+    "R0-010",
+    "R6-001",
+    "R6-002",
+    "R6-003",
+    "R6-004",
+    "R6-005",
+    "R6-006",
+    "R6-007",
+    "R6-008",
+    "R9-001",
+    "R9-002",
+    "R9-024",
+    "R9-025",
+    "R9-026",
+    "R9-027",
+    "R9-028"
+  ],
+  "fresh_scenarios": [
+    "T13",
+    "T17",
+    "T27",
+    "T30",
+    "T32"
+  ],
+  "remaining": "E01 Legal interpretation; E02 policy access/identity; E03 authorized underlying evidence. T29 and 28 source-dependent leaves stay blocked."
+}

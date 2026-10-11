@@ -1,0 +1,126 @@
+{
+  "consumed_record_ids": [
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:source:2e72ee4513304a06876cf6632efb6824",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:source:521772031f1b4cd884c4811354276d19",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:source:6df6cc5c0d8c4d429c04821ffcb59365",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:source:c7b3bc02787a455cb0ded4fc1baafdd8",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:source:c85311889d8f4abab476874308a26b46",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:source:ee90a3f7f5d7466ca3064c954b726abb"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-10T21:10:01.228671Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/02-source-capture.json",
+    "sha256": "sha256:1483765ac20d55cf93dd8ba01d240ccc0f287baf4573877a85ba7a062874b876",
+    "snapshot_id": "snapshot-3170acb2b6d1493480bccb29fd84e720"
+  },
+  "produced_record_ids": [
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:b459178ba68947569c11a052cfd6372f",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:8b633fc22a414a78acb48a58651d32bd",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:45e1ac615d4348ec844ef14d38e6ce2c",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:9ba16d51f172457ab41637306874c024"
+  ],
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 3,
+  "snapshot_id": "snapshot-e2ce5cf03e874cbd8f5ab5501bd33ff3",
+  "stage": "authority-and-timing",
+  "state": {
+    "authority_blockers": [
+      {
+        "evidence_ids": [],
+        "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:b459178ba68947569c11a052cfd6372f",
+        "owner": "Legal",
+        "reason": "OJ: required authority/context source unavailable or unsuitable",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ"
+        ],
+        "summary": "OJ: required authority/context source unavailable or unsuitable"
+      },
+      {
+        "evidence_ids": [],
+        "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:8b633fc22a414a78acb48a58651d32bd",
+        "owner": "Legal",
+        "reason": "AMEND: required authority/context source unavailable or unsuitable",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ"
+        ],
+        "summary": "AMEND: required authority/context source unavailable or unsuitable"
+      },
+      {
+        "evidence_ids": [],
+        "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:45e1ac615d4348ec844ef14d38e6ce2c",
+        "owner": "Legal",
+        "reason": "CONSOLIDATED: required authority/context source unavailable or unsuitable",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ"
+        ],
+        "summary": "CONSOLIDATED: required authority/context source unavailable or unsuitable"
+      },
+      {
+        "evidence_ids": [],
+        "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:9ba16d51f172457ab41637306874c024",
+        "owner": "Legal",
+        "reason": "No authority interpretation submitted; Legal must inspect captured sources",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ"
+        ],
+        "summary": "No authority interpretation submitted; Legal must inspect captured sources"
+      }
+    ],
+    "binding_rules": [],
+    "extensions": {
+      "u09_authority": {
+        "schema_version": "rci-u09-authority/1",
+        "value": {
+          "assigned_review_date": "2026-08-26",
+          "candidate_reviews": [],
+          "candidates": [],
+          "draft_only": true,
+          "final_interpretation_owner": "Legal",
+          "interpretation": null,
+          "problems": [
+            "OJ: required authority/context source unavailable or unsuitable",
+            "AMEND: required authority/context source unavailable or unsuitable",
+            "CONSOLIDATED: required authority/context source unavailable or unsuitable",
+            "No authority interpretation submitted; Legal must inspect captured sources"
+          ],
+          "schema_version": "rci-u09-authority/1"
+        }
+      }
+    },
+    "guidance_context": [],
+    "timing_rules": []
+  },
+  "status": "blocked",
+  "unresolved": []
+}

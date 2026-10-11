@@ -6,7 +6,6 @@ neither a passing schema nor this module grants final Legal interpretation.
 """
 from copy import deepcopy
 from collections import Counter
-from datetime import date
 import shutil
 import sys
 from uuid import uuid4
@@ -15,6 +14,7 @@ from urllib.parse import parse_qs, urlsplit
 from jsonschema import Draft202012Validator, FormatChecker
 
 from .adapters.reports import text_representation
+from .authority_representations import date_mappings, literal_identity, selector_mapping
 from .contracts import (ASSIGNED_REVIEW_DATE, ContractError, ExchangeResult,
     SNAPSHOT_PATHS, json_bytes, package_path, parse_json, require, sha256_bytes,
     validate_interpretation, validate_schema, reduce_states)
@@ -136,27 +136,28 @@ def _assessment(candidate, chain):
         require(attempt['source_id'] == source['source_id'], 'source assessment changes source identity')
         support(source['evidence_id'], source['version_quote'])
         support(source['evidence_id'], source['relationship_quote'])
-        require(source['document_id'] in source['identity_quote'] and source['version'] in source['version_quote'],
+        require(literal_identity(source['document_id'], source['identity_quote']) and source['version'] in source['version_quote'],
                 'document identity/version lacks literal captured support')
         require(source['relationship'] in expected_relations[source['source_id']], 'incompatible authority relationship')
         if source['source_id'] == 'OJ':
             require(source['document_id'] == '2024/1689', 'unrelated base act')
         if source['source_id'] in {'LAW','AMEND','CONSOLIDATED'} and source['relationship'] not in {'unrelated','future'}:
-            require('2024/1689' in source['relationship_quote'], 'relationship to reviewed act unverified')
+            require(literal_identity('2024/1689', source['relationship_quote']), 'relationship to reviewed act unverified')
         if source['source_id'] in {'AMEND','CONSOLIDATED'}:
-            selector = parse_qs(urlsplit(attempt['original_locator']).query).get('uri', [None])[0]
-            require(selector == source['document_id'], 'returned act/version does not match requested selector')
+            selectors = parse_qs(urlsplit(attempt['original_locator']).query).get('uri', [])
+            require(len(selectors) == 1, 'missing or ambiguous requested authority selector')
+            selector_mapping(selectors[0], source['document_id'], source['identity_quote'], source['version_quote'])
         require(source['assessment'] == 'consistent', 'conflicting or unresolved authority/version/timing chain')
         if source['publication_date'] is not None:
-            require(source['publication_date'] in source['version_quote'], 'publication date lacks literal evidence')
+            date_mappings(source['publication_date'], source['version_quote'])
             require(source['source_id'] not in FORMAL or source['publication_date'] <= ASSIGNED_REVIEW_DATE or source['relationship'] in {'future','unrelated'},
                     'post-review version cannot silently supply historical authority')
         if source['relationship'] == 'future':
             require(source['effective_from'] is not None and source['effective_from'] > ASSIGNED_REVIEW_DATE and
-                    source['effective_from'] in source['relationship_quote'], 'future amendment exclusion needs supported date')
+                    date_mappings(source['effective_from'], source['relationship_quote']), 'future amendment exclusion needs supported date')
         elif source['relationship'] == 'amends':
             require(source['effective_from'] is not None and source['effective_from'] <= ASSIGNED_REVIEW_DATE and
-                    source['effective_from'] in source['relationship_quote'], 'amendment application needs supported date')
+                    date_mappings(source['effective_from'], source['relationship_quote']), 'amendment application needs supported date')
     components = [('obligation', candidate['summary']), ('role', candidate['role'])]
     components += [('predicate', p) for p in candidate['conditions']]
     components += [('exception', p) for p in candidate['exception_candidates']]
@@ -179,8 +180,10 @@ def _assessment(candidate, chain):
     timing_quotes = [s['quote'] for s in value['support'] if s['component'] == 'timing']
     for field in ('effective_from','effective_until'):
         if timing[field] is not None:
-            require(any(timing[field] in q for q in timing_quotes), 'effective date not present in binding timing quote')
-            date.fromisoformat(timing[field])
+            # Each timing component is independently quote-bound. Malformed
+            # representations fail closed rather than accepting a substring.
+            for quote in timing_quotes:
+                date_mappings(timing[field], quote)
     require(timing['effective_until'] is None or timing['effective_from'] < timing['effective_until'], 'conflicting timing interval')
     require(timing['effective_from'] <= ASSIGNED_REVIEW_DATE and
             (timing['effective_until'] is None or ASSIGNED_REVIEW_DATE < timing['effective_until']),
@@ -278,6 +281,43 @@ def submit_authority(root, proposal_bytes, *, providers=None):
     return dict(disposition=status, reason=reason, production_package=False)
 
 
+def _representation_accounting(descriptor, chain):
+    """Expose nonliteral mappings with their unchanged capture/quote bindings."""
+    index = _index(chain)
+    records = []
+    assessed = {s['source_id']:s for s in descriptor['sources']}
+    def binding(source, field, quote):
+        eid = source['evidence_id']
+        capture = index[index[eid]['capture_id']]
+        attempt = _source_for(eid, index)
+        return dict(basis_id=descriptor['basis_id'], source_id=source['source_id'], evidence_id=eid,
+                    capture_id=capture['id'], capture_sha256=capture['content_hash'],
+                    source_version=source['version'], original_locator=attempt['original_locator'],
+                    effective_locator=attempt['effective_locator'], field=field, quoted_support=quote)
+    def dates(source, field, encoded, quote):
+        if encoded is None:
+            return
+        mappings = date_mappings(encoded, quote)
+        if any(m['kind'] != 'iso-calendar-date' for m in mappings):
+            records.append(dict(**binding(source,field,quote), encoded_value=encoded, mappings=mappings))
+    for source in descriptor['sources']:
+        dates(source,'publication_date',source['publication_date'],source['version_quote'])
+        if source['relationship'] in {'amends','future'}:
+            dates(source,'source_effective_from',source['effective_from'],source['relationship_quote'])
+        if source['source_id'] in {'AMEND','CONSOLIDATED'}:
+            attempt = _source_for(source['evidence_id'],index)
+            selector = parse_qs(urlsplit(attempt['original_locator']).query)['uri'][0]
+            if selector != source['document_id']:
+                records.append(dict(**binding(source,'document_id',source['identity_quote']),
+                    mapping=selector_mapping(selector,source['document_id'],source['identity_quote'],source['version_quote'])))
+    for component in descriptor['support']:
+        if component['component'] == 'timing':
+            source = assessed[_source_for(component['evidence_id'],index)['source_id']]
+            for field in ('effective_from','effective_until'):
+                dates(source,'timing.'+field,descriptor['timing'][field],component['quote'])
+    return records
+
+
 def freeze_authority(store, *, write=True):
     """Python writes Stage 03 after independently rereading the accepted exchange."""
     from .runner import _snapshot, validate_slice
@@ -307,6 +347,9 @@ def freeze_authority(store, *, write=True):
                 summary=candidate['summary'], evidence_ids=sorted({c['evidence_id'] for c in candidate['citations']}),
                 basis_type='guidance', context=candidate['summary']))
         for candidate, descriptor in value['rules']:
+            mappings = _representation_accounting(descriptor, chain)
+            if mappings:
+                accounting.setdefault('representation_mappings', []).extend(mappings)
             ids = sorted({c['evidence_id'] for c in candidate['citations']})
             key = {k:descriptor[k] for k in ('basis_id','meaning_key')}
             base = next(s for s in descriptor['sources'] if s['source_id'] == 'OJ')

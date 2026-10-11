@@ -1,0 +1,39 @@
+..............................F........F..............                   [100%]
+=================================== FAILURES ===================================
+______________ test_helper_cli_and_independent_projection_tamper _______________
+
+captured = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp/pytest-of-mike/pytest-4/u091/out/.staging/run-13968c8942f24741b7789d7c8f0e5d42')
+tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp/pytest-of-mike/pytest-4/test_helper_cli_and_independen0')
+
+    def test_helper_cli_and_independent_projection_tamper(captured,tmp_path):
+        root=clone(captured,tmp_path); request=packet(root); proposal_path=root/'analysis/authority/agent-proposal.json'
+        proposal_path.write_bytes(json_bytes(proposal(request)))
+        env={**os.environ,'RCI_CHILD_RUN':root.name,'PYTHONDONTWRITEBYTECODE':'1'}
+        process=subprocess.run([sys.executable,str(SKILL/'scripts/stage.py'),'submit-authority','--root',str(root),'--proposal',str(proposal_path)],
+            env=env,capture_output=True,text=True)
+>       assert process.returncode==0,process.stdout+process.stderr
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/home/mike/regulatory-compliance/.evidence/u20/venv/bin/python', '/home/mike/regulatory-compli...s": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}\n', stderr='').returncode
+
+tests/runtime/test_u09.py:207: AssertionError
+____________ test_additive_schema_and_frozen_contract_fingerprints _____________
+
+    def test_additive_schema_and_frozen_contract_fingerprints():
+        Draft202012Validator.check_schema(parse_json((SKILL/'references/schemas/authority-basis.schema.json').read_bytes()))
+        assert sha256_bytes((SKILL.parent/'snapshot.schema.json').read_bytes())=='sha256:8de9874ded18fa97294e83012796e4c386aa60ccfd30f8eca89cabdf2a267ac3'
+        assert sha256_bytes((SKILL/'references/schemas/contracts.schema.json').read_bytes())=='sha256:946d7fa46c18373f01313e1c2aab7b48b25b296527cbae0cf138f31f9c8915ec'
+        # Owner-approved U19 bounded status amendment; baseline and authorization
+        # are retained in docs/verification/report-resolution-proposal.md.
+>       assert sha256_bytes((SKILL/'scripts/rci/snapshots.py').read_bytes())=='sha256:a9b14e8ebed869dbdc4cc0952ed36eba1468bb28246559f09be7e28f2b7ff2e0'
+E       AssertionError: assert 'sha256:cbb64...c8b6e95ad1ee8' == 'sha256:a9b14...7e28f2b7ff2e0'
+E         
+E         - sha256:a9b14e8ebed869dbdc4cc0952ed36eba1468bb28246559f09be7e28f2b7ff2e0
+E         + sha256:cbb640b9cf165851fd5675b55a246a2f7b5fc1b2545717c7b12c8b6e95ad1ee8
+
+tests/runtime/test_u09.py:272: AssertionError
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u09.py::test_helper_cli_and_independent_projection_tamper
+FAILED tests/runtime/test_u09.py::test_additive_schema_and_frozen_contract_fingerprints
+2 failed, 52 passed in 306.09s (0:05:06)

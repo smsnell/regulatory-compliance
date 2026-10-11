@@ -1,0 +1,29 @@
+{
+  "recorded_at": "2026-10-10T18:51:25.877240+00:00",
+  "reason": "R9 failed-supervisor outcomes lacked stage/output/recovery/owner fields. New focused tests passed; supervisor integration rerun recorded separately.",
+  "changes": {
+    "regulatory-change-impact-brief/scripts/rci/pipeline.py": {
+      "before": "sha256:f95e1e3b68a8a518aadca5c46730cb0fccf7cf3a36eec04fc3b185f824180432",
+      "after": "sha256:6ed8e159c6b093dca0bd16fa4dc54727ed5740d6495188c16de9b5cd232dc601"
+    },
+    "tests/runtime/test_u20.py": {
+      "before": null,
+      "after": "sha256:e76e6e664eef904721e2228461bcd61203fe7d4ffd5a7de0acd923f861ee8c10"
+    },
+    "docs/verification/check-u20.py": {
+      "before": null,
+      "after": "sha256:6d34e90abf14b77a5d6a716f8f152361f6d2cf528f27185e52f125a690d59a45"
+    },
+    "regulatory-change-impact-brief/scripts/run.py": {
+      "before": "sha256:4a1531911593059cbc6c5018f97f1347cb27fa90a3dd0546a15fc9c767c86850",
+      "after": "sha256:d0424bf9d37ebb499995a80015e994bf5ae7d2db262adf545bb873740b2463d2"
+    },
+    "tests/runtime/test_u20_metamorphic.py": {
+      "before": null,
+      "after": "sha256:f34d1120ced9b61ea72a95fcd3e5b2e0670b4aaa11fb70bc35808c2762eb5c78"
+    }
+  },
+  "test_basis_note": "Broad suite started before amendment. Its already imported supervisor uses baseline code; subsequent copied skill files carry their own hashes. Final-supervisor run starts after amendment and covers success, corruption, host failures and new diagnostic assertions. The final-launcher run additionally covers the pre-candidate diagnostic branch; the full workflow metamorphic test covers final values after register permutations.",
+  "remaining_limitations": "E05: candidate initialization occurs before the supervisor try; setup failure lacks retained outcome/run context and archive/feedback errors inherit capture label. Amendment improves only caught-stage and launcher diagnostics; no universal closure claimed.",
+  "final_fingerprinted_at": "2026-10-10T19:23:03.109495+00:00"
+}

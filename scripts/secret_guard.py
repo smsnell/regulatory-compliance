@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Scan Git's index, never the worktree or a binary-skipping patch."""
 import argparse
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import shutil
 import subprocess
@@ -38,6 +39,13 @@ def scan(data, scanner, config):
             stderr=subprocess.DEVNULL).returncode
 
 
+def check_path(path, scanner, config):
+    if forbidden(path):
+        return path, 'prohibited raw evidence/credential path'
+    code = scan(git('show', ':' + path), scanner, config)
+    return path, ('possible secret' if code == 1 else 'scanner failed') if code else None
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--all', action='store_true', help='scan every indexed file')
@@ -47,21 +55,17 @@ def main():
         sys.exit('Secret guard: install Gitleaks 8.24.2+ (see docs/secret-safety.md).')
     names = (git('ls-files', '-z') if args.all else
              git('diff', '--cached', '--name-only', '--diff-filter=ACMRT', '-z'))
+    paths = [raw.decode('utf-8', 'surrogateescape')
+             for raw in names.split(b'\0') if raw]
     failed = False
-    for raw in names.split(b'\0'):
-        if not raw:
-            continue
-        path = raw.decode('utf-8', 'surrogateescape')
-        if forbidden(path):
-            print(f'Secret guard: prohibited raw evidence/credential path {path!r}', file=sys.stderr)
-            failed = True
-            continue
-        data = git('show', ':' + path)
-        code = scan(data, scanner, ROOT / '.gitleaks.toml')
-        if code:
-            reason = 'possible secret' if code == 1 else 'scanner failed'
-            print(f'Secret guard: {reason} in staged file {path!r}; values suppressed.', file=sys.stderr)
-            failed = True
+    # Keep stdin coverage and an isolated private cwd for every blob. Bound the
+    # number of simultaneous blobs/processes; report results in index order.
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        results = pool.map(lambda path: check_path(path, scanner, ROOT / '.gitleaks.toml'), paths)
+        for path, reason in results:
+            if reason:
+                print(f'Secret guard: {reason} in staged file {path!r}; values suppressed.', file=sys.stderr)
+                failed = True
     return int(failed)
 
 

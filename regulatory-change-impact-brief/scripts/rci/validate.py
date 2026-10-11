@@ -19,6 +19,28 @@ CSV_COLUMNS = ['impact_id','system_id','rule_ref','state','evidence_ids','reason
     'action_ids','resolution_need','basis_type','source_versions']
 
 
+def _condition_state(model, feedback):
+    if feedback['match_status'] != 'matched':
+        return 'not applied; current approval pending'
+    if not feedback['conditions']:
+        return 'none'
+    requirements = [r for r in model.get('approval_requirements', []) if feedback['id'] in r['feedback_ids']]
+    return 'satisfied' if requirements and all(r.get('conditions_satisfied') is True for r in requirements) else 'unmet'
+
+
+def _action_feedback(model, action):
+    # Reconstruct allowed display claims from records without calling renderers.
+    descriptions = []
+    for f in model.get('feedback', []):
+        if f['match_status'] == 'matched' and f['authentication'] == 'verified' and action['id'] in f['subject_ids']:
+            statuses = sorted({r['status'] for r in model.get('approval_requirements', [])
+                               if action['id'] in r['subject_ids'] and f['id'] in r['feedback_ids']})
+            descriptions.append(f['responder_role'] + ' ' + f['outcome'] + '; approval ' +
+                (';'.join(statuses) or 'pending') + '; conditions ' + _condition_state(model, f) + ': ' +
+                (';'.join(f['conditions']) or 'None') + '; reasons: ' + ';'.join(f['reasons']) + '; feedback ' + f['id'])
+    return '\n'.join(descriptions)
+
+
 def _csv(raw, model):
     reader=csv.DictReader(io.StringIO(raw.decode('utf-8'),newline=''))
     require(reader.fieldnames==CSV_COLUMNS,'CSV columns differ')
@@ -47,6 +69,9 @@ def _csv(raw, model):
             action_ids=';'.join(a['action_id'] for a in actions),
             resolution_need=i['resolution_need'] or ('No action required for this supported scope.' if not actions else ';'.join(a['date_basis'] for a in actions)),
             source_versions=';'.join(r.get('source_versions',[r['rule_version_id']])))
+        feedback = '\n'.join(value for a in actions if (value := _action_feedback(model, a)))
+        if feedback:
+            expected['resolution_need'] += '\nReviewer feedback: ' + feedback
         require(actual.get(i['impact_id'])==expected,'CSV differs from Stage 06: '+i['impact_id'])
         for a in actions:
             if a['proposed_due_date']: date.fromisoformat(a['proposed_due_date'])
@@ -122,6 +147,9 @@ def _brief(raw, model):
             'Existing operational date':a['existing_due_date'] or 'Not established','Date basis':a['date_basis'],
             'Approval':a['approval_status'],'Impacts':';'.join(i['impact_id'] for i in model['impacts'] if i['id'] in a['impact_ids']),
             'Evidence':';'.join(a['evidence_ids'])}
+        feedback = _action_feedback(model, a)
+        if feedback:
+            expected['Action '+a['action_id']]['Reviewer feedback'] = feedback
     for row in model.get('calendar_context',[]):
         fields=row['values']['fields']; raw_values=row['values'].get('raw',{});native=dict(zip(raw_values.get('headers',[]),raw_values.get('cells',[])))
         expected['Calendar row '+row['id']]={'Source row':row['source_business_id'],'System':row['system_id'],
@@ -138,6 +166,13 @@ def _brief(raw, model):
         expected['Request '+r['request_id']]={'Reviewer':r['required_reviewer'],'Question':r['question'],
             'Subjects':';'.join(r['subject_ids']),'Source versions':';'.join(r['source_versions']),
             'Delivery':r['delivery_status'],'Evidence':';'.join(r['evidence_ids'])}
+    for f in model.get('feedback', []):
+        expected['Feedback '+f['id']] = {'Reviewer':f['responder_role'], 'Outcome':f['outcome'],
+            'Match':f['match_status'], 'Authentication':f['authentication'],
+            'Reasons':';'.join(f['reasons']), 'Conditions':';'.join(f['conditions']) or 'None',
+            'Condition state':_condition_state(model, f), 'Current subjects':';'.join(f['subject_ids']),
+            'Reviewed run':str(f['claimed_run_id']), 'Reviewed draft':str(f['claimed_draft_version']),
+            'Reviewed artifacts':';'.join(a['path']+' '+a['sha256'] for a in f['claimed_artifacts'])}
     require(records==expected,'brief records differ from Stage 06')
     allowed=['# Regulatory change impact — draft',
         'Source rows retain operational dates, statuses and review paths; they do not establish approval or completion.',
@@ -223,6 +258,9 @@ def _calendar(raw, model):
             'Source/decision basis: '+';'.join(a.get('source_basis',[])), 'Date basis: '+a['date_basis'],
             'Approval: '+a['approval_status'],'Run: '+model['run_id'],'Evidence: '+';'.join(a['evidence_ids']),
             'Draft proposal; human review required.'])
+        feedback = _action_feedback(model, a)
+        if feedback:
+            description += '\nReviewer feedback: ' + feedback
         require(str(event['DESCRIPTION'])==description,'calendar description differs')
 
 

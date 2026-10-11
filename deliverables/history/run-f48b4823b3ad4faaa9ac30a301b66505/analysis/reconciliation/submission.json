@@ -1,0 +1,10 @@
+{
+  "request": {
+    "path": "analysis/reconciliation/exchanges/98e1a66cbbc54c00bafca1de38d41a1c/request.json",
+    "sha256": "sha256:3f78047023c683e3b9797f9700bf8ed0a3ffa0461f9ede2e70c4e09851ae2485"
+  },
+  "response": {
+    "path": "analysis/reconciliation/exchanges/98e1a66cbbc54c00bafca1de38d41a1c/response.json",
+    "sha256": "sha256:e56adf10a34edd86821df6e22d8b7d5334de1bdd98f3055bd2efbbf3eacb0ab5"
+  }
+}

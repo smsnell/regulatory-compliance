@@ -1,0 +1,26 @@
+{
+  "changes": [
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/decisions.py",
+      "full_regression_hash": "sha256:4e80ebc47a287f7a6e0567316b7e08b7c99b127202141e91c9dbd663e32d653c",
+      "final_hash": "sha256:0b1c0accba97464447dfbfb627eaa3be3046c550449aba0366fdb0d7ef85bdff"
+    },
+    {
+      "path": "tests/runtime/test_source_resolution_export.py",
+      "full_regression_hash": "sha256:faa4e96101ade52a8a597849d6b53d24a485bbe10ff9eedf7af32e1d4f252558",
+      "final_hash": "sha256:53fd56a0db17d1a0e5e296903801945cdacc52ceddf78347707fb3d55b4a367f"
+    },
+    {
+      "path": "tests/runtime/test_u10.py",
+      "full_regression_hash": "sha256:c9d8e02ceae9ac9a43a9c5f25867b5b4d7344b6a21742933ad6b316c04c92a0e",
+      "final_hash": "sha256:01be0f9f7e1ed91cfbae06ca311ddb6e57f486081d98a74d8a3cf85f4d6f429e"
+    },
+    {
+      "path": "tests/runtime/test_u20_decisions.py",
+      "full_regression_hash": "sha256:261f925bcbdfc522b27ab6720152ff73f9b2c851b90929a9722a6ef194da6ffa",
+      "final_hash": "sha256:fd80901ac00e2f72a7e29964ac69adbf916a04ea04cfd2714a6da4ff04196b18"
+    }
+  ],
+  "production_delta": "Only the unbundled legacy fallback additionally checks the exact previously recorded canonical scope witness hash. Marked production packages and verified legacy bundles follow unchanged paths.",
+  "verification": "Focused E04 producer/tamper tests and read-only revalidation of 11 retained packages follow this correction; two unrelated test maintenance corrections receive exact affected-module/node reruns. A second full workflow regression is not needed for the narrow fallback predicate."
+}

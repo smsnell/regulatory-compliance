@@ -1,0 +1,12 @@
+{
+  "candidate": "deliverables/.staging/run-b38ca2b36e1044bbba572399b41bf5ae",
+  "missing_artifacts": [],
+  "missing_snapshots": [],
+  "package_acceptance": false,
+  "production_package": true,
+  "publication_status": "blocked",
+  "reason": "Seven-stage draft; review requests await authorized humans.",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "status": "blocked",
+  "supersedes_run_id": "run-f48b4823b3ad4faaa9ac30a301b66505"
+}

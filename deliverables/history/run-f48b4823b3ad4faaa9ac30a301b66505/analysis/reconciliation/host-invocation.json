@@ -1,0 +1,56 @@
+{
+  "command": [
+    "/home/mike/.local/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "--json",
+    "-C",
+    "/home/mike/regulatory-compliance/deliverables/.staging/run-f48b4823b3ad4faaa9ac30a301b66505",
+    "-m",
+    "gpt-6.1-sol",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "-c",
+    "sandbox_workspace_write.network_access=false",
+    "-c",
+    "features.multi_agent=false",
+    "-c",
+    "features.web_search=false",
+    "-"
+  ],
+  "metadata": {
+    "host_version": "codex-cli 0.162.1",
+    "instruction_versions": [
+      {
+        "path": "regulatory-change-impact-brief/SKILL.md",
+        "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+      },
+      {
+        "path": "regulatory-change-impact-brief/references/reconciliation.md",
+        "sha256": "sha256:cc43744da27ed514fa22d61718b5981ac6c1c7c5ac2748615e853cfedfad27d9"
+      }
+    ],
+    "reference_versions": [
+      {
+        "path": "regulatory-change-impact-brief/references/schemas/reconciliation-basis.schema.json",
+        "sha256": "sha256:8b82033bd0ece493670b81cf99b1675e535a808294c8a20958ca0d2ee5aefee7"
+      },
+      {
+        "path": "config/review.example.json",
+        "sha256": "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d"
+      }
+    ],
+    "reported_effort": null,
+    "reported_model": null,
+    "requested_effort": "high",
+    "requested_model": "gpt-6.1-sol",
+    "usage": null
+  }
+}

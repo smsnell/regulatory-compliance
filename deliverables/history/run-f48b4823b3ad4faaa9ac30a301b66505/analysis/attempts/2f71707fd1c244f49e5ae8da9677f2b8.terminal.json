@@ -1,0 +1,73 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "2f71707fd1c244f49e5ae8da9677f2b8",
+    "content": "full",
+    "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "content_type": "application/binary",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:6dd0611598b147a1a86a3c2d49d6650d",
+    "identity_check": "unverified",
+    "local_reference": "sources/2f71707fd1c244f49e5ae8da9677f2b8.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+    "outcome": "HTTP 302",
+    "record_type": "attempt",
+    "recoverable_failure": "Redirect response retained; next GET separately journaled",
+    "retrieval_status": "invalid",
+    "retrieved_at": "2026-10-10T18:41:35.538235Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "CALENDAR",
+    "started_at": "2026-10-10T18:41:35.281638Z",
+    "summary": "Read attempt for CALENDAR",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Redirect response retained; next GET separately journaled",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:6dd0611598b147a1a86a3c2d49d6650d",
+    "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "content_type": "application/binary",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:3e4f9e6c2fdb4d79abead6ac6c4182f7",
+    "local_reference": "sources/2f71707fd1c244f49e5ae8da9677f2b8.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": null,
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/edit",
+      "requested_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/"
+    },
+    "summary": "Retained representation for CALENDAR"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "Redirect response retained; next GET separately journaled",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "CALENDAR",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "rci-attempt-journal/1"
+}

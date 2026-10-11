@@ -1,0 +1,128 @@
+{
+  "scope": "Entire refs and branch; all locally pending reachable blobs, excluding locally known remote reachability",
+  "remote_state": "Not refreshed; no network or synchronization performed",
+  "refs": [
+    "refs/entire/checkpoints/1S/01M4E6XWXWMAXTGK9Q854JCX1S",
+    "refs/entire/checkpoints/CB/01M4EDHQP5CN1GMK82BJA7RPCB",
+    "refs/entire/checkpoints/CG/01M4DXKRZQ7CP2D31D9K6330CG",
+    "refs/entire/checkpoints/GJ/01M4J6PA09EKTYMDEEAFSW0VGJ",
+    "refs/entire/checkpoints/J7/01M4FDZZYKBKGNHM6MV7JRMSJ7",
+    "refs/entire/checkpoints/SQ/01M4CS2KS1P4K4W0PS5896GZSQ",
+    "refs/entire/checkpoints/W4/01M4CTC2GPXTBM5RTZT6QB9NW4",
+    "refs/entire/checkpoints/WP/01M4C4YY3R2HJT9EWKDTZJ7ZWP",
+    "refs/entire/checkpoints/YE/01M4HX413J05F4X5BE5C80SAYE",
+    "refs/entire/checkpoints/YP/01M4E6SPZX6A1Z14Z65WZC85YP",
+    "refs/entire/checkpoints/Z3/01M4CCAYBZKNFRCKSPVE86APZ3",
+    "refs/heads/entire/e0b8ccd-e3b0c4"
+  ],
+  "ref_tips": {
+    "refs/entire/checkpoints/1S/01M4E6XWXWMAXTGK9Q854JCX1S": "ba86846db604b6ba6febd7b4ae07a14b808ed228",
+    "refs/entire/checkpoints/CB/01M4EDHQP5CN1GMK82BJA7RPCB": "f51ef0edefd5630e07d8d5995b1cd7562719c6b2",
+    "refs/entire/checkpoints/CG/01M4DXKRZQ7CP2D31D9K6330CG": "d3d61531eabc2aa9fb3f8315ac7d2edd4e717068",
+    "refs/entire/checkpoints/GJ/01M4J6PA09EKTYMDEEAFSW0VGJ": "1247be5a1f3f0fe782936524dcb7ae681725190f",
+    "refs/entire/checkpoints/J7/01M4FDZZYKBKGNHM6MV7JRMSJ7": "9e51e3aa152c617436bf7810dc4e462c5eda9658",
+    "refs/entire/checkpoints/SQ/01M4CS2KS1P4K4W0PS5896GZSQ": "827e6c9ac3dd54c31933aa942ca1cffcec0b0d88",
+    "refs/entire/checkpoints/W4/01M4CTC2GPXTBM5RTZT6QB9NW4": "1302be1f6b87bc5211ffa1495a9a917564b40739",
+    "refs/entire/checkpoints/WP/01M4C4YY3R2HJT9EWKDTZJ7ZWP": "9298b21fe92e8445cb9d1017a3ad4f9efcc8ab5c",
+    "refs/entire/checkpoints/YE/01M4HX413J05F4X5BE5C80SAYE": "da998497a7b85a6a444dfa926415ddf6e1747acc",
+    "refs/entire/checkpoints/YP/01M4E6SPZX6A1Z14Z65WZC85YP": "dab826daa18f770fadb7225db0644558c3d42b36",
+    "refs/entire/checkpoints/Z3/01M4CCAYBZKNFRCKSPVE86APZ3": "4cf4cb8d36c09922c6a9391bf0070392a01c9dbc",
+    "refs/heads/entire/e0b8ccd-e3b0c4": "22b65c9545b23672bf562014f9767c90f7bb6ae4"
+  },
+  "blob_count": 979,
+  "findings": [
+    {
+      "oid": "b6dfc2d4269e5d98cde1d3963c729cb887a6aa50",
+      "path": ".entire/metadata/01a12714-cf7c-7db0-bfc3-6fa8f8b849d0/full.jsonl",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "480702a53d5161584dd0b4ee44d66aed87861e24",
+      "path": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/15ae719c1b5e462fa4d946d9bb91d920.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "25ebc74f2f5046ea767d7c4834550284fc872a15",
+      "path": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/780f63e16d444eeea63f7ceeb7ef7a98.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "50daa11094aa8a9a29182afa845be7c1ff198133",
+      "path": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/8502670b407f4d88b184c689e08d6273.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "36eb66f39313f57f515ba29147457424732524c3",
+      "path": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/9de475942a9d494aabaf3e1696cb0c8c.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "58cc517eb30ab69a8e9270957831a36558fefa79",
+      "path": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/aac479ed5b5b4430a5f92ca87a4c3c70.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "c2099db49d28762e7ff2fbf71100af83327beb55",
+      "path": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/da20552b9fc446cf9c0fde2b15b34cf3.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "3a78cf5fbb8b4f31192a911ef3e69351a2f1c33f",
+      "path": "deliverables/sources/098718c066874eee8f5eaa561b60c4f9.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "68f770dd9988ec84687d04fd289ea9f32c73da7d",
+      "path": "deliverables/sources/0c15679a9aa34cf599a1f2249f938dbd.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "a81f2667f6c0ca47247536f27eb00e39e0d4ee32",
+      "path": "deliverables/sources/39c5b4e1e1704e838fba2512d4367979.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "51eb711494350c1db0a4ff2eea7c4d988f1b3308",
+      "path": "deliverables/sources/67eb8ff2ffc64f6bad2784591d1aa9a4.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "9657be63684b93511ff070c800edaa4fca1b4327",
+      "path": "deliverables/sources/a0cd77fbb3f7493888fd1dcb41dc45d3.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "ac0d3f4e3c07e52774b4bbd70d48ff80180098a4",
+      "path": "deliverables/sources/a5a78fd5352b4e1882485f18fd68c38b.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "6148f2925fc5f2690196af251e541e0df56b5f31",
+      "path": "deliverables/sources/eba44a84b7df47e4a241ac11d1bbbcb7.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "a52b4ffab0438d12d116c2ab770e6a462eec3e95",
+      "path": "deliverables/sources/f34f0793ba6847d2b693861ca1a07fde.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "93284782beb39dc5ead9b577d8013076ba3e71cc",
+      "path": "deliverables/sources/f9b436533cb94cab9def3ef60c892f44.bin",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "f01ac23013f92553f11a579b2103aa8ee4f8c86e",
+      "path": "0/full.jsonl",
+      "result": "possible-sensitive-content"
+    },
+    {
+      "oid": "1c35c47f624ea096be9902088dd639c24f166b0c",
+      "path": "0/full.jsonl",
+      "result": "possible-sensitive-content"
+    }
+  ],
+  "synchronization_authorized": false,
+  "disposition": "HOLD: potential sensitive content or scanner errors",
+  "limitation": "Local objects and refs may change after this scan; no claim about unseen or future checkpoints"
+}

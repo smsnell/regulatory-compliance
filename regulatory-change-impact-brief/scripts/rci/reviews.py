@@ -156,7 +156,19 @@ def _basis(record, index, seen=()):
             # retain their factual observation dates and all other meanings.
             return {key: normalize(v) for key, v in value.items() if key != 'retrieved_at'}
         return value
-    return {key: normalize(value) for key, value in record.items() if key not in ignored}
+    basis = {key: normalize(value) for key, value in record.items() if key not in ignored}
+    if record['record_type'] == 'action' and isinstance(basis.get('date_basis'), str):
+        # This generated explanation embeds its exact source-row pointer in
+        # prose. Compare that pointer through retained content, like the same
+        # pointer in source_basis, while preserving all date/prose semantics.
+        for identity in record.get('source_basis', []):
+            row = index.get(identity)
+            if row is not None and row['record_type'] == 'normalized-row':
+                pointer = 'source row ' + identity + ' and its evidence supply the date;'
+                resolved = sha256_bytes(json_bytes(_basis(row, index, seen)))
+                basis['date_basis'] = basis['date_basis'].replace(pointer,
+                    'source row ' + resolved + ' and its evidence supply the date;')
+    return basis
 
 
 def _evidence(record, index, seen=None):
@@ -228,6 +240,10 @@ def match_feedback(*, run_id, request, reviewed_request, review_binding, payload
         require(run_id == request['run_id'] and run_id != reviewed_request['run_id'], 'carry-forward must target a new run')
         require(context.reviewed_draft['root'] == 'history/' + reviewed_request['run_id'], 'wrong retained reviewed draft')
         validate_schema(context.reviewed_draft, 'reviewed-draft')
+        # Disk-backed intake already verified this historical binding. Keep it
+        # when changed current meaning quarantines the response; it does not
+        # authorize any current subject, request or approval.
+        record['reviewed_draft'] = deepcopy(context.reviewed_draft)
         pairs = list(context.subject_bindings)
         require(len(pairs) == len(record['claimed_subject_ids']) and
                 {p['reviewed_id'] for p in pairs} == set(record['claimed_subject_ids']) and
@@ -256,7 +272,6 @@ def match_feedback(*, run_id, request, reviewed_request, review_binding, payload
         record['subject_ids'] = sorted(p['current_id'] for p in pairs)
         record['request_id'], record['match_status'] = request['request_id'], 'matched'
         record['summary'] = 'Authenticated feedback explicitly revalidated for current proposed draft'
-        record['reviewed_draft'] = deepcopy(context.reviewed_draft)
         record['revalidation'] = dict(current_run_id=run_id, current_request_id=request['request_id'],
             current_draft_version=request['draft_version'], current_source_versions=request['source_versions'],
             reviewed_stage07_sha256=context.reviewed_draft['stage07']['sha256'], upstream=deepcopy(list(context.upstream)),
@@ -290,10 +305,40 @@ def approval_for_feedback(*, run_id, request, feedback=None, condition_resolutio
                   summary='Reviewer decision for proposed draft: ' + status, evidence_ids=request['evidence_ids'],
                   subject_ids=subjects, required_reviewer=request['required_reviewer'], status=status,
                   request_id=request['request_id'], feedback_ids=feedback_ids)
-    if valid and feedback['conditions'] and conditions_ok:
-        record.update(conditions_satisfied=True, condition_evidence_ids=list(condition_resolution.evidence_ids))
+    if valid and feedback['conditions']:
+        record['conditions_satisfied'] = conditions_ok
+        if conditions_ok:
+            record['condition_evidence_ids'] = list(condition_resolution.evidence_ids)
     validate_schema(record, 'approval')
     return record
+
+
+def feedback_condition_state(model, feedback):
+    """Display current condition disposition without treating claims as proof."""
+    if feedback['match_status'] != 'matched':
+        return 'not applied; current approval pending'
+    if not feedback['conditions']:
+        return 'none'
+    approvals = [a for a in model.get('approval_requirements', [])
+                 if feedback['id'] in a['feedback_ids']]
+    return 'satisfied' if approvals and all(a.get('conditions_satisfied') is True for a in approvals) else 'unmet'
+
+
+def action_feedback_text(model, action):
+    """Only verified current matches can describe an action decision."""
+    values = []
+    for feedback in model.get('feedback', []):
+        if (feedback['match_status'] != 'matched' or feedback['authentication'] != 'verified' or
+                action['id'] not in feedback['subject_ids']):
+            continue
+        approvals = [a for a in model.get('approval_requirements', [])
+                     if action['id'] in a['subject_ids'] and feedback['id'] in a['feedback_ids']]
+        status = ';'.join(sorted({a['status'] for a in approvals})) or 'pending'
+        values.append(feedback['responder_role'] + ' ' + feedback['outcome'] + '; approval ' + status +
+            '; conditions ' + feedback_condition_state(model, feedback) + ': ' +
+            (';'.join(feedback['conditions']) or 'None') + '; reasons: ' +
+            ';'.join(feedback['reasons']) + '; feedback ' + feedback['id'])
+    return '\n'.join(values)
 
 
 def process_feedback(store, requests, actions, inputs, *, policy, authentication, carry_forward=False,

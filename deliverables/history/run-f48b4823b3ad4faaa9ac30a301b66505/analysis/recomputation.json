@@ -1,0 +1,16 @@
+{
+  "current_file_inspection_required": true,
+  "earliest_changed_sequence": 1,
+  "earliest_changed_stage": "scope",
+  "fresh_source_attempts_required": true,
+  "reason": "no prior stage fingerprints",
+  "recompute_sequences": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
+}

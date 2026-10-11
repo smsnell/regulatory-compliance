@@ -160,6 +160,10 @@ def build_export_model(chain, state, status):
     model['draft_version']=_fingerprint(model)
     model.update(review_requests=deepcopy(state['review_requests']),approval_requirements=deepcopy(state['approval_requirements']),
         escalations=deepcopy(state['escalations']))
+    if state['feedback']:
+        # Reviewer outcomes accompany the draft after its substantive review
+        # fingerprint. Their original run/artifact claims remain intact.
+        model['feedback'] = deepcopy(state['feedback'])
     model['limitations'].extend(deepcopy(state['escalations']))
     return model
 

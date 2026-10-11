@@ -1,6 +1,7 @@
 """UTF-8 CSV with reversible, explicit spreadsheet display escaping."""
 import csv
 import io
+from ..reviews import action_feedback_text
 
 COLUMNS = ['impact_id', 'system_id', 'rule_ref', 'state', 'evidence_ids', 'reason',
            'owner', 'proposed_action', 'proposed_due_date', 'approval_status',
@@ -34,6 +35,9 @@ def render(model):
             action_ids=';'.join(a['action_id'] for a in actions),
             resolution_need=impact['resolution_need'] or ('No action required for this supported scope.' if not actions else ';'.join(a['date_basis'] for a in actions)),
             basis_type=impact['basis_type'], source_versions=';'.join(rule.get('source_versions', [rule['rule_version_id']])))
+        feedback = '\n'.join(value for a in actions if (value := action_feedback_text(model, a)))
+        if feedback:
+            row['resolution_need'] += '\nReviewer feedback: ' + feedback
         writer.writerow({k:display(v) for k,v in row.items()})
     for item in sorted(model.get('unresolved_coverage', []), key=lambda r: r['impact_id']):
         rule = rules.get(item.get('rule_id'))

@@ -1,0 +1,973 @@
+{
+  "transformation": "Only three exact synthetic test credential labels redacted in portable text. Original raw evidence retained; outcome/count semantics unchanged.",
+  "files": [
+    {
+      "original": ".evidence/u20-remediation/regression-final/shard-1.xml",
+      "portable": "docs/verification/u20/remediation/regression-final-shard-1.xml",
+      "original_sha256": "sha256:d7c9ea25bd087f2ebadd915c87960b9a304cbb351b854748e3fbdd64607c2b24",
+      "portable_sha256": "sha256:401b49e896c6e0b1adea838b4fee2c6dd061aa9a70d55bc3672c861874ccac0e",
+      "synthetic_label_substitutions": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression-final/shard-1.log",
+      "portable": "docs/verification/u20/remediation/regression-final-shard-1.log",
+      "original_sha256": "sha256:82cd66f3552ee5fc67ae1df60cce11aa7ce16e161db71ec3398866caa9433d62",
+      "portable_sha256": "sha256:82cd66f3552ee5fc67ae1df60cce11aa7ce16e161db71ec3398866caa9433d62",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression-final/shard-2.xml",
+      "portable": "docs/verification/u20/remediation/regression-final-shard-2.xml",
+      "original_sha256": "sha256:32406332bdae4cb1f993489e88aefac07864b53e88312943e7e409ebd1114c20",
+      "portable_sha256": "sha256:32406332bdae4cb1f993489e88aefac07864b53e88312943e7e409ebd1114c20",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression-final/shard-2.log",
+      "portable": "docs/verification/u20/remediation/regression-final-shard-2.log",
+      "original_sha256": "sha256:4f2d89768ed596d724ea11dfd6b4ebb5864a12e9725d7be8883c70d5cd561224",
+      "portable_sha256": "sha256:4f2d89768ed596d724ea11dfd6b4ebb5864a12e9725d7be8883c70d5cd561224",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression-final/shard-3.xml",
+      "portable": "docs/verification/u20/remediation/regression-final-shard-3.xml",
+      "original_sha256": "sha256:a024728c9bd8431b8b728187690825511db66990a4a9e9271f4bf5a7c00f7024",
+      "portable_sha256": "sha256:a024728c9bd8431b8b728187690825511db66990a4a9e9271f4bf5a7c00f7024",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression-final/shard-3.log",
+      "portable": "docs/verification/u20/remediation/regression-final-shard-3.log",
+      "original_sha256": "sha256:1f363eca131d8a775864bff01253894d5b2fa51dad9267de21887ed824051455",
+      "portable_sha256": "sha256:1f363eca131d8a775864bff01253894d5b2fa51dad9267de21887ed824051455",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/external.xml",
+      "portable": "docs/verification/u20/remediation/external.xml",
+      "original_sha256": "sha256:a98a553b3b5b2ca82a5be384c39ad2bb982be397f9d41ed2714ddf0aeac03828",
+      "portable_sha256": "sha256:a98a553b3b5b2ca82a5be384c39ad2bb982be397f9d41ed2714ddf0aeac03828",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/external.log",
+      "portable": "docs/verification/u20/remediation/external.log",
+      "original_sha256": "sha256:ae66ebbc2f26b81d394a81f1fedb5a6de9cb9db481be4a7ab82aa3c81d868fd4",
+      "portable_sha256": "sha256:ae66ebbc2f26b81d394a81f1fedb5a6de9cb9db481be4a7ab82aa3c81d868fd4",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/loopback.xml",
+      "portable": "docs/verification/u20/remediation/loopback.xml",
+      "original_sha256": "sha256:40c8744bd0e03f6c38987c0f291bf6eb0289dc800b6e88cde78f8fccf74508fd",
+      "portable_sha256": "sha256:40c8744bd0e03f6c38987c0f291bf6eb0289dc800b6e88cde78f8fccf74508fd",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/loopback.log",
+      "portable": "docs/verification/u20/remediation/loopback.log",
+      "original_sha256": "sha256:0fc44b226b21cdd63f1f4daf26c2593d72af191b3b773e774dd40f1980fb3cc2",
+      "portable_sha256": "sha256:0fc44b226b21cdd63f1f4daf26c2593d72af191b3b773e774dd40f1980fb3cc2",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/final-maintenance.xml",
+      "portable": "docs/verification/u20/remediation/final-maintenance.xml",
+      "original_sha256": "sha256:3e17ff67b558a3d700341650af34518c83517fc497a86b1b9897cadcf69bb351",
+      "portable_sha256": "sha256:3e17ff67b558a3d700341650af34518c83517fc497a86b1b9897cadcf69bb351",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/final-maintenance.log",
+      "portable": "docs/verification/u20/remediation/final-maintenance.log",
+      "original_sha256": "sha256:815d81d2e6fd55673e3e70fa0c56e410b022106f7d3eb3c3b23b983642898250",
+      "portable_sha256": "sha256:815d81d2e6fd55673e3e70fa0c56e410b022106f7d3eb3c3b23b983642898250",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/exact-witness-final.xml",
+      "portable": "docs/verification/u20/remediation/e04-exact-witness-final.xml",
+      "original_sha256": "sha256:a54ef168bf181d87dc2dcadcc4bc85916238a5a298f4c3fd080c61cb1140ee22",
+      "portable_sha256": "sha256:a54ef168bf181d87dc2dcadcc4bc85916238a5a298f4c3fd080c61cb1140ee22",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/exact-witness-final.log",
+      "portable": "docs/verification/u20/remediation/e04-exact-witness-final.log",
+      "original_sha256": "sha256:33c918ef358c3998f3bcccefd36edd4528cb844de4b9dff6eae43ea4ad47fdb2",
+      "portable_sha256": "sha256:33c918ef358c3998f3bcccefd36edd4528cb844de4b9dff6eae43ea4ad47fdb2",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/command-results.json",
+      "portable": "docs/verification/u20/remediation/command-results.json",
+      "original_sha256": "sha256:0591e676a3be83783edb6d51e0ec4d3c52f1e095e7e4a8b9480eb79adb98f17c",
+      "portable_sha256": "sha256:0591e676a3be83783edb6d51e0ec4d3c52f1e095e7e4a8b9480eb79adb98f17c",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/executed-checks.json",
+      "portable": "docs/verification/u20/remediation/executed-checks.json",
+      "original_sha256": "sha256:35653496274abfd82660b142c15d33a1b4fbfc9dc81890562eb4a4ea6258a91f",
+      "portable_sha256": "sha256:16465fd22f986a065a06c7cb2bb6d2fdf9a623de04e95ba01621be34f1e495cc",
+      "synthetic_label_substitutions": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/collection-before-final-provenance.txt",
+      "portable": "docs/verification/u20/remediation/collection-before-final-provenance.txt",
+      "original_sha256": "sha256:966785c22df45cd3846ff036c37c52c2c00c2a113ee0663b4ad2b88cfd981ad2",
+      "portable_sha256": "sha256:64e24d882a051e0f953b0f429e48c5451c0749a51ad4865b9a85112bda10b9cc",
+      "synthetic_label_substitutions": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/collection.txt",
+      "portable": "docs/verification/u20/remediation/collection.txt",
+      "original_sha256": "sha256:38ea79ff92845efd2a9d2a8ed6519c6b84b0e843fca8fa6bc3c4783fe50b3b9e",
+      "portable_sha256": "sha256:15558756b75356c01d1a3b345685905420b78dc11641398c94dbe482bbf11ed3",
+      "synthetic_label_substitutions": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression-final/commands.json",
+      "portable": "docs/verification/u20/remediation/regression-commands.json",
+      "original_sha256": "sha256:64d8a39d19b25d0ad50a5ea191d8aaebf5c4bcaaf521d12a9fc3e1307a4014b0",
+      "portable_sha256": "sha256:64d8a39d19b25d0ad50a5ea191d8aaebf5c4bcaaf521d12a9fc3e1307a4014b0",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/run-regression.py",
+      "portable": "docs/verification/u20/remediation/run-regression.py",
+      "original_sha256": "sha256:6f65228a9c76cf54dc911b4ce9f4104030c87bf70bc06076eba480d6ba4d1779",
+      "portable_sha256": "sha256:6f65228a9c76cf54dc911b4ce9f4104030c87bf70bc06076eba480d6ba4d1779",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/consolidated-inspection.py",
+      "portable": "docs/verification/u20/remediation/consolidated-inspection.py",
+      "original_sha256": "sha256:83ee64fbddebc95bd476f9ef6901215879ef009e9205b8b0bd9dcc5d1d11f170",
+      "portable_sha256": "sha256:83ee64fbddebc95bd476f9ef6901215879ef009e9205b8b0bd9dcc5d1d11f170",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/retain-recovery.py",
+      "portable": "docs/verification/u20/remediation/retain-recovery.py",
+      "original_sha256": "sha256:7c059ad848305876daed521144bb9dad0368ebfe9dd7339083188b1728a667df",
+      "portable_sha256": "sha256:7c059ad848305876daed521144bb9dad0368ebfe9dd7339083188b1728a667df",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/recovery-inspection.log",
+      "portable": "docs/verification/u20/remediation/recovery-inspection.log",
+      "original_sha256": "sha256:da0d503a553c9385a3205a39e2310b45c197f86ad9ec06fea03d3b83404cf104",
+      "portable_sha256": "sha256:da0d503a553c9385a3205a39e2310b45c197f86ad9ec06fea03d3b83404cf104",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/recovery-inspection-final.log",
+      "portable": "docs/verification/u20/remediation/recovery-inspection-final.log",
+      "original_sha256": "sha256:44866d8266f1a6e9376afeffa81ca1d417c7d06059ea2ba34786305bc91eb279",
+      "portable_sha256": "sha256:44866d8266f1a6e9376afeffa81ca1d417c7d06059ea2ba34786305bc91eb279",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/recovery-inspection-exact-legacy.log",
+      "portable": "docs/verification/u20/remediation/recovery-inspection-exact-legacy.log",
+      "original_sha256": "sha256:44866d8266f1a6e9376afeffa81ca1d417c7d06059ea2ba34786305bc91eb279",
+      "portable_sha256": "sha256:44866d8266f1a6e9376afeffa81ca1d417c7d06059ea2ba34786305bc91eb279",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/consolidated-inspection-final.log",
+      "portable": "docs/verification/u20/remediation/consolidated-inspection-final.log",
+      "original_sha256": "sha256:05ae89b29749739965baf890ef0dd777a50bb25c9e4f62453c2ed538d6c627f8",
+      "portable_sha256": "sha256:05ae89b29749739965baf890ef0dd777a50bb25c9e4f62453c2ed538d6c627f8",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/consolidated-inspection-exact-legacy.log",
+      "portable": "docs/verification/u20/remediation/consolidated-inspection-exact-legacy.log",
+      "original_sha256": "sha256:05ae89b29749739965baf890ef0dd777a50bb25c9e4f62453c2ed538d6c627f8",
+      "portable_sha256": "sha256:05ae89b29749739965baf890ef0dd777a50bb25c9e4f62453c2ed538d6c627f8",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression/commands.json",
+      "portable": "docs/verification/u20/remediation/preliminary-regression-commands.json",
+      "original_sha256": "sha256:9d9c376a7d8025c447d44325e1447788f54cf343ecb5bc519f47ca433d44dca5",
+      "portable_sha256": "sha256:9d9c376a7d8025c447d44325e1447788f54cf343ecb5bc519f47ca433d44dca5",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression/shard-1.log",
+      "portable": "docs/verification/u20/remediation/preliminary-shard-1.log",
+      "original_sha256": "sha256:cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "portable_sha256": "sha256:cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression/shard-2.log",
+      "portable": "docs/verification/u20/remediation/preliminary-shard-2.log",
+      "original_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "portable_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/regression/shard-3.log",
+      "portable": "docs/verification/u20/remediation/preliminary-shard-3.log",
+      "original_sha256": "sha256:73960530b68b8cadc62b6be936d9f279c858d67f90ac83208fc195fecee7ad11",
+      "portable_sha256": "sha256:73960530b68b8cadc62b6be936d9f279c858d67f90ac83208fc195fecee7ad11",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e01/findings.md",
+      "portable": "docs/verification/u20/remediation/focused/e01-findings.md",
+      "original_sha256": "sha256:14882e3b801f09f7460d71e49b50555586d0104ddd0951dfa52d7dc818563999",
+      "portable_sha256": "sha256:14882e3b801f09f7460d71e49b50555586d0104ddd0951dfa52d7dc818563999",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e01/green-cli-projection.txt",
+      "portable": "docs/verification/u20/remediation/focused/e01-green-cli-projection.txt",
+      "original_sha256": "sha256:9302fbcf5eb2b39e266633e756ad0cac38e11061692f7150df3709d0a060d2cc",
+      "portable_sha256": "sha256:9302fbcf5eb2b39e266633e756ad0cac38e11061692f7150df3709d0a060d2cc",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e01/green-fingerprint.txt",
+      "portable": "docs/verification/u20/remediation/focused/e01-green-fingerprint.txt",
+      "original_sha256": "sha256:59b9466559aeabf218a54ec041fd83cd357cf9bf1d80a17c47aab62ed0c205bf",
+      "portable_sha256": "sha256:59b9466559aeabf218a54ec041fd83cd357cf9bf1d80a17c47aab62ed0c205bf",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e01/green-focused.txt",
+      "portable": "docs/verification/u20/remediation/focused/e01-green-focused.txt",
+      "original_sha256": "sha256:80aed89efd6bcec18bcd7b2f733d5a8df7e4a593da32330c0fb9fcf6ca2be397",
+      "portable_sha256": "sha256:80aed89efd6bcec18bcd7b2f733d5a8df7e4a593da32330c0fb9fcf6ca2be397",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e01/green-initial.txt",
+      "portable": "docs/verification/u20/remediation/focused/e01-green-initial.txt",
+      "original_sha256": "sha256:c99cdcccf5a4646e90185978dde0fa7b6cf3fa17a5aaae3037bea849e13b9e68",
+      "portable_sha256": "sha256:c99cdcccf5a4646e90185978dde0fa7b6cf3fa17a5aaae3037bea849e13b9e68",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e01/red.txt",
+      "portable": "docs/verification/u20/remediation/focused/e01-red.txt",
+      "original_sha256": "sha256:91e9913b95ffd951ba55af960e05777c234b500d570f67a54ab5fc1b32d11904",
+      "portable_sha256": "sha256:91e9913b95ffd951ba55af960e05777c234b500d570f67a54ab5fc1b32d11904",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/blocked-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-blocked-final.log",
+      "original_sha256": "sha256:e134c88ef25e5c54365225cc4d2566ebf2407d856e77b4bd8e23d4c67f3a4d64",
+      "portable_sha256": "sha256:e134c88ef25e5c54365225cc4d2566ebf2407d856e77b4bd8e23d4c67f3a4d64",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/claimed-legacy-red.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-claimed-legacy-red.log",
+      "original_sha256": "sha256:95798ae4f4e71ae215980b3aac7ce98256d55fb69ea658d9a2bc0756e4c57adf",
+      "portable_sha256": "sha256:95798ae4f4e71ae215980b3aac7ce98256d55fb69ea658d9a2bc0756e4c57adf",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/contracts.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-contracts.log",
+      "original_sha256": "sha256:c01462f1c85f89880c41f2cc8e5751d6cda54dae6534a3d21afedf4780436382",
+      "portable_sha256": "sha256:c01462f1c85f89880c41f2cc8e5751d6cda54dae6534a3d21afedf4780436382",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/exact-witness-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-exact-witness-final.log",
+      "original_sha256": "sha256:33c918ef358c3998f3bcccefd36edd4528cb844de4b9dff6eae43ea4ad47fdb2",
+      "portable_sha256": "sha256:33c918ef358c3998f3bcccefd36edd4528cb844de4b9dff6eae43ea4ad47fdb2",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/exact-witness-final.xml",
+      "portable": "docs/verification/u20/remediation/focused/e04-exact-witness-final.xml",
+      "original_sha256": "sha256:a54ef168bf181d87dc2dcadcc4bc85916238a5a298f4c3fd080c61cb1140ee22",
+      "portable_sha256": "sha256:a54ef168bf181d87dc2dcadcc4bc85916238a5a298f4c3fd080c61cb1140ee22",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/exact-witness-legacy.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-exact-witness-legacy.log",
+      "original_sha256": "sha256:d74768f82a58cf2199d02f8358ac762201e44496be02d710c22b6ecf165ea9c5",
+      "portable_sha256": "sha256:d74768f82a58cf2199d02f8358ac762201e44496be02d710c22b6ecf165ea9c5",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/focused-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-focused-final.log",
+      "original_sha256": "sha256:cffbea7cdb59c8243bc443f6a84a5bebc3639b336bf4f5cb9c28801e9c8fd8ff",
+      "portable_sha256": "sha256:cffbea7cdb59c8243bc443f6a84a5bebc3639b336bf4f5cb9c28801e9c8fd8ff",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/focused-frozen.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-focused-frozen.log",
+      "original_sha256": "sha256:988eac798b729ac391ea51c6ccdaf36df70072a3f1777e74094ee39e307ece69",
+      "portable_sha256": "sha256:988eac798b729ac391ea51c6ccdaf36df70072a3f1777e74094ee39e307ece69",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/focused.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-focused.log",
+      "original_sha256": "sha256:6de80dc9b1bdad489bf1a92c325ece33c7f49d6726fac15d8d17091538055c8c",
+      "portable_sha256": "sha256:6de80dc9b1bdad489bf1a92c325ece33c7f49d6726fac15d8d17091538055c8c",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/launcher-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-launcher-final.log",
+      "original_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "portable_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/launcher-frozen.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-launcher-frozen.log",
+      "original_sha256": "sha256:b4d6af8ae43485ec201470d4505666889f07ef57e0e24b5d5991573b5b728801",
+      "portable_sha256": "sha256:b4d6af8ae43485ec201470d4505666889f07ef57e0e24b5d5991573b5b728801",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/launcher.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-launcher.log",
+      "original_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "portable_sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/legacy-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-legacy-final.log",
+      "original_sha256": "sha256:d0f0e6ce9e5f6249ad05bcb0670e15c2fb2419dab40bda58fb8dded7c95fd363",
+      "portable_sha256": "sha256:d0f0e6ce9e5f6249ad05bcb0670e15c2fb2419dab40bda58fb8dded7c95fd363",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/legacy-final.xml",
+      "portable": "docs/verification/u20/remediation/focused/e04-legacy-final.xml",
+      "original_sha256": "sha256:496de536ee3fc6de03b73682a24e4a0ee1d5c95f31edaa07865b6ddcd20f6667",
+      "portable_sha256": "sha256:496de536ee3fc6de03b73682a24e4a0ee1d5c95f31edaa07865b6ddcd20f6667",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/legacy-package-provenance.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-legacy-package-provenance.log",
+      "original_sha256": "sha256:a1938fac9ea5a628f6b77806ce8e446615c3090563df71602deb231212ca8d4e",
+      "portable_sha256": "sha256:a1938fac9ea5a628f6b77806ce8e446615c3090563df71602deb231212ca8d4e",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/legacy-slice-readability.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-legacy-slice-readability.log",
+      "original_sha256": "sha256:8adb1b3a6a52f0cafd44f67370d06225f7807ce43610536adebd36922cbf02bf",
+      "portable_sha256": "sha256:8adb1b3a6a52f0cafd44f67370d06225f7807ce43610536adebd36922cbf02bf",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/profile-downgrade-green.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-profile-downgrade-green.log",
+      "original_sha256": "sha256:799c8a2d6956464e69567814d0237f5d383f7ddeb1251d6a6a61437965258c63",
+      "portable_sha256": "sha256:799c8a2d6956464e69567814d0237f5d383f7ddeb1251d6a6a61437965258c63",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/profile-downgrade-green.xml",
+      "portable": "docs/verification/u20/remediation/focused/e04-profile-downgrade-green.xml",
+      "original_sha256": "sha256:b3bb5d5f9a105c3b421dec4dd12407582d1c8b768aa9cc8a72d229fa30fd20de",
+      "portable_sha256": "sha256:b3bb5d5f9a105c3b421dec4dd12407582d1c8b768aa9cc8a72d229fa30fd20de",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/profile-downgrade-red.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-profile-downgrade-red.log",
+      "original_sha256": "sha256:d538ee12faa929b7917c319967f1c3942515456a4771bdbc43893d392eb1b923",
+      "portable_sha256": "sha256:d538ee12faa929b7917c319967f1c3942515456a4771bdbc43893d392eb1b923",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/profile-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-profile-final.log",
+      "original_sha256": "sha256:d3d469b00cce332be6ade41a82ba9a637c868b43cda15bf12d15a09d2476e979",
+      "portable_sha256": "sha256:d3d469b00cce332be6ade41a82ba9a637c868b43cda15bf12d15a09d2476e979",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/profile-final.xml",
+      "portable": "docs/verification/u20/remediation/focused/e04-profile-final.xml",
+      "original_sha256": "sha256:345aaebb738c39c750030c75ca21b4b925a37124a85f8f80713c3834f9313a41",
+      "portable_sha256": "sha256:345aaebb738c39c750030c75ca21b4b925a37124a85f8f80713c3834f9313a41",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/red.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-red.log",
+      "original_sha256": "sha256:5f19b3f127be03db86be4fd7a628910afe32e10ae401b83b537dc47b69c1d962",
+      "portable_sha256": "sha256:5f19b3f127be03db86be4fd7a628910afe32e10ae401b83b537dc47b69c1d962",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/results.json",
+      "portable": "docs/verification/u20/remediation/focused/e04-results.json",
+      "original_sha256": "sha256:d9f9e2976c0216b81841ef8ebeefa9e52989dd8297ed726873317916af22f108",
+      "portable_sha256": "sha256:d9f9e2976c0216b81841ef8ebeefa9e52989dd8297ed726873317916af22f108",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e04/u07.log",
+      "portable": "docs/verification/u20/remediation/focused/e04-u07.log",
+      "original_sha256": "sha256:ca596129e38cd6c691785fb974e750a7c820161ceb058a823df7952e435da6dd",
+      "portable_sha256": "sha256:ca596129e38cd6c691785fb974e750a7c820161ceb058a823df7952e435da6dd",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e05/green.log",
+      "portable": "docs/verification/u20/remediation/focused/e05-green.log",
+      "original_sha256": "sha256:62697fea1a63cc3e24566384417c920857c3885630adc56ba89963ebd2b753da",
+      "portable_sha256": "sha256:62697fea1a63cc3e24566384417c920857c3885630adc56ba89963ebd2b753da",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e05/green.xml",
+      "portable": "docs/verification/u20/remediation/focused/e05-green.xml",
+      "original_sha256": "sha256:c81b4634a1d361fa7bbe6ad6ab240da42cfe2a18e18f96456a74b7dfe1b3f3af",
+      "portable_sha256": "sha256:c81b4634a1d361fa7bbe6ad6ab240da42cfe2a18e18f96456a74b7dfe1b3f3af",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e05/red.log",
+      "portable": "docs/verification/u20/remediation/focused/e05-red.log",
+      "original_sha256": "sha256:d2ac0279298f8fdc2da15f9fcec6c2831edcfe840f2faaf08c3c04bdd6d7dea6",
+      "portable_sha256": "sha256:d2ac0279298f8fdc2da15f9fcec6c2831edcfe840f2faaf08c3c04bdd6d7dea6",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e05/red.xml",
+      "portable": "docs/verification/u20/remediation/focused/e05-red.xml",
+      "original_sha256": "sha256:042f7c2be27a80283f6f8dc69b1ed91bba26a336ebb238fa5b09467c7ecab4de",
+      "portable_sha256": "sha256:042f7c2be27a80283f6f8dc69b1ed91bba26a336ebb238fa5b09467c7ecab4de",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/fixture-debug.log",
+      "portable": "docs/verification/u20/remediation/focused/e06-fixture-debug.log",
+      "original_sha256": "sha256:3179dd5a3c46abfd232e7a46038fab06fd9ddcfdaa4260c7faf4a324674c923e",
+      "portable_sha256": "sha256:3179dd5a3c46abfd232e7a46038fab06fd9ddcfdaa4260c7faf4a324674c923e",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/green-final.log",
+      "portable": "docs/verification/u20/remediation/focused/e06-green-final.log",
+      "original_sha256": "sha256:4097fc9e8659533f1b53766fea3887d391a0fdeeeb2d179771ae9347ad064f59",
+      "portable_sha256": "sha256:4097fc9e8659533f1b53766fea3887d391a0fdeeeb2d179771ae9347ad064f59",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/green-final.xml",
+      "portable": "docs/verification/u20/remediation/focused/e06-green-final.xml",
+      "original_sha256": "sha256:4b95ef5e9e6f59540c8d998f5dd2a16d824c3ff65a8ea738ab33199e389d4ff5",
+      "portable_sha256": "sha256:4b95ef5e9e6f59540c8d998f5dd2a16d824c3ff65a8ea738ab33199e389d4ff5",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/green.log",
+      "portable": "docs/verification/u20/remediation/focused/e06-green.log",
+      "original_sha256": "sha256:adf71736eddc34fc26122046c16b865a60ddea72cd06c63489fc432f9ba65d01",
+      "portable_sha256": "sha256:adf71736eddc34fc26122046c16b865a60ddea72cd06c63489fc432f9ba65d01",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/green.xml",
+      "portable": "docs/verification/u20/remediation/focused/e06-green.xml",
+      "original_sha256": "sha256:8779c628c02e7c2faf2a2cbec9625749a03ba663d78e9f1a58c5ea39b290812c",
+      "portable_sha256": "sha256:8779c628c02e7c2faf2a2cbec9625749a03ba663d78e9f1a58c5ea39b290812c",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/red.log",
+      "portable": "docs/verification/u20/remediation/focused/e06-red.log",
+      "original_sha256": "sha256:c9f2520180ef673cb26412d2e46bf35a3a9819058c65c3d795ebb6bdbe0cfc7a",
+      "portable_sha256": "sha256:c9f2520180ef673cb26412d2e46bf35a3a9819058c65c3d795ebb6bdbe0cfc7a",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e06/red.xml",
+      "portable": "docs/verification/u20/remediation/focused/e06-red.xml",
+      "original_sha256": "sha256:eae8f17190ac5a24a1c28c2a0aa090748bb503e18605135b8abc0ef59be1b73b",
+      "portable_sha256": "sha256:eae8f17190ac5a24a1c28c2a0aa090748bb503e18605135b8abc0ef59be1b73b",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/basis-regression.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-basis-regression.log",
+      "original_sha256": "sha256:ed91178a2f300ff9460de687579525543ef79a6866a1f02b107858715eb7873b",
+      "portable_sha256": "sha256:ed91178a2f300ff9460de687579525543ef79a6866a1f02b107858715eb7873b",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/final-focused.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-final-focused.log",
+      "original_sha256": "sha256:5f4f8dcd8d8c6aa7740851cd2a42fa1b8909bfa94443ff1b02b0b2e85720233c",
+      "portable_sha256": "sha256:5f4f8dcd8d8c6aa7740851cd2a42fa1b8909bfa94443ff1b02b0b2e85720233c",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/final.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-final.log",
+      "original_sha256": "sha256:f0ab055fd642c40623a7c72be661d122f1a565a733b4b5efebb52e5fa35e57a0",
+      "portable_sha256": "sha256:f0ab055fd642c40623a7c72be661d122f1a565a733b4b5efebb52e5fa35e57a0",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/green-pointer.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-green-pointer.log",
+      "original_sha256": "sha256:7140911e6261d80a1b0e10ba1b99d4ac9ea1e589bc830e900337d87462dd1359",
+      "portable_sha256": "sha256:7140911e6261d80a1b0e10ba1b99d4ac9ea1e589bc830e900337d87462dd1359",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/green.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-green.log",
+      "original_sha256": "sha256:b81821e4fcb425ea2232803b8a0495b3fbd2e74dde33b1ba85ee5dc3911c9c0d",
+      "portable_sha256": "sha256:b81821e4fcb425ea2232803b8a0495b3fbd2e74dde33b1ba85ee5dc3911c9c0d",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/legacy-validation.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-legacy-validation.log",
+      "original_sha256": "sha256:7052abcb817eecb655892f97dc14f235313891bd5bf474ec6b204c74e4a6b58b",
+      "portable_sha256": "sha256:7052abcb817eecb655892f97dc14f235313891bd5bf474ec6b204c74e4a6b58b",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/red-basis.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-red-basis.log",
+      "original_sha256": "sha256:ffba1985edfda5dcd9e90e45c1ec91c964b9bd3091a1097c9d425edea21f575d",
+      "portable_sha256": "sha256:ffba1985edfda5dcd9e90e45c1ec91c964b9bd3091a1097c9d425edea21f575d",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/red-case.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-red-case.log",
+      "original_sha256": "sha256:b19911be9d490f85bf272e3615a4d770b3ed667ce9a3b6cfa2eed63928cc75c6",
+      "portable_sha256": "sha256:b19911be9d490f85bf272e3615a4d770b3ed667ce9a3b6cfa2eed63928cc75c6",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/red-pointer.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-red-pointer.log",
+      "original_sha256": "sha256:6dceedc1e00d38c58df0110690c1c5ee95883f93f835c199ad135a9a8f2abe05",
+      "portable_sha256": "sha256:6dceedc1e00d38c58df0110690c1c5ee95883f93f835c199ad135a9a8f2abe05",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/red.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-red.log",
+      "original_sha256": "sha256:74c032a37af85c2381c7f7a11517e7978689d064dae9b82753afe7f458846d9e",
+      "portable_sha256": "sha256:74c032a37af85c2381c7f7a11517e7978689d064dae9b82753afe7f458846d9e",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/rejection-final-code.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-rejection-final-code.log",
+      "original_sha256": "sha256:a7f8f55ce32c3df0eec3119bdc4f323b9cf56b5f6ba23ade9ff6f99101923137",
+      "portable_sha256": "sha256:a7f8f55ce32c3df0eec3119bdc4f323b9cf56b5f6ba23ade9ff6f99101923137",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/rejection-results.json",
+      "portable": "docs/verification/u20/remediation/focused/e07-rejection-results.json",
+      "original_sha256": "sha256:0be32b3e83bc2701306c986a5a479cf2b30b5c28cd963e86d0cf770cdc4f50c1",
+      "portable_sha256": "sha256:0be32b3e83bc2701306c986a5a479cf2b30b5c28cd963e86d0cf770cdc4f50c1",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/rejection.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-rejection.log",
+      "original_sha256": "sha256:fde6b76b1d01d0cf4945331d43659cccef1e65b6f1dfbacd1b47f25b67fc8867",
+      "portable_sha256": "sha256:fde6b76b1d01d0cf4945331d43659cccef1e65b6f1dfbacd1b47f25b67fc8867",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/renderer-regression.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-renderer-regression.log",
+      "original_sha256": "sha256:d494835a6280cb8445c9270bb0d485064b3d4744bb96143ffcc8de030bd6aff9",
+      "portable_sha256": "sha256:d494835a6280cb8445c9270bb0d485064b3d4744bb96143ffcc8de030bd6aff9",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/replay-results.json",
+      "portable": "docs/verification/u20/remediation/focused/e07-replay-results.json",
+      "original_sha256": "sha256:2d0e694fca4b08f874450c8c4986bbe02a2c29c58d5a48587c7d34cb4ec83fca",
+      "portable_sha256": "sha256:2d0e694fca4b08f874450c8c4986bbe02a2c29c58d5a48587c7d34cb4ec83fca",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "original": ".evidence/u20-remediation/e07/replay.log",
+      "portable": "docs/verification/u20/remediation/focused/e07-replay.log",
+      "original_sha256": "sha256:29dd9ed64a328109972aeb47013e8fabdf4ab8d46c16d673c8b4588dc4deff0b",
+      "portable_sha256": "sha256:29dd9ed64a328109972aeb47013e8fabdf4ab8d46c16d673c8b4588dc4deff0b",
+      "synthetic_label_substitutions": [
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

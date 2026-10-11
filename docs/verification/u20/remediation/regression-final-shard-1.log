@@ -1,0 +1,109 @@
+...........sss...sss................FF.................................. [ 29%]
+........................................................................ [ 58%]
+........................................................................ [ 88%]
+.............................                                         [100%]
+=================================== FAILURES ===================================
+____ test_export_resolution_is_exact_detached_projection_before_fingerprint ____
+
+    def test_export_resolution_is_exact_detached_projection_before_fingerprint():
+        accounting=resolution_accounting()
+        chain,state=export_chain(accounting)
+        original=deepcopy(chain)
+>       model=build_export_model(chain,state,'complete')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_source_resolution_export.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+chain = [{'sequence': 1, 'state': {'scope_basis': [], 'audiences': ['Legal'], 'systems_in_scope': ['學習系統']}, 'unresolved': [],...s': [], 'unaffected_items': [], 'conflicts': [], 'unresolved_items': [], ...}, 'unresolved': [], 'decisions': [], ...}]
+state = {'proposed_actions': [], 'review_requests': [], 'approval_requirements': [], 'escalations': [], ...}
+status = 'complete'
+
+    def build_export_model(chain, state, status):
+        records=[r for s in chain for r in stage_records(s)]
+        fifth=chain[4]
+        impacts=[r for r in stage_records(fifth) if r['record_type']=='impact']
+        rules=[r for r in records if r['record_type'] in {'rule','policy-control'}]
+        versions=retained_source_versions(chain,rules)
+        model=dict(schema_version='rci-draft-export/1',run_id=chain[0]['run_id'],assigned_review_date=ASSIGNED_REVIEW_DATE,
+            status=status,draft=True,recipients=chain[0]['state']['audiences'],systems_in_scope=chain[0]['state']['systems_in_scope'],
+            created_at=fifth['created_at'],impacts=deepcopy(impacts),rules=deepcopy(rules),
+            unresolved_coverage=unresolved_coverage(chain),
+            facts=deepcopy(chain[3]['state']['system_facts']),actions=deepcopy(state['proposed_actions']),
+            decisions=deepcopy([r for r in records if r['record_type']=='decision']),
+            limitations=deepcopy([r for r in records if r['record_type'] in {'blocker','diagnostic','gap','conflict'} or
+                r['record_type']=='impact' and r['state'] in {'unresolved','conflicting'}]),
+            evidence_index=deepcopy(chain[1]['state']['evidence']),source_quality=deepcopy(chain[1]['state']['sources']),
+            source_versions=versions,coverage=deepcopy(fifth['state']['extensions']['u11_impacts']['value']['coverage']),
+            action_accounting=deepcopy(state['extensions']['u12_actions']['value']['actions']),
+            calendar_context=deepcopy(state['extensions']['u12_actions']['value']['calendar_rows']))
+        reconciliation=chain[3]['state']['extensions']['u10_reconciliation']['value']
+        if 'capture_resolution' in reconciliation:
+            # Expose the independently checked inspection ledger without removing
+            # its original capture diagnostics or changing historical source status.
+            model['source_resolution']=deepcopy(reconciliation['capture_resolution'])
+            model['source_resolution']['report_resolutions']=deepcopy([
+                entry for entry in reconciliation['reports']
+                if entry['gap_id'] is None and 'resolution' in entry])
+        model['draft_version']=_fingerprint(model)
+        model.update(review_requests=deepcopy(state['review_requests']),approval_requirements=deepcopy(state['approval_requirements']),
+            escalations=deepcopy(state['escalations']))
+>       if state['feedback']:
+           ^^^^^^^^^^^^^^^^^
+E       KeyError: 'feedback'
+
+regulatory-change-impact-brief/scripts/rci/actions.py:163: KeyError
+_____________ test_export_legacy_without_resolution_omits_new_key ______________
+
+    def test_export_legacy_without_resolution_omits_new_key():
+        accounting=resolution_accounting()
+        accounting.pop('capture_resolution')
+        chain,state=export_chain(accounting)
+>       first=build_export_model(chain,state,'partial')
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_source_resolution_export.py:87: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+chain = [{'sequence': 1, 'state': {'scope_basis': [], 'audiences': ['Legal'], 'systems_in_scope': ['學習系統']}, 'unresolved': [],...s': [], 'unaffected_items': [], 'conflicts': [], 'unresolved_items': [], ...}, 'unresolved': [], 'decisions': [], ...}]
+state = {'proposed_actions': [], 'review_requests': [], 'approval_requirements': [], 'escalations': [], ...}
+status = 'partial'
+
+    def build_export_model(chain, state, status):
+        records=[r for s in chain for r in stage_records(s)]
+        fifth=chain[4]
+        impacts=[r for r in stage_records(fifth) if r['record_type']=='impact']
+        rules=[r for r in records if r['record_type'] in {'rule','policy-control'}]
+        versions=retained_source_versions(chain,rules)
+        model=dict(schema_version='rci-draft-export/1',run_id=chain[0]['run_id'],assigned_review_date=ASSIGNED_REVIEW_DATE,
+            status=status,draft=True,recipients=chain[0]['state']['audiences'],systems_in_scope=chain[0]['state']['systems_in_scope'],
+            created_at=fifth['created_at'],impacts=deepcopy(impacts),rules=deepcopy(rules),
+            unresolved_coverage=unresolved_coverage(chain),
+            facts=deepcopy(chain[3]['state']['system_facts']),actions=deepcopy(state['proposed_actions']),
+            decisions=deepcopy([r for r in records if r['record_type']=='decision']),
+            limitations=deepcopy([r for r in records if r['record_type'] in {'blocker','diagnostic','gap','conflict'} or
+                r['record_type']=='impact' and r['state'] in {'unresolved','conflicting'}]),
+            evidence_index=deepcopy(chain[1]['state']['evidence']),source_quality=deepcopy(chain[1]['state']['sources']),
+            source_versions=versions,coverage=deepcopy(fifth['state']['extensions']['u11_impacts']['value']['coverage']),
+            action_accounting=deepcopy(state['extensions']['u12_actions']['value']['actions']),
+            calendar_context=deepcopy(state['extensions']['u12_actions']['value']['calendar_rows']))
+        reconciliation=chain[3]['state']['extensions']['u10_reconciliation']['value']
+        if 'capture_resolution' in reconciliation:
+            # Expose the independently checked inspection ledger without removing
+            # its original capture diagnostics or changing historical source status.
+            model['source_resolution']=deepcopy(reconciliation['capture_resolution'])
+            model['source_resolution']['report_resolutions']=deepcopy([
+                entry for entry in reconciliation['reports']
+                if entry['gap_id'] is None and 'resolution' in entry])
+        model['draft_version']=_fingerprint(model)
+        model.update(review_requests=deepcopy(state['review_requests']),approval_requirements=deepcopy(state['approval_requirements']),
+            escalations=deepcopy(state['escalations']))
+>       if state['feedback']:
+           ^^^^^^^^^^^^^^^^^
+E       KeyError: 'feedback'
+
+regulatory-change-impact-brief/scripts/rci/actions.py:163: KeyError
+=========================== short test summary info ============================
+FAILED tests/runtime/test_source_resolution_export.py::test_export_resolution_is_exact_detached_projection_before_fingerprint
+FAILED tests/runtime/test_source_resolution_export.py::test_export_legacy_without_resolution_omits_new_key
+2 failed, 237 passed, 6 skipped, 3 subtests passed in 1360.83s (0:22:40)

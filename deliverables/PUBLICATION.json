@@ -1,0 +1,19 @@
+{
+  "historical_execution_records": [
+    "analysis/outcome.json",
+    "analysis/prior-inspection.json",
+    "analysis/recomputation.json",
+    "analysis/run-context.json",
+    "analysis/stage-fingerprints.json"
+  ],
+  "history_semantics": "Sanitized publication view; original exact-byte archive is restricted, not this directory",
+  "interpretation_semantics": "Rebound request/response envelopes are publication derivatives only; no new host execution. Original prompts/events/times describe restricted original inputs. Candidate meanings and quoted extracts are unchanged.",
+  "lineage_manifest_relative_path": "publication-manifest.json",
+  "new_execution": false,
+  "notice": "PUBLICATION DERIVATIVE: sanitized retained evidence, not untouched HTTP responses or a new execution. Run/record/snapshot IDs and acquisition times identify the original occurrence only. See PUBLICATION.json and the submission-root publication-manifest.json for original/derivative hashes and limitations.",
+  "original_run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "original_storage": "/home/mike/regulatory-compliance-evidence/2026-10-11-publication",
+  "originals_published": false,
+  "schema_version": "rci-publication-derivative/1",
+  "verification_boundary": "Public bytes support derivative validation. Full original-to-derivative lineage requires restricted originals; missing originals is a LIMITATION."
+}

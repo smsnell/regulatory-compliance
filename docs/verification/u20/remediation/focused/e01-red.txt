@@ -1,0 +1,44 @@
+F.                                                                       [100%]
+=================================== FAILURES ===================================
+____ test_observed_dates_pass_existing_assessment_without_rewriting_support ____
+
+captured = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp/pytest-of-mike/pytest-0/u090/out/.staging/run-7f4dd700433043798696cb0d67833684')
+
+    def test_observed_dates_pass_existing_assessment_without_rewriting_support(captured):
+        """Synthetic semantics; the encoding witness is copied from actual U20 text."""
+        chain = deepcopy(read_chain(captured, count=2))
+        evidence = [e for e in chain[1]['state']['evidence'] if e['assertion'].startswith('Captured legal/context')]
+        packet = {'extracts':[dict(evidence_id=e['id'],locator=e['locator']) for e in evidence]}
+        value = proposal(packet); candidate = value['candidates'][0]; d = descriptor(value)
+        oj_text = retained('OJ')['text']
+        timing = next(line for line in oj_text.splitlines() if line == 'It shall apply from 2\xa0August 2026.')
+        publication = next(line for line in oj_text.splitlines() if line.startswith('OJ L, 2024/1689,'))
+        source = next(s for s in d['sources'] if s['source_id']=='OJ')
+        source.update(version='12.7.2024', version_quote=publication, publication_date='2024-07-12')
+        d['timing'].update(basis=timing, effective_until=None)
+        component = next(s for s in d['support'] if s['component']=='timing')
+        component.update(value=timing,quote=timing)
+        candidate['citations'] += [dict(evidence_id=source['evidence_id'],quote=publication),
+                                   dict(evidence_id=source['evidence_id'],quote=timing)]
+        set_descriptor(value,d)
+        before = deepcopy(candidate)
+>       accepted = _assessment(candidate,chain)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_authority_remediation.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/authority.py:151: in _assessment
+    require(source['publication_date'] in source['version_quote'], 'publication date lacks literal evidence')
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+condition = False, message = 'publication date lacks literal evidence'
+
+    def require(condition: bool, message: str) -> None:
+        if not condition:
+>           raise ContractError(message)
+E           rci.contracts.ContractError: publication date lacks literal evidence
+
+regulatory-change-impact-brief/scripts/rci/contracts.py:121: ContractError
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u20_authority_remediation.py::test_observed_dates_pass_existing_assessment_without_rewriting_support
+1 failed, 1 passed in 5.01s

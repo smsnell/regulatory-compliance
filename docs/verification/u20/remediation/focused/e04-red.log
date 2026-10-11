@@ -1,0 +1,16 @@
+FF                                                                       [100%]
+=================================== FAILURES ===================================
+________ test_scope_date_and_actual_source_routes_emit_decisions[False] ________
+tests/runtime/test_u20_decisions.py:21: in test_scope_date_and_actual_source_routes_emit_decisions
+    scope = by_summary['Scope input selection']
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'Scope input selection'
+________ test_scope_date_and_actual_source_routes_emit_decisions[True] _________
+tests/runtime/test_u20_decisions.py:21: in test_scope_date_and_actual_source_routes_emit_decisions
+    scope = by_summary['Scope input selection']
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   KeyError: 'Scope input selection'
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u20_decisions.py::test_scope_date_and_actual_source_routes_emit_decisions[False]
+FAILED tests/runtime/test_u20_decisions.py::test_scope_date_and_actual_source_routes_emit_decisions[True]
+2 failed, 9 deselected in 9.65s

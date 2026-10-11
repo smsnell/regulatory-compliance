@@ -1,0 +1,237 @@
+{
+  "consumed_record_ids": [],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-10T21:09:50.296541Z",
+  "decisions": [
+    {
+      "chosen_behavior": "Freeze discovered scope for AI-001, AI-002, AI-003, AI-004, AI-005, AI-006, AI-007, AI-008; import the original SYSTEMS discovery attempt exactly once in Stage 02.",
+      "concern": "Scope must use actual authorized system IDs before downstream evidence exists.",
+      "decision_basis": "rci-engineering-decisions/1:scope",
+      "downstream_effect": "All later stages use this frozen scope; unresolved corroboration remains visible.",
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:decision:e28e1d1bc418b68054172bcac03f84c7",
+      "options_considered": [
+        "Use an authorized scope declaration",
+        "Discover identity from the authorized SYSTEMS route",
+        "Defer when neither can establish actual identities"
+      ],
+      "rationale": "The retained identity-verified SYSTEMS capture establishes the requested identities without claiming current operational facts.",
+      "record_type": "decision",
+      "source_basis": [
+        "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:scope-basis:cb90bd4ef7194a25b3fe8a0267430a52",
+        "interviews/interview-B-3.md 03:08/03:21",
+        "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+        "SYSTEMS system_id column; complete identity-verified tab",
+        "1361e2f8307a467caa267f7cd719d951",
+        "sources/1361e2f8307a467caa267f7cd719d951.bin",
+        "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968"
+      ],
+      "status": "provisional-engineering",
+      "summary": "Scope input selection",
+      "tradeoffs": [
+        "Identity selection alone does not establish system facts or legal applicability."
+      ]
+    },
+    {
+      "chosen_behavior": "Encode 2026-08-26 as 2026-08-26T00:00:00Z with as_of_precision=date.",
+      "concern": "The date-time schema must not invent an intraday legal cutover.",
+      "decision_basis": "rci-engineering-decisions/1:date",
+      "downstream_effect": "Retrieval, observation, legal effective dates and proposed action dates retain their separate bases.",
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:decision:5521016c4c70ca51f6cce33fda44320e",
+      "options_considered": [
+        "Encode the assigned review date with explicit date precision",
+        "Assert an unsupported intraday cutover"
+      ],
+      "rationale": "Preserves the assigned review date while satisfying the existing date-time contract.",
+      "record_type": "decision",
+      "source_basis": [
+        "REQUIREMENTS.md R0/R3/R7",
+        "snapshot.schema.json as_of",
+        "2026-08-26",
+        "date",
+        "2026-08-26T00:00:00Z"
+      ],
+      "status": "provisional-engineering",
+      "summary": "Assigned date precision encoding",
+      "tradeoffs": [
+        "Timezone and intraday applicability remain unresolved unless separately evidenced."
+      ]
+    },
+    {
+      "chosen_behavior": "Start fresh run run-b38ca2b36e1044bbba572399b41bf5ae superseding run-f48b4823b3ad4faaa9ac30a301b66505; reason: Final submission-artifact refresh after verified U20 remediation and E04 runtime decision-emission repair.",
+      "concern": "Replacing a previous occurrence must preserve its evidence and avoid reusing stale conclusions.",
+      "decision_basis": "rci-engineering-decisions/1:recovery",
+      "downstream_effect": "Keep the prior occurrence and any failure evidence; validate the new candidate before replacing current outputs.",
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:decision:57f2ac2f57118ec4b3a5599e2841f262",
+      "options_considered": [
+        "Retain the prior occurrence and fully recompute in a fresh run",
+        "Reuse earlier stage conclusions"
+      ],
+      "rationale": "The supervisor identified a retained prior occurrence; fresh acquisition and complete recalculation preserve run isolation.",
+      "record_type": "decision",
+      "source_basis": [
+        "run-f48b4823b3ad4faaa9ac30a301b66505",
+        "Final submission-artifact refresh after verified U20 remediation and E04 runtime decision-emission repair",
+        "analysis/run-context.json"
+      ],
+      "status": "provisional-engineering",
+      "summary": "Fresh run supersession and recovery",
+      "tradeoffs": [
+        "All source reads and stage calculations repeat; promotion and archival still require their own successful checks."
+      ]
+    }
+  ],
+  "predecessor": null,
+  "produced_record_ids": [
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:scope-basis:cb90bd4ef7194a25b3fe8a0267430a52",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:decision:e28e1d1bc418b68054172bcac03f84c7",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:decision:5521016c4c70ca51f6cce33fda44320e",
+    "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:decision:57f2ac2f57118ec4b3a5599e2841f262"
+  ],
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 1,
+  "snapshot_id": "snapshot-ce337b47bd0e4e8c89675c64c26c1957",
+  "stage": "scope",
+  "state": {
+    "approval_gates": [
+      "Legal final interpretations and exceptions",
+      "Operations dates, activation and incident closure"
+    ],
+    "as_of": "2026-08-26T00:00:00Z",
+    "as_of_precision": "date",
+    "assigned_review_date": "2026-08-26",
+    "audiences": [
+      "Legal",
+      "Operations"
+    ],
+    "change_reason": "Final submission-artifact refresh after verified U20 remediation and E04 runtime decision-emission repair",
+    "code_fingerprint": "sha256:7a4de3b53c530f39d42bb30665297e9e41c0c14150fcf2ca99a96fceb2fc5a65",
+    "config_fingerprint": "sha256:44985ebc099e94d447960c610a09f94f8b973bd6ea41275bc7746853ca6c2be0",
+    "extensions": {
+      "u07_sources": {
+        "schema_version": "rci-source-declarations/1",
+        "value": {
+          "sources": [
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "LAW",
+              "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/article-50"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "OJ",
+              "route": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "AMEND",
+              "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "CONSOLIDATED",
+              "route": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "TIME",
+              "route": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/eu-ai-act-implementation-timeline"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": null,
+              "id": "FAQ",
+              "route": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act"
+            },
+            {
+              "adapter": "http-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "POLICY",
+              "route": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "SYSTEMS",
+              "route": "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "EVIDENCE",
+              "route": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk"
+            },
+            {
+              "adapter": "google-sheets-read",
+              "credential_ref": "external-readonly-source-login",
+              "id": "CALENDAR",
+              "route": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA"
+            }
+          ]
+        }
+      },
+      "u20_decisions": {
+        "schema_version": "rci-engineering-decisions/1",
+        "value": {
+          "stages": [
+            1,
+            2,
+            5
+          ]
+        }
+      }
+    },
+    "review_type": "Article 50 EU programme draft review",
+    "scope_basis": [
+      {
+        "attempt_key": "1361e2f8307a467caa267f7cd719d951",
+        "authorized_by": "Interview 03:08/03:21 and authorized SYSTEMS route",
+        "basis_kind": "discovered",
+        "basis_version": "rci-scope-discovery/1",
+        "content_hash": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+        "evidence_ids": [],
+        "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:01:scope-basis:cb90bd4ef7194a25b3fe8a0267430a52",
+        "local_reference": "sources/1361e2f8307a467caa267f7cd719d951.bin",
+        "record_type": "scope-basis",
+        "retrieved_at": "2026-10-10T21:09:49.757652Z",
+        "source_basis": [
+          "interviews/interview-B-3.md 03:08/03:21",
+          "https://docs.google.com/spreadsheets/d/10ky745H_1h9XbGCXPJsiRp5yfdeU08TZtmrsCMinGgU",
+          "SYSTEMS system_id column; complete identity-verified tab"
+        ],
+        "summary": "Eight actual requested system IDs; current operational facts require fresh corroboration.",
+        "system_ids": [
+          "AI-001",
+          "AI-002",
+          "AI-003",
+          "AI-004",
+          "AI-005",
+          "AI-006",
+          "AI-007",
+          "AI-008"
+        ]
+      }
+    ],
+    "supersedes_run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+    "systems_in_scope": [
+      "AI-001",
+      "AI-002",
+      "AI-003",
+      "AI-004",
+      "AI-005",
+      "AI-006",
+      "AI-007",
+      "AI-008"
+    ]
+  },
+  "status": "complete",
+  "unresolved": []
+}

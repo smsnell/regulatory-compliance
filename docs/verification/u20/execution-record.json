@@ -1,0 +1,251 @@
+{
+  "live": {
+    "outcome": {
+      "candidate": "deliverables/.staging/run-f48b4823b3ad4faaa9ac30a301b66505",
+      "missing_artifacts": [],
+      "missing_snapshots": [],
+      "package_acceptance": false,
+      "production_package": true,
+      "publication_status": "blocked",
+      "reason": "Seven-stage draft; review requests await authorized humans.",
+      "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+      "status": "blocked",
+      "supersedes_run_id": "run-1578f8eaddcf40e98aa788f6d1f53e35"
+    },
+    "config_sha256": "sha256:44985ebc099e94d447960c610a09f94f8b973bd6ea41275bc7746853ca6c2be0",
+    "run_context": {
+      "change_reason": "U20 fresh live retry with network access after sandbox source-read failure",
+      "mode": "production",
+      "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+      "started_at": "2026-10-10T18:41:26.272324Z",
+      "supersedes_run_id": "run-1578f8eaddcf40e98aa788f6d1f53e35"
+    },
+    "host_invocations": [
+      {
+        "path": "analysis/host-invocation.json",
+        "sha256": "sha256:fa81064d4346328033fdea224cb234ac8fdc4dc3e767d76839f9c4f84956f966",
+        "metadata": {
+          "host_version": "codex-cli 0.162.1",
+          "instruction_versions": [
+            {
+              "path": "regulatory-change-impact-brief/SKILL.md",
+              "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/authority-policy.md",
+              "sha256": "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc"
+            }
+          ],
+          "reference_versions": [
+            {
+              "path": "regulatory-change-impact-brief/references/contracts.md",
+              "sha256": "sha256:e02f2b4644bcfb70a84b91ea5e6c8cf093d6d64e7c393be373d3f7e52d61603e"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/schemas/authority-basis.schema.json",
+              "sha256": "sha256:df9a051da2f2c0ba2f3f26635a549e6b7bb4ad131e8bc3ea07b0de3c05e7849c"
+            }
+          ],
+          "reported_effort": null,
+          "reported_model": null,
+          "requested_effort": "high",
+          "requested_model": "gpt-6.1-sol",
+          "usage": null
+        },
+        "visible_usage": [
+          {
+            "input_tokens": 874133,
+            "cached_input_tokens": 795136,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 15850,
+            "reasoning_output_tokens": 3338
+          }
+        ]
+      },
+      {
+        "path": "analysis/reconciliation/host-invocation.json",
+        "sha256": "sha256:a3719e181d8eb7665655a03a058d3c13e1c9854a76457f529fffd09f9b6774f6",
+        "metadata": {
+          "host_version": "codex-cli 0.162.1",
+          "instruction_versions": [
+            {
+              "path": "regulatory-change-impact-brief/SKILL.md",
+              "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/reconciliation.md",
+              "sha256": "sha256:cc43744da27ed514fa22d61718b5981ac6c1c7c5ac2748615e853cfedfad27d9"
+            }
+          ],
+          "reference_versions": [
+            {
+              "path": "regulatory-change-impact-brief/references/schemas/reconciliation-basis.schema.json",
+              "sha256": "sha256:8b82033bd0ece493670b81cf99b1675e535a808294c8a20958ca0d2ee5aefee7"
+            },
+            {
+              "path": "config/review.example.json",
+              "sha256": "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d"
+            }
+          ],
+          "reported_effort": null,
+          "reported_model": null,
+          "requested_effort": "high",
+          "requested_model": "gpt-6.1-sol",
+          "usage": null
+        },
+        "visible_usage": [
+          {
+            "input_tokens": 310344,
+            "cached_input_tokens": 270208,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 2936,
+            "reasoning_output_tokens": 301
+          }
+        ]
+      }
+    ]
+  },
+  "clean_synthetic": {
+    "outcome": {
+      "candidate": "deliverables/.staging/run-a7b50ae23a714c07aaa101ec88f3d70e",
+      "missing_artifacts": [],
+      "missing_snapshots": [],
+      "package_acceptance": true,
+      "production_package": true,
+      "publication_status": "validated",
+      "reason": "Seven-stage draft; review requests await authorized humans.",
+      "run_id": "run-a7b50ae23a714c07aaa101ec88f3d70e",
+      "status": "partial",
+      "supersedes_run_id": null
+    },
+    "config_sha256": "sha256:a2c41d0500ef5e34ac0a1191cf6cce6ba5152358bed5f996e5d9e945edba86df",
+    "run_context": {
+      "change_reason": null,
+      "mode": "production",
+      "run_id": "run-a7b50ae23a714c07aaa101ec88f3d70e",
+      "started_at": "2026-10-10T18:44:17.946122Z",
+      "supersedes_run_id": null
+    },
+    "host_invocations": [
+      {
+        "path": "analysis/host-invocation.json",
+        "sha256": "sha256:646b0e05a25267722cb4dcf4d46dbf2cd0b067479b2f6d53587511e118c530d8",
+        "metadata": {
+          "host_version": "codex-cli 0.162.1",
+          "instruction_versions": [
+            {
+              "path": "regulatory-change-impact-brief/SKILL.md",
+              "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/authority-policy.md",
+              "sha256": "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc"
+            }
+          ],
+          "reference_versions": [
+            {
+              "path": "regulatory-change-impact-brief/references/contracts.md",
+              "sha256": "sha256:e02f2b4644bcfb70a84b91ea5e6c8cf093d6d64e7c393be373d3f7e52d61603e"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/schemas/authority-basis.schema.json",
+              "sha256": "sha256:df9a051da2f2c0ba2f3f26635a549e6b7bb4ad131e8bc3ea07b0de3c05e7849c"
+            }
+          ],
+          "reported_effort": null,
+          "reported_model": null,
+          "requested_effort": "high",
+          "requested_model": "gpt-6.1-sol",
+          "usage": null
+        },
+        "visible_usage": [
+          {
+            "input_tokens": 391789,
+            "cached_input_tokens": 343168,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 4297,
+            "reasoning_output_tokens": 499
+          }
+        ]
+      },
+      {
+        "path": "analysis/impacts/host-invocation.json",
+        "sha256": "sha256:a31e060988556891f16fd8b518165c6dc8d6dd2f967f6def27d32b14c5de5952",
+        "metadata": {
+          "host_version": "codex-cli 0.162.1",
+          "instruction_versions": [
+            {
+              "path": "regulatory-change-impact-brief/SKILL.md",
+              "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/impacts.md",
+              "sha256": "sha256:27b8f633079c7cd7ccbe7ed1bba4b5d89a7124e9dd42e8725d9a4478020f340f"
+            }
+          ],
+          "reference_versions": [
+            {
+              "path": "regulatory-change-impact-brief/references/g3-fact-and-impact-contract.md",
+              "sha256": "sha256:80c622ad3c0b833384d2c22fbeda216480d6dfc1043dc203bc0faaab11939037"
+            }
+          ],
+          "reported_effort": null,
+          "reported_model": null,
+          "requested_effort": "high",
+          "requested_model": "gpt-6.1-sol",
+          "usage": null
+        },
+        "visible_usage": [
+          {
+            "input_tokens": 451719,
+            "cached_input_tokens": 397312,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3734,
+            "reasoning_output_tokens": 1109
+          }
+        ]
+      },
+      {
+        "path": "analysis/reconciliation/host-invocation.json",
+        "sha256": "sha256:6993adfd4ea87bc924dacafda3f6b7d93d1eee0865b371c064e579688868f2c6",
+        "metadata": {
+          "host_version": "codex-cli 0.162.1",
+          "instruction_versions": [
+            {
+              "path": "regulatory-change-impact-brief/SKILL.md",
+              "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+            },
+            {
+              "path": "regulatory-change-impact-brief/references/reconciliation.md",
+              "sha256": "sha256:cc43744da27ed514fa22d61718b5981ac6c1c7c5ac2748615e853cfedfad27d9"
+            }
+          ],
+          "reference_versions": [
+            {
+              "path": "regulatory-change-impact-brief/references/schemas/reconciliation-basis.schema.json",
+              "sha256": "sha256:8b82033bd0ece493670b81cf99b1675e535a808294c8a20958ca0d2ee5aefee7"
+            },
+            {
+              "path": "config/review.example.json",
+              "sha256": "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d"
+            }
+          ],
+          "reported_effort": null,
+          "reported_model": null,
+          "requested_effort": "high",
+          "requested_model": "gpt-6.1-sol",
+          "usage": null
+        },
+        "visible_usage": [
+          {
+            "input_tokens": 444855,
+            "cached_input_tokens": 400000,
+            "cache_write_input_tokens": 0,
+            "output_tokens": 3706,
+            "reasoning_output_tokens": 428
+          }
+        ]
+      }
+    ]
+  }
+}

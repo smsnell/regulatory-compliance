@@ -70,6 +70,10 @@ def _snapshot(store, sequence, state, status, providers, predecessor=None, consu
         stage=STAGES[sequence - 1], sequence=sequence, created_at=providers.now(), status=status,
         predecessor=predecessor, consumed_record_ids=list(consumed), produced_record_ids=[],
         state=state, decisions=[], unresolved=[])
+    from .decisions import enabled, project
+    first = snapshot if sequence == 1 else parse_json(package_path(store.root, SNAPSHOT_PATHS[0]).read_bytes())
+    if enabled(first):
+        snapshot['decisions'] = project(snapshot)
     snapshot['produced_record_ids'] = [r['id'] for r in stage_records(snapshot)]
     return snapshot
 
@@ -165,14 +169,18 @@ def run_stages(store, config, sources, reader, *, config_bytes, providers,
         basis['source_basis'] = basis['source_basis'] + ['analysis/scope-input.json', sha256_bytes(scope_bytes)]
     basis.update(id=new_record_id(store.run_id, 1, 'scope-basis'), record_type='scope-basis',
                  summary='Eight actual requested system IDs; current operational facts require fresh corroboration.', evidence_ids=[])
+    from .decisions import PROFILE, PRODUCER_PATH, producer_inventory
+    code = producer_inventory(SKILL)
+    _write(store.root, PRODUCER_PATH, json_bytes(code))
     state = dict(as_of=AS_OF, as_of_precision='date', assigned_review_date=ASSIGNED_REVIEW_DATE,
         review_type='Article 50 EU programme draft review', systems_in_scope=ids,
         audiences=config['recipients'], approval_gates=['Legal final interpretations and exceptions',
         'Operations dates, activation and incident closure'], scope_basis=[basis],
         supersedes_run_id=supersedes_run_id, change_reason=change_reason,
-        config_fingerprint=sha256_bytes(config_bytes), code_fingerprint=_code_fingerprint(),
+        config_fingerprint=sha256_bytes(config_bytes), code_fingerprint=sha256_bytes(json_bytes(code)),
         extensions={'u07_sources': {'schema_version':'rci-source-declarations/1',
                                   'value':{'sources':deepcopy(config['sources'])}}})
+    state['extensions']['u20_decisions'] = deepcopy(PROFILE)
     first = _snapshot(store, 1, state, 'complete', providers)
     pointer = write_snapshot(store.root, first, upstream=[])
     for source in sources:
@@ -255,6 +263,8 @@ def run_stages(store, config, sources, reader, *, config_bytes, providers,
 def validate_slice(store):
     """Re-read frozen files and check U07's supplemental accounting against the journal."""
     first, second = read_chain(store.root, count=2)
+    from .decisions import validate_producer
+    validate_producer(store.root, first)
     config_bytes = (store.root / 'analysis/config.json').read_bytes()
     config = validate_config(parse_json(config_bytes))
     require(first['state']['config_fingerprint'] == sha256_bytes(config_bytes), 'config fingerprint changed')
@@ -375,8 +385,8 @@ def validate_slice(store):
 
 
 def _code_fingerprint():
-    return sha256_bytes(json_bytes({p.relative_to(SKILL).as_posix():sha256_bytes(p.read_bytes())
-        for p in sorted(SKILL.rglob('*')) if p.is_file() and p.suffix in {'.py','.json','.md'}}))
+    from .decisions import producer_inventory
+    return sha256_bytes(json_bytes(producer_inventory(SKILL)))
 
 
 def capture_slice(config_path, *, scope_path=None, supersedes_run_id=None, change_reason=None,

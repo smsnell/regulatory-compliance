@@ -1,0 +1,11 @@
+..F.                                                                     [100%]
+=================================== FAILURES ===================================
+______ test_partial_and_blocked_launcher_export_actual_disposition[True] _______
+tests/runtime/test_u20_decisions.py:72: in test_partial_and_blocked_launcher_export_actual_disposition
+    assert not outcome['package_acceptance'] and not (root / 'compliance-brief.md').exists()
+E   AssertionError: assert (not False and not True)
+E    +  where True = exists()
+E    +    where exists = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp/pytest-of-mike/pytest-12/test_partial_and_blocked_launc1/out/.staging/run-12ef5c374b8c4a3b90b3ae7a4ead7775') / 'compliance-brief.md').exists
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u20_decisions.py::test_partial_and_blocked_launcher_export_actual_disposition[True]
+1 failed, 3 passed, 7 deselected in 684.62s (0:11:24)

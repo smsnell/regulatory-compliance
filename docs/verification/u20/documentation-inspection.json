@@ -1,0 +1,96 @@
+{
+  "verifier": "Codex U20 explicit documentation/metadata inspection",
+  "expected": "Named skill with valid frontmatter, bounded loader, existing local references, documented runtime/dependencies/setup/public command/output/recovery and human boundaries.",
+  "observed": {
+    "name": "regulatory-change-impact-brief",
+    "name_length": 30,
+    "description_length": 172,
+    "loader_lines": 72,
+    "local_markdown_links": [
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/reconciliation.md",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/impacts.md",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/interpretation.md",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/authority-policy.md",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/contracts.md#skillpython-interpretation-exchange",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/operations.md",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/review-protocol.md",
+        "exists": true
+      },
+      {
+        "document": "regulatory-change-impact-brief/SKILL.md",
+        "target": "references/history-recovery.md",
+        "exists": true
+      },
+      {
+        "document": "docs/operating-guide.md",
+        "target": "../requirements.lock",
+        "exists": true
+      },
+      {
+        "document": "docs/operating-guide.md",
+        "target": "u03-runtime.md",
+        "exists": true
+      },
+      {
+        "document": "docs/operating-guide.md",
+        "target": "../config/review.example.json",
+        "exists": true
+      },
+      {
+        "document": "docs/operating-guide.md",
+        "target": "../regulatory-change-impact-brief/references/review-protocol.md",
+        "exists": true
+      },
+      {
+        "document": "docs/operating-guide.md",
+        "target": "verification/u20/exception-register.md",
+        "exists": true
+      },
+      {
+        "document": "docs/evaluations.md",
+        "target": "verification/u11-u19.md",
+        "exists": true
+      }
+    ]
+  },
+  "files": {
+    "regulatory-change-impact-brief/SKILL.md": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd",
+    "docs/operating-guide.md": "sha256:c56a9dc7c4a1c61b116f8e5c4e069445812e984c43ad6ce490f1a4aff65c789a",
+    "docs/evaluations.md": "sha256:dbbdf64fe2d60b4a785f377d41614bfce50ad26971e1ee24c71f4326f2bbc529",
+    "requirements.lock": "sha256:fce5cce273a15b5578bf11d7d0a0a6fede14e0aafb78aeff5f984cb0f126d47e",
+    "pyproject.toml": "sha256:f93377a9340006f6279f7b30182c3f96e43ea9bd637b9f484a5622d79c23c661",
+    "config/review.example.json": "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d"
+  },
+  "supporting_inspections": [
+    "docs/verification/u20/clean-host-inspection.json",
+    "docs/verification/u20/execution-record.json",
+    "docs/verification/u20/review-notes.md"
+  ],
+  "limitations": "Metadata and documentation inspection is separate from import/profile assertions. E04/E05 and live source limitations remain explicit; no runtime license was invented."
+}

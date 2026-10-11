@@ -1,0 +1,73 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "fe078c46d4b94936b5b8e138b1321a5c",
+    "content": "full",
+    "content_hash": "sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:c0ffb175b36b49439e8400a183117ec0",
+    "identity_check": "unverified",
+    "local_reference": "sources/fe078c46d4b94936b5b8e138b1321a5c.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk",
+    "outcome": "HTTP 302",
+    "record_type": "attempt",
+    "recoverable_failure": "Redirect response retained; next GET separately journaled",
+    "retrieval_status": "invalid",
+    "retrieved_at": "2026-10-10T21:09:52.748637Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "EVIDENCE",
+    "started_at": "2026-10-10T21:09:52.624628Z",
+    "summary": "Read attempt for EVIDENCE",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Redirect response retained; next GET separately journaled",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:c0ffb175b36b49439e8400a183117ec0",
+    "content_hash": "sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:1b715096e57143d2bac05437b6d3a5a6",
+    "local_reference": "sources/fe078c46d4b94936b5b8e138b1321a5c.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk/",
+      "requested_locator": "https://docs.google.com/spreadsheets/d/19BYZ68OSbsa1i9OfF6MzthrdC6q6mt6IWk6ucI8u7Rk"
+    },
+    "summary": "Retained representation for EVIDENCE"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "Redirect response retained; next GET separately journaled",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "EVIDENCE",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-attempt-journal/1"
+}

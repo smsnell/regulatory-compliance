@@ -1,0 +1,34 @@
+{
+  "scanner": "Cisco AI Skill Scanner 2.0.13; local static_analyzer, bytecode, pipeline only",
+  "exit_code": 1,
+  "findings": [
+    {
+      "severity": "HIGH",
+      "location": "scripts/rci/adapters/reads.py:168",
+      "disposition": "Accepted false positive: while loop is bounded by configured retry/redirect counters and returns/breaks on terminal outcomes; unchanged adapter."
+    },
+    {
+      "severity": "MEDIUM",
+      "locations": [
+        "scripts/rci/snapshots.py:318",
+        "scripts/rci/snapshots.py:323",
+        "scripts/rci/snapshots.py:558"
+      ],
+      "disposition": "Accepted false positives: requests is a local dict indexing review requests. Its get calls perform no network I/O."
+    },
+    {
+      "severity": "INFO",
+      "location": "SKILL.md",
+      "disposition": "Accepted optional manifest metadata omission. No license grant is invented during remediation."
+    }
+  ],
+  "manual_scope": "Reviewed changed authority/date parser, decision projection, pipeline diagnostics/fingerprints, feedback projection/rendering and validation. No new network destination, external transmission, credential flow, destructive operation, or source instruction execution was added. Existing adapters and original audit manual review remain the unchanged baseline.",
+  "limitation": "Bounded scanner/manual inspection is not certification.",
+  "final_scan": "skill-scan-final.md",
+  "final_scan_exit_code": 1,
+  "final_code_scan": {
+    "report": "docs/verification/u20/remediation/skill-scan-exact-legacy.md",
+    "exit_code": 1,
+    "observed": "Same five findings after exact legacy scope fallback correction; previous dispositions unchanged."
+  }
+}

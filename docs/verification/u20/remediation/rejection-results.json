@@ -1,0 +1,199 @@
+{
+  "action_id": "action:v1:61437c0e10445b402da0e82695c43a07e5e957a393f61c249a292a9d9a1eafc8",
+  "assertions": {
+    "independent_csv_brief_ics": true,
+    "original_dates_retained": true,
+    "other_actions_pending": true,
+    "other_reviewers_pending": true,
+    "prior_bindings_rehashed": true,
+    "prior_package_unchanged": true,
+    "requests_unsent": true,
+    "scoped_legal_rejection": true
+  },
+  "baseline": ".evidence/u20-remediation/e07/final-runs/e07-prior0/out",
+  "current_artifacts": [
+    {
+      "path": "impact-register.csv",
+      "sha256": "sha256:b6a5ab994ee87c776d58a5d6b8ec528268d7a2bed28bac38d0b39d865709b2e7"
+    },
+    {
+      "path": "compliance-brief.md",
+      "sha256": "sha256:0e93a29301bc9cb7eff0d8ff5e19338b921b2e8ecc246aed4f8a7bf94884e944"
+    },
+    {
+      "path": "action-calendar.ics",
+      "sha256": "sha256:ec8de845eda2ddb84486503a57c2cf105b0f0cd0176f062ce8c5d97b904bbaf3"
+    }
+  ],
+  "current_run_id": "run-445e7f696781415684f2201e827b9e16",
+  "feedback": {
+    "authentication": "verified",
+    "conditions": [],
+    "match_status": "matched",
+    "outcome": "rejected",
+    "revalidation": {
+      "checks": {
+        "conditions": {
+          "evidence_ids": [
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:02519ef1258d49929b0b8371f594118e",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:4127e52caff94a23b96cb0769d831619",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:5fe8641c05fc4fd2a6d5182259d7f265"
+          ],
+          "reason": "Explicit exact relevant basis comparison passed; reviewer conditions remain attached",
+          "result": "passed"
+        },
+        "facts": {
+          "evidence_ids": [
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:02519ef1258d49929b0b8371f594118e",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:4127e52caff94a23b96cb0769d831619",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:5fe8641c05fc4fd2a6d5182259d7f265"
+          ],
+          "reason": "Explicit exact relevant basis comparison passed; reviewer conditions remain attached",
+          "result": "passed"
+        },
+        "scope": {
+          "evidence_ids": [
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:02519ef1258d49929b0b8371f594118e",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:4127e52caff94a23b96cb0769d831619",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:5fe8641c05fc4fd2a6d5182259d7f265"
+          ],
+          "reason": "Explicit exact relevant basis comparison passed; reviewer conditions remain attached",
+          "result": "passed"
+        },
+        "source_versions": {
+          "evidence_ids": [
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:02519ef1258d49929b0b8371f594118e",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:4127e52caff94a23b96cb0769d831619",
+            "record:run-445e7f696781415684f2201e827b9e16:02:evidence:5fe8641c05fc4fd2a6d5182259d7f265"
+          ],
+          "reason": "Explicit exact relevant basis comparison passed; reviewer conditions remain attached",
+          "result": "passed"
+        }
+      },
+      "current_draft_version": "sha256:a163a77eefa567eba7a053ee699e3d355ba0359dc4fa4bdd605e4030b5a70247",
+      "current_request_id": "review-ae98353709154b9c99db45328eef39df",
+      "current_run_id": "run-445e7f696781415684f2201e827b9e16",
+      "current_source_versions": [
+        "AMEND:AMEND-v1",
+        "CONSOLIDATED:CONSOLIDATED-v1",
+        "FAQ:FAQ-v1",
+        "LAW:LAW-v1",
+        "OJ:OJ-v1",
+        "TIME:TIME-v1",
+        "captured-source:AMEND:extract:sha256:a43b612fba88c56e103a0cfeeab88bd79d5acae1a4f9f36ab4b788d7c7081f05",
+        "captured-source:AMEND:full:sha256:5b0c9ed2f1a5e32d6880af29567f6d965a4ec6e38acfeae279c4d6c0ece6b751",
+        "captured-source:CALENDAR:full:sha256:22ac59d5f1735f783da440f616f62f8888004c7ea261ba92b326fd3ae41b9fba",
+        "captured-source:CALENDAR:full:sha256:2d93b8b88817a346109127171844f1bf2e250ecfa1d2b106f4b50900da917f53",
+        "captured-source:CALENDAR:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:CONSOLIDATED:extract:sha256:a2981b51e3fc8c6b5591c8ebcc7758fca3aa1be3f320cece3c8ab7070ee17997",
+        "captured-source:CONSOLIDATED:full:sha256:5a1410cf172b5363acba0e4073a83ff1a72c3bac80c41b607a362f91acd7d8bf",
+        "captured-source:EVIDENCE:full:sha256:3fbcb284067109cd93ec8191da589156109eb38a3e165b20634851bb157343fe",
+        "captured-source:EVIDENCE:full:sha256:92abfea598c60abf3e5f360e1dea2be8eece2c50f510bab8ffdbb6891cd73b3b",
+        "captured-source:EVIDENCE:full:sha256:aff5794828cc275fb241c868f26963f8ba93bf6beac87d482e8ae8d876236233",
+        "captured-source:EVIDENCE:full:sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+        "captured-source:FAQ:extract:sha256:dc304d21effc8d4f19fde1d84828e79fe6abacabbd00c298790bdb9f40f4d4f2",
+        "captured-source:FAQ:full:sha256:5a507b40f90eefe12b2045fd224a44764f6b8666782d867bcac5be88a7940458",
+        "captured-source:LAW:extract:sha256:2788329b0168074277ec93af143b9c14af853f0418ff62d0737624e1e1d38a7f",
+        "captured-source:LAW:full:sha256:5c0aeef33b7ce5cd13952f2f488a1ebb31bb05f893fc0b8a18ebe12eaf01cfb4",
+        "captured-source:OJ:extract:sha256:d022e3223ee2a55217219220fa04bad038f9a9a1b89718b48030311f7f3251b9",
+        "captured-source:OJ:full:sha256:bd38ba97d00ec6cad20e12f8e0168299a85f9d15712f35d0fc9970d6d58ef919",
+        "captured-source:POLICY:extract:sha256:7282c7341323ab83afea20b2aac852dd0864ae2f64a4a9df442945717e7b0d80",
+        "captured-source:POLICY:full:sha256:f7724d136bb9a3ef66e8073996cc904ddd203189b492fc9f958c6dda19c06057",
+        "captured-source:REPORT-REC-008-c16149cc319d:full:sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621",
+        "captured-source:SYSTEMS:full:sha256:0f553dcc765925435bb22f282e8149cfc34e70d630b3d53dc54af18d2ca8d7a9",
+        "captured-source:SYSTEMS:full:sha256:bb358ade245f1c3057d3729d8d1f781feb3919dccf7d7368ebd7cc917cc4dff4",
+        "captured-source:SYSTEMS:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:TIME:extract:sha256:35daebf731bf6a446d7781bc4126a60118bb09d62dc581f9a63ef898e78f15d3",
+        "captured-source:TIME:full:sha256:b7d811661a74ff5b4a43d39d3daebc6e8beab394db526c50623b2df7ed6b5386",
+        "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      ],
+      "reviewed_stage07_sha256": "sha256:a06dc377f224b0f44250c7d1296ccd83027f974cc74e24dcfeaaff4b309f6bd8",
+      "subject_bindings": [
+        {
+          "current_id": "record:run-445e7f696781415684f2201e827b9e16:06:action:3dc103db43c8451aacf9c33e8d3a9f65",
+          "reviewed_id": "record:run-59af6d47ffd14563bdbe9844951843ea:06:action:34c51ebec270449f82b24e3c31c49c89"
+        }
+      ],
+      "upstream": [
+        {
+          "path": "snapshots/01-scope.json",
+          "sha256": "sha256:e068c797b9fa642467a07ab1cf44642a99d6fb0409cdfd1468999ca2d57bc6d0",
+          "snapshot_id": "snapshot-ea0930868bec4cf8b2896601edd20ed8"
+        },
+        {
+          "path": "snapshots/02-source-capture.json",
+          "sha256": "sha256:ded2c9fe3b6445cd9687333e7617df654b714759cef0b0a5641ab1c16c2ad853",
+          "snapshot_id": "snapshot-ec17ef157d30419dac2a65d5e7ca1bb4"
+        },
+        {
+          "path": "snapshots/03-authority-and-timing.json",
+          "sha256": "sha256:5e89d42476641fa9ce6c319a56ec1d893375a261e40a6f819dc2420ef43929c4",
+          "snapshot_id": "snapshot-6888632a00d34b10b7584879126c4654"
+        },
+        {
+          "path": "snapshots/04-evidence-reconciliation.json",
+          "sha256": "sha256:5b089fda15fb8c48c68bd28a9b66d0b62ca1ce947f47bcd4d1557bd8a6a9eda1",
+          "snapshot_id": "snapshot-f49f6d7230c448f2b474008ea4e55ae7"
+        },
+        {
+          "path": "snapshots/05-impact-analysis.json",
+          "sha256": "sha256:13f2065310a0addaab5613c7654d1de5d03a0f58b8a077162249b4b20fcf9151",
+          "snapshot_id": "snapshot-755572e6f5684c8e9490b6836693662b"
+        }
+      ]
+    },
+    "subject_ids": [
+      "record:run-445e7f696781415684f2201e827b9e16:06:action:3dc103db43c8451aacf9c33e8d3a9f65"
+    ]
+  },
+  "organizational_authorization_claimed": false,
+  "outcome": {
+    "candidate": "out/.staging/run-445e7f696781415684f2201e827b9e16",
+    "launcher_exit_code": 2,
+    "missing_artifacts": [],
+    "missing_snapshots": [],
+    "package_acceptance": true,
+    "production_package": true,
+    "publication_status": "validated",
+    "reason": "Seven-stage draft; review requests await authorized humans.",
+    "run_id": "run-445e7f696781415684f2201e827b9e16",
+    "status": "partial",
+    "supersedes_run_id": "run-59af6d47ffd14563bdbe9844951843ea",
+    "test_host_calls": [
+      "authority",
+      "reconciliation",
+      "impacts"
+    ]
+  },
+  "output": ".evidence/u20-remediation/e07/rejection-run/out",
+  "prior_artifacts": [
+    {
+      "path": "impact-register.csv",
+      "sha256": "sha256:47f8102e694ee7a18c976c194c2dee8ff227a49a510f4a27ac56801794d226d4"
+    },
+    {
+      "path": "compliance-brief.md",
+      "sha256": "sha256:f4c7d20b210179909e3678cfb98b70b3a342953e9ded6252844fb3ff4ba8f85a"
+    },
+    {
+      "path": "action-calendar.ics",
+      "sha256": "sha256:3dcfc85d18d68886aceda0346f1de2b7e55fd8b2baedbe8f6a4044fd3d74f9f6"
+    }
+  ],
+  "prior_run_id": "run-59af6d47ffd14563bdbe9844951843ea",
+  "public_launcher": true,
+  "reviewed_draft": {
+    "root": "history/run-59af6d47ffd14563bdbe9844951843ea",
+    "stage06": {
+      "path": "snapshots/06-actions-and-approvals.json",
+      "sha256": "sha256:a117f2d2a2718736794d901f1a85af8509d25121a4d0e870669dfd176a1fc1f3",
+      "snapshot_id": "snapshot-9e8ee6c1bece4b97947f0f30b1d373f8"
+    },
+    "stage07": {
+      "path": "snapshots/07-publication-validation.json",
+      "sha256": "sha256:a06dc377f224b0f44250c7d1296ccd83027f974cc74e24dcfeaaff4b309f6bd8",
+      "snapshot_id": "snapshot-7e4805ca0a544ddbb7a90d9f373bf175"
+    }
+  },
+  "synthetic_only": true
+}

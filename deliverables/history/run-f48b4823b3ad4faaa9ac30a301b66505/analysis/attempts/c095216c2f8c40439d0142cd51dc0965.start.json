@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "c095216c2f8c40439d0142cd51dc0965",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:6bd8dd7b3ebb4542bfb9bf1fa6a01f87",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://digital-strategy.ec.europa.eu/en/faqs/transparency-obligations-under-article-50-ai-act",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-10T18:41:32.693069Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "FAQ",
+    "started_at": "2026-10-10T18:41:32.693049Z",
+    "summary": "Read attempt for FAQ",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "rci-attempt-journal/1"
+}

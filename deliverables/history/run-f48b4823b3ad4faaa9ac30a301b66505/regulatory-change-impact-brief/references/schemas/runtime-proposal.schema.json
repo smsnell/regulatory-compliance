@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "disposition",
+    "diagnostic",
+    "candidates"
+  ],
+  "properties": {
+    "disposition": {
+      "enum": [
+        "proposed",
+        "refused",
+        "truncated",
+        "unsupported",
+        "ambiguous"
+      ]
+    },
+    "diagnostic": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "contracts.schema.json#/$defs/interpretation-response/properties/candidates/items"
+      }
+    }
+  }
+}

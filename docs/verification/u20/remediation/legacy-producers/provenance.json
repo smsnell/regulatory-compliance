@@ -1,0 +1,37 @@
+{
+  "sha256:250a1e3454a4093c0e348f4dee89f55e9ba9d640b80b6acf44986c2f7a24d34e": {
+    "code_fingerprint": "sha256:250a1e3454a4093c0e348f4dee89f55e9ba9d640b80b6acf44986c2f7a24d34e",
+    "inventory_copy": "250a1e3454a4093c0e348f4dee89f55e9ba9d640b80b6acf44986c2f7a24d34e.inventory.json",
+    "inventory_sha256": "sha256:250a1e3454a4093c0e348f4dee89f55e9ba9d640b80b6acf44986c2f7a24d34e",
+    "original_bundle_path": ".evidence/u20/metamorphic/test_register_reordering_and_e0/original/out/regulatory-change-impact-brief",
+    "original_scope_path": ".evidence/u20/metamorphic/test_register_reordering_and_e0/original/out/snapshots/01-scope.json",
+    "scope_copy": "250a1e3454a4093c0e348f4dee89f55e9ba9d640b80b6acf44986c2f7a24d34e.scope.json",
+    "scope_sha256": "sha256:3982bc3502fd537613d4d0799cb9b9eb1ad7d257a75039d36b911fb09ca3a17f"
+  },
+  "sha256:92ba7c690fc4f4b46ae3cffcdbec471de77a5188e22a96af292c38559732f3ee": {
+    "baseline_copy": "../baseline.json",
+    "baseline_sha256": "sha256:da774cfb252594192035ce69d4bbda765fbe3e47791a97094ee44a500dd428c1",
+    "code_fingerprint": "sha256:92ba7c690fc4f4b46ae3cffcdbec471de77a5188e22a96af292c38559732f3ee",
+    "original_scope_path": "tests/fixtures/sanitized/u07/.staging/run-6bec153b2d1343a5a43cc2f333798c4d/snapshots/01-scope.json",
+    "scope_copy": "92ba7c690fc4f4b46ae3cffcdbec471de77a5188e22a96af292c38559732f3ee.scope.json",
+    "scope_sha256": "sha256:2dc92be6a0858ada45e9d37a6de689305a2ae5c5ee5d13fffb36ddcdff90ed5a"
+  },
+  "sha256:af991973fcec2f42e34089aa574079bebedd774ee94e4739eb4807efcb30f85f": {
+    "code_fingerprint": "sha256:af991973fcec2f42e34089aa574079bebedd774ee94e4739eb4807efcb30f85f",
+    "inventory_copy": "af991973fcec2f42e34089aa574079bebedd774ee94e4739eb4807efcb30f85f.inventory.json",
+    "inventory_sha256": "sha256:af991973fcec2f42e34089aa574079bebedd774ee94e4739eb4807efcb30f85f",
+    "original_bundle_path": "deliverables/regulatory-change-impact-brief",
+    "original_scope_path": "deliverables/snapshots/01-scope.json",
+    "scope_copy": "af991973fcec2f42e34089aa574079bebedd774ee94e4739eb4807efcb30f85f.scope.json",
+    "scope_sha256": "sha256:86a0da272f5a1ed2d3aee182a9398887e6880a5181c1ce5338610b739a0ff0ad"
+  },
+  "sha256:c70dc6959400e5973ae42e0fbb7c3e2c91a179a1ced59f417e4e7001ae5ac271": {
+    "code_fingerprint": "sha256:c70dc6959400e5973ae42e0fbb7c3e2c91a179a1ced59f417e4e7001ae5ac271",
+    "inventory_copy": "c70dc6959400e5973ae42e0fbb7c3e2c91a179a1ced59f417e4e7001ae5ac271.inventory.json",
+    "inventory_sha256": "sha256:c70dc6959400e5973ae42e0fbb7c3e2c91a179a1ced59f417e4e7001ae5ac271",
+    "original_bundle_path": ".evidence/u20/suite/test_independent_package_corru5/draft/regulatory-change-impact-brief",
+    "original_scope_path": ".evidence/u20/suite/test_independent_package_corru5/draft/snapshots/01-scope.json",
+    "scope_copy": "c70dc6959400e5973ae42e0fbb7c3e2c91a179a1ced59f417e4e7001ae5ac271.scope.json",
+    "scope_sha256": "sha256:6f29b824e48c412c2fabff1c0f603d6943f961a813716ca9ad445ce544171a68"
+  }
+}

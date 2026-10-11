@@ -1,0 +1,2 @@
+{"run_id": "run-a7b50ae23a714c07aaa101ec88f3d70e", "status": "partial", "publication_status": "validated", "reason": "Seven-stage draft; review requests await authorized humans.", "production_package": true, "package_acceptance": true, "candidate": "deliverables/.staging/run-a7b50ae23a714c07aaa101ec88f3d70e", "supersedes_run_id": null, "missing_snapshots": [], "missing_artifacts": []}
+public_exit 2

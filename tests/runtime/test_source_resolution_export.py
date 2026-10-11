@@ -47,7 +47,7 @@ def export_chain(accounting):
     chain[4]['state']['extensions']={'u11_impacts':{'value':{'coverage':[]}}}
     chain[1]['state']['diagnostics']=[dict(id='diagnostic-report', record_type='diagnostic',
         summary='Historical pending report inspection', evidence_ids=[], reason='Inspection required')]
-    state=dict(proposed_actions=[], review_requests=[], approval_requirements=[], escalations=[],
+    state=dict(proposed_actions=[], review_requests=[], approval_requirements=[], escalations=[], feedback=[],
         extensions={'u12_actions':{'value':dict(actions=[],calendar_rows=[])}})
     return chain,state
 
@@ -86,6 +86,7 @@ def test_export_legacy_without_resolution_omits_new_key():
     chain,state=export_chain(accounting)
     first=build_export_model(chain,state,'partial')
     assert 'source_resolution' not in first
+    assert 'feedback' not in first  # An empty required collection adds no display ledger.
     assert first==build_export_model(chain,state,'partial')
 
 

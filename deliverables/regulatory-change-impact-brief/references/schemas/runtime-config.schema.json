@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "assigned_review_date",
+    "output_root",
+    "expected_system_count",
+    "recipients",
+    "host",
+    "sources"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "rci-runtime-config/1"
+    },
+    "assigned_review_date": {
+      "const": "2026-08-26"
+    },
+    "output_root": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9_./-]*$"
+    },
+    "expected_system_count": {
+      "const": 8
+    },
+    "recipients": {
+      "const": [
+        "Legal",
+        "Operations"
+      ]
+    },
+    "host": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model",
+        "effort",
+        "credential_ref",
+        "owner"
+      ],
+      "properties": {
+        "model": {
+          "const": "gpt-6.1-sol"
+        },
+        "effort": {
+          "const": "high"
+        },
+        "credential_ref": {
+          "const": "host-managed-login"
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 10,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "route",
+          "adapter",
+          "credential_ref"
+        ],
+        "properties": {
+          "id": {
+            "enum": [
+              "LAW",
+              "OJ",
+              "AMEND",
+              "CONSOLIDATED",
+              "TIME",
+              "FAQ",
+              "POLICY",
+              "SYSTEMS",
+              "EVIDENCE",
+              "CALENDAR"
+            ]
+          },
+          "route": {
+            "type": "string",
+            "format": "uri"
+          },
+          "adapter": {
+            "enum": [
+              "http-read",
+              "google-sheets-read"
+            ]
+          },
+          "credential_ref": {
+            "enum": [
+              null,
+              "external-readonly-source-login"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

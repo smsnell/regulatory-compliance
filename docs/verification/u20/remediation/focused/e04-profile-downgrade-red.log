@@ -1,0 +1,10 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_______ test_new_producer_cannot_downgrade_to_legacy_by_removing_profile _______
+tests/runtime/test_u20_decisions.py:127: in test_new_producer_cannot_downgrade_to_legacy_by_removing_profile
+    with pytest.raises(ContractError, match='decision|producer|profile'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: DID NOT RAISE ContractError
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u20_decisions.py::test_new_producer_cannot_downgrade_to_legacy_by_removing_profile
+1 failed in 6.28s

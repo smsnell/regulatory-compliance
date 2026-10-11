@@ -1,0 +1,31 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "c9e0325ab61e4c44ab2ea5aae07c8af3",
+    "content": null,
+    "content_hash": null,
+    "content_type": "application/octet-stream",
+    "content_type_known": false,
+    "date_suitability": "unresolved",
+    "effective_locator": null,
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:d3c00af904fc41c8a55fb25e6d6c6ae9",
+    "identity_check": "unverified",
+    "local_reference": null,
+    "original_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+    "outcome": null,
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "unavailable",
+    "retrieved_at": "2026-10-10T21:09:54.053137Z",
+    "selected": false,
+    "selection_reason": "Attempt has not finished",
+    "source_id": "CALENDAR",
+    "started_at": "2026-10-10T21:09:54.053108Z",
+    "summary": "Read attempt for CALENDAR",
+    "version_metadata": null
+  },
+  "phase": "start",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-attempt-journal/1"
+}

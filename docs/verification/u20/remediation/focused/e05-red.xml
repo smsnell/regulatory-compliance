@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="10" time="1.116" timestamp="2026-10-10T15:49:37.379573-04:00" hostname="MikeysMac"><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_initial_write_failure_retains_accurate_context[analysis/config.json]" time="0.146"><failure message="AssertionError: assert 'launcher-preflight' == 'candidate-initialization'&#10;  &#10;  - candidate-initialization&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_initial_write_failure_ret0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad507cb00&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad60ba120&gt;
+relative = 'analysis/config.json'
+
+    @pytest.mark.parametrize('relative',[
+        'analysis/config.json','analysis/scope-input.json',
+        'analysis/run-context.json','analysis/prior-inspection.json',
+    ])
+    def test_initial_write_failure_retains_accurate_context(tmp_path,monkeypatch,capsys,relative):
+        original=pipeline._write
+        def fail(root,path,raw):
+            if path==relative:raise OSError('controlled initial write failure')
+            return original(root,path,raw)
+        monkeypatch.setattr(pipeline,'_write',fail)
+        result=invoke(tmp_path,monkeypatch,capsys,scope=True)
+&gt;       assert result['affected_stage']=='candidate-initialization'
+E       AssertionError: assert 'launcher-preflight' == 'candidate-initialization'
+E         
+E         - candidate-initialization
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:43: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_initial_write_failure_retains_accurate_context[analysis/scope-input.json]" time="0.050"><failure message="AssertionError: assert 'launcher-preflight' == 'candidate-initialization'&#10;  &#10;  - candidate-initialization&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_initial_write_failure_ret1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad507cfc0&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad4f8dd10&gt;
+relative = 'analysis/scope-input.json'
+
+    @pytest.mark.parametrize('relative',[
+        'analysis/config.json','analysis/scope-input.json',
+        'analysis/run-context.json','analysis/prior-inspection.json',
+    ])
+    def test_initial_write_failure_retains_accurate_context(tmp_path,monkeypatch,capsys,relative):
+        original=pipeline._write
+        def fail(root,path,raw):
+            if path==relative:raise OSError('controlled initial write failure')
+            return original(root,path,raw)
+        monkeypatch.setattr(pipeline,'_write',fail)
+        result=invoke(tmp_path,monkeypatch,capsys,scope=True)
+&gt;       assert result['affected_stage']=='candidate-initialization'
+E       AssertionError: assert 'launcher-preflight' == 'candidate-initialization'
+E         
+E         - candidate-initialization
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:43: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_initial_write_failure_retains_accurate_context[analysis/run-context.json]" time="0.039"><failure message="AssertionError: assert 'launcher-preflight' == 'candidate-initialization'&#10;  &#10;  - candidate-initialization&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_initial_write_failure_ret2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4fdd5b0&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad4f8e490&gt;
+relative = 'analysis/run-context.json'
+
+    @pytest.mark.parametrize('relative',[
+        'analysis/config.json','analysis/scope-input.json',
+        'analysis/run-context.json','analysis/prior-inspection.json',
+    ])
+    def test_initial_write_failure_retains_accurate_context(tmp_path,monkeypatch,capsys,relative):
+        original=pipeline._write
+        def fail(root,path,raw):
+            if path==relative:raise OSError('controlled initial write failure')
+            return original(root,path,raw)
+        monkeypatch.setattr(pipeline,'_write',fail)
+        result=invoke(tmp_path,monkeypatch,capsys,scope=True)
+&gt;       assert result['affected_stage']=='candidate-initialization'
+E       AssertionError: assert 'launcher-preflight' == 'candidate-initialization'
+E         
+E         - candidate-initialization
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:43: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_initial_write_failure_retains_accurate_context[analysis/prior-inspection.json]" time="0.045"><failure message="AssertionError: assert 'launcher-preflight' == 'candidate-initialization'&#10;  &#10;  - candidate-initialization&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_initial_write_failure_ret3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4e4cc00&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad4e09220&gt;
+relative = 'analysis/prior-inspection.json'
+
+    @pytest.mark.parametrize('relative',[
+        'analysis/config.json','analysis/scope-input.json',
+        'analysis/run-context.json','analysis/prior-inspection.json',
+    ])
+    def test_initial_write_failure_retains_accurate_context(tmp_path,monkeypatch,capsys,relative):
+        original=pipeline._write
+        def fail(root,path,raw):
+            if path==relative:raise OSError('controlled initial write failure')
+            return original(root,path,raw)
+        monkeypatch.setattr(pipeline,'_write',fail)
+        result=invoke(tmp_path,monkeypatch,capsys,scope=True)
+&gt;       assert result['affected_stage']=='candidate-initialization'
+E       AssertionError: assert 'launcher-preflight' == 'candidate-initialization'
+E         
+E         - candidate-initialization
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:43: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_unwritable_storage_reports_context_without_claiming_retention" time="0.030"><failure message="AssertionError: assert 'launcher-preflight' == 'candidate-initialization'&#10;  &#10;  - candidate-initialization&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_unwritable_storage_report0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad50ad480&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad55bb360&gt;
+
+    def test_unwritable_storage_reports_context_without_claiming_retention(tmp_path,monkeypatch,capsys):
+        monkeypatch.setattr(pipeline,'_write',lambda *a:(_ for _ in ()).throw(OSError('controlled storage unavailable')))
+        result=invoke(tmp_path,monkeypatch,capsys)
+&gt;       assert result['affected_stage']=='candidate-initialization'
+E       AssertionError: assert 'launcher-preflight' == 'candidate-initialization'
+E         
+E         - candidate-initialization
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:57: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_candidate_directory_failure_does_not_create_a_fake_outcome" time="0.030"><failure message="AssertionError: assert 'launcher-preflight' == 'candidate-initialization'&#10;  &#10;  - candidate-initialization&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_candidate_directory_failu0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4feaf50&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad5405130&gt;
+
+    def test_candidate_directory_failure_does_not_create_a_fake_outcome(tmp_path,monkeypatch,capsys):
+        original=Path.mkdir
+        def mkdir(path,*args,**kwargs):
+            if path.parent.name=='.staging':raise OSError('controlled candidate mkdir failure')
+            return original(path,*args,**kwargs)
+        monkeypatch.setattr(Path,'mkdir',mkdir)
+        result=invoke(tmp_path,monkeypatch,capsys)
+&gt;       assert result['affected_stage']=='candidate-initialization'
+E       AssertionError: assert 'launcher-preflight' == 'candidate-initialization'
+E         
+E         - candidate-initialization
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:72: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_setup_boundaries_are_not_misclassified_as_capture[inspect-current-package-inspection]" time="0.012"><failure message="AssertionError: assert 'launcher-preflight' == 'current-package-inspection'&#10;  &#10;  - current-package-inspection&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_setup_boundaries_are_not_0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4fe9f50&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad55e1e10&gt;
+operation = 'inspect', stage = 'current-package-inspection'
+
+    @pytest.mark.parametrize('operation,stage',[
+        ('inspect','current-package-inspection'),('feedback','feedback-retention'),
+        ('archive','feedback-archive'),
+    ])
+    def test_setup_boundaries_are_not_misclassified_as_capture(tmp_path,monkeypatch,capsys,operation,stage):
+        def fail(*args,**kwargs):raise OSError('controlled '+operation+' failure')
+        if operation=='inspect':monkeypatch.setattr('rci.history.inspect_current',fail)
+        elif operation=='feedback':monkeypatch.setattr(pipeline,'_retain_feedback',fail)
+        else:
+            # A prior occurrence and supplied feedback trigger its preservation before intake.
+            root=tmp_path/'out';(root/'snapshots').mkdir(parents=True)
+            (root/'snapshots/01-scope.json').write_text('prior bytes must survive')
+            monkeypatch.setattr('rci.history.inspect_current',lambda *a,**kw:dict(run_id='run-prior',accepted=False))
+            monkeypatch.setattr('rci.history.archive_current',fail)
+            original=pipeline.run
+            monkeypatch.setattr(pipeline,'run',lambda *a,**kw:original(*a,**kw,**{}) if kw.get('feedback_path') else original(*a,**{**kw,'feedback_path':tmp_path/'feedback.json'}))
+        result=invoke(tmp_path,monkeypatch,capsys)
+&gt;       assert result['affected_stage']==stage
+E       AssertionError: assert 'launcher-preflight' == 'current-package-inspection'
+E         
+E         - current-package-inspection
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:95: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_setup_boundaries_are_not_misclassified_as_capture[feedback-feedback-retention]" time="0.139"><failure message="AssertionError: assert 'scope-and-source-capture' == 'feedback-retention'&#10;  &#10;  - feedback-retention&#10;  + scope-and-source-capture">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_setup_boundaries_are_not_1')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4e6c050&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad4e4d480&gt;
+operation = 'feedback', stage = 'feedback-retention'
+
+    @pytest.mark.parametrize('operation,stage',[
+        ('inspect','current-package-inspection'),('feedback','feedback-retention'),
+        ('archive','feedback-archive'),
+    ])
+    def test_setup_boundaries_are_not_misclassified_as_capture(tmp_path,monkeypatch,capsys,operation,stage):
+        def fail(*args,**kwargs):raise OSError('controlled '+operation+' failure')
+        if operation=='inspect':monkeypatch.setattr('rci.history.inspect_current',fail)
+        elif operation=='feedback':monkeypatch.setattr(pipeline,'_retain_feedback',fail)
+        else:
+            # A prior occurrence and supplied feedback trigger its preservation before intake.
+            root=tmp_path/'out';(root/'snapshots').mkdir(parents=True)
+            (root/'snapshots/01-scope.json').write_text('prior bytes must survive')
+            monkeypatch.setattr('rci.history.inspect_current',lambda *a,**kw:dict(run_id='run-prior',accepted=False))
+            monkeypatch.setattr('rci.history.archive_current',fail)
+            original=pipeline.run
+            monkeypatch.setattr(pipeline,'run',lambda *a,**kw:original(*a,**kw,**{}) if kw.get('feedback_path') else original(*a,**{**kw,'feedback_path':tmp_path/'feedback.json'}))
+        result=invoke(tmp_path,monkeypatch,capsys)
+&gt;       assert result['affected_stage']==stage
+E       AssertionError: assert 'scope-and-source-capture' == 'feedback-retention'
+E         
+E         - feedback-retention
+E         + scope-and-source-capture
+
+tests/runtime/test_u20_failure_remediation.py:95: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_setup_boundaries_are_not_misclassified_as_capture[archive-feedback-archive]" time="0.057"><failure message="AssertionError: assert 'scope-and-source-capture' == 'feedback-archive'&#10;  &#10;  - feedback-archive&#10;  + scope-and-source-capture">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_setup_boundaries_are_not_2')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4e6da90&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad4febd50&gt;
+operation = 'archive', stage = 'feedback-archive'
+
+    @pytest.mark.parametrize('operation,stage',[
+        ('inspect','current-package-inspection'),('feedback','feedback-retention'),
+        ('archive','feedback-archive'),
+    ])
+    def test_setup_boundaries_are_not_misclassified_as_capture(tmp_path,monkeypatch,capsys,operation,stage):
+        def fail(*args,**kwargs):raise OSError('controlled '+operation+' failure')
+        if operation=='inspect':monkeypatch.setattr('rci.history.inspect_current',fail)
+        elif operation=='feedback':monkeypatch.setattr(pipeline,'_retain_feedback',fail)
+        else:
+            # A prior occurrence and supplied feedback trigger its preservation before intake.
+            root=tmp_path/'out';(root/'snapshots').mkdir(parents=True)
+            (root/'snapshots/01-scope.json').write_text('prior bytes must survive')
+            monkeypatch.setattr('rci.history.inspect_current',lambda *a,**kw:dict(run_id='run-prior',accepted=False))
+            monkeypatch.setattr('rci.history.archive_current',fail)
+            original=pipeline.run
+            monkeypatch.setattr(pipeline,'run',lambda *a,**kw:original(*a,**kw,**{}) if kw.get('feedback_path') else original(*a,**{**kw,'feedback_path':tmp_path/'feedback.json'}))
+        result=invoke(tmp_path,monkeypatch,capsys)
+&gt;       assert result['affected_stage']==stage
+E       AssertionError: assert 'scope-and-source-capture' == 'feedback-archive'
+E         
+E         - feedback-archive
+E         + scope-and-source-capture
+
+tests/runtime/test_u20_failure_remediation.py:95: AssertionError</failure></testcase><testcase classname="tests.runtime.test_u20_failure_remediation" name="test_second_writer_failure_has_context_without_writing_candidate" time="0.012"><failure message="AssertionError: assert 'launcher-preflight' == 'output-lock'&#10;  &#10;  - output-lock&#10;  + launcher-preflight">tmp_path = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e05/red/test_second_writer_failure_has0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x76cad4f3e190&gt;
+capsys = &lt;_pytest.capture.CaptureFixture object at 0x76cad4e80d50&gt;
+
+    def test_second_writer_failure_has_context_without_writing_candidate(tmp_path,monkeypatch,capsys):
+        from rci.runtime import writer_lock
+        with writer_lock(tmp_path/'out'):
+            result=invoke(tmp_path,monkeypatch,capsys)
+&gt;       assert result['affected_stage']=='output-lock'
+E       AssertionError: assert 'launcher-preflight' == 'output-lock'
+E         
+E         - output-lock
+E         + launcher-preflight
+
+tests/runtime/test_u20_failure_remediation.py:109: AssertionError</failure></testcase></testsuite></testsuites>

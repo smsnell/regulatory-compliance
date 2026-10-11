@@ -1,0 +1,7 @@
+PASS deliverables/snapshots/01-scope.json sha256:af991973fcec2f42e34089aa574079bebedd774ee94e4739eb4807efcb30f85f
+PASS tests/fixtures/sanitized/u07/.staging/run-6bec153b2d1343a5a43cc2f333798c4d/snapshots/01-scope.json sha256:92ba7c690fc4f4b46ae3cffcdbec471de77a5188e22a96af292c38559732f3ee
+PASS .evidence/u20/metamorphic/test_register_reordering_and_e0/original/out/snapshots/01-scope.json sha256:250a1e3454a4093c0e348f4dee89f55e9ba9d640b80b6acf44986c2f7a24d34e
+PASS .evidence/u20/suite/test_independent_package_corru5/draft/snapshots/01-scope.json sha256:c70dc6959400e5973ae42e0fbb7c3e2c91a179a1ced59f417e4e7001ae5ac271
+PASS intermediate .evidence/u20-remediation/e04/retained/blocked/snapshots/01-scope.json
+PASS intermediate .evidence/u20-remediation/e04/retained/complete/snapshots/01-scope.json
+PASS intermediate .evidence/u20-remediation/e04/retained/partial/snapshots/01-scope.json

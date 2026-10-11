@@ -39,4 +39,14 @@ python3 regulatory-change-impact-brief/scripts/run.py --config config/review.jso
 Every production invocation performs fresh source attempts. The generated register,
 brief and tentative calendar are drafts for human review. Verification fixtures
 are explicitly synthetic. [Canonical evaluations](docs/evaluations.md) explain
-how to reproduce implementation checks; U20 remains an independent final audit.
+how to reproduce implementation checks. The [U20 final audit](docs/verification/final-report.md)
+records the preserved blocked live draft. The [remediation report](docs/verification/u20/remediation-report.md)
+closes the actionable engineering gaps with new verification evidence; Legal
+interpretation, policy access and underlying report availability remain blocked.
+
+The submitted [deliverables](deliverables/PUBLICATION.md) are explicitly labeled
+publication derivatives. Sensitive frontend and WAF material was removed without
+changing substantive findings. Exact originals are retained in restricted local
+storage. See [publication remediation and verification](docs/verification/publication-remediation.md)
+for lineage, public verification limits, and the owner's subsequent instruction
+to synchronize the unchanged Entire history despite the recorded scan findings.

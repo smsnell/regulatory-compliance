@@ -1,0 +1,1 @@
+{"run_id": "run-b38ca2b36e1044bbba572399b41bf5ae", "decision_counts_by_stage": [3, 10, 0, 0, 1, 0, 0], "exported_decision_count": 14, "mechanical_validation": "passed", "preservation": {"protected_file_count": 100903, "preserved_in_predecessor_archive": 172, "unchanged_at_original_path": 100731, "changed_or_missing": []}}

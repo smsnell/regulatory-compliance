@@ -1,0 +1,118 @@
+E
+==================================== ERRORS ====================================
+_ ERROR at setup of test_conditional_feedback_and_changed_basis_are_scoped[same] _
+
+request = <SubRequest 'feedback_run' for <Function test_conditional_feedback_and_changed_basis_are_scoped[same]>>
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/red-case-run.../mike/regulatory-compliance/.evidence/u20-remediation/e07/red-case-runs'), _retention_count=3, _retention_policy='all')
+prior_draft = (PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/red-case-runs/e07-prior0'), {'run_id': 'run...ized-row:e3084d2888434ee993fc86e6fdc4fa80 and its evidence supply the date; Operations approval remains pending', ...})
+
+        body = REPORT + ('\nSYNTHETIC TEST ONLY: report version changed; readiness still unverified.' if variant == 'content' else '')
+        with patch.object(CompanyReplay, 'table', dated), patch('runtime.test_u10.REPORT', body):
+            result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+        assert result['package_acceptance'] and result['production_package'], result
+        assert result['launcher_exit_code'] == {'complete':0, 'partial':2, 'blocked':3}[result['status']], result
+        return result, root, validate_package(root)
+    
+    
+    @pytest.fixture(scope='module')
+    def prior_draft(tmp_path_factory):
+        parent = tmp_path_factory.mktemp('e07-prior')
+        outcome, root, chain = _run(parent)
+        target = next(a for a in chain[5]['state']['proposed_actions'] if
+                      a['system_id'] == 'AI-007' and a['action_kind'] == 'review-rule-change')
+        assert target['proposed_due_date'] == target['existing_due_date'] == '2026-09-04'
+        return parent, outcome, chain, target
+    
+    
+    @pytest.fixture(scope='module', params=['same', 'date', 'content'])
+    def feedback_run(request, tmp_path_factory, prior_draft):
+        prior_parent, first, previous, target = prior_draft
+        parent = tmp_path_factory.mktemp('e07-' + request.param)
+        shutil.copytree(prior_parent / 'out', parent / 'out')
+        old_request = next(r for r in previous[5]['state']['review_requests'] if r['required_reviewer'] == 'Legal')
+        binding = next(b for b in previous[6]['state']['review_bindings'] if b['request_id'] == old_request['request_id'])
+>       reviewed = dict(root='history/' + first['run_id'], **{
+            name:dict(snapshot_id=previous[index]['snapshot_id'], path=SNAPSHOT_PATHS[index],
+                      sha256=sha256_bytes((parent / 'out' / SNAPSHOT_PATHS[index]).read_bytes()))
+            for name, index in [('stage06', 5), ('stage07', 6)]})
+
+tests/runtime/test_feedback_remediation.py:84: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tests/runtime/test_feedback_remediation.py:43: in _run
+    new, new_records = records('new')
+                       ^^^^^^^^^^^^^^^
+tests/integration/pipeline_harness.py:118: in execute
+    exit_code = public.main()
+                ^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/run.py:42: in main
+    outcome = production(args.config,scope_path=args.scope,supersedes_run_id=args.supersedes_run_id,
+regulatory-change-impact-brief/scripts/rci/runtime.py:236: in production
+    return run(config_path, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+regulatory-change-impact-brief/scripts/rci/pipeline.py:141: in run
+    interpret_authority(store,config,timeout=600)
+regulatory-change-impact-brief/scripts/rci/authority.py:419: in interpret_authority
+    for review in state['extensions']['u09_authority']['value']['candidate_reviews']:
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1176: in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1180: in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/usr/lib/python3.14/unittest/mock.py:1247: in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+command = ['synthetic-host', 'exec', '--ignore-user-config', '--ignore-rules', '--ephemeral', '--skip-git-repo-check', ...]
+prompt = 'Use $regulatory-change-impact-brief U09 authority branch. Run root: /home/mike/regulatory-compliance/.evidence/u20-re...dc22bf70323/analysis/authority/agent-proposal.json. Stop after submission; supervisor writes Stage 03. No later units.'
+root = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/red-case-runs/e07-same0/out/.staging/run-c614de0c8bba41c4916e1dc22bf70323')
+timeout = 600, analysis_directory = 'analysis'
+
+    def host(command, prompt, root, timeout, *, analysis_directory='analysis'):
+        root = Path(root)
+        logs = root / analysis_directory
+        logs.mkdir(parents=True, exist_ok=True)
+        (logs / 'host-events.jsonl').write_bytes(
+            b'{"type":"turn.completed","usage":{"synthetic_test_only":true}}\n')
+        (logs / 'host-stderr.txt').write_bytes(b'')
+        stage = {'analysis':'authority', 'analysis/reconciliation':'reconciliation',
+                 'analysis/impacts':'impacts'}[analysis_directory]
+        host_calls.append(stage)
+        if fail_host == stage or (fail_host == 'no-submission' and stage == 'reconciliation'):
+            return
+        if stage == 'authority':
+            request = parse_json((root / 'analysis/authority/request.json').read_bytes())
+            value = authority_proposal(request)
+            operation = 'submit-authority'
+        elif stage == 'reconciliation':
+            request = parse_json((root / 'analysis/reconciliation/request.json').read_bytes())
+            candidates = [candidate(request, value=False, quote=REPORT.splitlines()[1], kind='page-capture'),
+                          policy_candidate(request)]
+            if conflict:
+                candidates.insert(0, candidate(request))
+            value = dict(disposition='proposed', diagnostic=None, candidates=candidates)
+            operation = 'submit-reconciliation'
+            if fail_host == 'changed-source':
+                (root / request['extracts'][0]['path']).write_bytes(b'synthetic damaged source during host')
+        else:
+            value = dict(disposition='proposed', diagnostic=None, candidates=[binding(root)])
+            operation = 'submit-impact'
+        proposal = logs / 'test-proposal.json'
+        proposal.write_bytes(json_bytes(value))
+        process = subprocess.run([sys.executable, str(root / SKILL.name / 'scripts/stage.py'),
+            operation, '--root', str(root), '--proposal', str(proposal)], capture_output=True,
+            text=True, env={**os.environ, 'RCI_CHILD_RUN':root.name, 'PYTHONDONTWRITEBYTECODE':'1'})
+        if fail_host == 'changed-source' and stage == 'reconciliation':
+            assert process.returncode != 0, 'damaged retained source must reject the submission'
+            return
+>       assert process.returncode == 0, process.stdout + process.stderr
+               ^^^^^^^^^^^^^^^^^^^^^^^
+E       AssertionError: {"status": "failed", "reason": "engineering decisions differ from retained scope, access or disposition basis"}
+
+tests/integration/pipeline_harness.py:92: AssertionError
+=========================== short test summary info ============================
+ERROR tests/runtime/test_feedback_remediation.py::test_conditional_feedback_and_changed_basis_are_scoped[same]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 error in 121.18s (0:02:01)

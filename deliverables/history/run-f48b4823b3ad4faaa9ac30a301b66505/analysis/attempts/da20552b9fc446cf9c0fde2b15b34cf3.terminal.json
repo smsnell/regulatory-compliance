@@ -1,0 +1,174 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "da20552b9fc446cf9c0fde2b15b34cf3",
+    "content": "extract",
+    "content_hash": "sha256:2fb55ea3285ad807a451988381ce9b396e07a2b05c00f9cf38c74bdaf3c14a6e",
+    "content_type": "text/html; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/edit",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:dab69aadc27b44f0a05a26bbf856ff1a",
+    "identity_check": "verified",
+    "local_reference": "sources/da20552b9fc446cf9c0fde2b15b34cf3.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-10T18:41:36.525500Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "CALENDAR",
+    "started_at": "2026-10-10T18:41:36.224023Z",
+    "summary": "Read attempt for CALENDAR",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous spreadsheet identity and tab inventory verified",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": "1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+        "native_rows": {
+          "0": [
+            [
+              "action_id",
+              "system_id",
+              "action",
+              "owner",
+              "due_date",
+              "status",
+              "approval_required",
+              "source_version"
+            ],
+            [
+              "ACT-001",
+              "AI-004",
+              "Add and verify first-interaction AI notice",
+              "Learning Experience",
+              "2026-09-04",
+              "planned",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-002",
+              "AI-007",
+              "Resolve disclosure evidence conflict",
+              "Marketing",
+              "2026-09-03",
+              "open",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-003",
+              "AI-002",
+              "Confirm recipient disclosure practice",
+              "Admissions",
+              "2026-09-08",
+              "open",
+              "legal",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-004",
+              "AI-003",
+              "Verify machine-readable provenance after publishing",
+              "Communications",
+              "2026-09-10",
+              "open",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-005",
+              "AI-005",
+              "Refresh provider-role and release evidence",
+              "Assessment Operations",
+              "2026-09-12",
+              "open",
+              "legal",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-006",
+              "AI-008",
+              "Complete provenance test",
+              "Communications",
+              "2026-09-09",
+              "open",
+              "operations",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-007",
+              "AI-008",
+              "Review exception request",
+              "Legal",
+              "2026-09-15",
+              "blocked",
+              "legal",
+              "calendar-2026-08-26"
+            ],
+            [
+              "ACT-008",
+              "ALL",
+              "Quarterly AI register evidence review",
+              "Operations",
+              "2026-10-02",
+              "scheduled",
+              "operations",
+              "calendar-2026-08-26"
+            ]
+          ]
+        },
+        "revision": 9,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "Compliance Calendar"
+          }
+        ],
+        "title": "Project B — Compliance Calendar"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 9
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:dab69aadc27b44f0a05a26bbf856ff1a",
+    "content_hash": "sha256:2fb55ea3285ad807a451988381ce9b396e07a2b05c00f9cf38c74bdaf3c14a6e",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:c272edd93eed403a9a920ce386f90724",
+    "local_reference": "sources/da20552b9fc446cf9c0fde2b15b34cf3.bin",
+    "record_type": "capture",
+    "representation": "extract",
+    "representation_metadata": {
+      "locator": "sources/da20552b9fc446cf9c0fde2b15b34cf3.bin",
+      "method": "Publication extraction: credential fields redacted; WAF scripts omitted where present",
+      "original_availability": "Restricted local storage; not included in public repository",
+      "original_sha256": "sha256:c7902407fdf76236955e96a299497a4b03d11a266aa11671d7d284721ac88478",
+      "permission": "Owner-authorized publication remediation; no redistribution of credential values",
+      "publication_notice": "PUBLICATION DERIVATIVE: sanitized retained evidence, not untouched HTTP responses or a new execution. Run/record/snapshot IDs and acquisition times identify the original occurrence only. See PUBLICATION.json and the submission-root publication-manifest.json for original/derivative hashes and limitations."
+    },
+    "summary": "Retained representation for CALENDAR"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "rci-attempt-journal/1"
+}

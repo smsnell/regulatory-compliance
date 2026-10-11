@@ -1,0 +1,12 @@
+....F.......                                                             [100%]
+=================================== FAILURES ===================================
+_________________ test_producer_inventory_integrity[malformed] _________________
+tests/runtime/test_u20_decisions.py:169: in test_producer_inventory_integrity
+    with pytest.raises(ContractError, match='producer code inventory'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: Regex pattern did not match.
+E     Expected regex: 'producer code inventory'
+E     Actual message: 'JSON root must be an object'
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u20_decisions.py::test_producer_inventory_integrity[malformed]
+1 failed, 11 passed, 12 deselected in 36.49s

@@ -1,0 +1,89 @@
+Skip to main content
+en
+Select your language
+Close
+es
+Spanish
+de
+German
+en
+English
+fr
+French
+it
+Italian
+pl
+Polish
+Search
+Search
+AI Act Service Desk
+Menu
+Close
+Menu
+Back
+Previous items
+Next items
+Home
+AI Act Explorer
+Compliance Checker
+Contact the AI Act Service Desk
+AI Act Timeline
+Resources
+National Resources
+FAQ
+High-risk AI Systems Guidelines
+Summaries and Examples
+High-risk AI Systems Guidelines Explorer
+See all
+Home
+Timeline for the Implementation of the EU AI Act
+Timeline for the Implementation of the EU AI Act
+The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.
+01 Aug 2024
+Entry into force
+02 Feb 2025
+General provisions (definitions & AI literacy) and prohibitions apply
+02 Aug 2025
+Rules for general-purpose AI apply and governance must be in place
+AI Act obligations for providers of general-purpose AI models enter into application.
+Member States need to designate national competent authorities and adopt national laws on penalties.
+EU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.
+02 Aug 2026
+The majority of rules of the AI Act come into force and enforcement starts for applicable rules
+Transparency rules (Article 50) start to apply.
+Measures in support of innovation start apply.
+Enforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.
+02 Dec 2026
+New prohibitions + Article 50(2) transition apply **
+Prohibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.
+Transitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).
+02 Aug 2027
+Member States should have at least one AI regulatory sandbox per country operational
+02 Dec 2027
+Rules for high-risk AI systems in Annex III apply **
+02 Aug 2028
+Rules for high-risk AI embedded in regulated products covered by Annex I apply **
+** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to
+the FAQ section under 'Digital Omnibus
+.
+AI Act Service Desk
+Contact us
+Contact the AI Office
+About us
+Copyright notice
+Legal notice
+Privacy statement
+About Directorate-General CONNECT
+Follow the European Commission
+Facebook
+Instagram
+X
+Linkedin
+Other
+Contact us
+Report an IT vulnerability
+Languages on our websites
+Cookies
+Privacy policy
+Legal notice
+Accessibility

@@ -333,9 +333,10 @@ def test_cli_submission_separate_packet_and_schema_fingerprints(captured,tmp_pat
         Draft202012Validator.check_schema(parse_json((SKILL/f'references/schemas/{name}.schema.json').read_bytes()))
     assert sha256_bytes((SKILL.parent/'snapshot.schema.json').read_bytes())=='sha256:8de9874ded18fa97294e83012796e4c386aa60ccfd30f8eca89cabdf2a267ac3'
     assert sha256_bytes((SKILL/'references/schemas/contracts.schema.json').read_bytes())=='sha256:946d7fa46c18373f01313e1c2aab7b48b25b296527cbae0cf138f31f9c8915ec'
-    # Owner-approved U19 bounded status amendment; baseline and authorization
-    # are retained in docs/verification/report-resolution-proposal.md.
-    assert sha256_bytes((SKILL/'scripts/rci/snapshots.py').read_bytes())=='sha256:a9b14e8ebed869dbdc4cc0952ed36eba1468bb28246559f09be7e28f2b7ff2e0'
+    # Owner-authorized U20 E04 runtime decision validation amendment.
+    # The U19 implementation hash remains in the remediation baseline;
+    # both public and typed schema hash assertions above remain unchanged.
+    assert sha256_bytes((SKILL/'scripts/rci/snapshots.py').read_bytes())=='sha256:cbb640b9cf165851fd5675b55a246a2f7b5fc1b2545717c7b12c8b6e95ad1ee8'
 
 
 @pytest.mark.parametrize('disposition',['refused','truncated','unsupported','ambiguous'])

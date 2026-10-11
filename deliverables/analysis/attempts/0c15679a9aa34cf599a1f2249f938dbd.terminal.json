@@ -1,0 +1,74 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "0c15679a9aa34cf599a1f2249f938dbd",
+    "content": "extract",
+    "content_hash": "sha256:b39fdf56d177b5969b16c52cf018bdc2b3f725b38984f79fd5e49f991cdb6f19",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:10dcb76cfb4b43b8b8bf30d10359724c",
+    "identity_check": "unverified",
+    "local_reference": "sources/0c15679a9aa34cf599a1f2249f938dbd.bin",
+    "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02024R1689-20260727",
+    "outcome": "HTTP 202",
+    "record_type": "attempt",
+    "recoverable_failure": "HTTP 202; requested content unavailable",
+    "retrieval_status": "invalid",
+    "retrieved_at": "2026-10-10T21:09:51.526973Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "CONSOLIDATED",
+    "started_at": "2026-10-10T21:09:51.468369Z",
+    "summary": "Read attempt for CONSOLIDATED",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "HTTP 202; requested content unavailable",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:10dcb76cfb4b43b8b8bf30d10359724c",
+    "content_hash": "sha256:b39fdf56d177b5969b16c52cf018bdc2b3f725b38984f79fd5e49f991cdb6f19",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:85bc3be3f86348afa2b4e86f6069685d",
+    "local_reference": "sources/0c15679a9aa34cf599a1f2249f938dbd.bin",
+    "record_type": "capture",
+    "representation": "extract",
+    "representation_metadata": {
+      "locator": "sources/0c15679a9aa34cf599a1f2249f938dbd.bin",
+      "method": "Publication extraction: credential fields redacted; WAF scripts omitted where present",
+      "original_availability": "Restricted local storage; not included in public repository",
+      "original_sha256": "sha256:ae35fa75bdf1280de60cf6119a17e052c2f303cd88a3844495ae07d673a18e4a",
+      "permission": "Owner-authorized publication remediation; no redistribution of credential values",
+      "publication_notice": "PUBLICATION DERIVATIVE: sanitized retained evidence, not untouched HTTP responses or a new execution. Run/record/snapshot IDs and acquisition times identify the original occurrence only. See PUBLICATION.json and the submission-root publication-manifest.json for original/derivative hashes and limitations."
+    },
+    "summary": "Retained representation for CONSOLIDATED"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "HTTP 202; requested content unavailable",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "CONSOLIDATED",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-attempt-journal/1"
+}

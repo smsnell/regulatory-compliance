@@ -36,7 +36,8 @@ candidate's `timing_candidates`; the frozen exchange fields remain unchanged.
    six `sources`, exhaustive `support`, and `timing`. Use the schema for all fields.
    Every source assessment quotes its identity, version and relationship, with
    known publication/effective dates or null. The requested AMEND/CONSOLIDATED
-   selector must be affirmatively identifiable in the captured text. Every support
+   selector must be affirmatively identifiable in the captured text through the
+   representation rules below. Every support
    entry cites one binding quote and the exact component value from the capture
    whose version/history was assessed. Another capture from that source does not
    inherit the assessment. Include an
@@ -47,9 +48,25 @@ candidate's `timing_candidates`; the frozen exchange fields remain unchanged.
    when that interpretation is supported; `until_exclusive` is true. Unknown
    precision or an intraday cutover stays unresolved because the assigned review
    supplies a date, not a legal instant/timezone. This initial U09 boundary requires
-   date-level applicability. Dates must appear literally as ISO dates in supporting
-   binding quotes; other representations remain unresolved pending a reviewed
-   mapping. A later retrieved version is not automatically stale, but a post-review
+   date-level applicability. Encode date fields as ISO dates only when the exact
+   cited quote contains a supported calendar representation: ISO `YYYY-MM-DD`,
+   full English `D Month YYYY` (ordinary spaces or NBSP), or EUR-Lex dotted
+   `D.M.YYYY` / `DD.MM.YYYY`. Preserve the source quote, source version and
+   locators verbatim; the supervisor records mapped text and character offsets
+   alongside the encoded value. Slash dates, abbreviated months, malformed dates,
+   contradictory aliases and relative commencement formulas stay unresolved.
+   In particular, a statement such as “the third day following publication” does
+   not supply an explicit calendar date through this mapping; Legal must assess
+   it with supported publication/history and paragraph-specific qualifications.
+   Map `OJ:L_YYYYNNNNN` only to the matching `Regulation (EU) YYYY/N` identity
+   header, with leading zeroes removed from the number. Map the reviewed act's
+   `CELEX:02024R1689-YYYYMMDD` to the exact captured document identifier
+   `02024R1689-YYYYMMDD` and matching `02024R1689 — EN — DD.MM.YYYY — NNN.NNN`
+   version header. Conflicting identifiers/dates and unsupported selectors block
+   the candidate. Literal selectors remain valid support. These mappings verify
+   representations only; source assessment, amendment relationship, historical
+   suitability and every legal qualifier still require their own captured support.
+   A later retrieved version is not automatically stale, but a post-review
    legislative version cannot silently stand in for historical law. Treat future
    or unrelated amendments as exclusions from the rule's substantive support.
 5. Use `ambiguous`/`unsupported` with diagnostics for uncertainty or missing

@@ -1,0 +1,288 @@
+{
+  "recorded_at": "2026-10-10T19:22:26.798431+00:00",
+  "cwd": "/home/mike/regulatory-compliance",
+  "verifier": "Codex U20; pytest 9.1.1",
+  "tests": [
+    {
+      "name": "suite",
+      "exit_code": 0,
+      "testcase_results": {
+        "passed": 725
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "767",
+        "time": "2506.208",
+        "timestamp": "2026-10-10T14:39:55.593669-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Baseline imported modules; later copied helper bundles retain their own hashes. Three external-environment tests excluded; four U20 tests added after collection.",
+      "xml": "docs/verification/u20/suite.xml",
+      "log": "docs/verification/u20/suite.log",
+      "raw_log_sha256": "sha256:af141a548dc62ef4a47d4b0125046416811c357bcd66196c9493b627ac888f5f",
+      "xml_sha256": "sha256:e1ccdcfbcd3dbecea6e548755cfa440b8c5644e072ec4f8146895b7f8e7aec59",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q --basetemp=.evidence/u20/suite --junitxml=.evidence/u20/suite.xml -k 'not test_local_http_server and not test_manifest_exact_routes_and and not test_require_registers_cli' > .evidence/u20/suite.log 2>&1",
+      "successful_subtests_reported_in_log": 42,
+      "original_xml_sha256": "sha256:6e186b6b9f5e818d6f3b8cc59b1960b7b32deb2a77bd20eaa6f4ebbe8e7003e2",
+      "portable_evidence_note": "Portable XML has three exact synthetic credential values redacted from parameter labels. Original XML remains .evidence/u20/suite.xml with original_xml_sha256; results/counts unchanged. See portable-evidence-redaction.json."
+    },
+    {
+      "name": "external",
+      "exit_code": 1,
+      "testcase_results": {
+        "passed": 2,
+        "failed": 1
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "1",
+        "skipped": "0",
+        "tests": "3",
+        "time": "0.416",
+        "timestamp": "2026-10-10T14:40:11.105325-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Sandbox loopback binding denied; original failure retained.",
+      "xml": "docs/verification/u20/external.xml",
+      "log": "docs/verification/u20/external.log",
+      "raw_log_sha256": "sha256:674d6b76cbc3a8b855245b775afa8fdd6ded93d174e6bf5c9e731d56ada57bc0",
+      "xml_sha256": "sha256:3884640cc1313f0d944382d1cdc7ac58c1d8d25a1aefe833a631b45541a20a4c",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q tests/runtime/test_u05.py -k 'test_local_http_server or test_manifest_exact_routes_and or test_require_registers_cli' --basetemp=/tmp/rci-u20-external --junitxml=.evidence/u20/external.xml > .evidence/u20/external.log 2>&1"
+    },
+    {
+      "name": "loopback",
+      "exit_code": 0,
+      "testcase_results": {
+        "passed": 1
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "1",
+        "time": "0.823",
+        "timestamp": "2026-10-10T14:41:18.275413-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Required permission granted; same assertion, no code change.",
+      "xml": "docs/verification/u20/loopback.xml",
+      "log": "docs/verification/u20/loopback.log",
+      "raw_log_sha256": "sha256:f110ea65f6d33cdc6322b155f056abd01a7abd63e18b0f61e05569402024ad9d",
+      "xml_sha256": "sha256:aaccffabde946b20b99619c7fd1d1de7ed2d4eea599f6a56237e6ba4db55b54e",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q tests/runtime/test_u05.py::test_local_http_server --basetemp=/tmp/rci-u20-loopback --junitxml=.evidence/u20/loopback.xml > .evidence/u20/loopback.log 2>&1"
+    },
+    {
+      "name": "failure-diagnostics",
+      "exit_code": 0,
+      "testcase_results": {
+        "passed": 2
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "2",
+        "time": "0.730",
+        "timestamp": "2026-10-10T14:47:03.243025-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Two capture/authority failure cases before the third launcher test was added.",
+      "xml": "docs/verification/u20/failure-diagnostics.xml",
+      "log": "docs/verification/u20/failure-diagnostics.log",
+      "raw_log_sha256": "sha256:33c95cc962d7d33a83648235168c77f114a25a4c0158b979a45443cf92d71ce3",
+      "xml_sha256": "sha256:7ac0890d54bc14239d3f9ace5d1e49c59ca77c9ab303af57a75381b9614c4663",
+      "equivalent_reproduction_command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q tests/runtime/test_u20.py --basetemp=.evidence/u20/failure-diagnostics --junitxml=.evidence/u20/failure-diagnostics.xml > .evidence/u20/failure-diagnostics.log 2>&1",
+      "command_note": "Supplemental invocation reconstructed from recorded selectors/output paths; interpreter spelling and shell option order were not separately retained. XML/log are original execution evidence; this string is not asserted to be a verbatim shell transcript."
+    },
+    {
+      "name": "final-supervisor",
+      "exit_code": 0,
+      "testcase_results": {
+        "passed": 13
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "13",
+        "time": "384.638",
+        "timestamp": "2026-10-10T14:50:02.151115-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Final diagnostic supervisor amendment; two U20 cases existed at this invocation.",
+      "xml": "docs/verification/u20/final-supervisor.xml",
+      "log": "docs/verification/u20/final-supervisor.log",
+      "raw_log_sha256": "sha256:777490599b153901af636eba4994067b25f926a6dcb08a1fa39a2e8a168896ba",
+      "xml_sha256": "sha256:2bda2fb81a7e5389c4a232a15a36b06904ec1d11878fbaaf80a4e32c41ca0a62",
+      "equivalent_reproduction_command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q tests/runtime/test_u17.py tests/runtime/test_u20.py --basetemp=.evidence/u20/final-supervisor --junitxml=.evidence/u20/final-supervisor.xml > .evidence/u20/final-supervisor.log 2>&1",
+      "command_note": "Supplemental invocation reconstructed from recorded selectors/output paths; interpreter spelling and shell option order were not separately retained. XML/log are original execution evidence; this string is not asserted to be a verbatim shell transcript."
+    },
+    {
+      "name": "metamorphic",
+      "exit_code": 0,
+      "testcase_results": {
+        "passed": 1
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "1",
+        "time": "224.283",
+        "timestamp": "2026-10-10T14:53:52.633765-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Final source, two complete eight-system synthetic runs.",
+      "xml": "docs/verification/u20/metamorphic.xml",
+      "log": "docs/verification/u20/metamorphic.log",
+      "raw_log_sha256": "sha256:a00fbe937b9b5d1acab131098cc6cefe3360fd43932be8c930a88fd0083cf027",
+      "xml_sha256": "sha256:d6ecd626c66c1d0bb82aa51ed297807d8e0729011162de9e8dc9172cb3335b04",
+      "equivalent_reproduction_command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q tests/runtime/test_u20_metamorphic.py --basetemp=.evidence/u20/metamorphic --junitxml=.evidence/u20/metamorphic.xml > .evidence/u20/metamorphic.log 2>&1",
+      "command_note": "Supplemental invocation reconstructed from recorded selectors/output paths; interpreter spelling and shell option order were not separately retained. XML/log are original execution evidence; this string is not asserted to be a verbatim shell transcript."
+    },
+    {
+      "name": "final-launcher",
+      "exit_code": 0,
+      "testcase_results": {
+        "passed": 54
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "54",
+        "time": "2.659",
+        "timestamp": "2026-10-10T14:57:14.358858-04:00",
+        "hostname": "MikeysMac"
+      },
+      "basis": "Final source including all three U20 diagnostic cases.",
+      "xml": "docs/verification/u20/final-launcher.xml",
+      "log": "docs/verification/u20/final-launcher.log",
+      "raw_log_sha256": "sha256:d64f0058104dcc66e7404a3fcfd1b7f79588b4eccb54beaf1b15091baabd47a2",
+      "xml_sha256": "sha256:b1a7f45b399bb20035166958aa3347869eafffaa4c5ac560a5be42ecfb45e6e3",
+      "equivalent_reproduction_command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest -q tests/runtime/test_u20.py tests/runtime/test_u03.py --basetemp=.evidence/u20/final-launcher --junitxml=.evidence/u20/final-launcher.xml > .evidence/u20/final-launcher.log 2>&1",
+      "command_note": "Supplemental invocation reconstructed from recorded selectors/output paths; interpreter spelling and shell option order were not separately retained. XML/log are original execution evidence; this string is not asserted to be a verbatim shell transcript."
+    }
+  ],
+  "collection": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python -m pytest --collect-only -q > .evidence/u20/collection.txt 2>&1",
+    "count": 732,
+    "passed_collected_nodes": 732,
+    "not_passed_nodes": [],
+    "extra_junit_nodes": [],
+    "original_nonpassing_observations": [
+      {
+        "node": "tests/runtime/test_u05.py::test_local_http_server",
+        "result": "failed",
+        "run": "external"
+      }
+    ],
+    "conclusion": "Every final collected test has at least one actual passing execution; baseline suite plus final-change checks. This is not a single full-suite execution on the amended checkout."
+  },
+  "other_commands": [
+    {
+      "name": "initial-live",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python regulatory-change-impact-brief/scripts/run.py --config config/review.u20.json > .evidence/u20/live-01.log 2>&1",
+      "exit_code": 3,
+      "result": "Scope unavailable in sandbox; retained discovery attempts, no snapshots/artifacts."
+    },
+    {
+      "name": "network-live",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /tmp/rci-u03-clean/bin/python regulatory-change-impact-brief/scripts/run.py --config config/review.u20.json --supersedes-run-id run-1578f8eaddcf40e98aa788f6d1f53e35 --change-reason 'U20 fresh live retry with network access after sandbox source-read failure' > .evidence/u20/live-02.log 2>&1",
+      "exit_code": 3,
+      "result": "Fresh live reads and actual host; seven snapshots/three files; blocked publication, no completion marker."
+    },
+    {
+      "name": "new-environment",
+      "command": "python3 -m venv --without-pip .evidence/u20/venv",
+      "exit_code": 0,
+      "result": "Fresh environment, no system packages; host ensurepip unavailable."
+    },
+    {
+      "name": "locked-install",
+      "command": "/tmp/rci-u03-clean/bin/python -m pip --python .evidence/u20/venv/bin/python install -r requirements.lock",
+      "initial_exit_code": 1,
+      "retry_exit_code": 0,
+      "result": "Initial sandbox index-access failure retained; permitted network retry installs exactly 21 lockfile distributions."
+    },
+    {
+      "name": "clean-actual-host",
+      "cwd": "/home/mike/regulatory-compliance/.evidence/u20/clean-source",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20/tmp /home/mike/regulatory-compliance/.evidence/u20/venv/bin/python tests/integration/u19_host.py --output /home/mike/regulatory-compliance/.evidence/u20/clean-host > /home/mike/regulatory-compliance/.evidence/u20/clean-host.log 2>&1",
+      "exit_code": 0,
+      "public_launcher_exit_code": 2,
+      "result": "Baseline clean source copy; synthetic transport and actual managed-login host. Partial/validated package."
+    },
+    {
+      "name": "failure-counterexample",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .evidence/u20/venv/bin/python .evidence/u20/setup-failure.py > .evidence/u20/setup-failure.log 2>&1",
+      "exit_code": 0,
+      "public_launcher_exit_code": 1,
+      "result": "Counterexample confirmed E05, not requirement acceptance."
+    },
+    {
+      "name": "live-secret-scan",
+      "command": "gitleaks dir deliverables --config .gitleaks.toml --redact=100 --no-banner --no-color --log-level=error --ignore-gitleaks-allow --max-decode-depth=2 --report-format json --report-path .evidence/u20/live-secret-scan.json > .evidence/u20/live-secret-scan.log 2>&1",
+      "exit_code": 0,
+      "result": "Gitleaks 8.24.2; zero findings. Bounded scan only."
+    },
+    {
+      "name": "skill-scan",
+      "wrapper": "/home/mike/.codex/plugins/cache/fellowship-apprentice-workspace/apprentice-workspace/local/library/skills/scan-agent-skill/scripts/scan.sh",
+      "target": "regulatory-change-impact-brief",
+      "exit_code": 1,
+      "result": "Cisco scanner 2.0.13; five findings, dispositions in final-report.md; local analyzers only.",
+      "log": "docs/verification/u20/skill-scan-release.md"
+    },
+    {
+      "name": "live-inspection",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .evidence/u20/venv/bin/python docs/verification/check-u20.py --package deliverables --basis live --output docs/verification/u20/live-inspection.json > .evidence/u20/live-inspection-final.log 2>&1",
+      "exit_code": 0,
+      "result": "Independent public format/hash/graph checks and full internal reconstruction pass. Source meaning requires separate inspection."
+    },
+    {
+      "name": "clean-host-inspection",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .evidence/u20/venv/bin/python docs/verification/check-u20.py --package .evidence/u20/clean-host/deliverables --basis synthetic --output docs/verification/u20/clean-host-inspection.json > .evidence/u20/clean-host-inspection-final.log 2>&1",
+      "exit_code": 0,
+      "result": "Independent public format/hash/graph checks and full internal reconstruction pass. Source meaning requires separate inspection."
+    },
+    {
+      "name": "complete-inspection",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .evidence/u20/venv/bin/python docs/verification/check-u20.py --package .evidence/u20/metamorphic/test_register_reordering_and_e0/original/out --basis synthetic --output docs/verification/u20/complete-inspection.json > .evidence/u20/complete-inspection-final.log 2>&1",
+      "exit_code": 0,
+      "result": "Independent public format/hash/graph checks and full internal reconstruction pass. Source meaning requires separate inspection."
+    },
+    {
+      "name": "final-audit-integrity",
+      "command": "PYTHONDONTWRITEBYTECODE=1 .evidence/u20/venv/bin/python .evidence/u20/final-integrity.py",
+      "initial_exit_code": 1,
+      "result": "Initial checker required its own not-yet-written output link to exist; corrected to allow exactly the record it emits. Other reference/hash assertions unchanged.",
+      "initial_log": ".evidence/u20/final-integrity-initial.log",
+      "corrected_log": ".evidence/u20/final-integrity.log",
+      "corrected_exit_code": 0
+    },
+    {
+      "name": "portable-audit-secret-scan",
+      "command": "gitleaks dir docs/verification/u20 --config .gitleaks.toml --redact=100 --no-banner --no-color --log-level=error --ignore-gitleaks-allow --max-decode-depth=2 --report-format json --report-path .evidence/u20/audit-secret-scan-clean.json > .evidence/u20/audit-secret-scan-clean.log 2>&1",
+      "initial_exit_code": 1,
+      "corrected_exit_code": 0,
+      "result": "21 matches traced to three deliberately synthetic credential values echoed in five pytest parameter IDs; portable copies redacted with original hashes retained. Rescan has zero findings.",
+      "evidence": "docs/verification/u20/portable-evidence-redaction.json"
+    }
+  ],
+  "inspection_correction": {
+    "initial_result": "Request-ID assertion failed because brief uses HTML entity escaping.",
+    "correction": "Decode with html.unescape before comparing visible request IDs; retained package unchanged.",
+    "initial_log": ".evidence/u20/live-inspection.log",
+    "corrected_log": ".evidence/u20/live-inspection-corrected.log"
+  }
+}

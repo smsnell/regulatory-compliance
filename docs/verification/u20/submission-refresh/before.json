@@ -1,0 +1,9 @@
+{
+  "predecessor_run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "assigned_review_date": "2026-08-26",
+  "config_sha256": "sha256:44985ebc099e94d447960c610a09f94f8b973bd6ea41275bc7746853ca6c2be0",
+  "current_package_validation": "passed",
+  "protected_file_count": 100903,
+  "protected_inventory_path": ".evidence/u20-submission-refresh/before.json",
+  "protected_inventory_sha256": "sha256:8c056af6e965a8b4491e95ea545850b9b4b7a6c9bcfb64eaf868124ffeed9176"
+}

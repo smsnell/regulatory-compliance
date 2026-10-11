@@ -1,0 +1,2 @@
+JavaScript must be enabled in order to use Notion.
+Please enable JavaScript to continue.

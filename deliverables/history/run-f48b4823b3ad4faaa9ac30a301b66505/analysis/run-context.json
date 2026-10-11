@@ -1,0 +1,7 @@
+{
+  "change_reason": "U20 fresh live retry with network access after sandbox source-read failure",
+  "mode": "production",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "started_at": "2026-10-10T18:41:26.272324Z",
+  "supersedes_run_id": "run-1578f8eaddcf40e98aa788f6d1f53e35"
+}

@@ -1,0 +1,74 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "39c5b4e1e1704e838fba2512d4367979",
+    "content": "extract",
+    "content_hash": "sha256:b39fdf56d177b5969b16c52cf018bdc2b3f725b38984f79fd5e49f991cdb6f19",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:f0e32b0a3ac14702b94fbff5cb76dac9",
+    "identity_check": "unverified",
+    "local_reference": "sources/39c5b4e1e1704e838fba2512d4367979.bin",
+    "original_locator": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ%3AL_202601744",
+    "outcome": "HTTP 202",
+    "record_type": "attempt",
+    "recoverable_failure": "HTTP 202; requested content unavailable",
+    "retrieval_status": "invalid",
+    "retrieved_at": "2026-10-10T21:09:51.436264Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "AMEND",
+    "started_at": "2026-10-10T21:09:51.404913Z",
+    "summary": "Read attempt for AMEND",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "HTTP 202; requested content unavailable",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": null
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:f0e32b0a3ac14702b94fbff5cb76dac9",
+    "content_hash": "sha256:b39fdf56d177b5969b16c52cf018bdc2b3f725b38984f79fd5e49f991cdb6f19",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:1a7f66898a7c44f886bb3ebc6410e0ba",
+    "local_reference": "sources/39c5b4e1e1704e838fba2512d4367979.bin",
+    "record_type": "capture",
+    "representation": "extract",
+    "representation_metadata": {
+      "locator": "sources/39c5b4e1e1704e838fba2512d4367979.bin",
+      "method": "Publication extraction: credential fields redacted; WAF scripts omitted where present",
+      "original_availability": "Restricted local storage; not included in public repository",
+      "original_sha256": "sha256:bc72694b0e8ac53f001a2a576971c9bef3767d93b6ed47d3f49fdaee06359cdd",
+      "permission": "Owner-authorized publication remediation; no redistribution of credential values",
+      "publication_notice": "PUBLICATION DERIVATIVE: sanitized retained evidence, not untouched HTTP responses or a new execution. Run/record/snapshot IDs and acquisition times identify the original occurrence only. See PUBLICATION.json and the submission-root publication-manifest.json for original/derivative hashes and limitations."
+    },
+    "summary": "Retained representation for AMEND"
+  },
+  "diagnostic": {
+    "affected_output": null,
+    "failure_type": "ReadFailure",
+    "next_owner": null,
+    "reason": "HTTP 202; requested content unavailable",
+    "recovery_action": "Preserve failed run; rerun with fresh source attempts",
+    "source_id": "AMEND",
+    "stage": "source-capture"
+  },
+  "phase": "terminal",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-attempt-journal/1"
+}

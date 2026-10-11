@@ -1,0 +1,377 @@
+{
+  "schema_version": "rci-field-dictionary/1",
+  "basis": {
+    "capture_root": "docs/verification/u05-anonymous-live",
+    "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd",
+    "interview": "interviews/interview-B-3.md#04:35–04:46",
+    "requirements": "REQUIREMENTS.md#7"
+  },
+  "registers": {
+    "SYSTEMS": {
+      "identity_header": "system_id",
+      "tab_title": "AI System Register",
+      "basis": {
+        "path": "sources/259b7feb192d4117a822850e99f979af.bin",
+        "sha256": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+        "header_row": 1,
+        "sheet_id": 0
+      },
+      "fields": [
+        {
+          "header": "system_id",
+          "field": "system_id",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact system business identity; never derive from position.",
+          "source_column": 1
+        },
+        {
+          "header": "system_name",
+          "field": "system_name",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Source system name.",
+          "source_column": 2
+        },
+        {
+          "header": "use_case",
+          "field": "use_case",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported actual use; no legal classification inferred.",
+          "source_column": 3
+        },
+        {
+          "header": "owner",
+          "field": "owner",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported system owner; not authenticated reviewer identity.",
+          "source_column": 4
+        },
+        {
+          "header": "provider_role",
+          "field": "provider_role",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Source role assertion: yes/true, no/false, unknown/null; not verified legal role.",
+          "source_column": 5,
+          "tokens": {
+            "yes": true,
+            "no": false,
+            "unknown": null
+          }
+        },
+        {
+          "header": "deployer_role",
+          "field": "deployer_role",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Source role assertion; never default all systems to deployer.",
+          "source_column": 6,
+          "tokens": {
+            "yes": true,
+            "no": false,
+            "unknown": null
+          }
+        },
+        {
+          "header": "exposed_group",
+          "field": "exposed_group",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported exposed group; preserve exact text rather than guessing a list delimiter.",
+          "source_column": 7
+        },
+        {
+          "header": "output_type",
+          "field": "output_type",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported output category; not a legal applicability determination.",
+          "source_column": 8,
+          "tokens": {
+            "direct_interaction": "direct_interaction",
+            "text": "text",
+            "synthetic_image": "synthetic_image",
+            "classification": "classification",
+            "synthetic_audio_video": "synthetic_audio_video"
+          }
+        },
+        {
+          "header": "current_notice",
+          "field": "current_notice",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported notice state. visible_label is visible disclosure only, never machine-readable provenance; yes alone does not establish timing.",
+          "source_column": 9,
+          "tokens": {
+            "yes": "yes",
+            "no": "no",
+            "unknown": "unknown",
+            "visible_label": "visible_label",
+            "not_applicable": "not_applicable"
+          }
+        },
+        {
+          "header": "human_review",
+          "field": "human_review",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported review/escalation path; not evidence of completed review.",
+          "source_column": 10
+        },
+        {
+          "header": "evidence_status",
+          "field": "evidence_state",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported evidence state; complete means supplied evidence, not compliance.",
+          "source_column": 11,
+          "tokens": {
+            "complete": "complete",
+            "partial": "partial",
+            "conflicting": "conflicting",
+            "missing": "missing",
+            "stale": "stale"
+          }
+        },
+        {
+          "header": "evidence_updated_at",
+          "field": "evidence_updated_on",
+          "kind": "date",
+          "required": true,
+          "aliases": [],
+          "meaning": "Date of reported evidence update; not source revision, legal effective date or retrieval time.",
+          "source_column": 12
+        },
+        {
+          "header": "record_version",
+          "field": "record_version",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact row version string; no fixed date/version whitelist.",
+          "source_column": 13
+        }
+      ]
+    },
+    "EVIDENCE": {
+      "identity_header": "record_id",
+      "tab_title": "Incident Evidence Register",
+      "basis": {
+        "path": "sources/4daf8c9227c44b16a524e930c7fe1ca2.bin",
+        "sha256": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b",
+        "header_row": 1,
+        "sheet_id": 0
+      },
+      "fields": [
+        {
+          "header": "record_id",
+          "field": "record_id",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact evidence/incident business identity.",
+          "source_column": 1
+        },
+        {
+          "header": "system_id",
+          "field": "system_id",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact referenced system identity; no fuzzy join.",
+          "source_column": 2
+        },
+        {
+          "header": "record_type",
+          "field": "source_record_type",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Source-native record category, distinct from internal record_type.",
+          "source_column": 3,
+          "tokens": {
+            "evidence": "evidence",
+            "evidence_gap": "evidence_gap",
+            "incident": "incident",
+            "exception_request": "exception_request"
+          }
+        },
+        {
+          "header": "reported_at",
+          "field": "reported_on",
+          "kind": "date",
+          "required": true,
+          "aliases": [],
+          "meaning": "Source report date, not an invented timestamp or observation date.",
+          "source_column": 4
+        },
+        {
+          "header": "owner",
+          "field": "owner",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported owner responsible for the record.",
+          "source_column": 5
+        },
+        {
+          "header": "status",
+          "field": "operational_status",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported operational state; closed does not prove compliance or approval.",
+          "source_column": 6,
+          "tokens": {
+            "open": "open",
+            "closed": "closed",
+            "draft": "draft"
+          }
+        },
+        {
+          "header": "evidence_ref",
+          "field": "evidence_ref",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact source report reference, not proof that the underlying report was read.",
+          "source_column": 7
+        },
+        {
+          "header": "evidence_state",
+          "field": "evidence_state",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Complete: supplied evidence, not compliance; partial: verification incomplete; conflicting: reported evidence/capture contradiction. Missing/stale remain source labels, not automatically adjudicated gaps.",
+          "source_column": 8,
+          "tokens": {
+            "complete": "complete",
+            "partial": "partial",
+            "conflicting": "conflicting",
+            "missing": "missing",
+            "stale": "stale"
+          }
+        },
+        {
+          "header": "notes",
+          "field": "notes",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact owner/source notes; unresolved contradictions are retained.",
+          "source_column": 9
+        }
+      ]
+    },
+    "CALENDAR": {
+      "identity_header": "action_id",
+      "tab_title": "Compliance Calendar",
+      "basis": {
+        "path": "sources/d6f83bafe04847fc9ab926c418a16bf0.bin",
+        "sha256": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013",
+        "header_row": 1,
+        "sheet_id": 0
+      },
+      "fields": [
+        {
+          "header": "action_id",
+          "field": "action_id",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact existing action business identity, distinct from generated action:v1 IDs.",
+          "source_column": 1
+        },
+        {
+          "header": "system_id",
+          "field": "system_id",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact source scope token; ALL is retained without expansion into invented system rows.",
+          "source_column": 2
+        },
+        {
+          "header": "action",
+          "field": "action",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported compliance task text.",
+          "source_column": 3
+        },
+        {
+          "header": "owner",
+          "field": "owner",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Reported task owner; distinct from required reviewer.",
+          "source_column": 4
+        },
+        {
+          "header": "due_date",
+          "field": "existing_due_date",
+          "kind": "date",
+          "required": true,
+          "aliases": [],
+          "meaning": "Existing operational deadline, never proposed date, approved date, legal effective date or assigned review date.",
+          "source_column": 5
+        },
+        {
+          "header": "status",
+          "field": "operational_status",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Planned/open/blocked/scheduled/closed denote operational progression, not approved/compliant/complete.",
+          "source_column": 6,
+          "tokens": {
+            "planned": "planned",
+            "open": "open",
+            "blocked": "blocked",
+            "scheduled": "scheduled",
+            "closed": "closed"
+          }
+        },
+        {
+          "header": "approval_required",
+          "field": "required_reviewer",
+          "kind": "enum",
+          "required": true,
+          "aliases": [],
+          "meaning": "Review path only: legal -> Legal; operations -> Operations. Not an approval decision.",
+          "source_column": 7,
+          "tokens": {
+            "legal": "Legal",
+            "operations": "Operations"
+          }
+        },
+        {
+          "header": "source_version",
+          "field": "source_version",
+          "kind": "text",
+          "required": true,
+          "aliases": [],
+          "meaning": "Exact source version string; newer versions remain syntactically acceptable.",
+          "source_column": 8
+        }
+      ]
+    }
+  }
+}

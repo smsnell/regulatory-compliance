@@ -1,0 +1,108 @@
+{
+  "accepted": false,
+  "diagnostics": [],
+  "inventory": [
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "action-calendar.ics",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "compliance-brief.md",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "impact-register.csv",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/01-scope.json",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/02-source-capture.json",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/03-authority-and-timing.json",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/04-evidence-reconciliation.json",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/05-impact-analysis.json",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/06-actions-and-approvals.json",
+      "sha256": null,
+      "size": null
+    },
+    {
+      "availability": "missing",
+      "expected_sha256": [],
+      "findings": [
+        "file does not exist"
+      ],
+      "path": "snapshots/07-publication-validation.json",
+      "sha256": null,
+      "size": null
+    }
+  ],
+  "run_id": null,
+  "status": "empty"
+}

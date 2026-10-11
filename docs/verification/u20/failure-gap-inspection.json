@@ -1,0 +1,26 @@
+{
+  "verifier": "Codex U20 controlled inspection",
+  "stimulus": "Initial run-context write fails after candidate/config creation; host preflight stubbed, no network or interpretation.",
+  "expected": "Failure names setup stage, run/candidate, affected outputs, recovery and owner; available evidence retained.",
+  "observed": {
+    "status": "failed",
+    "reason": "U20 injected initial run-context write failure",
+    "production_package": false,
+    "affected_stage": "launcher-preflight",
+    "affected_outputs": [],
+    "recovery_action": "Correct the reported runtime, configuration or access prerequisite; preserve any existing package and rerun the documented launcher.",
+    "next_owner": "Operator"
+  },
+  "exit_code": 1,
+  "candidates": [
+    {
+      "path": ".evidence/u20/setup-failure/out/.staging/run-02d579b9358e4f409b09cc5db2035f39",
+      "files": [
+        "analysis/config.json"
+      ]
+    }
+  ],
+  "status": "not-demonstrated",
+  "exception": "E05",
+  "conclusion": "Launcher reports preflight with no run/candidate even though a candidate/config survives; no outcome is persisted in the surviving candidate."
+}

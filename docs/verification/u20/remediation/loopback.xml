@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.928" timestamp="2026-10-10T16:00:14.814291-04:00" hostname="MikeysMac"><testcase classname="tests.runtime.test_u05" name="test_local_http_server" time="0.582" /></testsuite></testsuites>

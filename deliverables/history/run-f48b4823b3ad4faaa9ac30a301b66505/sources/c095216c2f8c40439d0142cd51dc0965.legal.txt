@@ -1,0 +1,237 @@
+Skip to main content
+en
+Select your language
+Close
+bg
+български
+es
+español
+cs
+čeština
+da
+dansk
+de
+Deutsch
+et
+eesti
+el
+ελληνικά
+en
+English
+fr
+français
+ga
+Gaeilge
+hr
+hrvatski
+it
+italiano
+lv
+latviešu
+lt
+lietuvių
+hu
+magyar
+mt
+Malti
+nl
+Nederlands
+pl
+polski
+pt
+português
+ro
+română
+sk
+slovenčina
+sl
+slovenščina
+fi
+suomi
+sv
+svenska
+Search
+Search
+Shaping Europe’s digital future
+Menu
+Close
+Menu
+Back
+Previous items
+Next items
+Home
+Policies
+Activities
+News
+Library
+Funding
+Calendar
+Consultations
+AI Office
+Home
+FAQs
+Transparency obligations under Article 50 of the AI Act
+Transparency obligations under Article 50 of the AI Act
+This page provides answers to frequently asked questions related to concepts and obligations clarified in the Commission Guidelines on Article 50 of the AI Act.
+Who is a provider of an AI system and what transparency obligations apply to them?
+According to
+Article 3(3) of the AI Act
+, providers of AI systems are natural or legal persons, public authorities, agencies or other bodies that develop AI systems, or have them developed, and place them on the EU market or put them into service under their own name or trademark. This is irrespective of whether those providers are established or located within the EU or in a third country.
+Providers of AI systems established or located outside the EU are also subject to the provisions of the AI Act if the output of their AI system is used in the EU.
+Providers must ensure that their AI systems meet the relevant transparency obligations laid down in
+Articles 50(1), (2) and (5) of the AI Act
+before placing those systems on the market or putting them into service.
+According to Article 50(2) of the AI Act, providers must design and develop AI systems that interact directly with natural persons — such as chatbots, AI agents, and avatars — to ensure that people are informed they are interacting with AI. Providers must also ensure that the outputs of their generative AI systems are marked with effective, reliable, robust and interoperable machine-readable marks that enable the outputs to be detected as generated or manipulated by AI systems.
+Who is a deployer and what transparency obligations apply to them?
+Deployers of AI systems are natural or legal persons, public authorities, agencies or other bodies using AI systems under their authority, excluding use for personal, non-professional activities.
+When a natural person uses
+an AI system in their personal capacity — for example, to generate deepfakes and disseminate them on social media — this is considered a personal activity. Such use is excluded from the scope of the AI Act. However, if it is
+an activity through which they gain an economic benefit on a regular basis (or are otherwise involved in a business, trade, occupational or freelance activity) this is considered a ‘professional’ activity. In this case, the natural person is considered to be a deployer of that AI system.
+Where the deployer of an AI system is a legal person under whose authority the system is used (e.g. an advertising company), the individual employees that act under the instructions and under the control of that legal person (e.g. digital animators, web designers, content creators, journalists) should not be considered as separate deployers of that system. A legal person remains a deployer even if third parties (e.g. contractors, freelancers) are involved in the operation of the system on its behalf and under its responsibility and control.
+Under the AI Act, deployers must ensure that they inform people when they use emotion recognition or biometric categorisation systems (
+Articles 50(3) of the AI Act
+) and clearly label deepfakes and AI-generated or manipulated text published on matters of public interest without human review or editorial control (Article 50(4) of the AI Act).
+When do providers of AI systems have to inform people they are interacting with an AI system?
+According to
+Article 50(1) of the AI Act
+, Providers of AI systems that directly interact with people must design and develop those systems in such a way that the individuals concerned are informed that they are interacting with an AI system, unless this is obvious.
+The
+Guidelines on Transparency of AI-Generated Content
+clarify the 4 cumulative criteria in which this obligation applies:
+the system must qualify as an AI system;
+it must be designed for a genuine two-way exchange with people, rather than merely collecting data or providing automated responses;
+the interaction must be direct, meaning the AI itself communicates with the person rather than through a human intermediary;
+the interaction must be with natural persons, whether consumers, professionals or other users.
+AI systems operating solely in the background, through machine-to-machine communication, or without direct contact with people, fall outside the scope of this obligation.
+People must be notified when they are interacting with an AI system from the start of the first interaction in a clear and distinguishable manner and in accordance with accessibility requirements.
+This will enable them to take informed decisions regarding their interaction with the system and calibrate their trust in the content accordingly.
+People do not need to be informed when it is obvious they are interacting with an AI system. In practice, to assess how obvious an AI interaction is, a provider will have to identify an average person, who is reasonably well-informed, circumspect, and observant. Such person evaluates whether it is obvious that they are directly interacting with an AI system.
+The guidelines provide further guidance and practical examples on how to apply this exception. It should be interpreted in a restrictive manner, given that it deprives people of transparency.
+When do providers of AI systems have to mark the outputs of their generative AI systems and ensure their detectability?
+According to
+Article 50(2) of the AI Act
+, providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, must ensure that AI-generated or manipulated content are marked in a machine-readable format and detectable as artificially generated or manipulated.
+The
+Guidelines on Transparency of AI-Generated Content
+clarify that certain outputs fall outside the scope of the obligations, such as:
+a short sequence of numbers, symbols or letters,
+source code
+outputs of an AI system intended to be exclusively communicated from machine-to-machine and processed automatically without any exposure to humans, or
+outputs that are only used in closed loop industrial and product development environments, for example for film production, unless they are the final output.
+The obligation to mark AI-generated or manipulated synthetic content does not apply when the AI system performs an assistive function for standard editing. The guidelines provide a diverse set of practical examples of what can be considered standard editing and what goes beyond.
+To ensure Article 50(2) of the AI Act is implemented in a proportionate manner, a narrow exemption of the marking obligation is envisaged for AI systems that generate outputs used in “business to business” or “industrial contexts” (provided the conditions specified in the guidelines are met).
+The specificities and limitations of various types of content, the costs of implementation and the generally acknowledged state of the art must also be considered. The guidelines further explain these concepts.
+The
+Code of Practice on Transparency of AI-generated content
+sets out measures on which providers who adhere to the Code can rely to demonstrate compliance with these marking and detection obligations in a legally certain and predictable manner, regardless of their place of establishment, operation or competent market surveillance authority.
+When must deployers of AI-based emotion recognition or biometric categorisation systems inform natural persons exposed to those systems?
+According to
+Article 50(3) of the AI Act
+, deployers of emotion recognition systems and biometric categorisation systems must inform natural persons who are exposed to those systems of their operation to protect their privacy. This does not entail providing information regarding e.g. the purpose of the system’s operation.
+The obligation applies regardless of whether the persons are exposed to such systems in real-time or they are operated ex-post.
+What is a ‘deepfake’ and when do they need to be labelled?
+Deepfakes are defined in
+Article 3(60) of the AI Act
+as AI-generated or manipulated image, audio or video content that resembles existing persons, objects, places, entities or events and would falsely appear to a person to be authentic or truthful.
+Three cumulative criteria need to be met for content to constitute a ‘deepfake’:
+Resemblance: a high level of similarity between the deepfake content and the simulated subject.
+Existing: simulated persons, objects, places, entities or events need to resemble someone or something that exists, can plausibly exist or could have plausibly existed in reality.
+False appearance to be authentic or truthful: this relates to the essential characteristic of deepfake content and its capacity to potentially deceive or mislead a person regarding the content’s authenticity or truthfulness
+For the assessment of the last criterion above, the
+Guidelines on Transparency of AI-Generated Content
+allow stakeholders to take into account:
+the level of resemblance,
+the potential substantive message of the content
+the intended and foreseeable deployment contexts,
+the intended and reasonably foreseeable audience composition and their expectations.
+This enables deployers to duly consider the specific context in which they are operating and the audience to which their content will be exposed. If the intended audience within a specific deployment context does not expect the content to be authentic or truthful, the AI-generated or manipulated content may not falsely appear to be authentic or truthful. For example, the AI-generation or manipulation of background scenes, special effects, or technical pre- and post-processing as part of standard movie production processes are not likely to make content falsely appear to the audience to be authentic or truthful.
+Deployers must disclose deepfake content to a natural person upon first exposure at the latest. This disclosure should happen in a clear and distinguishable manner. It should be understandable and perceivable by natural persons (e.g. with visible or audible labels), without need for any specific technical tools or performing dedicated actions. Therefore, deployers cannot simply rely on the machine-readable marking embedded in the content by the provider under
+Article 50(2) of the AI Act
+to fulfil their disclosure obligation.
+Some deepfakes are part of evidently artistic, creative, satirical, fictional or analogous works or programmes. For these, the transparency obligation is limited to the disclosure of the deepfake content in an appropriate manner that does not hamper the display or enjoyment of the work.
+What AI-generated or manipulated text must deployers clearly label?
+According to
+Article 50(4) of the AI Act
+, deployers of generative AI systems must clearly label AI-generated or manipulated text published with the purpose of informing the public on matters of public interest. For text to fall within this obligation, 3 criteria must be fulfilled. The text needs to be:
+Published
+Informative to the public
+On matters of public interest, such as:
+politics and democratic processes,
+public administration and services,
+administration of justice and law enforcement,
+fundamental rights,
+public security,
+public health,
+environmental protection,
+consumer safety and any economic,
+financial, political, scientific, or cultural developments that may be relevant subject of public debate.
+What constitutes the human review or editorial control/responsibility required to qualify for an exemption from the labelling obligation?
+Published text that has undergone human review or editorial control – does not need to be labelled.
+Human review refers to the deliberate examination of the substance of the content by one or more natural persons possessing relevant knowledge and professional judgement pertaining to the subject matter under scrutiny (e.g. academic peer review or professional validation chains). Editorial control refers to the control exercised in practice by a responsible editorial entity (e.g. an editor-in-chief) over the content having the authority to approve, alter or reject the substance of the text based on substantive grounds (incl. factchecking of information and ensuring the trustworthiness of sources).
+Superficial, solely formal, or procedural checks (e.g. spell-checking or grammatical correction) are not considered to be human review or editorial control.
+Editorial responsibility means that a person must hold the ultimate legal responsibility over the publication of the content, including the human review or editorial control.
+How can providers and deployers demonstrate compliance and what are the effects of the Code of Practice on transparency of AI-generated content?
+The
+Code of Practice on Transparency of AI-generated content
+provides a voluntary practical tool to help providers and deployers of generative AI systems demonstrate compliance with the marking and labelling obligations under
+Article 50(2), (4) and (5) of the AI Act
+. The code has been assessed as adequate by both the Commission and the AI Board. It allows signatories to benefit from legal certainty, predictability, and trust as they may rely on an approved code that they have signed, regardless of their place of establishment, operation or competent supervisory authority.
+Providers and deployers of generative AI systems that decide not to adhere to the code will have to demonstrate compliance through alternative adequate means. They may be subject to more requests for information, since there is less transparency on how they comply with the transparency obligations of Article 50(2), (4) and (5) of the AI Act.
+For the other transparency obligations (e.g. those laid down in Article 50(1) and (3) of the AI Act), providers and deployers can determine adequate compliance measures themselves, while taking into account the
+Guidelines on Transparency of AI-Generated Content
+.
+How does the Code of Practice on transparent generative AI systems interact with the recent Code of Practice on General-Purpose AI?
+The transparency obligations laid down in
+Article 50 of the AI Act
+are complementary to the transparency rules applicable to general-purpose AI models laid down in Articles 53 and 55 of the AI Act. The means to comply with the latter have been further detailed in the
+Code of Practice for General-Purpose AI (GPAI)
+models and the Commission template for the summary of the content used for model training.
+Notably, the GPAI Code of Practice focuses on GPAI models and documentation and information to be provided to the AI Office, national competent authorities and downstream providers, and transparency of the input training data. The
+Code of Practice on transparency of AI-generated content
+addresses marking techniques and transparency of the AI generated or manipulated outputs towards the persons exposed to them.
+The Code of Practice on transparency of AI-generated content targets transparency obligations at the system level, including, but not limited to, GPAI systems. Transparency techniques which can be implemented by providers of GPAI models to facilitate compliance by downstream AI system providers with the transparency obligations of Article 50 of the AI Act will also be considered in the context of this code.
+When does Article 50 of the AI Act start to apply and is there a grace period?
+Article 50 of the AI Act
+applies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A
+limited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.
+Content generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50
+of the
+AI Act.
+Who will oversee the enforcement of Article 50 of the AI Act and have the power to impose fines?
+Compliance with the rules will mainly be enforced by national competent market surveillance authorities. The AI Office has a limited role in monitoring and enforcement, since it is only competent for AI systems that are built on general-purpose AI models, if the same entity provides the system and the model, or if the AI system is integrated into a
+very large online search engine or very large online platform designated under the Digital Services Act
+. The
+European Data Protection Supervisor
+will enforce the rules vis-a-vis AI systems used by the EU institutions, bodies and agencies.
+Fines can reach up to 15 million euros or 3% of total worldwide turnover for the preceding financial year, while proportionality can be taken into account in the case of small and medium sized enterprises (SMEs) and small mid-cap companies (SMCs).
+Last update
+24 July 2026
+Print as PDF
+Shaping Europe’s digital future
+This site is managed by:
+Directorate-General for Communications Networks, Content and Technology
+Digital EU on Mastadon
+Digital EU on LinkedIn
+Digital EU on Facebook
+Digital EU on Youtube
+Digital EU on Instagram
+Digital EU on X
+About us
+Privacy statement
+Copyright notice
+About Directorate-General CONNECT
+Language Policy
+Follow the European Commission
+Mastodon
+LinkedIn
+Bluesky
+Facebook
+Youtube
+Other
+Contact us
+Report an IT vulnerability
+Languages on our websites
+Cookies
+Privacy policy
+Legal notice
+Accessibility

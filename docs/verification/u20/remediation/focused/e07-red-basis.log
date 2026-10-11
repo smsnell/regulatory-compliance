@@ -1,0 +1,28 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+_____ test_dated_action_basis_remaps_only_its_generated_source_row_pointer _____
+
+    def test_dated_action_basis_remaps_only_its_generated_source_row_pointer():
+        def records(run):
+            row_id = 'record:' + run + ':02:normalized-row:source'
+            row = dict(id=row_id, record_type='normalized-row', source_business_id='ACT-001',
+                       values={'existing_due_date':'2026-09-04'}, evidence_ids=[])
+            action = dict(id='action-' + run, record_type='action', action_id='action:stable',
+                proposed_due_date='2026-09-04', existing_due_date='2026-09-04', source_basis=[row_id],
+                date_basis='Proposed reuse of the sole exact source action date; source row ' + row_id +
+                ' and its evidence supply the date; Operations approval remains pending')
+            return action, {row_id:row, action['id']:action}
+        old, old_records = records('old')
+        new, new_records = records('new')
+>       assert _basis(old, old_records) == _basis(new, new_records)
+E       AssertionError: assert {'record_type...6-09-04', ...} == {'record_type...6-09-04', ...}
+E         
+E         Omitting 5 identical items, use -vv to show
+E         Differing items:
+E         {'date_basis': 'Proposed reuse of the sole exact source action date; source row record:old:02:normalized-row:source and its evidence supply the date; Operations approval remains pending'} != {'date_basis': 'Proposed reuse of the sole exact source action date; source row record:new:02:normalized-row:source and its evidence supply the date; Operations approval remains pending'}
+E         Use -v to get more diff
+
+tests/runtime/test_feedback_remediation.py:44: AssertionError
+=========================== short test summary info ============================
+FAILED tests/runtime/test_feedback_remediation.py::test_dated_action_basis_remaps_only_its_generated_source_row_pointer
+1 failed in 1.06s

@@ -1,0 +1,93 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "47efe27ee0a04e17a4317397f150b9d8",
+    "content": "full",
+    "content_hash": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013",
+    "content_type": "text/csv; charset=utf-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/gviz/tq?gid=0&headers=1&tqx=out:csv",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:16f0b688fa824c4a89a4d8de16fe5588",
+    "identity_check": "verified",
+    "local_reference": "sources/47efe27ee0a04e17a4317397f150b9d8.bin",
+    "original_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-10T21:09:54.898908Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "CALENDAR",
+    "started_at": "2026-10-10T21:09:54.779433Z",
+    "summary": "Read attempt for CALENDAR",
+    "version_metadata": {
+      "access_mode": "anonymous",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Anonymous unfiltered tab CSV captured with raw row/cell locators",
+      "last_modified": null,
+      "returned_identity": {
+        "column_count": 8,
+        "document_id": "1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA",
+        "headers": [
+          "action_id",
+          "system_id",
+          "action",
+          "owner",
+          "due_date",
+          "status",
+          "approval_required",
+          "source_version"
+        ],
+        "identity_attempt_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:2cdcb848339849dba2bf39d48432da28",
+        "native_values_verified": true,
+        "revision": 9,
+        "row_count": 9,
+        "tabs": [
+          {
+            "gridProperties": {
+              "columnCount": 26,
+              "rowCount": 1000
+            },
+            "sheetId": 0,
+            "sheetType": "GRID",
+            "title": "Compliance Calendar"
+          }
+        ],
+        "title": "Project B — Compliance Calendar"
+      },
+      "version": {
+        "kind": "observed-google-html-revision",
+        "value": 9
+      }
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:attempt:16f0b688fa824c4a89a4d8de16fe5588",
+    "content_hash": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013",
+    "content_type": "text/csv; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:b720b38d944a4fffb8acd5695764a693",
+    "local_reference": "sources/47efe27ee0a04e17a4317397f150b9d8.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": "gzip",
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://docs.google.com/spreadsheets/d/1xtXl_P7Yb9LaECZjjgtlyI-idoAJTAhH-1gQ4vQaCGA/gviz/tq?gid=0&headers=1&tqx=out:csv"
+    },
+    "summary": "Retained representation for CALENDAR"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-attempt-journal/1"
+}

@@ -1,0 +1,411 @@
+{
+  "R0-010": {
+    "clause": "Explain important automation choices and trade-offs.",
+    "source_locator": "REQUIREMENTS.md:L21",
+    "implementing_components": "runner.py / skill package / operating guide",
+    "status": "demonstrated",
+    "acceptance_assertion": "For Objective / The skill must:, independently check this leaf: Explain important automation choices and trade-offs. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R0-010",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-001": {
+    "clause": "Each project decision must record:",
+    "source_locator": "REQUIREMENTS.md:L361",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records, independently check this leaf: Each project decision must record:. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-001",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-002": {
+    "clause": "concern;",
+    "source_locator": "REQUIREMENTS.md:L363",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: concern. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-002",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-003": {
+    "clause": "options considered;",
+    "source_locator": "REQUIREMENTS.md:L364",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: options considered. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-003",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-004": {
+    "clause": "source basis;",
+    "source_locator": "REQUIREMENTS.md:L365",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: source basis. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-004",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-005": {
+    "clause": "chosen behavior;",
+    "source_locator": "REQUIREMENTS.md:L366",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: chosen behavior. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-005",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-006": {
+    "clause": "rationale;",
+    "source_locator": "REQUIREMENTS.md:L367",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: rationale. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-006",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-007": {
+    "clause": "trade-offs;",
+    "source_locator": "REQUIREMENTS.md:L368",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: trade-offs. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-007",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R6-008": {
+    "clause": "downstream effect.",
+    "source_locator": "REQUIREMENTS.md:L369",
+    "implementing_components": "decision log / actions.py / reviews.py / validate.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 6. Review Evidence and Decision Records / Each project decision must record:, independently check this leaf: downstream effect. Apply T32 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh COMPLETE/PARTIAL/BLOCKED/recovery runs emit deterministic genuine scope/date/access/disposition/recovery decisions with required fields, evidence and graph relationships. The export and rendered briefs retain their trace; deletion/semantic tampering is rejected.",
+    "evidence": [
+      "tests/runtime/test_u20_decisions.py",
+      "complete-inspection.json",
+      "partial-inspection.json",
+      "focused/e04-results.json"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E04 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R6-008",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T27",
+      "T32"
+    ]
+  },
+  "R9-024": {
+    "clause": "Technical failures must be retained with:",
+    "source_locator": "REQUIREMENTS.md:L514",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery, independently check this leaf: Technical failures must be retained with:. Apply T15 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Controlled initial writes, candidate creation, locking, inspection, feedback retention and archival errors identify the exact boundary/run/candidate, next owner and recovery. Saved diagnostics are distinguished from unavailable persistence. Existing replacement and recovery failure assertions remain covered.",
+    "evidence": [
+      "tests/runtime/test_u20_failure_remediation.py",
+      "tests/runtime/test_u20.py",
+      "tests/runtime/test_u18.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E05 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/failure-gap-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-024",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T17"
+    ]
+  },
+  "R9-025": {
+    "clause": "affected stage;",
+    "source_locator": "REQUIREMENTS.md:L516",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery / Technical failures must be retained with:, independently check this leaf: affected stage. Apply T15 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Controlled initial writes, candidate creation, locking, inspection, feedback retention and archival errors identify the exact boundary/run/candidate, next owner and recovery. Saved diagnostics are distinguished from unavailable persistence. Existing replacement and recovery failure assertions remain covered.",
+    "evidence": [
+      "tests/runtime/test_u20_failure_remediation.py",
+      "tests/runtime/test_u20.py",
+      "tests/runtime/test_u18.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E05 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/failure-gap-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-025",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T17"
+    ]
+  },
+  "R9-026": {
+    "clause": "affected source or output;",
+    "source_locator": "REQUIREMENTS.md:L517",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery / Technical failures must be retained with:, independently check this leaf: affected source or output. Apply T15 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Controlled initial writes, candidate creation, locking, inspection, feedback retention and archival errors identify the exact boundary/run/candidate, next owner and recovery. Saved diagnostics are distinguished from unavailable persistence. Existing replacement and recovery failure assertions remain covered.",
+    "evidence": [
+      "tests/runtime/test_u20_failure_remediation.py",
+      "tests/runtime/test_u20.py",
+      "tests/runtime/test_u18.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E05 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/failure-gap-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-026",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T17"
+    ]
+  },
+  "R9-027": {
+    "clause": "recovery action;",
+    "source_locator": "REQUIREMENTS.md:L518",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery / Technical failures must be retained with:, independently check this leaf: recovery action. Apply T15 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Controlled initial writes, candidate creation, locking, inspection, feedback retention and archival errors identify the exact boundary/run/candidate, next owner and recovery. Saved diagnostics are distinguished from unavailable persistence. Existing replacement and recovery failure assertions remain covered.",
+    "evidence": [
+      "tests/runtime/test_u20_failure_remediation.py",
+      "tests/runtime/test_u20.py",
+      "tests/runtime/test_u18.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E05 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/failure-gap-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-027",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T17"
+    ]
+  },
+  "R9-028": {
+    "clause": "next owner where applicable.",
+    "source_locator": "REQUIREMENTS.md:L519",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery / Technical failures must be retained with:, independently check this leaf: next owner where applicable. Apply T15 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Controlled initial writes, candidate creation, locking, inspection, feedback retention and archival errors identify the exact boundary/run/candidate, next owner and recovery. Saved diagnostics are distinguished from unavailable persistence. Existing replacement and recovery failure assertions remain covered.",
+    "evidence": [
+      "tests/runtime/test_u20_failure_remediation.py",
+      "tests/runtime/test_u20.py",
+      "tests/runtime/test_u18.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E05 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/failure-gap-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-028",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T17"
+    ]
+  },
+  "R9-001": {
+    "clause": "When an input changes:",
+    "source_locator": "REQUIREMENTS.md:L482",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery, independently check this leaf: When an input changes:. Apply T15 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh capture outputs and isolated actual copied input/code/reference changes use production fingerprint/classification machinery for all seven categories. Unchanged earlier fingerprints, full recomputation and fresh-read requirements are asserted. G5 and E07 public reruns demonstrate actual fresh attempts/IDs/artifacts, supersession and exact history. No sevenfold duplicate workflow is claimed.",
+    "evidence": [
+      "tests/runtime/test_u20_dependency_remediation.py",
+      "tests/runtime/test_g5.py",
+      "tests/runtime/test_feedback_remediation.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E06 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-001",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T30"
+    ]
+  },
+  "R9-002": {
+    "clause": "identify the earliest stage whose basis changed;",
+    "source_locator": "REQUIREMENTS.md:L484",
+    "implementing_components": "validate.py / recovery.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For 9. Recalculation and Recovery / When an input changes:, independently check this leaf: identify the earliest stage whose basis changed. Apply T30 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Fresh capture outputs and isolated actual copied input/code/reference changes use production fingerprint/classification machinery for all seven categories. Unchanged earlier fingerprints, full recomputation and fresh-read requirements are asserted. G5 and E07 public reruns demonstrate actual fresh attempts/IDs/artifacts, supersession and exact history. No sevenfold duplicate workflow is claimed.",
+    "evidence": [
+      "tests/runtime/test_u20_dependency_remediation.py",
+      "tests/runtime/test_g5.py",
+      "tests/runtime/test_feedback_remediation.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E06 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#R9-002",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T30"
+    ]
+  },
+  "INT-082": {
+    "clause": "If verified, I incorporate the outcomes and conditions, propagating any changes in dates or decisions across the drafts, leaving final interpretations to Legal and Operations.",
+    "source_locator": "interviews/interview-B-3.md:L302",
+    "implementing_components": "reviews.py / validate.py / history.py",
+    "status": "demonstrated",
+    "acceptance_assertion": "For stakeholder 03:37, independently check this leaf: If verified, I incorporate the outcomes and conditions, propagating any changes in dates or decisions across the drafts, leaving final interpretations to Legal and Operations. Apply T13 expected records and artifact observations; failure or unsupported evidence cannot count as demonstrated.",
+    "observed": "Authenticated synthetic conditional feedback is scoped to the exact draft; unmet conditions remain explicit/pending in independently parsed CSV/brief/calendar. Changed date and content quarantine old authorization. Prior bound artifacts/history remain byte-exact. A separate bounded public rejection witness preserves rejection as a distinct scoped outcome. No real organizational authority is claimed.",
+    "evidence": [
+      "tests/runtime/test_feedback_remediation.py",
+      "rejection-results.json",
+      "public-rejection.py"
+    ],
+    "scope": "Software behavior with explicit synthetic/retained fixtures plus cited live inspections; no human approval claim.",
+    "exception_ids": "E07 implementation/verification closed; historical finding preserved",
+    "inspection": "docs/verification/u20/source-inspection.md; docs/verification/u20/live-inspection.json; docs/verification/u20/clean-host-inspection.json",
+    "assertion_source": "docs/verification/u20/assertion-index.json",
+    "remediation_report": "docs/verification/u20/remediation-report.md",
+    "historical_evidence": "docs/verification/u20/leaf-evidence.json#INT-082",
+    "execution_evidence": "docs/verification/u20/remediation/executed-checks.json",
+    "acceptance_cases": [
+      "T13"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "format": "rci-publication-test-report/1",
+  "original_path": "$HOME/.cache/rci-secret-scan/publication-remediation/publication-tests.original.xml",
+  "original_sha256": "sha256:ebd07ac351dc6fb4fbe6b40aeecafb7b01b46525e49856a22e9c871c71d57243",
+  "derivative_path": "docs/verification/publication-tests.xml",
+  "derivative_sha256": "sha256:a31696201a1d52f672497ef453562b0e54a10b9cb38b2403d88b4b27cccf35c7",
+  "transformation": "Replace five synthetic credential parameter IDs with numbered test-case labels; all results, counts, timings and other attributes unchanged",
+  "replacement_count": 5
+}

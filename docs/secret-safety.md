@@ -9,7 +9,9 @@ an unrelated pre-commit hook. With a custom hook manager, invoke
 `python3 scripts/secret_guard.py` from that existing hook.
 
 The hook scans the complete **staged blobs**, including binary `.bin` files,
-renames and partially staged files. It uses Gitleaks' maintained default rules
+renames and partially staged files. Up to four independent stdin scans run
+concurrently, each with its own private temporary working directory; results
+are reported in index order. It uses Gitleaks' maintained default rules
 plus unconditional Google API key and private key header detection. It blocks
 raw evidence and credential paths even when force-added. Missing tools, Git
 errors and scanner errors fail closed; output includes paths, never values.
@@ -17,6 +19,22 @@ Inline `gitleaks:allow` comments and repository ignore fingerprints cannot hide
 findings. No evidence directory is exempt from scanning. The only generic-rule exception
 is the exact `attempt_key` field with a 32-character hexadecimal value: the
 application generates it as a local capture filename, not a credential.
+
+When the system temporary filesystem is constrained, explicitly relocate every
+scanner/test invocation (shell environment changes do not persist between tools):
+
+```sh
+mkdir -p "$HOME/.cache/rci-secret-scan"
+TMPDIR="$HOME/.cache/rci-secret-scan" python3 scripts/secret_guard.py
+```
+
+The [final pre-commit investigation](verification/secret-guard-remediation.md)
+records unresolved sensitive material in hash-bound submission captures. Public
+frontend exposure and an earlier alert resolution do not justify an exception.
+Do not edit those originals or bypass the guard to make the submission pass.
+The owner subsequently authorized the [publication derivative remediation](verification/publication-remediation.md).
+Submission paths now contain labeled sanitized derivatives; the exact originals
+remain restricted outside Git. The original investigation remains historical.
 
 Run `python3 scripts/secret_guard.py --all` to scan the complete Git index.
 The ordinary hook scans added/changed files only, so historical copies do not

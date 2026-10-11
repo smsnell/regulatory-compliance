@@ -1,0 +1,30 @@
+{
+  "results": {
+    "installed_pre_commit": {
+      "command": [
+        ".git/hooks/pre-commit"
+      ],
+      "exit_code": 0,
+      "seconds": 218.589,
+      "diagnostic_bytes": 0
+    },
+    "complete_index": {
+      "command": [
+        "python3",
+        "scripts/secret_guard.py",
+        "--all"
+      ],
+      "exit_code": 0,
+      "seconds": 320.097,
+      "diagnostic_bytes": 0
+    }
+  },
+  "index_unchanged": true,
+  "index_listing_sha256": "f8241e905a2581cca845f1546958378bc1849d479c51aa33a8485fa4b450d604",
+  "indexed_files": 995,
+  "staged_changed_files": 574,
+  "temporary_directory": "/home/mike/.cache/rci-secret-scan",
+  "guard_sha256": "e4031726abb4ccdb35a5ad59b3023ec0ecc43cb686c98fb47a6e9f594cfc19c8",
+  "config_sha256": "6c447ca1deea50ab131a408d953b45b20de47a00f5ca4500acdf09d0e0cd2817",
+  "hook_sha256": "9ee41301de6c758af3c8b82abc651e49df1128d5b6727b7890525b38c9d9f9a3"
+}

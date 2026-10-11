@@ -1,5 +1,6 @@
 """Mechanical Markdown draft: every observation stays scoped and cited."""
 from html import escape
+from ..reviews import action_feedback_text, feedback_condition_state
 
 
 def text(value):
@@ -94,6 +95,9 @@ def render(model):
             f"Existing operational date: {text(a['existing_due_date'] or 'Not established')}",
             f"Date basis: {text(a['date_basis'])}", f"Approval: {text(a['approval_status'])}",
             f"Impacts: {text(';'.join(impacts))}", f"Evidence: {text(';'.join(a['evidence_ids']))}", '']
+        feedback = action_feedback_text(model, a)
+        if feedback:
+            lines += [f"Reviewer feedback: {text(feedback)}", '']
     if not model['actions']: lines.append('No supportable action proposals recorded.')
     lines += ['', '## Existing operational calendar', '',
         'Source rows retain operational dates, statuses and review paths; they do not establish approval or completion.', '']
@@ -118,6 +122,18 @@ def render(model):
             f"Source versions: {text(';'.join(r['source_versions']))}",
             f"Delivery: {text(r['delivery_status'])}", f"Evidence: {text(';'.join(r['evidence_ids']))}", '']
     if not model['review_requests']: lines.append('No additional decisions requested.')
+    for feedback in model.get('feedback', []):
+        lines += [f"### Feedback {text(feedback['id'])}", '',
+            f"Reviewer: {text(feedback['responder_role'])}",
+            f"Outcome: {text(feedback['outcome'])}", f"Match: {text(feedback['match_status'])}",
+            f"Authentication: {text(feedback['authentication'])}",
+            f"Reasons: {text(';'.join(feedback['reasons']))}",
+            f"Conditions: {text(';'.join(feedback['conditions']) or 'None')}",
+            f"Condition state: {text(feedback_condition_state(model, feedback))}",
+            f"Current subjects: {text(';'.join(feedback['subject_ids']))}",
+            f"Reviewed run: {text(feedback['claimed_run_id'])}",
+            f"Reviewed draft: {text(feedback['claimed_draft_version'])}",
+            f"Reviewed artifacts: {text(';'.join(a['path'] + ' ' + a['sha256'] for a in feedback['claimed_artifacts']))}", '']
     lines += ['', 'Exact reviewed artifact hashes are detached in [Stage 07](snapshots/07-publication-validation.json).', '', '## Engineering decisions', '']
     for d in model['decisions']:
         lines.append(f"- [{text(d['id'])}] {text(d['summary'])}; chosen: {text(d['chosen_behavior'])}; rationale: {text(d['rationale'])}; evidence: {text(';'.join(d['evidence_ids']))}")

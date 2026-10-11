@@ -1,0 +1,41 @@
+E
+==================================== ERRORS ====================================
+_ ERROR at setup of test_conditional_feedback_and_changed_basis_are_scoped[same] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/red-runs'), .../home/mike/regulatory-compliance/.evidence/u20-remediation/e07/red-runs'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def prior_draft(tmp_path_factory):
+        parent = tmp_path_factory.mktemp('e07-prior')
+>       outcome, root, chain = _run(parent)
+                               ^^^^^^^^^^^^
+
+tests/runtime/test_feedback_remediation.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+parent = PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e07/red-runs/e07-prior0')
+variant = 'same', kwargs = {}
+
+    def _run(parent, variant='same', **kwargs):
+        original = CompanyReplay.table
+        def dated(self, table):
+            table = original(self, table)
+            headers = table[0]
+            if headers[0] == 'action_id':
+                values = dict(system_id='AI-007', action=TASK, due_date='2026-09-05' if variant == 'date' else '2026-09-04')
+                for key, value in values.items():
+                    table[1][headers.index(key)] = value
+            return table
+        body = REPORT + ('\nSYNTHETIC TEST ONLY: report version changed; readiness still unverified.' if variant == 'content' else '')
+        with patch.object(CompanyReplay, 'table', dated), patch('runtime.test_u10.REPORT', body):
+            result, root = execute(parent, mutation='e07-dated', launcher=True, **kwargs)
+        assert result['package_acceptance'] and result['production_package'], result
+>       assert result['launcher_exit_code'] == 0, result
+E       AssertionError: {'run_id': 'run-05e2cb3b7c28465186a6c661772a472c', 'status': 'partial', 'publication_status': 'validated', 'reason': 'Seven-stage draft; review requests await authorized humans.', ...}
+E       assert 2 == 0
+
+tests/runtime/test_feedback_remediation.py:45: AssertionError
+=========================== short test summary info ============================
+ERROR tests/runtime/test_feedback_remediation.py::test_conditional_feedback_and_changed_basis_are_scoped[same]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 error in 69.88s (0:01:09)

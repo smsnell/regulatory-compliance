@@ -1,5 +1,6 @@
 """Real temporary Git indexes and scanner: never stage synthetic secrets here."""
 from pathlib import Path
+import importlib.util
 import os
 import shutil
 import subprocess
@@ -97,6 +98,42 @@ def test_attempt_filename_exception_does_not_hide_other_keys(repo):
     assert check().returncode == 0
     stage('journal.json', b'{"attempt_key": "' + KEY + b'"}')
     assert check().returncode == 1
+
+
+def test_multiple_staged_blobs_keep_independent_checks(repo):
+    root, _, stage, check = repo
+    for n in range(6):
+        stage(f'clean-{n}.bin', b'ordinary public content')
+    stage('secret.bin', b'\x00\xff' + KEY + b' # gitleaks:allow')
+    stage('.ssh/config', b'ordinary public content')
+    # A worktree correction and an ignore file must not hide staged bytes.
+    (root / 'secret.bin').write_bytes(b'clean unstaged correction')
+    (root / '.gitleaksignore').write_text('*\n')
+    result = check()
+    assert result.returncode == 1
+    assert b"'secret.bin'" in result.stderr
+    assert b"'.ssh/config'" in result.stderr
+    assert result.stderr.count(b'possible secret') == 1
+    assert result.stderr.count(b'prohibited raw evidence/credential path') == 1
+    assert KEY not in result.stdout + result.stderr
+    assert b'ordinary public content' not in result.stdout + result.stderr
+
+
+def test_scanner_error_blocks_without_scanner_output(tmp_path, monkeypatch, capsys):
+    scanner = tmp_path / 'failing-scanner'
+    scanner.write_text('#!/bin/sh\nprintf "sensitive diagnostic" >&2\nexit 2\n')
+    scanner.chmod(0o700)
+    spec = importlib.util.spec_from_file_location('secret_guard', GUARD)
+    guard = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(guard)
+    monkeypatch.setattr(guard.shutil, 'which', lambda _: str(scanner))
+    monkeypatch.setattr(guard, 'git', lambda *args: b'clean.bin\0' if args[0] == 'diff'
+                        else b'ordinary public content')
+    monkeypatch.setattr(sys, 'argv', [str(GUARD)])
+    assert guard.main() == 1
+    captured = capsys.readouterr()
+    assert 'scanner failed' in captured.err
+    assert 'sensitive diagnostic' not in captured.out + captured.err
 
 
 def test_missing_scanner_blocks_commit(tmp_path):

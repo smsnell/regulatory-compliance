@@ -1,0 +1,1483 @@
+{
+  "created_at": "2026-10-10T21:11:41.446977Z",
+  "inventory": [
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+      ],
+      "findings": [],
+      "path": "action-calendar.ics",
+      "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493",
+      "size": 97
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/1259f91dd2bb48bba45baac3080d87ba.start.json",
+      "sha256": "sha256:cbfba6cca2b92e11933b6ddb9b4fd2ae705c0cf1ec331de12e63f326a047a337",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/1259f91dd2bb48bba45baac3080d87ba.terminal.json",
+      "sha256": "sha256:0c4cc47bf6bc28e39cd04fa4dd9ac6bb748d7743696f2dd37b28a06dc3c9b42d",
+      "size": 3264
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/15ae719c1b5e462fa4d946d9bb91d920.start.json",
+      "sha256": "sha256:4257b6f3588dc4a6542dbbb78704e666bd686f0753681a9c895b0ee86bfba850",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/15ae719c1b5e462fa4d946d9bb91d920.terminal.json",
+      "sha256": "sha256:dab227db38965e56d7f560e05f8fa0769e4519d841e651e784f3a29f3a76310c",
+      "size": 7321
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/1c3a4a4923be47a580c2024f2771b12b.start.json",
+      "sha256": "sha256:bf486ce9e172696f89681e155b8cbaa140093ab685a8cf927b37f5d0f70a7797",
+      "size": 1100
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/1c3a4a4923be47a580c2024f2771b12b.terminal.json",
+      "sha256": "sha256:0212a5a14f3feacc7d2ca8d79b6bbfe0458e6a4182ed4d41c385fc21f12d6638",
+      "size": 3184
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/2f71707fd1c244f49e5ae8da9677f2b8.start.json",
+      "sha256": "sha256:8320886385ffbc29c56cfb07a96ec81a642b6cb502512ea9840e6e7b41590aef",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/2f71707fd1c244f49e5ae8da9677f2b8.terminal.json",
+      "sha256": "sha256:6e0562103c170fa27bda8fb99938e17429b737dac0f7b61c8f72ac7cf425c82f",
+      "size": 3250
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/40e10c7d3316446f830681bc50340bf9.start.json",
+      "sha256": "sha256:c694a5f5ae3cb548a40d8a68cb1a1a7762596d5fef8956dbbcd11beba6197bf7",
+      "size": 1119
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/40e10c7d3316446f830681bc50340bf9.terminal.json",
+      "sha256": "sha256:63c014032f740ef077319045a4df23fecefe3e57a0e7ba509f87a0d632ae3aa7",
+      "size": 3246
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/422cea902b2e47ff923779c0e98e76e3.start.json",
+      "sha256": "sha256:5c5066f0c0aaa72d329b28f1823c3590ef9024a060a3310b9187ca563ecade97",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/422cea902b2e47ff923779c0e98e76e3.terminal.json",
+      "sha256": "sha256:82cfa8a0f553ad560fde855fa9a174ae508aab7999588e2dafc5bce1a5f60533",
+      "size": 3244
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/51133f358c534890946b3d1547ffe08b.start.json",
+      "sha256": "sha256:57027eaef6604e7beba26fa51c62026aed3dcedd33743e91a2d23c3e9258ef03",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/51133f358c534890946b3d1547ffe08b.terminal.json",
+      "sha256": "sha256:511ea3ce23e82fc961fadf4428370531a8480abe82c4af7a5124bf80f5718633",
+      "size": 3779
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/6fee72810afd4fbdab7958be7ecfa522.start.json",
+      "sha256": "sha256:9dbd1872690fdd23da12375689ac29549063021b76cbabcabe5bc792ecb8615d",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/6fee72810afd4fbdab7958be7ecfa522.terminal.json",
+      "sha256": "sha256:17cbfb7e548faaabc69980213e77d35c745cd499fa68dabc95dec49bedc6534a",
+      "size": 3258
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/780f63e16d444eeea63f7ceeb7ef7a98.start.json",
+      "sha256": "sha256:13649a71b58c5707da3f6d4737003794fc1b7a0d61cc812bf37f9ca4d32bbfc4",
+      "size": 1119
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/780f63e16d444eeea63f7ceeb7ef7a98.terminal.json",
+      "sha256": "sha256:43519edd0b64221ad202bd8ec61fbd946ce584da2a65baa966983968325d777d",
+      "size": 7638
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/823e8e0864ea44d6b0d0125040b5cb4b.start.json",
+      "sha256": "sha256:866b4babe19c15efbc82b8816f5b08c3738e377e282aba2dd85104225fc801f5",
+      "size": 1165
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/823e8e0864ea44d6b0d0125040b5cb4b.terminal.json",
+      "sha256": "sha256:ea0bbdd32fbdaa005f42c3fe1675c96d17f1e5d6c6828c0586fc107056808735",
+      "size": 3427
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/8502670b407f4d88b184c689e08d6273.start.json",
+      "sha256": "sha256:3fd6fcff50a2429d01cd3231393546a807c36fb5743763b330b1d577a7348855",
+      "size": 1119
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/8502670b407f4d88b184c689e08d6273.terminal.json",
+      "sha256": "sha256:a9f1edb39117b492c68b52989f9beb7f5c42d044b98afc0084e3d32cf5c7b787",
+      "size": 7638
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/9de475942a9d494aabaf3e1696cb0c8c.start.json",
+      "sha256": "sha256:a34f3ad2b40e7c4248344c5fb4d2e3b24321d8e06deccc3233839d4ccecb2bff",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/9de475942a9d494aabaf3e1696cb0c8c.terminal.json",
+      "sha256": "sha256:08e9fc327ace6a4d7b0c1b3a812877d9874fdeb715964d137f61a62fcd46ef2b",
+      "size": 7321
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/aac479ed5b5b4430a5f92ca87a4c3c70.start.json",
+      "sha256": "sha256:a17d6fc769bdc73e5834b8a7d9100dc5098cabc24231ea4e02eeb9a6ad7797e7",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/aac479ed5b5b4430a5f92ca87a4c3c70.terminal.json",
+      "sha256": "sha256:296c7fc77d002cccc968f53f3670f57656f9edf63084fbba15e2f23899b40591",
+      "size": 6259
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/c095216c2f8c40439d0142cd51dc0965.start.json",
+      "sha256": "sha256:2255fa0307db61ab4a4b5fc10f0b3b8eb94b5a7bc3f5a1ddae4df7f25bbdafe2",
+      "size": 1122
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/c095216c2f8c40439d0142cd51dc0965.terminal.json",
+      "sha256": "sha256:5e1958da1d3f335b20082f5006c5cf900cb601bd314a7282a6f71070fa102ca4",
+      "size": 2980
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/c11d1c084b5845f28ac32c04610f3983.start.json",
+      "sha256": "sha256:a277da2e655faaa11cc58057417b6e7e31d72e6fc76ac3ede1c6a926244a38e7",
+      "size": 1114
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/c11d1c084b5845f28ac32c04610f3983.terminal.json",
+      "sha256": "sha256:46a4526bb8bf06fae9a7eab0bbe409eee443985a29b64f5589838fafa40f1ce5",
+      "size": 2932
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/ca5bed35912b48ba84249005ab7a22be.start.json",
+      "sha256": "sha256:59db3455748804e52199f715cda3744f3345c2cfab17cbd3fb027fb770d8becb",
+      "size": 1076
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/ca5bed35912b48ba84249005ab7a22be.terminal.json",
+      "sha256": "sha256:2b58463c126a80f30015da32a4f2f913104bfcb5bfbdd995f2c0ccf3f0ed19cd",
+      "size": 2770
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/d88259299d354343bddda35b2c322bd7.start.json",
+      "sha256": "sha256:420d29d3fd23941d4b6ab1a66e46972d52bf7668e9a15a05fbeaa53ecbec83ad",
+      "size": 1089
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/d88259299d354343bddda35b2c322bd7.terminal.json",
+      "sha256": "sha256:f25f05fa02e850ee837a2cc9b0f6dc3f655205f485b2d7500572808f929ccf34",
+      "size": 2898
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/d98047a8c06f4ce596f9a8e3f1ab7255.start.json",
+      "sha256": "sha256:77ceca0deed188339ce4ecc18749c7ce406821bbb3b82cb05fc0f181b19ff791",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/d98047a8c06f4ce596f9a8e3f1ab7255.terminal.json",
+      "sha256": "sha256:7808373dd2cd584fc5ce044f47a28ea6224e9344e3f97d4e8b871004f30ac29f",
+      "size": 3738
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/da20552b9fc446cf9c0fde2b15b34cf3.start.json",
+      "sha256": "sha256:fd672131a3eba8207f69e04d38bd98fb923c88ce5a587c772719af429faf876d",
+      "size": 1121
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/da20552b9fc446cf9c0fde2b15b34cf3.terminal.json",
+      "sha256": "sha256:08390480632c7355bbfcbfa9f2bdf428d258f2300cd506aef7183eb18fde06ef",
+      "size": 6259
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/df495b02101744b08f49963885d2e8e8.start.json",
+      "sha256": "sha256:d48986cee21b2bac2ed9afb35397603f091fa6f3000c436f467a06da5e79d06d",
+      "size": 1119
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/df495b02101744b08f49963885d2e8e8.terminal.json",
+      "sha256": "sha256:12fe93651f68afd352c4667c238eb04ef64c87e571b85d602a7af353c4deacfb",
+      "size": 3240
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/e448e622365141ad9be359d89c3b5e37.start.json",
+      "sha256": "sha256:7eae500e35295ccae590459d88500b97be137e2acdc64e6e684e11b42fe9da9f",
+      "size": 1119
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/e448e622365141ad9be359d89c3b5e37.terminal.json",
+      "sha256": "sha256:fd1524fa81febb92c5d959849e450bb72abd10b7907721f260497fafa4ea7264",
+      "size": 3887
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/f9bd3b067d33473cb67c73bbfc1ac163.start.json",
+      "sha256": "sha256:1d826ace7c8878489a908c5f5f9dd5a79a01660ed0c6d7dfcd6d15000745aec9",
+      "size": 1123
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/attempts/f9bd3b067d33473cb67c73bbfc1ac163.terminal.json",
+      "sha256": "sha256:c0c2f16a3d66778f4914652591c3800c0da6e7430edfc419eccd2ae3e6dd1f88",
+      "size": 3241
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/authority/agent-proposal.json",
+      "sha256": "sha256:f776d2b629cd9f8983625ff474b3bdd2190c620038f47bfddaac7938af351c1c",
+      "size": 456627
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/proposal.json",
+      "sha256": "sha256:f776d2b629cd9f8983625ff474b3bdd2190c620038f47bfddaac7938af351c1c",
+      "size": 456627
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:6e08b68c4630a1aa80e4bb5b95b12089ec0b4f4c05b00f9d07e0c44e388f21c4"
+      ],
+      "findings": [],
+      "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/request.json",
+      "sha256": "sha256:6e08b68c4630a1aa80e4bb5b95b12089ec0b4f4c05b00f9d07e0c44e388f21c4",
+      "size": 1219298
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:a951db7973ff14c6e8ed3dae530c4c34b6c88608ea681bdb69e5c024c3f70ca4"
+      ],
+      "findings": [],
+      "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/response.json",
+      "sha256": "sha256:a951db7973ff14c6e8ed3dae530c4c34b6c88608ea681bdb69e5c024c3f70ca4",
+      "size": 457992
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/validation.json",
+      "sha256": "sha256:a0e955c0a819d8717fbf7ed8f35836037db6d372cc9cb491d918ddba7319fa1b",
+      "size": 3873
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/authority/host-outcome.json",
+      "sha256": "sha256:7b31fc8ddfbfb6e02e7b8a106db8b50085c1140a72cc1a29cf95a7e8d6f448bc",
+      "size": 244
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/authority/request.json",
+      "sha256": "sha256:6e08b68c4630a1aa80e4bb5b95b12089ec0b4f4c05b00f9d07e0c44e388f21c4",
+      "size": 1219298
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/authority/submission.json",
+      "sha256": "sha256:e8c3a98559a53a6c937b479417a6c500d66c2c30242b5162b1680b882009b80c",
+      "size": 401
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/config.json",
+      "sha256": "sha256:44985ebc099e94d447960c610a09f94f8b973bd6ea41275bc7746853ca6c2be0",
+      "size": 2467
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/host-events.jsonl",
+      "sha256": "sha256:95c81d94a862d54629c0559da337569539cafb3f7566ea7b308e26b004d1e883",
+      "size": 1396345
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/host-invocation.json",
+      "sha256": "sha256:fa81064d4346328033fdea224cb234ac8fdc4dc3e767d76839f9c4f84956f966",
+      "size": 1633
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/host-prompt.txt",
+      "sha256": "sha256:c9f5df18f1c7c69220fc76e574d085b7d22f8a8cc2df6568f6ae03c5e02da6a4",
+      "size": 865
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/host-stderr.txt",
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/outcome.json",
+      "sha256": "sha256:3de9bc19b512e78cd6e54786d4eaf99e040f8d092a84dc72d1d4273e1e73f521",
+      "size": 443
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/prior-inspection.json",
+      "sha256": "sha256:1ddef0c59f9f6e7ac1849a0f2dd33c70bc07bfb741423a576b7ff559e707b879",
+      "size": 2338
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/recomputation.json",
+      "sha256": "sha256:3af83145d528e46d2db16231725232f0ba5b91b24c42e191dd7d8b626a3292cf",
+      "size": 283
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/agent-proposal.json",
+      "sha256": "sha256:5958c09eb4e8739f4856645f1b2bfea72482ae6b143b3f0682323334031ec637",
+      "size": 5481
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/exchanges/98e1a66cbbc54c00bafca1de38d41a1c/proposal.json",
+      "sha256": "sha256:5958c09eb4e8739f4856645f1b2bfea72482ae6b143b3f0682323334031ec637",
+      "size": 5481
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:3f78047023c683e3b9797f9700bf8ed0a3ffa0461f9ede2e70c4e09851ae2485"
+      ],
+      "findings": [],
+      "path": "analysis/reconciliation/exchanges/98e1a66cbbc54c00bafca1de38d41a1c/request.json",
+      "sha256": "sha256:3f78047023c683e3b9797f9700bf8ed0a3ffa0461f9ede2e70c4e09851ae2485",
+      "size": 23710
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e56adf10a34edd86821df6e22d8b7d5334de1bdd98f3055bd2efbbf3eacb0ab5"
+      ],
+      "findings": [],
+      "path": "analysis/reconciliation/exchanges/98e1a66cbbc54c00bafca1de38d41a1c/response.json",
+      "sha256": "sha256:e56adf10a34edd86821df6e22d8b7d5334de1bdd98f3055bd2efbbf3eacb0ab5",
+      "size": 6824
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/exchanges/98e1a66cbbc54c00bafca1de38d41a1c/validation.json",
+      "sha256": "sha256:fd754d41634d874743e2b62247602c7e226aa7cb0502820ebf778f28ec5c2632",
+      "size": 5596
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/host-events.jsonl",
+      "sha256": "sha256:d16f3fe2ca4c0a11998cc1d9b133a6644668f5d3732a400ad652635c04a02f93",
+      "size": 1227609
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/host-invocation.json",
+      "sha256": "sha256:a3719e181d8eb7665655a03a058d3c13e1c9854a76457f529fffd09f9b6774f6",
+      "size": 1608
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/host-outcome.json",
+      "sha256": "sha256:da3f2683b3c1471b9749899d2d36183890717ad0170d60794e15a5953118403d",
+      "size": 242
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/host-prompt.txt",
+      "sha256": "sha256:a941953c26a06a3463a97a132d68342b7b76fba7358f13ec335c4fb364d9319c",
+      "size": 883
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/host-stderr.txt",
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/request.json",
+      "sha256": "sha256:3f78047023c683e3b9797f9700bf8ed0a3ffa0461f9ede2e70c4e09851ae2485",
+      "size": 23710
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/reconciliation/submission.json",
+      "sha256": "sha256:2b4d5bd9ba3c6ace7e6008d12af707623c2170a5d7ce44e1169c5629a4e6c06f",
+      "size": 411
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/request.json",
+      "sha256": "sha256:6e08b68c4630a1aa80e4bb5b95b12089ec0b4f4c05b00f9d07e0c44e388f21c4",
+      "size": 1219298
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/run-context.json",
+      "sha256": "sha256:5e3d413b58576aeb2c42b2e1f4f3f0b449986b84429591f122b3f25927e57cac",
+      "size": 286
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "analysis/stage-fingerprints.json",
+      "sha256": "sha256:e8a02baa59278740a5d8ce908259f9b15b59bff7d13dbfbf0fdaaf7e7c0e7ede",
+      "size": 1579
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:cd15a63b346dccfb2ad400eacfaa86ea047107c6444b55bd01b57b0748664fd7"
+      ],
+      "findings": [],
+      "path": "compliance-brief.md",
+      "sha256": "sha256:cd15a63b346dccfb2ad400eacfaa86ea047107c6444b55bd01b57b0748664fd7",
+      "size": 177446
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d"
+      ],
+      "findings": [],
+      "path": "config/review.example.json",
+      "sha256": "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d",
+      "size": 2453
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:9ae567ea18b5fc5a08d07f7b4d432364fd4dbd40d60ed470831cd6ecae27868c"
+      ],
+      "findings": [],
+      "path": "impact-register.csv",
+      "sha256": "sha256:9ae567ea18b5fc5a08d07f7b4d432364fd4dbd40d60ed470831cd6ecae27868c",
+      "size": 15090
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+      ],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/SKILL.md",
+      "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd",
+      "size": 4397
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc"
+      ],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/authority-policy.md",
+      "sha256": "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc",
+      "size": 6307
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e02f2b4644bcfb70a84b91ea5e6c8cf093d6d64e7c393be373d3f7e52d61603e"
+      ],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/contracts.md",
+      "sha256": "sha256:e02f2b4644bcfb70a84b91ea5e6c8cf093d6d64e7c393be373d3f7e52d61603e",
+      "size": 20844
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/export-model.md",
+      "sha256": "sha256:2e217b14f633c631d19b14b2ce04085c7d14f9138c24cd9acfe44c257a8af07c",
+      "size": 5336
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/field-dictionary.json",
+      "sha256": "sha256:596e4ad60f96c12826c6b76d9c25e2a395e6ff98e9037eb84fd3f8575eb88afc",
+      "size": 12071
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/g3-fact-and-impact-contract.md",
+      "sha256": "sha256:80c622ad3c0b833384d2c22fbeda216480d6dfc1043dc203bc0faaab11939037",
+      "size": 9487
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/history-recovery.md",
+      "sha256": "sha256:040178895ed4240e27d0e70ed19fab557d4e213a23dc28545aaf26fd1823bc72",
+      "size": 7647
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/impacts.md",
+      "sha256": "sha256:27b8f633079c7cd7ccbe7ed1bba4b5d89a7124e9dd42e8725d9a4478020f340f",
+      "size": 2729
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/interpretation.md",
+      "sha256": "sha256:95a9d42043637d3fd0ebb0af97b22dad1e789f0aac837072e9f2780b6054a48d",
+      "size": 2318
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/operations.md",
+      "sha256": "sha256:0cf757ee4633c06ab106327f4a9773110d262e5f7553407a2771ea53ac234fcb",
+      "size": 2305
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:cc43744da27ed514fa22d61718b5981ac6c1c7c5ac2748615e853cfedfad27d9"
+      ],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/reconciliation.md",
+      "sha256": "sha256:cc43744da27ed514fa22d61718b5981ac6c1c7c5ac2748615e853cfedfad27d9",
+      "size": 6895
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/review-protocol.md",
+      "sha256": "sha256:eda71d74ea43ac80c062cc156efc3e913b8cf6fccadf80a1a28a0f89d43b68b1",
+      "size": 4835
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:df9a051da2f2c0ba2f3f26635a549e6b7bb4ad131e8bc3ea07b0de3c05e7849c"
+      ],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/authority-basis.schema.json",
+      "sha256": "sha256:df9a051da2f2c0ba2f3f26635a549e6b7bb4ad131e8bc3ea07b0de3c05e7849c",
+      "size": 5516
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/capture-accounting.schema.json",
+      "sha256": "sha256:746512e10d2c833bb1a8c4b84acdebfd01514ebcab9702f6123c846c6be63be4",
+      "size": 3536
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/contracts.schema.json",
+      "sha256": "sha256:946d7fa46c18373f01313e1c2aab7b48b25b296527cbae0cf138f31f9c8915ec",
+      "size": 85907
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/field-dictionary.schema.json",
+      "sha256": "sha256:a2e1631a124bf9a900f7056b66e8cc6661f6883e00d565e780c87020440740b4",
+      "size": 12884
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/linked-reports.schema.json",
+      "sha256": "sha256:7cabdc6c718272fdd4a941b09f065b7ed1f78fba25bc5df0ffb91cc7b6725ba9",
+      "size": 2087
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/normalized-values.schema.json",
+      "sha256": "sha256:3be5bf8c25559ed5d3d63139be581d4bc680ac0644aeef40438c82d95d72313b",
+      "size": 10590
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/reconciliation-accounting.schema.json",
+      "sha256": "sha256:f6adc5d994ba1b34f1eb875f033e61612733b8ef2ca7afa8c7abce8417b45154",
+      "size": 16089
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:8b82033bd0ece493670b81cf99b1675e535a808294c8a20958ca0d2ee5aefee7"
+      ],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/reconciliation-basis.schema.json",
+      "sha256": "sha256:8b82033bd0ece493670b81cf99b1675e535a808294c8a20958ca0d2ee5aefee7",
+      "size": 6879
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/runtime-config.schema.json",
+      "sha256": "sha256:44c3d3c33c3ec9d458b9c6c714abd69c4961b6b353e0d97ac8310b8703018255",
+      "size": 2187
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/runtime-proposal.schema.json",
+      "sha256": "sha256:6a58105d8221edacba53a97aad08be213490974e3b7391d7cdfd1ab1421f6ea0",
+      "size": 627
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/scope-input.schema.json",
+      "sha256": "sha256:e915a869a89efe35d72ee0de358f71bde9ff16d63f20594f0d6a56b0b49d6b0a",
+      "size": 721
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/references/schemas/u08-capture-accounting.schema.json",
+      "sha256": "sha256:8e9e51e86a5466a18b9414d02f9aded76a3c5db78f38dc23c6ecc92028ba1559",
+      "size": 3567
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/check_sources.py",
+      "sha256": "sha256:f01124cda4186ebf4b0ac0e52d71ca4cab1baa7d27e4e5be2fdaaed04d2e6142",
+      "size": 3485
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/__init__.py",
+      "sha256": "sha256:117d1704925e3c98c7e9c17ed0147735abcf3ab239d0d7de04da621350764caf",
+      "size": 62
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/actions.py",
+      "sha256": "sha256:43d5f77e13fb619b185f33da6de0b49aa81a82c33454dc4f99768164d4b0298e",
+      "size": 20689
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/adapters/__init__.py",
+      "sha256": "sha256:2c7799ce7bff9a7588a7cf0ec7d9c7329c5d35028a3b615bd02384ca2d690ced",
+      "size": 144
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/adapters/anonymous_sheets.py",
+      "sha256": "sha256:310193522858e89ed386eea2d23b0fee167e6353ce675237b5d6c1699ecf382f",
+      "size": 9148
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/adapters/readiness.py",
+      "sha256": "sha256:b9fdaf39b51fa809707a5c9abeafe2e249126662f6b11d8dc621deda3c71dca9",
+      "size": 4656
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/adapters/reads.py",
+      "sha256": "sha256:55c0d6430db9a4893de632ec429f747d37439b40b6a54f6dcb079f49ff112b12",
+      "size": 14848
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/adapters/reports.py",
+      "sha256": "sha256:5ef5b305785add667db0a96ba5661e73fbef1cacf85d96693260949401604842",
+      "size": 8563
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/authority.py",
+      "sha256": "sha256:956ca15fbc2d104d44c11bc7233af49aa9142c52d7c5ab22b820f24038fb353e",
+      "size": 29041
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/contracts.py",
+      "sha256": "sha256:be32297f45c014c55b1b8a5ed830fa8fcd0714c3dde2679efe70b217f94bc367",
+      "size": 16140
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/evidence.py",
+      "sha256": "sha256:bc9529b917ca176361fa764ce79993e76c5bbc3290e3ad1963f03fef492f7202",
+      "size": 19044
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/history.py",
+      "sha256": "sha256:2a27c5c0e505a1546b0de6983cf70643376aa4f2f3b5310a8a5dafc62db4f606",
+      "size": 12094
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/ids.py",
+      "sha256": "sha256:1c614f704237365ddf652ff6470c2447eb53166c7054662102f5dfb46ae982e2",
+      "size": 4724
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/impacts.py",
+      "sha256": "sha256:fd3ee8660b0c967299a54db923e2dc0903989c861f2d79110170a42fbf8c8768",
+      "size": 27253
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/interpretation.py",
+      "sha256": "sha256:bbd708ba22e8448e6445158e85a536f69783aed7cbb429cad41fbdbf46ade8e3",
+      "size": 12389
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/normalize.py",
+      "sha256": "sha256:4d673ddc6463357606981ecc95f46edf21366c41b9613dfd7baf7c5520efc1fe",
+      "size": 12040
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/pipeline.py",
+      "sha256": "sha256:f95e1e3b68a8a518aadca5c46730cb0fccf7cf3a36eec04fc3b185f824180432",
+      "size": 11192
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/reconcile.py",
+      "sha256": "sha256:e1d9e2de50ff899ad3794ffa0dc86ce603515a5fa060eac0cb7e8f1436c6b44b",
+      "size": 55538
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/recovery.py",
+      "sha256": "sha256:e89b887dea4b20230f99c1caa644c65181c84944e846ab9695e9575c2b46e058",
+      "size": 12449
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/__init__.py",
+      "sha256": "sha256:2900451eff6335908ce5fc4e2cd1d2acd8a7f14e33f7b299e2b8e23511d6d17d",
+      "size": 354
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/brief.py",
+      "sha256": "sha256:899b1be6298ca98c4819eebd787d3b755e44bf552f6ca83ca42dd1e60d0b6356",
+      "size": 9867
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/calendar.py",
+      "sha256": "sha256:2ffba4c2aec6e241aed1cbe95b371eacf56487083d167f1e575bf324896382f0",
+      "size": 1412
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/csv_register.py",
+      "sha256": "sha256:5c1259a6407dd4b5fab4578c9e341eda718af8e27ce7f6cc9223f85632f69419",
+      "size": 3012
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/reviews.py",
+      "sha256": "sha256:b59b79e4a945e71d023b8142f977e8fd52bf88679903d2b00f277cbe119c1365",
+      "size": 20938
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/runner.py",
+      "sha256": "sha256:f03359620ba12ddefc49e7105dd32db90540022d64ed19806237e2f6d62c796d",
+      "size": 30385
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/runtime.py",
+      "sha256": "sha256:81cda5192a7360ec2f6468baedc82eac6b0f83d005f86625c76199ab7eb9f0c9",
+      "size": 11768
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+      "sha256": "sha256:a9b14e8ebed869dbdc4cc0952ed36eba1468bb28246559f09be7e28f2b7ff2e0",
+      "size": 40677
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/source_manifest.py",
+      "sha256": "sha256:9b0207d2122d961e4ff2067e6456a51a09c15139b22e3219e206390f9df970c3",
+      "size": 2450
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/validate.py",
+      "sha256": "sha256:163c2ec41484ba78dfd181673df52419975b0f2ddafb464e8715f2589257efb2",
+      "size": 22404
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/rci/validation_cache.py",
+      "sha256": "sha256:2a8a8017b9e65e8332e6196def0da8072587ef9056e635091b0f7044a8cf404a",
+      "size": 1665
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/run.py",
+      "sha256": "sha256:4a1531911593059cbc6c5018f97f1347cb27fa90a3dd0546a15fc9c767c86850",
+      "size": 3317
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "regulatory-change-impact-brief/scripts/stage.py",
+      "sha256": "sha256:e7e7902a35b3f4b90d2afa64cd68908d7acaba03acab10af47df243e2e1b177d",
+      "size": 4560
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "snapshot.schema.json",
+      "sha256": "sha256:8de9874ded18fa97294e83012796e4c386aa60ccfd30f8eca89cabdf2a267ac3",
+      "size": 7936
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:86a0da272f5a1ed2d3aee182a9398887e6880a5181c1ce5338610b739a0ff0ad"
+      ],
+      "findings": [],
+      "path": "snapshots/01-scope.json",
+      "sha256": "sha256:86a0da272f5a1ed2d3aee182a9398887e6880a5181c1ce5338610b739a0ff0ad",
+      "size": 5430
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:c7cb7ab9643e37b1c1f9844dd19b7c56ad621480875b43c7bc6fde9631cba9f0"
+      ],
+      "findings": [],
+      "path": "snapshots/02-source-capture.json",
+      "sha256": "sha256:c7cb7ab9643e37b1c1f9844dd19b7c56ad621480875b43c7bc6fde9631cba9f0",
+      "size": 1493562
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:5e88656cd3a83d039c452a3474e4a72c962f86ad7e8950c703f83982377b2ab8"
+      ],
+      "findings": [],
+      "path": "snapshots/03-authority-and-timing.json",
+      "sha256": "sha256:5e88656cd3a83d039c452a3474e4a72c962f86ad7e8950c703f83982377b2ab8",
+      "size": 24262
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:0784045f732c17f83f8f4fef715015115b0c2a0d9686c1d4d28095ce96fa3fa7"
+      ],
+      "findings": [],
+      "path": "snapshots/04-evidence-reconciliation.json",
+      "sha256": "sha256:0784045f732c17f83f8f4fef715015115b0c2a0d9686c1d4d28095ce96fa3fa7",
+      "size": 926088
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:6f5ce01258f397d892f60f19ba53e69ebe56afae3460b2006a2fa361fc01d163"
+      ],
+      "findings": [],
+      "path": "snapshots/05-impact-analysis.json",
+      "sha256": "sha256:6f5ce01258f397d892f60f19ba53e69ebe56afae3460b2006a2fa361fc01d163",
+      "size": 151237
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:5bbef87ee74dcd287a9943f021a3179fa9d563e6b56cf9fff78b3c9fa7be8f05"
+      ],
+      "findings": [],
+      "path": "snapshots/06-actions-and-approvals.json",
+      "sha256": "sha256:5bbef87ee74dcd287a9943f021a3179fa9d563e6b56cf9fff78b3c9fa7be8f05",
+      "size": 2926423
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [],
+      "findings": [],
+      "path": "snapshots/07-publication-validation.json",
+      "sha256": "sha256:94b0591ff878125fb1ed84e7a322dd047396f6a21fac6175e36e89b7006bdfe3",
+      "size": 83420
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:92abfea598c60abf3e5f360e1dea2be8eece2c50f510bab8ffdbb6891cd73b3b"
+      ],
+      "findings": [],
+      "path": "sources/1259f91dd2bb48bba45baac3080d87ba.bin",
+      "sha256": "sha256:92abfea598c60abf3e5f360e1dea2be8eece2c50f510bab8ffdbb6891cd73b3b",
+      "size": 297
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:66b880c1aefffaad87d9f7f7d13d6a98a5bc410a16d0403e600484f14d36e042"
+      ],
+      "findings": [],
+      "path": "sources/15ae719c1b5e462fa4d946d9bb91d920.bin",
+      "sha256": "sha256:66b880c1aefffaad87d9f7f7d13d6a98a5bc410a16d0403e600484f14d36e042",
+      "size": 249351
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:c7286348ce1950144daf72e4ef61b23503d38844e4655d04d427e6ba911a9c78"
+      ],
+      "findings": [],
+      "path": "sources/1c3a4a4923be47a580c2024f2771b12b.bin",
+      "sha256": "sha256:c7286348ce1950144daf72e4ef61b23503d38844e4655d04d427e6ba911a9c78",
+      "size": 609321
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:85fd4c6b60042f1f81947614ba530eca308e9d1a7a64e79dcf054215cb921f1a"
+      ],
+      "findings": [],
+      "path": "sources/1c3a4a4923be47a580c2024f2771b12b.legal.txt",
+      "sha256": "sha256:85fd4c6b60042f1f81947614ba530eca308e9d1a7a64e79dcf054215cb921f1a",
+      "size": 157029
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "findings": [],
+      "path": "sources/2f71707fd1c244f49e5ae8da9677f2b8.bin",
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "findings": [],
+      "path": "sources/40e10c7d3316446f830681bc50340bf9.bin",
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "findings": [],
+      "path": "sources/422cea902b2e47ff923779c0e98e76e3.bin",
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b"
+      ],
+      "findings": [],
+      "path": "sources/51133f358c534890946b3d1547ffe08b.bin",
+      "sha256": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b",
+      "size": 1708
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb"
+      ],
+      "findings": [],
+      "path": "sources/6fee72810afd4fbdab7958be7ecfa522.bin",
+      "sha256": "sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+      "size": 293
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:88341daf60d03cef1dd949ca865a6f3766b54f6c79882645bf06d0c6ea0348e4"
+      ],
+      "findings": [],
+      "path": "sources/780f63e16d444eeea63f7ceeb7ef7a98.bin",
+      "sha256": "sha256:88341daf60d03cef1dd949ca865a6f3766b54f6c79882645bf06d0c6ea0348e4",
+      "size": 255288
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:3ee41179bc474f2291bf883bb28d4b63a7fc637d986ed554bacbd4da95f8dc75"
+      ],
+      "findings": [],
+      "path": "sources/823e8e0864ea44d6b0d0125040b5cb4b.bin",
+      "sha256": "sha256:3ee41179bc474f2291bf883bb28d4b63a7fc637d986ed554bacbd4da95f8dc75",
+      "size": 20056
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:5b7688aec6a4d66a7ba3751182841e64b3274d010ecbb2cbe77c7ad5a36cce26"
+      ],
+      "findings": [],
+      "path": "sources/823e8e0864ea44d6b0d0125040b5cb4b.policy.txt",
+      "sha256": "sha256:5b7688aec6a4d66a7ba3751182841e64b3274d010ecbb2cbe77c7ad5a36cce26",
+      "size": 88
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:6ce5462c3616b9eacac82c695cea7a7302d4b27d0557e148fe3e76f940e4f186"
+      ],
+      "findings": [],
+      "path": "sources/8502670b407f4d88b184c689e08d6273.bin",
+      "sha256": "sha256:6ce5462c3616b9eacac82c695cea7a7302d4b27d0557e148fe3e76f940e4f186",
+      "size": 255313
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:2ff887345ec2fd4f50481ec201a0a129e07e226e31678c64611bcc864ce8b8e8"
+      ],
+      "findings": [],
+      "path": "sources/9de475942a9d494aabaf3e1696cb0c8c.bin",
+      "sha256": "sha256:2ff887345ec2fd4f50481ec201a0a129e07e226e31678c64611bcc864ce8b8e8",
+      "size": 249379
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:d4dc8587ba219b723bd42e21fc49e3b7cff6883fe39f52b3c439b1e0d78ddd37"
+      ],
+      "findings": [],
+      "path": "sources/aac479ed5b5b4430a5f92ca87a4c3c70.bin",
+      "sha256": "sha256:d4dc8587ba219b723bd42e21fc49e3b7cff6883fe39f52b3c439b1e0d78ddd37",
+      "size": 251531
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:c6f8c10578680b93431d8dde460ebfe6fee81efc75b3bf31ebb1c414d0cf7916"
+      ],
+      "findings": [],
+      "path": "sources/c095216c2f8c40439d0142cd51dc0965.bin",
+      "sha256": "sha256:c6f8c10578680b93431d8dde460ebfe6fee81efc75b3bf31ebb1c414d0cf7916",
+      "size": 76034
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e683f87a0f43465c949944b2f08a0218f60a630001e15b8b2a0069ae654bb5fa"
+      ],
+      "findings": [],
+      "path": "sources/c095216c2f8c40439d0142cd51dc0965.legal.txt",
+      "sha256": "sha256:e683f87a0f43465c949944b2f08a0218f60a630001e15b8b2a0069ae654bb5fa",
+      "size": 18365
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:28f0a7b623182b2f16da79dca8b628b5ef10233a0bcb8def1f83da0a8a231127"
+      ],
+      "findings": [],
+      "path": "sources/c11d1c084b5845f28ac32c04610f3983.bin",
+      "sha256": "sha256:28f0a7b623182b2f16da79dca8b628b5ef10233a0bcb8def1f83da0a8a231127",
+      "size": 36227
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:4f15fce2374fa3e3c0d1dcf3c9d8b6c591ac16499e1563baf6f581d80bf8fb5b"
+      ],
+      "findings": [],
+      "path": "sources/c11d1c084b5845f28ac32c04610f3983.legal.txt",
+      "sha256": "sha256:4f15fce2374fa3e3c0d1dcf3c9d8b6c591ac16499e1563baf6f581d80bf8fb5b",
+      "size": 2689
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:cc09d2680ca10291b9daf0fedee36d6c92990594ef6c418a4156ef6bf86ad0b1"
+      ],
+      "findings": [],
+      "path": "sources/ca5bed35912b48ba84249005ab7a22be.bin",
+      "sha256": "sha256:cc09d2680ca10291b9daf0fedee36d6c92990594ef6c418a4156ef6bf86ad0b1",
+      "size": 1534704
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:81d2073b3b8aac51cd3062c9f21acf86d596cb77b30c8223031b20019929d7f0"
+      ],
+      "findings": [],
+      "path": "sources/ca5bed35912b48ba84249005ab7a22be.legal.txt",
+      "sha256": "sha256:81d2073b3b8aac51cd3062c9f21acf86d596cb77b30c8223031b20019929d7f0",
+      "size": 596334
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:dd09700d18616b9ff9e6bb6a667d6fb0a2173755ab9e46be1039baf77474acaf"
+      ],
+      "findings": [],
+      "path": "sources/d88259299d354343bddda35b2c322bd7.bin",
+      "sha256": "sha256:dd09700d18616b9ff9e6bb6a667d6fb0a2173755ab9e46be1039baf77474acaf",
+      "size": 89453
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:ce5d92aeeb2bf740c9f0520f00dae05e169aba840ab5d2a034ee423df06a849f"
+      ],
+      "findings": [],
+      "path": "sources/d88259299d354343bddda35b2c322bd7.legal.txt",
+      "sha256": "sha256:ce5d92aeeb2bf740c9f0520f00dae05e169aba840ab5d2a034ee423df06a849f",
+      "size": 16118
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013"
+      ],
+      "findings": [],
+      "path": "sources/d98047a8c06f4ce596f9a8e3f1ab7255.bin",
+      "sha256": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013",
+      "size": 1125
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:2fb55ea3285ad807a451988381ce9b396e07a2b05c00f9cf38c74bdaf3c14a6e"
+      ],
+      "findings": [],
+      "path": "sources/da20552b9fc446cf9c0fde2b15b34cf3.bin",
+      "sha256": "sha256:2fb55ea3285ad807a451988381ce9b396e07a2b05c00f9cf38c74bdaf3c14a6e",
+      "size": 251516
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ],
+      "findings": [],
+      "path": "sources/df495b02101744b08f49963885d2e8e8.bin",
+      "sha256": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968"
+      ],
+      "findings": [],
+      "path": "sources/e448e622365141ad9be359d89c3b5e37.bin",
+      "sha256": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+      "size": 1834
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:92887f9905e43a96fc6ffd26e440614e97bff9d37225e110930056c7252b8377"
+      ],
+      "findings": [],
+      "path": "sources/f9bd3b067d33473cb67c73bbfc1ac163.bin",
+      "sha256": "sha256:92887f9905e43a96fc6ffd26e440614e97bff9d37225e110930056c7252b8377",
+      "size": 1104686
+    },
+    {
+      "availability": "present",
+      "expected_sha256": [
+        "sha256:583c5655874a0744aac522d38fb740303f2f91cd689265d6f1af804503edfe35"
+      ],
+      "findings": [],
+      "path": "sources/f9bd3b067d33473cb67c73bbfc1ac163.legal.txt",
+      "sha256": "sha256:583c5655874a0744aac522d38fb740303f2f91cd689265d6f1af804503edfe35",
+      "size": 399375
+    }
+  ],
+  "occurrence": false,
+  "reference_resolution": "archive-root-relative",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "rci-history-inventory/1"
+}

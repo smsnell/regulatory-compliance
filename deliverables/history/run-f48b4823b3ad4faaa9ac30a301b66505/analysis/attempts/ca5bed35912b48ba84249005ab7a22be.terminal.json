@@ -1,0 +1,65 @@
+{
+  "attempt": {
+    "adapter": "http-read",
+    "attempt_key": "ca5bed35912b48ba84249005ab7a22be",
+    "content": "full",
+    "content_hash": "sha256:cc09d2680ca10291b9daf0fedee36d6c92990594ef6c418a4156ef6bf86ad0b1",
+    "content_type": "text/html; charset=UTF-8",
+    "content_type_known": true,
+    "date_suitability": "unresolved",
+    "effective_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:962a10174c5c4358b0391374bc673b24",
+    "identity_check": "verified",
+    "local_reference": "sources/ca5bed35912b48ba84249005ab7a22be.bin",
+    "original_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng",
+    "outcome": "HTTP 200",
+    "record_type": "attempt",
+    "recoverable_failure": null,
+    "retrieval_status": "retrieved",
+    "retrieved_at": "2026-10-10T18:41:30.206210Z",
+    "selected": false,
+    "selection_reason": "Retained for identity/access review; downstream selection deferred",
+    "source_id": "OJ",
+    "started_at": "2026-10-10T18:41:28.613111Z",
+    "summary": "Read attempt for OJ",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": null,
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": null,
+      "identity_reason": "Returned title and visible document content match requested source",
+      "last_modified": null,
+      "returned_identity": {
+        "document_id": "2024/1689",
+        "tabs": null,
+        "title": "Regulation - EU - 2024/1689 - EN - EUR-LexLog inEnglish"
+      },
+      "version": null
+    }
+  },
+  "capture": {
+    "attempt_id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:962a10174c5c4358b0391374bc673b24",
+    "content_hash": "sha256:cc09d2680ca10291b9daf0fedee36d6c92990594ef6c418a4156ef6bf86ad0b1",
+    "content_type": "text/html; charset=UTF-8",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:a90e54d2e3ed490c8a7512a9f1e75abb",
+    "local_reference": "sources/ca5bed35912b48ba84249005ab7a22be.bin",
+    "record_type": "capture",
+    "representation": "full",
+    "representation_metadata": {
+      "content_encoding": null,
+      "method": "HTTP GET decoded response body",
+      "permission": "Authorized source route read and local evidence retention",
+      "redirect_target": null,
+      "requested_locator": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng"
+    },
+    "summary": "Retained representation for OJ"
+  },
+  "diagnostic": null,
+  "phase": "terminal",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "rci-attempt-journal/1"
+}

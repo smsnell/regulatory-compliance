@@ -1,0 +1,91 @@
+{
+  "basis": "synthetic; public launcher with controlled transport and deterministic interpretation helpers",
+  "root": ".evidence/u20/suite/test_public_run_changed_source0/out",
+  "current_outcome": {
+    "candidate": "out/.staging/run-f4093a54b29a4593a2c05e267892c9a7",
+    "missing_artifacts": [],
+    "missing_snapshots": [],
+    "package_acceptance": true,
+    "production_package": true,
+    "publication_status": "validated",
+    "reason": "Seven-stage draft; review requests await authorized humans.",
+    "run_id": "run-f4093a54b29a4593a2c05e267892c9a7",
+    "status": "partial",
+    "supersedes_run_id": "run-28edfa7e79ae460fbf3916b3b3276e0a"
+  },
+  "recomputation": {
+    "current_file_inspection_required": true,
+    "earliest_changed_sequence": null,
+    "earliest_changed_stage": null,
+    "fresh_source_attempts_required": true,
+    "reason": "substantive stage bases unchanged",
+    "recompute_sequences": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "prior_inspection": {
+    "path": ".evidence/u20/suite/test_public_run_changed_source0/out/analysis/prior-inspection.json",
+    "sha256": "sha256:cae1b04f384874d3e41f3315c7b879249ee5e97e9da73a86342d0850d5c34be7",
+    "accepted": false,
+    "run_id": "run-28edfa7e79ae460fbf3916b3b3276e0a",
+    "inventory_counts": {
+      "present": 188,
+      "corrupt": 1
+    },
+    "damaged_or_missing": [
+      {
+        "availability": "corrupt",
+        "expected_sha256": [
+          "sha256:75a32193a5c7301eac912a5d3049d87f112b780ed9929e961813386690ca04f5"
+        ],
+        "findings": [
+          "retained bytes/hash mismatch"
+        ],
+        "path": "compliance-brief.md",
+        "sha256": "sha256:d8235cafdf8995a8a497a8344dc2960cdc36e366cac3f0b1561c17788dcb75bc",
+        "size": 75
+      }
+    ]
+  },
+  "archives": [
+    {
+      "run_id": "run-28edfa7e79ae460fbf3916b3b3276e0a",
+      "files_rehashed": 189,
+      "manifest_sha256": "sha256:f97df25b61382b73106579a6b51a7770d131f55be85bb7486452f16861d1e6c3",
+      "damaged_or_missing": [
+        {
+          "availability": "corrupt",
+          "expected_sha256": [
+            "sha256:75a32193a5c7301eac912a5d3049d87f112b780ed9929e961813386690ca04f5"
+          ],
+          "findings": [
+            "retained bytes/hash mismatch"
+          ],
+          "path": "compliance-brief.md",
+          "sha256": "sha256:d8235cafdf8995a8a497a8344dc2960cdc36e366cac3f0b1561c17788dcb75bc",
+          "size": 75
+        }
+      ],
+      "brief_sha256": "sha256:d8235cafdf8995a8a497a8344dc2960cdc36e366cac3f0b1561c17788dcb75bc"
+    },
+    {
+      "run_id": "run-90bf67ca580041fc955ecaf03ec1355f",
+      "files_rehashed": 189,
+      "manifest_sha256": "sha256:098a6f2d5631f19d6fad4ccbcdb40b0f1973f2e660b68b61148bf5c495303479",
+      "damaged_or_missing": [],
+      "brief_sha256": "sha256:23c8843b4688ce8b455850f9988e0317114d2ec5cdc7c24897d19097fee90399"
+    }
+  ],
+  "current_artifacts": {
+    "impact-register.csv": "sha256:8aa71c115d999a28ee384ad73eeb6106743f0eb4b06ab562762ee87b67dacda8",
+    "compliance-brief.md": "sha256:29443ed79445a9727a49971430fa9f49ba320570539bc916288e21f8ba775aea",
+    "action-calendar.ics": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+  },
+  "manual_observation": "Both prior archives rehashed against their own roots. The changed-source occurrence preserves the deliberately corrupted brief; the new current package has new IDs and fresh attempts. Earlier intact archive remains unchanged."
+}

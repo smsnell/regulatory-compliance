@@ -1,0 +1,10 @@
+{
+  "request": {
+    "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/request.json",
+    "sha256": "sha256:6e08b68c4630a1aa80e4bb5b95b12089ec0b4f4c05b00f9d07e0c44e388f21c4"
+  },
+  "response": {
+    "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/response.json",
+    "sha256": "sha256:a951db7973ff14c6e8ed3dae530c4c34b6c88608ea681bdb69e5c024c3f70ca4"
+  }
+}

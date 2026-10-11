@@ -1,0 +1,26 @@
+{
+  "original_lineage": "verified with restricted originals",
+  "derivative_packages": "verified",
+  "packages": [
+    {
+      "root": "history/run-f48b4823b3ad4faaa9ac30a301b66505",
+      "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+      "status": "blocked",
+      "publication_status": "blocked",
+      "attempts": 22,
+      "captures": 29,
+      "unresolved_coverage": 56,
+      "review_requests": 2
+    },
+    {
+      "root": ".",
+      "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+      "status": "blocked",
+      "publication_status": "blocked",
+      "attempts": 22,
+      "captures": 26,
+      "unresolved_coverage": 8,
+      "review_requests": 2
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "checked_at": "2026-10-10T21:13:40.473819+00:00",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "predecessor_run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "outcome": {
+    "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+    "status": "blocked",
+    "publication_status": "blocked",
+    "reason": "Seven-stage draft; review requests await authorized humans.",
+    "production_package": true,
+    "package_acceptance": false,
+    "candidate": "deliverables/.staging/run-b38ca2b36e1044bbba572399b41bf5ae",
+    "supersedes_run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+    "missing_snapshots": [],
+    "missing_artifacts": []
+  },
+  "assigned_review_date": "2026-08-26",
+  "decision_counts_by_stage": [
+    3,
+    10,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "exported_decision_count": 14,
+  "decision_reconstruction_and_brief_propagation": "passed",
+  "current_producer_inventory_match": "passed",
+  "fresh_attempt_ids_disjoint_from_predecessor": "passed",
+  "mechanical_validation": "passed",
+  "archive_root": "deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505",
+  "archive_inventory_sha256": "sha256:85857d9602dcbabbbb1a4000f2d818d79914f5fa3cf51ace5434428a22838674",
+  "archive_hash_and_package_validation": "passed",
+  "preservation": {
+    "protected_file_count": 100903,
+    "preserved_in_predecessor_archive": 172,
+    "unchanged_at_original_path": 100731,
+    "changed_or_missing": []
+  },
+  "authority_blockers": [
+    {
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:b459178ba68947569c11a052cfd6372f",
+      "owner": "Legal",
+      "reason": "OJ: required authority/context source unavailable or unsuitable",
+      "record_type": "blocker",
+      "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+      "source_basis": [
+        "LAW",
+        "OJ",
+        "AMEND",
+        "CONSOLIDATED",
+        "TIME",
+        "FAQ"
+      ],
+      "summary": "OJ: required authority/context source unavailable or unsuitable"
+    },
+    {
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:8b633fc22a414a78acb48a58651d32bd",
+      "owner": "Legal",
+      "reason": "AMEND: required authority/context source unavailable or unsuitable",
+      "record_type": "blocker",
+      "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+      "source_basis": [
+        "LAW",
+        "OJ",
+        "AMEND",
+        "CONSOLIDATED",
+        "TIME",
+        "FAQ"
+      ],
+      "summary": "AMEND: required authority/context source unavailable or unsuitable"
+    },
+    {
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:45e1ac615d4348ec844ef14d38e6ce2c",
+      "owner": "Legal",
+      "reason": "CONSOLIDATED: required authority/context source unavailable or unsuitable",
+      "record_type": "blocker",
+      "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+      "source_basis": [
+        "LAW",
+        "OJ",
+        "AMEND",
+        "CONSOLIDATED",
+        "TIME",
+        "FAQ"
+      ],
+      "summary": "CONSOLIDATED: required authority/context source unavailable or unsuitable"
+    },
+    {
+      "evidence_ids": [],
+      "id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:03:blocker:9ba16d51f172457ab41637306874c024",
+      "owner": "Legal",
+      "reason": "No authority interpretation submitted; Legal must inspect captured sources",
+      "record_type": "blocker",
+      "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+      "source_basis": [
+        "LAW",
+        "OJ",
+        "AMEND",
+        "CONSOLIDATED",
+        "TIME",
+        "FAQ"
+      ],
+      "summary": "No authority interpretation submitted; Legal must inspect captured sources"
+    }
+  ],
+  "source_statuses": [
+    {
+      "source_id": "LAW",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/1b130db2945e4e1bae70fb6677dbd071.bin",
+      "content_hash": "sha256:dd09700d18616b9ff9e6bb6a667d6fb0a2173755ab9e46be1039baf77474acaf"
+    },
+    {
+      "source_id": "OJ",
+      "retrieval_status": "invalid",
+      "local_reference": "sources/a0cd77fbb3f7493888fd1dcb41dc45d3.bin",
+      "content_hash": "sha256:70d8b158d793d0e2a24a962fc367d720746d0f6b514ba6464625b58e03909138"
+    },
+    {
+      "source_id": "AMEND",
+      "retrieval_status": "invalid",
+      "local_reference": "sources/39c5b4e1e1704e838fba2512d4367979.bin",
+      "content_hash": "sha256:bc72694b0e8ac53f001a2a576971c9bef3767d93b6ed47d3f49fdaee06359cdd"
+    },
+    {
+      "source_id": "CONSOLIDATED",
+      "retrieval_status": "invalid",
+      "local_reference": "sources/0c15679a9aa34cf599a1f2249f938dbd.bin",
+      "content_hash": "sha256:ae35fa75bdf1280de60cf6119a17e052c2f303cd88a3844495ae07d673a18e4a"
+    },
+    {
+      "source_id": "TIME",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/20bead709a164e80b6af46fc2e3d3e45.bin",
+      "content_hash": "sha256:28f0a7b623182b2f16da79dca8b628b5ef10233a0bcb8def1f83da0a8a231127"
+    },
+    {
+      "source_id": "FAQ",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/b1456abcba774673a59ad7f830ca6d57.bin",
+      "content_hash": "sha256:5c205c9b6f71711037045e92a8ef192adc9944c9f82806b68ac0c5ebfe74be72"
+    },
+    {
+      "source_id": "POLICY",
+      "retrieval_status": "unverified",
+      "local_reference": "sources/4459c027a6074f9f88bd1fa1df6bf207.bin",
+      "content_hash": "sha256:ed565fb7849a8a64b87ccdc2eb08b5a4ebeef9ac63f220602b5f79820e694bef"
+    },
+    {
+      "source_id": "SYSTEMS",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/098718c066874eee8f5eaa561b60c4f9.bin",
+      "content_hash": "sha256:bf9b88edc171156094003ed8644d459a6a16febf97359fea14bd0e0a19b76dd7"
+    },
+    {
+      "source_id": "EVIDENCE",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/eba44a84b7df47e4a241ac11d1bbbcb7.bin",
+      "content_hash": "sha256:f89135712b1219735176ac19770f2f159adad7100b44a6e762630916530fb33f"
+    },
+    {
+      "source_id": "CALENDAR",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/f9b436533cb94cab9def3ef60c892f44.bin",
+      "content_hash": "sha256:4430757a73d070676ce22e7d34b3ecb632820d7c2000debd0545ee605079f5c0"
+    }
+  ],
+  "csv_rows": 8,
+  "calendar_events": 0,
+  "supported_impacts": 0,
+  "proposed_actions": 0,
+  "review_request_count": 2,
+  "snapshots": {
+    "snapshots/01-scope.json": "sha256:0a32df637301772a40a104add1106ce998cdbe1b585755fcd7fbfa44be451812",
+    "snapshots/02-source-capture.json": "sha256:37d68335213bbdc6e559c7848525d37202bd48e04854cb35f01a4b5a50231efe",
+    "snapshots/03-authority-and-timing.json": "sha256:69d780d097191aa1b49161d7f943d13cf47e1a31e846b5edb8c6d7612c601953",
+    "snapshots/04-evidence-reconciliation.json": "sha256:a6ee45fe72081b8e78e063eb72fdcfb49759691e3ea7fdcde37fa4eec389eb39",
+    "snapshots/05-impact-analysis.json": "sha256:4e3d31a54a68600fb780f98f309a39901dc757fbccec8135c2a62eda1ddc1664",
+    "snapshots/06-actions-and-approvals.json": "sha256:622c5b549d2e76114dc98077f9019a662b073867a832a3360d69620f576faa9f",
+    "snapshots/07-publication-validation.json": "sha256:b1b67b93d7a0fa6843b33fd23d71132309c9b5010abbc41aea0c5bee1d8d23e2"
+  },
+  "artifacts": {
+    "impact-register.csv": "sha256:c5a0685b5d89105328546906d10cb7431b85a18474393cbc6a0d7013ddd966e8",
+    "compliance-brief.md": "sha256:0ea86e3249aa68045cc91995722226770dbc8021e512f6fed07f300484aec8ca",
+    "action-calendar.ics": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+  },
+  "scope": "One fresh live occurrence; package and preservation checks only. No regression rerun."
+}

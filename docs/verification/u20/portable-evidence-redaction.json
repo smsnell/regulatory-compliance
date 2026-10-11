@@ -1,0 +1,42 @@
+{
+  "basis": "Synthetic in-memory rejection-test inputs in tests/runtime/test_secret_guard.py; parameter IDs echoed them into pytest collection/XML and derived check index. No actual credential identified.",
+  "transformation": "Replace only the three exact synthetic credential values with explicit SYNTHETIC_*_REDACTED labels; original raw outputs remain under .evidence/u20/. Test results, counts, durations and assertions are unchanged; only display labels differ.",
+  "files": [
+    {
+      "path": "docs/verification/u20/executed-checks.json",
+      "original_sha256": "sha256:f7c3d100d70d8391fe464952b6c34bdc509c97ab8d25e61638d09f626e3b2781",
+      "portable_sha256": "sha256:541a664ebcf08e790e8a26f078acc39cd257bb3bcab783b6d198f3e011945d86",
+      "substitutions": [
+        6,
+        2,
+        2
+      ]
+    },
+    {
+      "path": "docs/verification/u20/collection.txt",
+      "original_sha256": "sha256:f035d48ec2854566f21581f88b2fa33b6f83b13c741afc718dc5d4c6c223c112",
+      "portable_sha256": "sha256:bf293cb68104e3b383036ce4835fb64494a6c3865e9d44aa80a15a7829783655",
+      "substitutions": [
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "path": "docs/verification/u20/suite.xml",
+      "original_sha256": "sha256:6e186b6b9f5e818d6f3b8cc59b1960b7b32deb2a77bd20eaa6f4ebbe8e7003e2",
+      "portable_sha256": "sha256:e1ccdcfbcd3dbecea6e548755cfa440b8c5644e072ec4f8146895b7f8e7aec59",
+      "substitutions": [
+        3,
+        1,
+        1
+      ]
+    }
+  ],
+  "initial_scan": "audit-secret-scan-initial.json",
+  "initial_findings": 21,
+  "initial_exit_code": 1,
+  "final_scan": "audit-secret-scan-clean.json",
+  "final_exit_code": 0,
+  "final_findings": 0
+}

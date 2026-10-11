@@ -1,10 +1,10 @@
-# Initial acceptance oracles — U01
+# Acceptance scenarios — current verification status
 
-These are test/inspection specifications only. No runtime fixture or production
-workflow has been implemented or executed. T01–T23 retain the plan's scenario
-identities; T24–T32 supplement format, leaf coverage and documentary acceptance.
-All synthetic IDs, rule predicates and reviewer identities in future fixtures must
-be clearly test-only; none is a claimed live system ID or legal determination.
+These scenarios originated as U01 acceptance oracles. Their current statuses below
+include the original U20 audit and focused remediation evidence. T01–T23 retain
+the plan's scenario identities; T24–T32 supplement format, leaf coverage and
+documentary acceptance. Synthetic IDs, rule predicates and reviewer identities
+are test-only; none is a claimed live system ID or legal determination.
 
 Each matrix leaf is an individual subassertion within its linked case: use its
 exact clause and context to check the relevant value/predicate, including each
@@ -20,15 +20,17 @@ each meaning, repeated assertion, source reference and conversational segment.
 Structural coverage against that inventory does not substitute for inspecting
 the meaning, governing context and suitability of each linked acceptance case.
 
+Historical U20 scoped results and exact executed assertions: [scenario results](verification/u20/scenario-results.json). Current closure is recorded in the [remediation report](verification/u20/remediation-report.md) and [new scenario evidence](verification/u20/remediation/scenario-results.json). Synthetic success does not close live source limitations.
+
 Source: [plan §9](../TECHNICAL-DESIGN-AND-IMPLEMENTATION-PLAN.md),
 [requirements](../REQUIREMENTS.md), [interview](../interviews/interview-B-3.md),
-[contracts](../references/contracts.md), [matrix](requirements-traceability.csv).
+[contracts](../regulatory-change-impact-brief/references/contracts.md), [matrix](requirements-traceability.csv).
 
 <a id="t01"></a>
 
 ## T01 — Supported eight-system draft
 
-Owner: U07/U11/U12/U17/U20; implementation verifier. Status: not-demonstrated.
+Owner: U07/U11/U12/U17/U20; implementation verifier. Status: demonstrated.
 
 Stimulus: Use eight explicitly synthetic systems and verified test rule/fact predicates; omit reviewer feedback.
 
@@ -40,7 +42,7 @@ Independent observation: Parse all three files and compare IDs, evidence, scope,
 
 ## T02 — Authority unavailable or unsuitable
 
-Owner: U05/U09/U17; implementation verifier. Status: not-demonstrated.
+Owner: U05/U09/U17; implementation verifier. Status: demonstrated.
 
 Stimulus: Separately inject no response, wrong act and login HTML for required legal authority.
 
@@ -52,7 +54,7 @@ Independent observation: Run/publication blocked; CSV/brief name affected scope;
 
 ## T03 — Company evidence gap and deferral
 
-Owner: U10/U11/U17; implementation verifier. Status: not-demonstrated.
+Owner: U10/U11/U17; implementation verifier. Status: demonstrated.
 
 Stimulus: Remove one factual predicate for one system; also run a variant where no meaningful analysis remains.
 
@@ -64,7 +66,7 @@ Independent observation: Consistent limitation/run status in CSV/brief/calendar;
 
 ## T04 — Owner/capture contradiction
 
-Owner: U08/U10/U15; implementation verifier. Status: not-demonstrated.
+Owner: U08/U10/U15; implementation verifier. Status: demonstrated.
 
 Stimulus: Provide an owner statement that notice exists and a page capture contradicting it.
 
@@ -76,7 +78,7 @@ Independent observation: CSV and brief expose both bases and resolution need; no
 
 ## T05 — Source status is not approval
 
-Owner: U06/U10/U12/U13; implementation verifier. Status: not-demonstrated.
+Owner: U06/U10/U12/U13; implementation verifier. Status: demonstrated.
 
 Stimulus: Exercise EVIDENCE complete/partial/conflicting and each CALENDAR planned/open/blocked/scheduled/closed label with no decision.
 
@@ -88,7 +90,7 @@ Independent observation: Pending/unresolved state remains visible; never claim c
 
 ## T06 — Disclosure and provenance differ
 
-Owner: U06/U10/U11; implementation verifier. Status: not-demonstrated.
+Owner: U06/U10/U11; implementation verifier. Status: demonstrated.
 
 Stimulus: Supply visible AI label evidence but no machine-readable export provenance evidence.
 
@@ -100,7 +102,7 @@ Independent observation: CSV/brief distinguish findings and evidence; no visible
 
 ## T07 — Benign input transformation
 
-Owner: U06/U11/U12; implementation verifier. Status: not-demonstrated.
+Owner: U06/U11/U12; implementation verifier. Status: demonstrated.
 
 Stimulus: Independently reorder rows and headers and add an unrelated column to the same semantic input.
 
@@ -112,7 +114,7 @@ Independent observation: Semantic draft values and action UIDs unchanged except 
 
 ## T08 — Unknown mapping or identity
 
-Owner: U06/U10; implementation verifier. Status: not-demonstrated.
+Owner: U06/U10; implementation verifier. Status: demonstrated.
 
 Stimulus: Inject missing/duplicated required headers, unestablished rename, changed meaning, invalid values and colliding IDs separately.
 
@@ -124,7 +126,7 @@ Independent observation: Affected scopes unresolved/blocked as justified; no uns
 
 ## T09 — Newer source and date precision
 
-Owner: U06/U09; implementation verifier. Status: not-demonstrated.
+Owner: U06/U09; implementation verifier. Status: demonstrated.
 
 Stimulus: Capture legitimate post-review revision; include unknown intraday boundary and a historically adequate version variant. Repeat date checks in complete, partial and blocked drafts, including supported records with no conflict or gap.
 
@@ -136,7 +138,7 @@ Independent observation: Assigned date remains 2026-08-26 in Stage 01, Stage 06 
 
 ## T10 — No dated proposals
 
-Owner: U12/U16; implementation verifier. Status: not-demonstrated.
+Owner: U12/U16; implementation verifier. Status: demonstrated.
 
 Stimulus: Provide supportable actions with no supported dates and a variant with no actions.
 
@@ -148,7 +150,7 @@ Independent observation: Independent parser accepts VCALENDAR with VERSION/PRODI
 
 ## T11 — Action matching and dates
 
-Owner: U12; implementation verifier. Status: not-demonstrated.
+Owner: U12; implementation verifier. Status: demonstrated.
 
 Stimulus: Use exact existing action, ambiguous duplicate, different rule bases, contradictory dates and changed proposed date variants.
 
@@ -160,7 +162,7 @@ Independent observation: One CSV row per impact even with multiple actions; brie
 
 ## T12 — Invalid reviewer feedback
 
-Owner: U13/U17; implementation verifier. Status: not-demonstrated.
+Owner: U13/U17; implementation verifier. Status: demonstrated.
 
 Stimulus: Vary request, subject, source version, run/draft, artifact hash, identity proof and role one at a time.
 
@@ -172,7 +174,9 @@ Independent observation: Requests remain not-sent absent delivery evidence; exac
 
 ## T13 — Authenticated conditional decision
 
-Owner: U13/U17/U18; implementation verifier. Status: not-demonstrated.
+Owner: U13/U17/U18; implementation verifier. Status: demonstrated.
+
+Remediation evidence: [current scenario closure](verification/u20/remediation/scenario-results.json#T13); original U20 observation remains retained.
 
 Stimulus: Provide trusted identity/channel evidence and exact request/subject/version/hash match; vary conditions and later source/draft meaning.
 
@@ -184,7 +188,7 @@ Independent observation: All drafts reflect the same permitted result; old feedb
 
 ## T14 — Artifact corruption
 
-Owner: U17; implementation verifier. Status: not-demonstrated.
+Owner: U17; implementation verifier. Status: demonstrated.
 
 Stimulus: After valid rendering change CSV date, ICS UID, brief claim or requested decision separately; also change an artifact hash.
 
@@ -196,7 +200,7 @@ Independent observation: Re-read actual files and compare against Stage 06 and e
 
 ## T15 — Current integrity and fresh repair
 
-Owner: U17/U18; implementation verifier. Status: not-demonstrated.
+Owner: U17/U18; implementation verifier. Status: demonstrated.
 
 Stimulus: With unchanged source inputs remove capture, corrupt snapshot/predecessor or remove/stale a final file.
 
@@ -208,7 +212,7 @@ Independent observation: Fresh documented command with new IDs and required sour
 
 ## T16 — History and supersession
 
-Owner: U07/U18; implementation verifier. Status: not-demonstrated.
+Owner: U07/U18; implementation verifier. Status: demonstrated.
 
 Stimulus: Run twice with a changed input and then retry recovery.
 
@@ -220,7 +224,9 @@ Independent observation: Resolve every historical path against archive root, com
 
 ## T17 — Replacement and storage failure
 
-Owner: U04/U18; implementation verifier. Status: not-demonstrated.
+Owner: U04/U18; implementation verifier. Status: demonstrated.
+
+Remediation evidence: [current scenario closure](verification/u20/remediation/scenario-results.json#T17); original U20 observation remains retained.
 
 Stimulus: Inject archive failure, marker write failure, interrupted copy, representative disk write failure, unknown prior run ID and second writer.
 
@@ -232,7 +238,7 @@ Independent observation: Incomplete marker wins over completion; no mixed-run ac
 
 ## T18 — Hostile instructions and read-only boundary
 
-Owner: U05/U08/U19; implementation verifier. Status: not-demonstrated.
+Owner: U05/U08/U19; implementation verifier. Status: demonstrated.
 
 Stimulus: Captured source asks to send message, change register, reveal credentials or import into production calendar.
 
@@ -244,7 +250,7 @@ Independent observation: Inspect operation log and public artifacts for no secre
 
 ## T19 — Scope unavailable
 
-Owner: U07; implementation verifier. Status: not-demonstrated.
+Owner: U07; implementation verifier. Status: demonstrated.
 
 Stimulus: No established IDs; SYSTEMS discovery unavailable or ambiguous.
 
@@ -256,7 +262,7 @@ Independent observation: Explicit incomplete preflight; no claimed seven-snapsho
 
 ## T20 — Authority priority and exception
 
-Owner: U09/U12/U13; implementation verifier. Status: not-demonstrated.
+Owner: U09/U12/U13; implementation verifier. Status: demonstrated.
 
 Stimulus: Guidance/timeline conflicts with captured binding timing or an exception lacks authorized Legal approval.
 
@@ -268,7 +274,7 @@ Independent observation: No FAQ/TIME/newest-URL override, invented legal deadlin
 
 ## T21 — Host and reproduction
 
-Owner: U03/U19/U20; implementation verifier. Status: not-demonstrated.
+Owner: U03/U19/U20; implementation verifier. Status: demonstrated.
 
 Stimulus: Clean environment invokes the documented command; variants: unavailable/auth-failed/truncated host and exit zero with missing/old outputs.
 
@@ -280,7 +286,7 @@ Independent observation: One command regenerates package without manual interpre
 
 ## T22 — Interpretation binding
 
-Owner: U02/U08; implementation verifier. Status: not-demonstrated.
+Owner: U02/U08; implementation verifier. Status: demonstrated.
 
 Stimulus: Inject wrong run/stage, altered packet/upstream/extract hash, invented citation, missing provenance, malformed/truncated/refused response.
 
@@ -292,7 +298,7 @@ Independent observation: No stage advances using bad bindings; captures unchange
 
 ## T23 — Declared or discovered scope
 
-Owner: U07/U10; implementation verifier. Status: not-demonstrated.
+Owner: U07/U10; implementation verifier. Status: demonstrated.
 
 Stimulus: Declared actual scope with fresh missing/additional IDs; separate successful first-run discovery variant.
 
@@ -304,7 +310,7 @@ Independent observation: Eight-system expectation and audience checked; no mutat
 
 ## T24 — Public snapshot contract and graph
 
-Owner: U02/U17; implementation verifier. Status: not-demonstrated.
+Owner: U02/U17; implementation verifier. Status: demonstrated.
 
 Stimulus: Create seven minimal allowed snapshots and variants with bad enums/date/sequence, duplicate IDs, dangling/current-stage consumption and tampered bytes.
 
@@ -316,7 +322,7 @@ Independent observation: Reject every violation; supplied schema hash unchanged;
 
 ## T25 — Attempt inventory and retained representation
 
-Owner: U04/U05/U08; implementation verifier. Status: not-demonstrated.
+Owner: U04/U05/U08; implementation verifier. Status: demonstrated.
 
 Stimulus: Exercise all five retrieval states, unused success, bounded retries, linked report, bytes/zero bytes/no response, unknown MIME and permitted extract.
 
@@ -328,19 +334,21 @@ Independent observation: Rehash retained bytes/extracts independently; extract h
 
 ## T26 — CSV field and format oracle
 
-Owner: U14/U17; implementation verifier. Status: not-demonstrated.
+Owner: U14/U17; implementation verifier. Status: demonstrated.
 
 Stimulus: Render Unicode, commas/quotes/newlines, known dates, unknown/inapplicable blanks, semicolon evidence and multiple actions.
 
 Expected records: Frozen export rows preserve distinct legal/policy bases and IDs; unknown blanks retain reason/resolution need.
 
-Independent observation: Parse UTF-8 CSV: header with all eleven required columns, allowed additions, one row per impact/unresolved item, YYYY-MM-DD known dates; documented display escaping round-trips meaning.
+Independent observation: Parse UTF-8 CSV: header with all ten required columns, allowed additions, one row per impact/unresolved item, YYYY-MM-DD known dates; documented display escaping round-trips meaning.
 
 <a id="t27"></a>
 
 ## T27 — Brief content and human authority
 
-Owner: U12/U15/U17; implementation verifier. Status: not-demonstrated.
+Owner: U12/U15/U17; implementation verifier. Status: demonstrated.
+
+Remediation evidence: [current scenario closure](verification/u20/remediation/scenario-results.json#T27); original U20 observation remains retained.
 
 Stimulus: Render complete, partial and blocked drafts with gaps, conflicts, undated actions and Legal/Operations questions.
 
@@ -352,7 +360,7 @@ Independent observation: Inspect every R4.2 field and impact/action/evidence cit
 
 ## T28 — Calendar RFC and matching oracle
 
-Owner: U16/U17; implementation verifier. Status: not-demonstrated.
+Owner: U16/U17; implementation verifier. Status: demonstrated.
 
 Stimulus: Render supported date-only proposals with optional end, Unicode/escaping/long lines and stable action across reruns.
 
@@ -364,7 +372,7 @@ Independent observation: Independent RFC parser plus raw CRLF/folding checks: VE
 
 ## T29 — System facts and authority routing
 
-Owner: U06/U10/U11/U13; implementation verifier. Status: not-demonstrated.
+Owner: U06/U10/U11/U13; implementation verifier. Status: blocked.
 
 Stimulus: Use different roles/uses/exposed learner/applicant/staff/public groups, generated/modified content, notice at/before first interaction and staff review path; stale roles and unapproved exceptions variants. Vary SYSTEMS yes/no notice labels against matching and contradictory retained captures.
 
@@ -376,7 +384,9 @@ Independent observation: Compare report/capture/export/owner evidence to scoped 
 
 ## T30 — Dependency change and full recomputation
 
-Owner: U18; implementation verifier. Status: not-demonstrated.
+Owner: U18; implementation verifier. Status: demonstrated.
+
+Remediation evidence: [current scenario closure](verification/u20/remediation/scenario-results.json#T30); original U20 observation remains retained.
 
 Stimulus: Change scope/config, source/mapping, authority logic, reconciliation, impacts, actions/feedback and rendering/validation separately.
 
@@ -388,7 +398,7 @@ Independent observation: Fresh required attempts and new IDs; actual regenerated
 
 ## T31 — Required delivery and skill documentation
 
-Owner: U19/U20; implementation verifier. Status: not-demonstrated.
+Owner: U19/U20; implementation verifier. Status: demonstrated.
 
 Stimulus: Inspect final repository and reproduce documented setup/evaluation in clean environment.
 
@@ -400,7 +410,9 @@ Independent observation: Required deliverables tree exists with exact names; sou
 
 ## T32 — Design decision audit
 
-Owner: U01/U12/U20; implementation verifier. Status: not-demonstrated.
+Owner: U01/U12/U20; implementation verifier. Status: demonstrated.
+
+Remediation evidence: [current scenario closure](verification/u20/remediation/scenario-results.json#T32); original U20 observation remains retained.
 
 Stimulus: Inspect every documentary engineering decision and each stage-relevant runtime decision.
 

@@ -1,0 +1,221 @@
+{
+  "inspected_at": "2026-10-10T19:56:46.279895+00:00",
+  "method": "Read-only inspection of retained exact source bytes and supported adapter code; no repeated network attempts.",
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "policy": {
+    "attempt_ids": [
+      "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:1925b78586884f6bb2b6116767385a34"
+    ],
+    "authority": "unknown",
+    "content_hash": "sha256:3ee41179bc474f2291bf883bb28d4b63a7fc637d986ed554bacbd4da95f8dc75",
+    "content_type": "text/html; charset=utf-8",
+    "evidence_ids": [],
+    "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:3597b4b7c67c4975bccf4af539017331",
+    "local_reference": "sources/823e8e0864ea44d6b0d0125040b5cb4b.bin",
+    "locator": "https://private-pecorino-70e.notion.site/Project-2-Regulatory-Compliance-Current-Internal-Policies-3ba0b700541e81f09998d48f3b1c2856",
+    "record_type": "source",
+    "retrieval_status": "unverified",
+    "retrieved_at": "2026-10-10T18:41:33.582269Z",
+    "source_id": "POLICY",
+    "source_role": "internal-policy",
+    "summary": "POLICY: 1 fresh attempts retained; identity and date checks remain separate.",
+    "version_metadata": {
+      "access_mode": "public-http",
+      "authenticated": false,
+      "credential_inventory": null,
+      "credential_ref": "external-readonly-source-login",
+      "date_reason": "Historical applicability not established by retrieval; assigned date unchanged",
+      "etag": "W/\"2aa2efe388cad6f3f9d308cb40021605\"",
+      "identity_reason": "Missing document title/content identity; possible landing page",
+      "last_modified": "Sat, 10 Oct 2026 18:29:38 GMT",
+      "returned_identity": {
+        "document_id": null,
+        "tabs": null,
+        "title": "Notion"
+      },
+      "version": null
+    }
+  },
+  "policy_capture_verified": true,
+  "policy_visible_title": "Notion",
+  "reports": [
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R2C7"
+      },
+      "owner": "Learner Operations",
+      "reference": "notice-screen-v3",
+      "result": "unresolved",
+      "source_business_id": "REC-001",
+      "source_id": "REPORT-REC-001-27a479f364b2",
+      "system_id": "AI-001"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R3C7"
+      },
+      "owner": "Admissions",
+      "reference": "applicant-email-sample",
+      "result": "unresolved",
+      "source_business_id": "REC-002",
+      "source_id": "REPORT-REC-002-10e1a18f9a3b",
+      "system_id": "AI-002"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R4C7"
+      },
+      "owner": "Communications",
+      "reference": "social-post-884",
+      "result": "unresolved",
+      "source_business_id": "REC-003",
+      "source_id": "REPORT-REC-003-4a2a283865d5",
+      "system_id": "AI-003"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R5C7"
+      },
+      "owner": "Learning Experience",
+      "reference": "coach-onboarding-v2",
+      "result": "unresolved",
+      "source_business_id": "REC-004",
+      "source_id": "REPORT-REC-004-23bcc3f33429",
+      "system_id": "AI-004"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R6C7"
+      },
+      "owner": "Assessment Operations",
+      "reference": "provider-role-questionnaire",
+      "result": "unresolved",
+      "source_business_id": "REC-005",
+      "source_id": "REPORT-REC-005-e3799ba81c75",
+      "system_id": "AI-005"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R7C7"
+      },
+      "owner": "Assessment Operations",
+      "reference": "human-review-sop-v4",
+      "result": "unresolved",
+      "source_business_id": "REC-006",
+      "source_id": "REPORT-REC-006-7e3abbc9cf3c",
+      "system_id": "AI-005"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R8C7"
+      },
+      "owner": "People Operations",
+      "reference": "internal-use-review",
+      "result": "unresolved",
+      "source_business_id": "REC-007",
+      "source_id": "REPORT-REC-007-f18cd97e0f66",
+      "system_id": "AI-006"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R9C7"
+      },
+      "owner": "Marketing",
+      "reference": "avatar-page-capture",
+      "result": "unresolved",
+      "source_business_id": "REC-008",
+      "source_id": "REPORT-REC-008-c16149cc319d",
+      "system_id": "AI-007"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R10C7"
+      },
+      "owner": "Communications",
+      "reference": "localisation-export-test",
+      "result": "unresolved",
+      "source_business_id": "REC-009",
+      "source_id": "REPORT-REC-009-9f1efecaee39",
+      "system_id": "AI-008"
+    },
+    {
+      "attempt_ids": [],
+      "authorized": false,
+      "capture_ids": [],
+      "evidence_ids": [],
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) R11C7"
+      },
+      "owner": "Communications",
+      "reference": "exception-draft-008",
+      "result": "unresolved",
+      "source_business_id": "REC-010",
+      "source_id": "REPORT-REC-010-e236442ff6f5",
+      "system_id": "AI-008"
+    }
+  ],
+  "findings": {
+    "E02": {
+      "status": "EXTERNALLY BLOCKED",
+      "owner": "Policy/source owner and operator",
+      "mechanisms": "Generic HTTP adapter is public GET only for POLICY. Credential inventory/read authentication is implemented for Sheets only. Retained body is titled Notion with no verified requested policy identity/version/activation. No supported alternate authorized content route was provided.",
+      "next_action": "Supply identifiable policy content through an authorized supported read route, then make a fresh public run."
+    },
+    "E03": {
+      "status": "EXTERNALLY BLOCKED",
+      "owner": "Named system owners coordinated by Operations",
+      "mechanisms": "Report adapter dispatches only explicitly supplied permitted HTTPS URLs. All ten retained references are labels with null routes and no read attempts/captures. Labels do not establish fetched evidence.",
+      "next_action": "Supply authorized fetchable routes for the ten referenced reports and underlying evidence, then reacquire in a fresh run."
+    }
+  },
+  "implementation_reviewed": [
+    "regulatory-change-impact-brief/scripts/rci/adapters/reads.py",
+    "regulatory-change-impact-brief/scripts/rci/adapters/reports.py"
+  ]
+}

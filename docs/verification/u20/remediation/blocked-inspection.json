@@ -1,0 +1,523 @@
+{
+  "inspected_at": "2026-10-10T20:46:41.719519+00:00",
+  "verifier": "Codex U20 / check-u20.py",
+  "basis": "synthetic",
+  "root": "/home/mike/regulatory-compliance/.evidence/u20-remediation/e04/retained/blocked",
+  "run_id": "run-07c8a3ec84034f2ab14ceab46e9c0cb3",
+  "schema_sha256": "sha256:8de9874ded18fa97294e83012796e4c386aa60ccfd30f8eca89cabdf2a267ac3",
+  "checker_sha256": "sha256:6d34e90abf14b77a5d6a716f8f152361f6d2cf528f27185e52f125a690d59a45",
+  "stage_statuses": [
+    "complete",
+    "partial",
+    "blocked",
+    "blocked",
+    "blocked",
+    "blocked",
+    "blocked"
+  ],
+  "publication_status": "blocked",
+  "snapshots": {
+    "snapshots/01-scope.json": "sha256:88081adde0f95507559a0fbb0fc2f7988c75c38e20077ce83e8dee3af9ef6101",
+    "snapshots/02-source-capture.json": "sha256:20bbce9c5d8713cbdba50d3be4d9515c07ef532d6ab0f5bcf9334e89dc020a4f",
+    "snapshots/03-authority-and-timing.json": "sha256:d89a79835fd3352f2075e32345599e6b16dd2163acc8de704353000e72afd7ab",
+    "snapshots/04-evidence-reconciliation.json": "sha256:22024502c9e7fa3217b4333c6d027e00bfaa3d82d774ae212a5427f17484c55d",
+    "snapshots/05-impact-analysis.json": "sha256:4e1af806e3160dfd919b37f500de83ed9a4284c9971a45ae2600060b78435057",
+    "snapshots/06-actions-and-approvals.json": "sha256:16a2f0b2081ab1fb9cbc39f1963fdd5acf40f6de4b002731eaa20baedec7379e",
+    "snapshots/07-publication-validation.json": "sha256:86a53ad7bb764dc9a79aeabd5d70b6669869895899c4c7d286aede3d75dfd36e"
+  },
+  "artifacts": {
+    "impact-register.csv": "sha256:9501645956ffc69008f04ad684f4a9caceb0005940cb7ced3982154926dc172a",
+    "compliance-brief.md": "sha256:9d868cd18fbe82d4e0e92a9e90aba0262fb9142929c4fa832ec6e32f8acb61c8",
+    "action-calendar.ics": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+  },
+  "captures_checked": 28,
+  "attempt_count": 23,
+  "retrieval_start": "2026-10-10T20:01:54.249512Z",
+  "retrieval_end": "2026-10-10T20:01:57.279768Z",
+  "assigned_review_date": "2026-08-26",
+  "csv_rows": 16,
+  "calendar_events": 0,
+  "system_dispositions": {
+    "AI-001": [
+      {
+        "impact_id": "impact:v1:897b1745770b348ef35a0006f9ed2039ba4cd4999173f2e68aff2a57c8b08e72",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:c8a52d8097656746ad2d7b9f4bff85e341e581a930726f3489ae9731f3e57955",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-002": [
+      {
+        "impact_id": "impact:v1:0257c913fd5ac832986182474038bb9cbe9851fbd531cdfdbadc5f59ca9c1c9f",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:f3b1c074eac877963c812810d2c2435a931d7f46f0935f794b913a8292180ef9",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-003": [
+      {
+        "impact_id": "impact:v1:0d9008c357f70ce3edb5bdf7cfd3ac35c722c32e1156ca2f8623829e76582535",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:60eeadbc8006a944d6384affbcccd3b1093d0f1807e9dd7caa2b4e08ff685127",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-004": [
+      {
+        "impact_id": "impact:v1:f15a89416f64f33a66fb8027ba64d85fdeb1c82844c882ccc0f9971d3ffbe3f7",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:c46953eef9e70a8ea6556126b89b560627b715edb5cb2173975eb2282b9efaeb",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-005": [
+      {
+        "impact_id": "impact:v1:1bb0c95066abae02267792c386e1f5a44a297ff5b589ddc7f8f9273d439ca874",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:88e98159fec8ad2f60058b65f122cebb81c3328a835e9f9f9fdfe51967d6a1bc",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-006": [
+      {
+        "impact_id": "impact:v1:9e94000b8a61a1d4773791a12226a1db4d65626202047577c88d8370f994f35f",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:c17a9a0e60db53160dc625b19230b12a8785db9ff696d052963b956e7dd4ed46",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-007": [
+      {
+        "impact_id": "impact:v1:8d73ced8629434123bb80ea31fb885ebfcde46b0e05829ded5327f45bfe535b9",
+        "state": "supported-impact",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:3132ca09b9a0b159ecece52ab81e18eb92a13ad897a21addafb9cc76b5cd9c6f",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ],
+    "AI-008": [
+      {
+        "impact_id": "impact:v1:8bc35cdc59381c96c1826d8b631fd809a64f045a9eec3665e091f5129ba12de5",
+        "state": "unresolved",
+        "rule_ref": "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      },
+      {
+        "impact_id": "impact:v1:4d6702c6a96059baf276e651a383d4b74c45f9912bbfa40debfc71c3ce9cdda6",
+        "state": "unresolved",
+        "rule_ref": ""
+      }
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "LAW",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/5235d3c94fb54f22b60d666191aa3724.bin",
+      "content_hash": "sha256:5c0aeef33b7ce5cd13952f2f488a1ebb31bb05f893fc0b8a18ebe12eaf01cfb4"
+    },
+    {
+      "source_id": "OJ",
+      "retrieval_status": "unavailable",
+      "local_reference": null,
+      "content_hash": null
+    },
+    {
+      "source_id": "AMEND",
+      "retrieval_status": "unverified",
+      "local_reference": "sources/e139e1c0c00c47abbe233161cd14847a.bin",
+      "content_hash": "sha256:5b0c9ed2f1a5e32d6880af29567f6d965a4ec6e38acfeae279c4d6c0ece6b751"
+    },
+    {
+      "source_id": "CONSOLIDATED",
+      "retrieval_status": "unverified",
+      "local_reference": "sources/302807f90fd9416496a927c7af0a0fbc.bin",
+      "content_hash": "sha256:5a1410cf172b5363acba0e4073a83ff1a72c3bac80c41b607a362f91acd7d8bf"
+    },
+    {
+      "source_id": "TIME",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/23d9e1507fe544df9db67a32e6457a29.bin",
+      "content_hash": "sha256:b7d811661a74ff5b4a43d39d3daebc6e8beab394db526c50623b2df7ed6b5386"
+    },
+    {
+      "source_id": "FAQ",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/66c23dd084254fa4a90465d9bc5fcf35.bin",
+      "content_hash": "sha256:5a507b40f90eefe12b2045fd224a44764f6b8666782d867bcac5be88a7940458"
+    },
+    {
+      "source_id": "POLICY",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/274a466824234fbc8b63eed7cfd47d8d.bin",
+      "content_hash": "sha256:f7724d136bb9a3ef66e8073996cc904ddd203189b492fc9f958c6dda19c06057"
+    },
+    {
+      "source_id": "SYSTEMS",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/1452dbc88c58403cb8910e6bed0fddf5.bin",
+      "content_hash": "sha256:3b788710882d6e5d2c39a3d01a9270d1ffeb73b5e9982d0471d60ac40e1faede"
+    },
+    {
+      "source_id": "EVIDENCE",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/cb08557792204ad0a60d3f85e1b1ad7c.bin",
+      "content_hash": "sha256:b2f209ffad58d2b09434141ebae8fea6a112e36115799e03f829974cb6a4c1e7"
+    },
+    {
+      "source_id": "CALENDAR",
+      "retrieval_status": "retrieved",
+      "local_reference": "sources/1c3cb68b4a084db58b85e485c061beb3.bin",
+      "content_hash": "sha256:d1ac5eed556d23f7e518391bc56468083fd63a1c95e62b5ea216b27b9419bfeb"
+    },
+    {
+      "source_id": "REPORT-REC-008-c16149cc319d",
+      "retrieval_status": "unverified",
+      "local_reference": "sources/964f69b85e9542a98e5d88a2d95fe9a6.bin",
+      "content_hash": "sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621"
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "review-ca7969768f414a71aebd36321bb8bffe",
+      "question": "Legal must review scoped findings, supporting evidence and proposed responsibilities; dates and approvals remain pending.",
+      "required_reviewer": "Legal",
+      "subject_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:01:scope-basis:f881bc55dff546b9b2f3821996fd0ed5",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:source:50d042a2b7754302937a8b4e218894d8",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:source:54ff2887a87f4e3facd96fe5f3556811",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:source:551c5efabf7c4393909b930fadc95701",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:source:8ff09386daed460d99e664ad20747bbf",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:source:db29c8d4a76542c5be6763a0076b9623",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:source:f62d43bf11c94134a12784968705aa5d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:60d7df78967c49e2b06dd860cfd7c559",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:71fede69aa674503b9f0880448038edc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:905fdd987edf48238cb9273ca161656f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:a61b90bd4ea244719f4a033ce1f45eb7",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:d237c84c211c46fc8cd1cb6ec35b586d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:e76ace8ea5674f2ea963f8e46f3fd564",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:f3edb1a9ce7244b4976a1973da58f3bb",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:f7e5fafdf0ff4cd18868b9ac801bab39"
+      ],
+      "source_versions": [
+        "captured-source:AMEND:extract:sha256:a43b612fba88c56e103a0cfeeab88bd79d5acae1a4f9f36ab4b788d7c7081f05",
+        "captured-source:AMEND:full:sha256:5b0c9ed2f1a5e32d6880af29567f6d965a4ec6e38acfeae279c4d6c0ece6b751",
+        "captured-source:CALENDAR:full:sha256:82992456c99984641edfb2db259df9af0b1023ee0755ecedd8903d79a4cfa522",
+        "captured-source:CALENDAR:full:sha256:d1ac5eed556d23f7e518391bc56468083fd63a1c95e62b5ea216b27b9419bfeb",
+        "captured-source:CALENDAR:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:CONSOLIDATED:extract:sha256:a2981b51e3fc8c6b5591c8ebcc7758fca3aa1be3f320cece3c8ab7070ee17997",
+        "captured-source:CONSOLIDATED:full:sha256:5a1410cf172b5363acba0e4073a83ff1a72c3bac80c41b607a362f91acd7d8bf",
+        "captured-source:EVIDENCE:full:sha256:92abfea598c60abf3e5f360e1dea2be8eece2c50f510bab8ffdbb6891cd73b3b",
+        "captured-source:EVIDENCE:full:sha256:aff5794828cc275fb241c868f26963f8ba93bf6beac87d482e8ae8d876236233",
+        "captured-source:EVIDENCE:full:sha256:b2f209ffad58d2b09434141ebae8fea6a112e36115799e03f829974cb6a4c1e7",
+        "captured-source:EVIDENCE:full:sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+        "captured-source:FAQ:extract:sha256:dc304d21effc8d4f19fde1d84828e79fe6abacabbd00c298790bdb9f40f4d4f2",
+        "captured-source:FAQ:full:sha256:5a507b40f90eefe12b2045fd224a44764f6b8666782d867bcac5be88a7940458",
+        "captured-source:LAW:extract:sha256:2788329b0168074277ec93af143b9c14af853f0418ff62d0737624e1e1d38a7f",
+        "captured-source:LAW:full:sha256:5c0aeef33b7ce5cd13952f2f488a1ebb31bb05f893fc0b8a18ebe12eaf01cfb4",
+        "captured-source:POLICY:extract:sha256:7282c7341323ab83afea20b2aac852dd0864ae2f64a4a9df442945717e7b0d80",
+        "captured-source:POLICY:full:sha256:f7724d136bb9a3ef66e8073996cc904ddd203189b492fc9f958c6dda19c06057",
+        "captured-source:REPORT-REC-008-c16149cc319d:full:sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621",
+        "captured-source:SYSTEMS:full:sha256:3b788710882d6e5d2c39a3d01a9270d1ffeb73b5e9982d0471d60ac40e1faede",
+        "captured-source:SYSTEMS:full:sha256:bb358ade245f1c3057d3729d8d1f781feb3919dccf7d7368ebd7cc917cc4dff4",
+        "captured-source:SYSTEMS:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:TIME:extract:sha256:35daebf731bf6a446d7781bc4126a60118bb09d62dc581f9a63ef898e78f15d3",
+        "captured-source:TIME:full:sha256:b7d811661a74ff5b4a43d39d3daebc6e8beab394db526c50623b2df7ed6b5386",
+        "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      ],
+      "evidence_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:10b53ef64b3643aa99427f1341bd7eeb",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:2dbdead6784543c19c37b987a2e7f9df"
+      ],
+      "delivery_status": "not-sent"
+    },
+    {
+      "request_id": "review-37a30fa3840f427f878699d3db7dd364",
+      "question": "Operations must review scoped findings, supporting evidence and proposed responsibilities; dates and approvals remain pending.",
+      "required_reviewer": "Operations",
+      "subject_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:01:scope-basis:f881bc55dff546b9b2f3821996fd0ed5",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:0200419e8f724ace91fdc9c43d447392",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:020a099f311f4d50a2a61befb714ebe0",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:0852ed1c44a04a6ebb9b197c89f69129",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:0d8e1eeeafb9485180e632feec410262",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:10cd2a8d30cb4b1bbc55167e7f90dfbe",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:110b150a221941c6be1fad56d3e8cb25",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:111e5bca062f49d394cd8ed9ffe77827",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:1415e79e31084ac9b1c78af7b5aa2a0a",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:16c8135c74d44d9381011e714eed3a71",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:16ff1b55f75d42f693a7ba922ea700a0",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:17ff1b241eab470d9616555fce1ded75",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:18a18c3a5db743528843fc7a30f9a851",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:1b62f97be9f04e97a56bfea8d3e1d0f2",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:1dc78e85bc964005acfee0d8ce296c43",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:1e1f8c9f70194905820771e2063c87c9",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:216b044524c1420e96eba796f27eb1f8",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:2362628771954424a1e9a2a5825499cc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:247293001a3b4edf81f59ca55f1572cc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:28aa973c7e33435b91ab8dd5885f1d40",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:2cf39e98dcf74775913a32bb059d38f3",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:2ed5291dcb82494fb6832f6d2b23ac11",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:2ffccad0b1844320940dee5d05212598",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:3386f7b686334936b40c845f5e15f910",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:3563ed46b2e54abca2cbee44c6b5fe5d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:367004ebb959473f836b4f575f7fab3d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:39e7881b7c5148efad189b82b955a635",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:3aa6d12bda0e435fb5a2b6ea5c6beb36",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:3bb90386fc2e4882b3fcfd6cd388b077",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:407d92aec3534a259faea2598d3574fc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:44ca6237eaec41f2bee572794eb8c86b",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:44ced7b248c9453b9e5e1516c250b617",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:462b62f9b9b6477fa84d8b12c7bc5612",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:48165b19edb74ae7a0f59415d59d84ca",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:48282e1a50204a3fb8eaaade1ef113fc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:4ab2fd40e30e4a64a93f0bd9be6dd8d7",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:4b92a0bbd651435ea03c10ea306043df",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:4e2a3970f5234e068fe0f2fe7e55307f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:54ee89f9cfa441c1a38284282de0ebd2",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:573f715aa3d64cc0b325055b5069ec34",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:5992eae85eca46c795845c39e938ee28",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:5adbf05be01047a1a6a97f09510ea7b1",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:5f0f92d8d15f4751910f3f4a75045208",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:5f2b5d88e3434d28879a5778ca0dbe01",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:65cf1346bb7244729fcc961523fb1f53",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:6723a60c94174515906485fd5cebf312",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:6822728f1a114b2296b230b6f3e710d9",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:69bfe5d11ed744b083929bc4e62e2078",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:6b04f956892e49e282bc54ddf5ea613c",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:6b9401957b5b4bdbb166d1b532abf348",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:6bd9c1d7ad7843eba4f55afc45f8f38e",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:71dde0e817b44b82a3b20bbee788d475",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7378bdd0adb34bc7842c2b02d8192ef9",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7599fc58578c4ccdbd5ee2fcc4b2a2c2",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:77f24357a2a046d9b4878c0b5d5f88db",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7b45c0417f324b0288119cc4a27ba26d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7bf11d17e57b429f843c0f74a64df772",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7c48e958a0a7420f95b831fe6889ebe6",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7dc09e56f1c24539be37dba22992a65f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:7f136730935d443f82958f609b7a8486",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:8277c4add3844d4e9181c81a9e9912a9",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:82f89938a4124a469ae8b6f7355091cd",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:842b0c929f2f4146a0d0a04dc3837dac",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:87d2523ab99d416c898c2866ebe7acb2",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:881a2a6b7b284b6cab3f3f2f2f8835f1",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:8a82127fe15c4372bfcbe39ef59b1c82",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:8ff6d49078704279b5754998df5064d2",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:914a14c2f3ac4bd2859651a003beebc9",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:92593a8c20de45c5948939c992099678",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:93838b222d1b4ab787daa8482d0fef00",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:9540aa26646343ff84039e083518c0f1",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:9966d3b702d749429df12e15bca71a63",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:a1f6297f47e643c9b86e34eee375fa90",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:a1fef72eb75046a0a1cddc7fea293d62",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:a4fefa12b7f948ba9ddbdd9a3c31a038",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:a6392d4571f84ab39c42f297b1dc123e",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:b0294d7c37d048d0b7e8412c158ce031",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:b6518a4ba267423ba470104cf180e652",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:b918058047734b55921fa620ab14eb9f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:ba331e8d36624def80f77e051f2392e8",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:ba705c4a2555406d97fbdfcf28b94a40",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:bd37c610883841d4b3d4936b8f25cb8c",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:c321b5551f874bd496f0ab3e87381227",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:c6cf057c2e7148b78263f9b17a84da64",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:c772f4c96d9b447eac882752f7654d72",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:c9f7a0d547494ee6b6e6eea2da53b4a7",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:cb4e064c021d4f58a5bf877c7796f443",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:d784d713510a406e87c5a997b9cb1996",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:e213d2fddaad454a95d2392a8099f598",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:ecfb741f02264ca7a211feb1cd79b135",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:eea7d732da8641f0966f19250cda13b5",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:ef1a9a94d4e843449ecf73e9af2f2eb6",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:f0c45eff59964377803c4b323cbdebad",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:f3ae081249ab429c823e243aac930b04",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:f522c4b4951f434d9f433f7282a25af0",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:f6009e06e52c42edaf3822d2236aa1af",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:04:gap:fc5ed748a0994c1da3e69b8dd4e97c8f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:60d7df78967c49e2b06dd860cfd7c559",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:71fede69aa674503b9f0880448038edc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:905fdd987edf48238cb9273ca161656f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:a61b90bd4ea244719f4a033ce1f45eb7",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:d237c84c211c46fc8cd1cb6ec35b586d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:e76ace8ea5674f2ea963f8e46f3fd564",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:f3edb1a9ce7244b4976a1973da58f3bb",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:f7e5fafdf0ff4cd18868b9ac801bab39"
+      ],
+      "source_versions": [
+        "captured-source:AMEND:extract:sha256:a43b612fba88c56e103a0cfeeab88bd79d5acae1a4f9f36ab4b788d7c7081f05",
+        "captured-source:AMEND:full:sha256:5b0c9ed2f1a5e32d6880af29567f6d965a4ec6e38acfeae279c4d6c0ece6b751",
+        "captured-source:CALENDAR:full:sha256:82992456c99984641edfb2db259df9af0b1023ee0755ecedd8903d79a4cfa522",
+        "captured-source:CALENDAR:full:sha256:d1ac5eed556d23f7e518391bc56468083fd63a1c95e62b5ea216b27b9419bfeb",
+        "captured-source:CALENDAR:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:CONSOLIDATED:extract:sha256:a2981b51e3fc8c6b5591c8ebcc7758fca3aa1be3f320cece3c8ab7070ee17997",
+        "captured-source:CONSOLIDATED:full:sha256:5a1410cf172b5363acba0e4073a83ff1a72c3bac80c41b607a362f91acd7d8bf",
+        "captured-source:EVIDENCE:full:sha256:92abfea598c60abf3e5f360e1dea2be8eece2c50f510bab8ffdbb6891cd73b3b",
+        "captured-source:EVIDENCE:full:sha256:aff5794828cc275fb241c868f26963f8ba93bf6beac87d482e8ae8d876236233",
+        "captured-source:EVIDENCE:full:sha256:b2f209ffad58d2b09434141ebae8fea6a112e36115799e03f829974cb6a4c1e7",
+        "captured-source:EVIDENCE:full:sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+        "captured-source:FAQ:extract:sha256:dc304d21effc8d4f19fde1d84828e79fe6abacabbd00c298790bdb9f40f4d4f2",
+        "captured-source:FAQ:full:sha256:5a507b40f90eefe12b2045fd224a44764f6b8666782d867bcac5be88a7940458",
+        "captured-source:LAW:extract:sha256:2788329b0168074277ec93af143b9c14af853f0418ff62d0737624e1e1d38a7f",
+        "captured-source:LAW:full:sha256:5c0aeef33b7ce5cd13952f2f488a1ebb31bb05f893fc0b8a18ebe12eaf01cfb4",
+        "captured-source:POLICY:extract:sha256:7282c7341323ab83afea20b2aac852dd0864ae2f64a4a9df442945717e7b0d80",
+        "captured-source:POLICY:full:sha256:f7724d136bb9a3ef66e8073996cc904ddd203189b492fc9f958c6dda19c06057",
+        "captured-source:REPORT-REC-008-c16149cc319d:full:sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621",
+        "captured-source:SYSTEMS:full:sha256:3b788710882d6e5d2c39a3d01a9270d1ffeb73b5e9982d0471d60ac40e1faede",
+        "captured-source:SYSTEMS:full:sha256:bb358ade245f1c3057d3729d8d1f781feb3919dccf7d7368ebd7cc917cc4dff4",
+        "captured-source:SYSTEMS:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:TIME:extract:sha256:35daebf731bf6a446d7781bc4126a60118bb09d62dc581f9a63ef898e78f15d3",
+        "captured-source:TIME:full:sha256:b7d811661a74ff5b4a43d39d3daebc6e8beab394db526c50623b2df7ed6b5386",
+        "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      ],
+      "evidence_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:10b53ef64b3643aa99427f1341bd7eeb",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:2dbdead6784543c19c37b987a2e7f9df",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:9ed8e8ea12594cbc8ec2cf65424a0797",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:fe10d9c168554d96a00f889675515fa9"
+      ],
+      "delivery_status": "not-sent"
+    },
+    {
+      "request_id": "review-083474cf9bda4cd98bbd9fbfd1611123",
+      "question": "system-owner must review scoped findings, supporting evidence and proposed responsibilities; dates and approvals remain pending.",
+      "required_reviewer": "system-owner",
+      "subject_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:60d7df78967c49e2b06dd860cfd7c559",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:71fede69aa674503b9f0880448038edc",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:905fdd987edf48238cb9273ca161656f",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:a61b90bd4ea244719f4a033ce1f45eb7",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:d237c84c211c46fc8cd1cb6ec35b586d",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:e76ace8ea5674f2ea963f8e46f3fd564",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:f3edb1a9ce7244b4976a1973da58f3bb",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:06:action:f7e5fafdf0ff4cd18868b9ac801bab39"
+      ],
+      "source_versions": [
+        "captured-source:AMEND:extract:sha256:a43b612fba88c56e103a0cfeeab88bd79d5acae1a4f9f36ab4b788d7c7081f05",
+        "captured-source:AMEND:full:sha256:5b0c9ed2f1a5e32d6880af29567f6d965a4ec6e38acfeae279c4d6c0ece6b751",
+        "captured-source:CALENDAR:full:sha256:82992456c99984641edfb2db259df9af0b1023ee0755ecedd8903d79a4cfa522",
+        "captured-source:CALENDAR:full:sha256:d1ac5eed556d23f7e518391bc56468083fd63a1c95e62b5ea216b27b9419bfeb",
+        "captured-source:CALENDAR:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:CONSOLIDATED:extract:sha256:a2981b51e3fc8c6b5591c8ebcc7758fca3aa1be3f320cece3c8ab7070ee17997",
+        "captured-source:CONSOLIDATED:full:sha256:5a1410cf172b5363acba0e4073a83ff1a72c3bac80c41b607a362f91acd7d8bf",
+        "captured-source:EVIDENCE:full:sha256:92abfea598c60abf3e5f360e1dea2be8eece2c50f510bab8ffdbb6891cd73b3b",
+        "captured-source:EVIDENCE:full:sha256:aff5794828cc275fb241c868f26963f8ba93bf6beac87d482e8ae8d876236233",
+        "captured-source:EVIDENCE:full:sha256:b2f209ffad58d2b09434141ebae8fea6a112e36115799e03f829974cb6a4c1e7",
+        "captured-source:EVIDENCE:full:sha256:cb17c96072a8558f8fe2ef49c632e1033a8b55c0fa014097fcfb468249ccc0eb",
+        "captured-source:FAQ:extract:sha256:dc304d21effc8d4f19fde1d84828e79fe6abacabbd00c298790bdb9f40f4d4f2",
+        "captured-source:FAQ:full:sha256:5a507b40f90eefe12b2045fd224a44764f6b8666782d867bcac5be88a7940458",
+        "captured-source:LAW:extract:sha256:2788329b0168074277ec93af143b9c14af853f0418ff62d0737624e1e1d38a7f",
+        "captured-source:LAW:full:sha256:5c0aeef33b7ce5cd13952f2f488a1ebb31bb05f893fc0b8a18ebe12eaf01cfb4",
+        "captured-source:POLICY:extract:sha256:7282c7341323ab83afea20b2aac852dd0864ae2f64a4a9df442945717e7b0d80",
+        "captured-source:POLICY:full:sha256:f7724d136bb9a3ef66e8073996cc904ddd203189b492fc9f958c6dda19c06057",
+        "captured-source:REPORT-REC-008-c16149cc319d:full:sha256:c0e98b06eec5c16eca6cbcce15600eb9dabce4de51519de8a1e84e494821c621",
+        "captured-source:SYSTEMS:full:sha256:3b788710882d6e5d2c39a3d01a9270d1ffeb73b5e9982d0471d60ac40e1faede",
+        "captured-source:SYSTEMS:full:sha256:bb358ade245f1c3057d3729d8d1f781feb3919dccf7d7368ebd7cc917cc4dff4",
+        "captured-source:SYSTEMS:full:sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "captured-source:TIME:extract:sha256:35daebf731bf6a446d7781bc4126a60118bb09d62dc581f9a63ef898e78f15d3",
+        "captured-source:TIME:full:sha256:b7d811661a74ff5b4a43d39d3daebc6e8beab394db526c50623b2df7ed6b5386",
+        "rule:v1:d2df878fa7d423e687ba5b74dca3f46948565b67b4894a7fbf0fd432fc83a4c8"
+      ],
+      "evidence_ids": [
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:10b53ef64b3643aa99427f1341bd7eeb",
+        "record:run-07c8a3ec84034f2ab14ceab46e9c0cb3:02:evidence:2dbdead6784543c19c37b987a2e7f9df"
+      ],
+      "delivery_status": "not-sent"
+    }
+  ],
+  "review_bindings": [
+    {
+      "artifacts": [
+        {
+          "path": "impact-register.csv",
+          "sha256": "sha256:9501645956ffc69008f04ad684f4a9caceb0005940cb7ced3982154926dc172a"
+        },
+        {
+          "path": "compliance-brief.md",
+          "sha256": "sha256:9d868cd18fbe82d4e0e92a9e90aba0262fb9142929c4fa832ec6e32f8acb61c8"
+        },
+        {
+          "path": "action-calendar.ics",
+          "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+        }
+      ],
+      "draft_version": "sha256:37f35ed68e8f8733ef8d986ca3078f57b580bcb83ed288d660491c7b48202266",
+      "request_id": "review-ca7969768f414a71aebd36321bb8bffe",
+      "run_id": "run-07c8a3ec84034f2ab14ceab46e9c0cb3"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "impact-register.csv",
+          "sha256": "sha256:9501645956ffc69008f04ad684f4a9caceb0005940cb7ced3982154926dc172a"
+        },
+        {
+          "path": "compliance-brief.md",
+          "sha256": "sha256:9d868cd18fbe82d4e0e92a9e90aba0262fb9142929c4fa832ec6e32f8acb61c8"
+        },
+        {
+          "path": "action-calendar.ics",
+          "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+        }
+      ],
+      "draft_version": "sha256:37f35ed68e8f8733ef8d986ca3078f57b580bcb83ed288d660491c7b48202266",
+      "request_id": "review-37a30fa3840f427f878699d3db7dd364",
+      "run_id": "run-07c8a3ec84034f2ab14ceab46e9c0cb3"
+    },
+    {
+      "artifacts": [
+        {
+          "path": "impact-register.csv",
+          "sha256": "sha256:9501645956ffc69008f04ad684f4a9caceb0005940cb7ced3982154926dc172a"
+        },
+        {
+          "path": "compliance-brief.md",
+          "sha256": "sha256:9d868cd18fbe82d4e0e92a9e90aba0262fb9142929c4fa832ec6e32f8acb61c8"
+        },
+        {
+          "path": "action-calendar.ics",
+          "sha256": "sha256:2a940ae65747ebcd9d186faf3b8293f1e7810713f5a3c8c674d9e1133eeaa493"
+        }
+      ],
+      "draft_version": "sha256:37f35ed68e8f8733ef8d986ca3078f57b580bcb83ed288d660491c7b48202266",
+      "request_id": "review-083474cf9bda4cd98bbd9fbfd1611123",
+      "run_id": "run-07c8a3ec84034f2ab14ceab46e9c0cb3"
+    }
+  ],
+  "mechanical_validation": "passed",
+  "decision_counts": [
+    2,
+    11,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "exported_decision_count": 14,
+  "meaning_limit": "Byte/graph/format agreement does not establish source meaning or legal applicability."
+}

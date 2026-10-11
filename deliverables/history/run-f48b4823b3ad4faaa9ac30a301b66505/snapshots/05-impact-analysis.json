@@ -1,0 +1,2232 @@
+{
+  "consumed_record_ids": [
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:01:scope-basis:8542ee9ea3d14391900ea64b7e6913aa",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:0609a9a7cb9e4131b0e4dbda0eeb3901",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:104adb2a898e42bab9a412de82056dd8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:1925b78586884f6bb2b6116767385a34",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:21719bf0ee7448f080296871175ca865",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:2687d4db1ee3420e8fb0a78f9bab0584",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:3692efba754e469e87002db2bd02b891",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:3be2bc89698c498293f7e341b4397ffa",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:6bd8dd7b3ebb4542bfb9bf1fa6a01f87",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:6dd0611598b147a1a86a3c2d49d6650d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:783f567d2f6149c9a16de55cd7f80ebf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:8263ec636962475880a906cd0c6338b9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:87d94947cb334ea28b64d577cf527eb8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:962a10174c5c4358b0391374bc673b24",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:9c49091f34064cc79ac1a577c9ba3419",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:9cad9bf2504b400cadc7e44253ffadc0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:a9ae4921439b45588c069d2cac695fb0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:c5400b4399e54154bb360dda338cc97a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:cf73d57fb88d49ae86e4e29aa6306002",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:d6facf7510a74a0d987cf2da1798245d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:dab69aadc27b44f0a05a26bbf856ff1a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:e71fbbad0e414f1585e08eb3c8688180",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:attempt:feec0e7f59a34f0da2c31d085715d6fd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:004405f9620e4c5ca451e87e13da8cf0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:202668aaf73d4eedaab0aeba58d2a4f1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:23782a79d407443f8372281c59959605",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:249fa1a655224db99cbac15ebc1c105b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:2992cd1bb8b74aa2a160badb63949854",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:2db826f8e5924b6bbf9d3eba4dc5bc31",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:3e4f9e6c2fdb4d79abead6ac6c4182f7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:48eba8d484934c19ba255718b81bedce",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:4e71ca04b98b4ee9b4fa4ac9e3935000",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:5ed3b7b0f59e482291ac5e8250ac1f6c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:6172b0466cb046fd97f8de735a1bcdd4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:68708b393fcd4d6885c131b218107935",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:71998d9bbf8f4215980645b5b79f3459",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:7226e649f3744b388a5a821ab635284e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:7288142e1bd6485b9b0036db809a3bb8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:8501d47e1e164c07b168e961acc178a5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:8817d1db8aad451687a557cb5e8b4011",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:8bd63c4fea1c487387ba5f900127cc7a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:a90e54d2e3ed490c8a7512a9f1e75abb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:ad63d3f331b044c487c552e7f631e354",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:aeaac20e2a024f779155af7b500c8a13",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:b227f924918f4a35a4304dd28340aa8b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:b612a3a6f2744ac1a0f6152f3f0521c7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:c272edd93eed403a9a920ce386f90724",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:c5cd01ce666b4bf790acf40b4b0dc0c3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:e8218878f2744a279b986757ffe50a45",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:ebe7634e363e4934995058d3b101836b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:ec3fbb37e3a2476dab76cf94c696661c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:capture:f8cbed8d59e349e3b2f5e3c5fb448f93",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:08e147f9e5924c0dacd6a1e6c9339b05",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:20b450cb6a24486ab4fa30a7530f35b4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:24e7bc1a851548899445d9669edc6313",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:2c6e0119ff0946eb9458b2ab98c3a0ab",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:3c57779b342d422db0c016bd939cfe7b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:5e5721fe7df14d6e9dcee7d5e8fdd954",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:664fdebe5e634c73bae75a04f99ea462",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:6c4ebee1ad4645258d44c831dedac334",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:7b68dc0effba4369a7704167e25e5c36",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:88649e3c06d54f0e87d16aedf2539c2f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:8f019be8968c4889a3bd56d43ecae150",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:917d7db7314441e2a79cc21f1b3efd24",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:9205cf21de41415e91250a93c2f7cb60",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:9b6246257921498c871fcc90aced6fac",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:b59f097fde4841d3b0e5ac74c5402a1f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:bc92ee0575da4e9bbf94fffba5fbbb23",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:d25516b8860e4ee3ab00088801d402f9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:e14557708b5b4bf79b7438a2483e33fb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:diagnostic:efbaf60d65394217a164e9c6501e9294",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:1b5790a1365449618935afc60dd787e7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:35c71687213246ad8628633b14511870",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:52ad2b2297474f4e9abee4e2bc59deae",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:5ec0099b72314f52b6f541d39e36064f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:60339e4ff27d4a47800b1d59c10aab64",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:7689bfcff42d4d938e3384b37fd0fa46",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:84a53b1ebec94a6483f59f7f8df3ff9c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:8dc7bea5eb9b426382ebe956ac92e17e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:93a23155ea8f4d8da44c284a08720cbe",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:evidence:a4722457adfa4356b99c838387996334",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:mapping:024f6b4632fa49bc988ed1ecc6916d12",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:mapping:4e803c8b58d54ec882d6e3b25dd81e16",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:mapping:98b59c94af3145908ca23506dc9b8956",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:02272110e0f14a499533cfcade0b1be0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:092050f382984b7b994ce34d09403f08",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:0ace942237344148bffbba18c63a5709",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:1ba017147a8449118da53b14965193fc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:2e035f88fbc14d2094c209785f2b4bbf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:2fc746f768494c289ffcec232a1a1882",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:337f85a27985440a9d5197ccc9de3872",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:38a17a5a51b140aa9626f5a0579a7370",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:5118812f582948799da0b7a196e799be",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:513b0fad8e374bd68690e5c57bf6cfbf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:533bafca46bf48e2b2eb4e8e456adc3f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:656fa17616ae435e9cac9d3a187a4fcd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:6c843a167a0a456bab63d076faf64c52",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:782d4322119d42cbb4c307fda7a26b96",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:78a7052036cc4d7a9fb02449fc98c47f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:7ffe3f951399410f8f7e4600eaafac90",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:86638c2e9ea84fd7b8f8f131d18bc329",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:939c7453e01547c29fd773c4138efb8f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:b3742d6d2c434b0abf9cd892c4b7caba",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:bc757486f3164519a7df3fed21145656",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:c416bb474b374630b7fffe27f997f27f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:d04c17305ff94cb1ab6d9eeb0822b594",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:d2125b25e3644d8c81c3a235581c1b4e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:dc55b28adb5946e4be740b4157825fd5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:f686fcbb7e274acca72e670e6d146935",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:normalized-row:fc2c15cdda5b409a91884ff36048e465",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:0dd34792fc8946209aa2fea27cf878cd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:135c78ac4a034bd8b6728b192b49c871",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:3597b4b7c67c4975bccf4af539017331",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:3de7cfbc9901494d86964498e6823d49",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:733fc92845e34a57ad4e9131b8f0d6c6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:73c88f67a64e4804a9aa6b8cf07f9fb6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:7a01fff08dac46f7a9c4190d60eb4e2b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:840d03478b304bcba631b815e36017c0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:a9ff6e13eff24c0ba7df0f95d0c8a1a3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:b761854e7ddd4406bf0a530216bb4081",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:009f0155d9d74958b56d093996a55e60",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:00f19ea5e8b64421a9862963d250eb76",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:03be9fc27c184c069ddd7afd2900a77f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0456b06d96da4cfe81fa39c8592a3d3f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:06750e64a62b4b3b96f08672d9e56075",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:06c8b2f431cb46df9794601270728e61",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:07a6e95303c94f29a89d886ba028241d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:08bdaf31495949d3923eba93a6595036",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:095d6b6376df4651b863562a8852bbf2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0c17ef76e7464899947d4ef1ad9d44f0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0c36054586ab46e0bedbeb7055be54c1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0cce2c8870d84f8db7baa68cee72468e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0ea8ce21ce234f11aa30996c72fe568d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0f1ceef1025b407aa59638a38516281f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0f6c9604a5c64074a7e21f76913a7bb1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0f97dc432aea4a958d3eecd3bcc366f9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0fa7d2811a884bbe8438de736320cd56",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0fe28fdbe7434c4abbc35bd995f96098",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:0fe76ab1986b47f2a95089abf105f05b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:10a156e4d5794406b4380e028c2275f5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1129000e5807487f81aae2c2934a83fb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1325df45f9634687af5db29e781faf75",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1452128c064145949fa60d34b53f4952",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:146c449ad2114682b264bdabbc1b71ac",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1506dfa8aeca4da3967377d9ffddeeea",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:154466f3566643f1b8c51ab55a967ed1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1564747fc7bb46978c932da1ba94cd65",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:18dcb2431b3e4e5d91342d05c457d4c0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:18fd30e86d6343018f61ff56bcaa7d89",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1970d55d38394d8c94aede20cf0ab8d3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:19d470220ec342aaad240dd861ed6376",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:19e79e59f058491e95b4ea21a4409ca5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:19ecfc99993c465a914b5db2b29d8295",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1a08ce17147c4d0e9ebc790c40683173",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1c0a948a4b86468abdbb78de99f2ecd4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1c17759a64464a739de9e017d3429014",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1cceefb0739f4bb99ec5c7ba6b6526da",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1cee29e89db04793b9bbf2754f0754ad",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1d4f71889fe445a99a04949bf6bc4571",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1d9116b223fe4e1b92f006192d86c723",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1dc500f9ccec495f8d87792a2fb4a226",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1e3dd2386d42422fa055a14ee1b6dabd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:1fce3eef7ad548f5a7369032c01d82d5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:23a55f782d2c4dcaa1dc6bf04cb6656d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:24ca3065e5094085840bf43fdddeb5b2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:24cc251779714dc08026608df1359f6b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:27e3f65c65544db8b9b686b16fec6c3a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:28acb86c2f64462a8dae5d5c4281f12f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:28ff55c82054435c802cec57b66eed01",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:290db6d0c626412b97c8b082ddf7d10c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:29f00554241a4c2a848b77aad67b287a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2b1709599ac7478a9d07ea4cd2bc742a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2b2fb37cd68041789a73322614484cbe",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2ba7b53b25504646980c97e834b0dae9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2be511d4684b46a2a40ab8ce8ff8b411",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2c19f7aa200c450ebad578727513ac6f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2d70ef4edb514bfaa2aeadd8dbaea473",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2d7b4c4865374619b571366a80b7f233",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2dcbe41987f44f8284e5b641b1d57bf1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2df63fe2dd414a359c6cbcc6bdecf874",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2e521cf7e69049cda0eb9e81f3b24b47",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:2e612f512b194dd79f34e8ee2a8251d0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:329cc84972504050b7156202613d710e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:32d45f2ddddc49ed96da44655dc3d2c4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3305e6b8ae6e4657a052d14fb7f3db9a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3625eaab3b7949459e277cd1af05dee9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:364ac5638ada4b34a4a498d69df699c3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:36afdc8478b14988ae149db56964e387",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:36d6fc0ae4f34209a0159a660dfac908",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:370bcb602daa4034b761aa77dbd37545",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:38c57712dcbf4a8e8f92d6964a2cc6ac",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:39c954cedbfd481d8687d07ca3473d14",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:39e0df0336a14ca8ab26312d03b9c524",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3b1a5fc90e8d488b93af87d4c65b52b8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3b5eb7306a294e47b963a9af4ff4faad",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3b70460732654cf8b1b35d4c63b49a8c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3bf8ca50197142de8a5a00c9c4164ca3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3c0b3ff54f584a27ac4b93a8d26b0f42",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3c81c45fe8054dc2bc5f23fc800c294b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3e482ea962a44cc2baa9e59137deca91",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:3f6fc0c08176431592275b71fe77069d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:40e293cf52a941deb59e66325b3d9741",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:4112276b4d534925a7e6b4ce441d461f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:4261273982134861b3836d3347fd3e5c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:42c058d6436b44e092d51924c91e84cb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:43e8f4c77066424d984c20db16187933",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:43f944ab489147c6ba78c5110b370733",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:44aff80ddfcd4eaaa9a2703b2d0ad347",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:455709a40e59425d88c5035f518a7788",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:45e5000579f0416bb679ae2f402cb991",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:4a774c4b98f24e2dba4cac2fdc72c178",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:4b938d7a96ff40d5a014debb3f97b395",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:4d716a79141f45b2a82aff3e0dfe480b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:4ece3a2ac39746c38811e926917ba405",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5029a6a2f7864b18893cd08d35586d91",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:502bc34d29974e5cbd350569eebf0455",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:520e035a526b4fdc9597b1e8f6458a46",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5287282308a14ce0b11408b7e66502cd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:544b0d9c5a8b4d6cbc2c0a265039b012",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:54df558f88a74d0eb4023576a7a78acd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:553100761ff2423993f231d06fdb7472",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:56f0f1370d1e4320878a809656932122",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:575cb6c7674447a68969d7eadaa5130b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:58260dbf20974d6ca6036bbf6cefbb64",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:59593a87db744d65a90013f903e24391",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:598c2ffe9ccb42cca890b033284801a6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5a38f34de22647ac968a74f0517ae453",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5a53e868ef2643539d5cde04b01adc43",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5a6160e265f0467592e161ca380d02ee",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5a71fe0d7c6f4c5eb54b02528b870c3b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5aa6514dfcb340b48777a92f490cba96",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5baf48621c0c4e8e97f728e82fe75f85",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5ca679c0a44f4035b22779e0b5837f08",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5e79402e0b1e437ab7078543b5ef1057",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5eeabbce82df4d8e9332d905f39137db",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5f1f55aff9ec4a4aa7c3f91d90173838",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5f72bc24bc1f4024b6596d640f94e5e4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:5fe76fc738694a8baf85237f028c9407",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:603be831c24a4996b1b9d01f23047030",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:616de8b2a76f4c4196b2790e0e4f78d8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:6268e304e30d431aaa4d8c2c3f8705c3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:62846daf46834832bcd689be4d7c8ac6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:63f81293a27449fcbda769f03e0a55cb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:64d774ceaddb4aa3a3019adf4cb1c1ef",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:65f6ed074c9f4abcbf7eaead2d07a6bf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:664978318ebb4c519bfbe3a97d2f6707",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:66624e452a43483fb8319f7135127e85",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:689207828928421b96f327617d0b1a8b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:698848fa6373467fa6f2d1dd8210421d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:69de290effc34a42aad8eebaa3cc9fb3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:6a2ae9b40e20468982a741fce82fdec0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:6a3cfe1b6b5042d69b10c48616924e76",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:6c62992f4aea456b8f0d97be82385652",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:6edab6faf22f44608a25f2a7128e8287",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:6ffdcc9d9d384c13b2c9b70df7665c61",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:717c9fc343d144b9bb6573d14f8b7de9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:71b55852635a4d299d933cd6ea0a9a7d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:71eccafaff9b4a4fb3792c2b1edfff79",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7241098c75c6485aab0af3b180b12bb1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:72d4106518a84f19b24ca5ed7d74cf54",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:72e38b937ca14fc2a76fe3f80569155b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:73959b62896a486d88de5eb8b759aa34",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7416cf1fbc04486892273c0407ba5693",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:751ae5b2ba8f45d7bb339c8868fff550",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:75764500a5ca4cd685b8df2728de1ffb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:75c7677fdbbc4bfc8e63af64a73b1f1a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:75f2e51c514d43888a9dc2b526c4a25b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7691b3fcba024fc7b59d2a116516c00e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:77254622fd3b455e9d02c92c05268a61",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:773d9447500a4cd48871333d52fc05f3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:77c217d7ca0046c7a54b48d05bd8c3f6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:78e1efae0b6b483d8b627d17e5e74674",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:794c0550dab744d2b53a58214e88984e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:79826b3274d3421a91f5ff5c5ac09c67",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7982c58aecf440f9829109a9423c7cba",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7a2c6988ad2a48a88d07bfcac6dec31c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7a8ea3b14f9d4491bf8b46f3e1cb31f5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7aa1412004e14e41bf193b9c64df4abf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7abbeeb1b98d4aa28f42846b223deecf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7ae46168b38d45d49691284effeff7a4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7bcb072a5f044ebb8a8b794a516e1c3b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7d2753ad4a704323a584ce7fce3dac07",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7e68638a343b47b692edd7615b01d8bc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7eaffe690a34469da40ac19cac6b4812",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7f844590d4e24829886880e76a6b745b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:7fc0d1c969a0476b842865b057086292",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:823cb98024494fd9bfa033e1a4adbbb3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:82c5c2a44e1d4e0cb211128eeabb5ec4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:82d80bc560c2472aa0db293fbdb5b710",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:83e1b47790404c1e970070f567bef3a8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:84c7c3cb08e9406f84dfd8d3699603b7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:854fd1f8fd2e43908ca2fce0c5fdb46f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8582ed79453c425fb52e6a578d75a659",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:85ecd057902a4ff3ab21c6310091968a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:861c07d2df474562aefb2a5039a3b43e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:865e2fae4e764d84b63e682cb307d794",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:86e5fe10df1d4397912cb3dfb9cde43a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:877689a140504fc3b17923b2943b408d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:87be7f294e6d4376af8a835b6dcc5008",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:87cd96dd1190443a86a953970b6816ba",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8892173a22ba4569a1cef0077ae9d48e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:88b978f5b6b04b899af46dd47cf8e6f8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:890a2abbd4eb40dab9ed6ced47cf6217",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8ad9bdc3d8a5430a969de3d864fc71be",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8b959d5eae524bf0bd950f9de6e29f3f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8be76bb777bc4d1db3e3da6c7d316764",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8cbe4fbb03654b6e8ac8ece5b0ea9796",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:8d215cfe9bb345a7973f146f42b2fb76",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:923f396c559245fc96773561fa69d4e7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9323c24466e04977b91877df8642b779",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9392a511078b4270b3377be829db4c81",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:93bc27a739e444d6b92df7a59a3b9518",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9460d8865d94490c9975875ba290aa45",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:94b12bf8782e41c2a0349afe0c8ef509",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:95e1a0df78fe49f69d39fd89d2da849b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:961e877d338945d689662e416c3d02a4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9775d5099b4b493b91ddaa26bbf988ad",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:97776cdec75a41bf91dd8a289bf2beb8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:97cf86f8f43e41868d65bfdc47119492",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:97f3324c525e4059b1dbcd5fbb1d9120",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9acbb215a48e4aae9e473bbdd995cfad",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9b6c81afda754025ad8a4d4fc58ead89",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9b9f08626dc846acae34e985eea6c369",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9bca82bab784481f8389496c03bb99cf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9c2e43eb74c34d7dae0289626aa78a90",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9cd582d197f2438c8d009a2da3155b30",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9d31f083028b445c9c588d04d0b6f9ec",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9d52128a73124b1f863a0f4f75fc8cce",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9d6aa56d230b481f82cd35ab685c7a45",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9e44ae1e226b46548a7974d715922b46",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9ea07a61ecb547ed8f1864706b90350c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9f0c0f34a1b340a4974cca902a4570ec",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:9fed8da7345f4a809e571a5241f9d974",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a3411a9dcea0410195c8c99172fb0db3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a3d9425f849d44bf9116fd386a2855a9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a4557f8b82574515b62f90b47d55ac40",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a578eb03005843cbbc1fa697ec8878d1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a64e737ff0fb475687d617583a3fae9a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a6fbb5891a564069a4eef4797ad5fe37",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a736434b0ba84b52917c0d402a05abd4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a803563a343b4084bca40e72eee640a5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a908c838fa2c479388651d2202150882",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:a916b1f570954c29a34eba4d4fcb6b59",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:aa3e21de0e674b00aa56678196ad8a52",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:aaf2e0b8b9254c02918c648d6bdb79ef",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ad09f3a49c894fc995acb9b9c99062f4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ad126e2ebf6f4049a9972adb0312b72c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ad764bb982134a638a6e0b613b4a4e95",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ad99b9602d614888861712fc12ca3f19",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:adb5ec237b214223ad249ab76c3ef9ae",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ae53d372d65546cbba15d812231178c2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ae59c12615de470694aeed827887540f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:af7c142e290c498a8c4a14912e594525",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:afd0eba6d0d54782a6230e3b1a1465a9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:b0651f310980425790d0c6f002771c36",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:b0a64044e9c842f3b640801b331f7207",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:b2116cc6c6c14b7385c482111fe75645",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:b23ac156eabf417b936d85e39639f3d1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:b2b29fb69ff54ddf9b938908141b271d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:b5655f56702d4767bb981437db4c5ee7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ba5dc88b33a648259bbfc01568af2606",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:baef3393482e40f9a3dcb14334312383",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bb7c083bc5b54049a71e302c0f2f2a8e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bbf0bc23da144545872fc13fb263f13e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bbf7dce0e43e47f193950aa91108fc71",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bc03809b0d224d9db901c9bc4942d0b5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bc5f38c3d0164869bf746a378641053b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bc94b4c1e8ab4c778341843af824d20c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:bf27a32d3607482fbba555bd4820e2d0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c0f46ea112034c81bab1395b1ea8f87f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c172c6b1f0554091b334642a408962de",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c21b0da37665407591270003debcfd56",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c2d7112cf06141909d856a6f92d03f5e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c36c1d3fff354879a417c5c89ba8769e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c6e058a323314ac589a782e156acfc4f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:c9db1700d7d64f70a7f6efa77bd91896",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:cb82f45037e5461ca424192d533938d1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ccf5aeddb2734c499a9c6641d97c2b84",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ceb59f1df8664497991c5eb092ad5d0e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ceb9f04a57504485bfed99e3703f48de",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:cec0a0d51d3c419d9e128675afb01c9b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:cec1835691074128a3df1ebfdc9158e1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:cf3d3e1b8fe84a988987e83f0ccce4cc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d0ad3b35fe534e93ac3c7c58739bb8e2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d201ed67a7454c028b10883a37c6468d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d20e8885a07a4641afaeeb8a7f0f3008",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d252dbdebb5944908d564cdf99ba904a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d2806ce5c1ee43c19c9a67ab148d08f0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d48a064d7e054f538405f735953b6dbe",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d502b28cfe1c49a38d20b12b164078ee",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d5a9edea62e44e5eb21ca10481a8ce29",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d642019a77eb4ac7b18e92d4b3653b6e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d69ed0586ef84f29a24a0baf4a76c901",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d7729fbcbfb94fe0a165beeccdafafb4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d7a8287893a54187ae03c304b0731796",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d8180fbc36a04ba08c47f9c6669449d6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d83b6a877587418aabb5cdfcfe03df6a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d85729c578b1448ca2710b020858c526",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d91cbf4713f54b5ea73833939021e9dc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:d99d77ba5cf7476dbf3f38552de94201",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:df90c80f959d43d59d0a730b93737f04",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:dfc5879c91e9475fa411c80827257a64",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e0395778a9864102a25bb633f62c67bb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e1656eb8d9d144db82f96e92799a828c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e1c9df90b10a4337958f4c5d40196ec9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e1fabc01ae2a4b3b99a005533e334df2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e210d45f4c9f476ea4f54dfc9b99cde5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e2665ec3a5d348ceb3a56e4a242c95de",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e291dd624c9349d1b31d462c29c1001c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e2c54c5695c748049526f4bf8d42b01f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e46f4a2e930d446cac368eb2d6aa436b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e48de9703a97426ab983a18524f86623",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e733a79721594131b87e08aa8d777736",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e733c1c38d8f41b8aad7fa864a3eb399",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e7565800f1e24fb9a9331b96b9cc8b68",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e76a806bc005461ca8c364f1cd4c2f32",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e77d05f944e345159d02da9b123e0015",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e7faf10f61bb48fd85a7ebebcf9bdb0c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e7ff0bd8d6eb4d7ea3ed7e2bafd0a0a8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e890327891ac4de5badd5a40ddd93592",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:e9fb9ef2507a49a2861e4ab447b10020",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ea467b6ad32a483d9191eb99f373767b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:eb94eb4dfe4045deafe233398f45693d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ec344e83d6c9453cb4197228609a5461",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:eccfe3ec788a49caa4b52fd93818d099",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ecf08589fd3d45d48780be92b766ec8e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ed04d79a8601494982ded599ee06b21c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:ed74d789a76647888351566114c93377",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:eeae00be535f49168b59a7fd3b859382",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:eecacfc8639c439eb84802616e255164",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:eee574dd2be24a52887aa917d6cc62d4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f1d5f97288a5411b913b3643e20bd87f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f2691fd60e004146843f2e1920a4707c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f2e1d7c98b2f484b91d1945833401a78",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f2fbaf6043474a9594355e5fc5005037",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f3adde99bbfb449d8f4a41bed50a05f2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f451b24111264f109bf1862267dc7a05",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f46c71bfbfad45d6b29c5c99f86fee8c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f485cc3cf9534f4393297793b28d51d3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f631233ae11b48cfaef03ce9344f5ffc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f7966b54120940ad84fb80bf31ae61b4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f81bc4c982e641e0b81e57f5cd10b98f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:f8a6e0d5c94f48acbd0a0e51e6a42137",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:fa240ab4e49a48c39b8c7ebed5ab387f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:fa5345d276834841a9b19e073fe679ea",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:fa8cd508b90d42208974a10b9ab473ba",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:fb5948ff745640528e05ef061d260cb3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:fd2db63395c24f26a89d946ef8d58990",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:fe00fc8436d349cba96370980554c80b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:fact:feb8412d71794a6d81dd4ef025a80e25",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:00a250fc16f048a18397c7784769cc4c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:00f6aca499b145248a3bb6e78dedbce9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:01431d8d880c4f168821223135acb15d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:057887f591a14f25ac51948ab421173c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:05a6bfcfd8794776a465516ce51548e6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:08f210ccfea74fe7b0c5e2aa05b9b8fc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:0bf16f03701543e592374de459439df9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:10e27a2c7bcc4f338e792583ab32b8a9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:17f770b8341c410ebc11ff21405298c4",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:1af7243eae4843f88d5066de1e0e7035",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:1f2ee6f9f8b64ec6a455956f3ac37f0b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:2372d6dda22f4948b819b8ffbb2d0a7c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:23c2cc2ab2cb49a8baf49a8c5be3064d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:24169640b01c4193b8ebccdb76dcb548",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:2549c2659cfe4dfab662a477b0b0e044",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:281a66b27e054a138b8bc14910b102d5",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:2ce417dc9b254f8f8fa51a1f26f274f0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:2dd42030adfa43e984f74ed14008dc15",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:2e4601f21e424f9a86caf8c84a4b2dcf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:31615a5828bf46958a302f848c65a85b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:31f1b3ba84cd4357a74268bbf75c4abf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:335f1c97fabb4ad6b5db0499ac413aab",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:346593c6abe04db9a046e64ba891f963",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:3519d726563647efa54913660a723747",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:3801d0b4060d4c15bd284723e3f9c0a8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:388dd77c2b3f4e07b8e20474b81fd3e7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:3b3e027ac4e4441d9e9265d1521d4f5e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:3b90d45ef9894e00b938da980c05b063",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:3c0db6755d2547299a37a5d85dae278d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:3d3dc96718fb449fae28b979f4fb00af",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:540b452a2a8e49839393d99beb7c9487",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:54e5d8b590c2412eabd12461286d5377",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:55a9ba30dea84c42beb32c2c9f9124a6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:56629f7273f24dee9feca064452fba39",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:57f81566d02c47c49c21ca71da83984d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:59784d8ddcee41c7a1167e0e9b7cdcf9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:5ab03bbcca3544aa8f648bf0312bdd01",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:5c724ed5ad394c04ac57037db3e19917",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:5e4dcfb6468a467cb2e0fbd97e409a3c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:620fdcc4602f44ea81eaf2bd17a0a518",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:6a2524078eab4f4eb8dbb66f6db87b92",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:6ae3b5acca99445180874761335a89bc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:6d039e72a1e74f069523786a5ebfbedc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:6e1509fc3cbf4df8bd34f4dae29caa56",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:71b9dc07a453426380f50feb76fa7f2c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:74a7a0ecb5ec45c99fe1692c79a06c63",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:76352193fad84a2db66035b9b18c86a9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:76e3520756bf4c8782668bb14424f7fd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:7753c0c812ed41499a6b65cf2c2d2841",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:7b824e53f88f4e5bb7aa31bd4d297cc0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:7f7d2ac4c28044208388a2db86745398",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:7f9a56d4d08d49238aee3990936555ff",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:81b15fac7ff84e3c95cbd207ebd6548d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:84bc214ffb934f038093816ae9e78fdc",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:8580a37a926d48f6a7834c827173df9f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:86af03047bdb4747be744b45bf85a00c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:89e1d7c5f211477f9a137f3e09168c39",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:8de23e2ae5ac49cdbd9bd6e1c35b6506",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:8fd5ab548bee446fb64b84398e05caa3",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:939750534c1540a0bc567801e72e7063",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:9397c1549dd44583b55a129a09345aa7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:95b729de2fd94fd3adcb64f5bcc944d8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:9b289bd0b846405fb4b9e28ef3a93f1e",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:9b748f78fad648bcaf1449691e0e84f1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:9bc0298801ad44d795b6159b4f14e1ec",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:9c9196d1ab4b4b26bc3264dd6f831d9f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:9d437935cf61403185b9f52a234c6447",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b07bbc250dc34dbeb7a9e573ab75afee",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b4ddddbe1dc942cfa9d663cc903fc3ce",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b5ec391b0f194a05a3f8a3d273b7dc63",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b7162c6aee914fd0aecad9bb910009d0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b7755150a1a64c0ab9ca1ddc18242871",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b9bb19fedaa641e9878a74c5e0476674",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:b9d4067b3c4542ad909bc4955bd4c831",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:ba455807f7254ad9b5c051259fe0f499",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:c401e9e763944343bd5b1609057b3b40",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:c54a9b3e0f2b478eaae203c14b0ffa15",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:c70105fb63ee44e282bc511d9dff115a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:caf8bb778f6a470897e2d3ed9e2a93c7",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:d362f890f0264bd1bcef8ebbf9243753",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:d3e6bea157604293b5d08fd1da4c31f1",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:d60a3c9867b54c1191bf65bb64e18d40",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:d637ab867f2f4a36a39996bd82ae8893",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:d793364e40cd46a38b1b6cb697e1d76c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:daa8a92f3f82414b8c2e0cc8bacc6561",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:de4e5e3325874ab2b8194e4cbd6536b9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:e2e70060696d4f669554fe12a002479c",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:e4b194991a0a48b888f217d7be187e00",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:e7ba4723354b4b38b52df5c4337b49a8",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:e8798dd746204eafaf812a33bd0a5658",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:e9d92af3650e443a915f3df8b1a8a673",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:ea4a2a1d2a0b4dd0b1f50c8a7887a1c2",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:ef7f3f3c45894f898bb2be28bbf92a57",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:f101a5df2797416394ead80555617a64",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:f34a2911673746959ba0cfc694ccdaf9",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:fa249536377341bf845ba388de051bca",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:fb6c80fc20544d6b9e57f4648edbd0eb",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:fcaa908b0962470182c5e9c23976e930",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:gap:fe2fbada187c4903a82abb9584efe2fd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:2dcc67e61ab9496cb60636dca6149258",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:2e48177a1b00449681dc35fab04a583f",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:5019b3654e4042a89d745360f7cfd4de",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:5e5b846918474fde9427cd06f88da65d",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:74198825be14428ba27d0c32cff42a72",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:952e0882831f4daa898a0bccb102debf",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:b9d3f61e75d9454c9bd9ee9bd4ff8480",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:bacf66c08781429386a36c01c8883477",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:db3154df357a4d09bd4cd4aa5efb2a58",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:04:incident:dcc9cdf7d3364bc5816a3692b194679b"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-10T18:49:13.000873Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/04-evidence-reconciliation.json",
+    "sha256": "sha256:0784045f732c17f83f8f4fef715015115b0c2a0d9686c1d4d28095ce96fa3fa7",
+    "snapshot_id": "snapshot-362a348f9dc44a69a4bfe48175871532"
+  },
+  "produced_record_ids": [],
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 5,
+  "snapshot_id": "snapshot-eeca18b7d26c4feb94a1f43d7f74cad5",
+  "stage": "impact-analysis",
+  "state": {
+    "conflicts": [],
+    "extensions": {
+      "u11_impacts": {
+        "schema_version": "rci-u11-impacts/1",
+        "value": {
+          "candidate_reviews": [],
+          "coverage": [
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:1",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-direct-interaction-notice"
+              },
+              "candidate_number": 1,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:2",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "provider-synthetic-output-machine-readable-marking"
+              },
+              "candidate_number": 2,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:3",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-emotion-biometric-notice-and-data-processing"
+              },
+              "candidate_number": 3,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-first-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-deepfake-disclosure"
+              },
+              "candidate_number": 4,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": "eu-ai-act:2024-1689:article-50:4-second-subparagraph",
+                "basis_type": "binding-legal",
+                "kind": "candidate-review",
+                "meaning_key": "deployer-public-interest-text-disclosure"
+              },
+              "candidate_number": 5,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n."
+              },
+              "candidate_number": 6,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-001"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-002"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-003"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-004"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-005"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-006"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-007"
+            },
+            {
+              "basis_type": "binding-legal",
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "candidate_basis": {
+                "basis_id": null,
+                "basis_type": "binding-legal",
+                "exceptions": [],
+                "kind": "candidate-review",
+                "meaning_key": null,
+                "predicates": [],
+                "role": "unknown",
+                "summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act."
+              },
+              "candidate_number": 7,
+              "evidence_ids": [],
+              "impact_record_ids": [],
+              "owner": "Legal",
+              "reason": "Candidate withheld: blocked",
+              "resolution_need": "Legal must establish authority and exact scoped applicability",
+              "rule_basis": null,
+              "rule_id": null,
+              "scope": null,
+              "source_basis": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "state": "unresolved",
+              "system_id": "AI-008"
+            }
+          ],
+          "draft_only": true,
+          "interpretation": null,
+          "schema_version": "rci-u11-impacts/1"
+        }
+      }
+    },
+    "impacts": [],
+    "unaffected_items": [],
+    "unresolved_items": []
+  },
+  "status": "blocked",
+  "unresolved": []
+}

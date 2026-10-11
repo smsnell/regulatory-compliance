@@ -1,0 +1,3 @@
+{"variant": "same", "run_id": "run-20294d3f0df84da4896e17e0dff1d741", "status": "partial", "package_acceptance": true, "match_status": "matched", "assertions": "passed"}
+{"variant": "date", "run_id": "run-d385e16d20894c8cb59153a0526680c6", "status": "partial", "package_acceptance": true, "match_status": "unresolved", "assertions": "passed"}
+{"variant": "content", "run_id": "run-caba25c8903b49c9a2f9555bef6bd498", "status": "partial", "package_acceptance": true, "match_status": "unresolved", "assertions": "passed"}

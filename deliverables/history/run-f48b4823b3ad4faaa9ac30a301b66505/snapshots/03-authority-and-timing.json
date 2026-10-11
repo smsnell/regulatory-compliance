@@ -1,0 +1,233 @@
+{
+  "consumed_record_ids": [
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:0dd34792fc8946209aa2fea27cf878cd",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:733fc92845e34a57ad4e9131b8f0d6c6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:73c88f67a64e4804a9aa6b8cf07f9fb6",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:7a01fff08dac46f7a9c4190d60eb4e2b",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:840d03478b304bcba631b815e36017c0",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:02:source:a9ff6e13eff24c0ba7df0f95d0c8a1a3"
+  ],
+  "contract_version": "rci-contracts/1",
+  "created_at": "2026-10-10T18:47:37.804115Z",
+  "decisions": [],
+  "predecessor": {
+    "path": "snapshots/02-source-capture.json",
+    "sha256": "sha256:c7cb7ab9643e37b1c1f9844dd19b7c56ad621480875b43c7bc6fde9631cba9f0",
+    "snapshot_id": "snapshot-f96aa9e2a1484d86a2b676d3c51ae87e"
+  },
+  "produced_record_ids": [
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+    "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+  ],
+  "run_id": "run-f48b4823b3ad4faaa9ac30a301b66505",
+  "schema_version": "regulatory-compliance-stage-snapshot/2",
+  "sequence": 3,
+  "snapshot_id": "snapshot-79004624c16c471f86363a612164faa0",
+  "stage": "authority-and-timing",
+  "state": {
+    "authority_blockers": [
+      {
+        "evidence_ids": [],
+        "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+        "owner": "Legal",
+        "reason": "U09 ambiguous; retain five textual Article 50 draft bases and two guidance contexts, withhold formal applicability at 2026-08-26. Source-by-source inspection: OJ is the authentic 2024/1689 original, PE/24/2024/REV/1, OJ publication written 12.7.2024; its current-version navigation is not a replacement for its original legislative body. AMEND body identifies 2026/1744, PE/30/2026/REV/1, OJ publication written 24.7.2026, and Article 1 expressly amends 2024/1689. Its Article 4 specifies entry into force on the third day after publication. It is relevant, not unrelated or silently excluded as future: Article 1(20) changes 50(7), 1(39)(b) adds the limited 111(4) provider transition, 1(40) changes other 113 exceptions while leaving the general written 2 August 2026 date. Future milestones in those provisions are scoped provisions, not evidence that the whole amendment is future. Amendment changes to 2018/1139 or 2023/1230, including their own Article 50, are excluded from this reviewed act’s substantive support. CONSOLIDATED body affirmatively identifies Document 02024R1689-20260727 and 02024R1689 — EN — 27.07.2026 — 001.001, lists base OJ 12.7.2024 and M1 2026/1744 OJ 24.7.2026, and reproduces the relevant amendment clauses. It expressly has no legal effect and is used only through that official act chain. There is no substantive competing official chain observed; original/amended differences are retained chronologically. All formal captures originated and finished on HTTPS EUR-Lex as recorded in Stage 02. However literal selector OJ:L_202601744 / CELEX:02024R1689-20260727 is absent from the respective body, and no binding applicability/commencement quote contains a literal ISO date. The consolidated ELI 2026-07-27 is version metadata, not an ISO Article 50 commencement basis. No reviewed date/selector mapping is supplied. Formal publication_date/effective_from fields remain null rather than inventing literal support. LAW explicitly reproduces the 27 July 2026 consolidation and matches 50(1)-(6) plus amended 50(7), but lacks literal 2024/1689 relationship and historical content assurance. TIME explicitly includes Digital Omnibus changes but has no visible publication/version-history date. FAQ has Last update 24 July 2026, yet the captured current body does not prove its historical bytes. Their HTTP last-modified/retrieval dates in October cannot establish August historical suitability. FAQ erroneously cites Article 50(2) for the direct-interaction notice and separately states a shortened review exemption; the binding 50(1) numbering and 50(4) conjunction with editorial responsibility govern the retained drafts. FAQ-only examples (business-to-business/industrial, short sequences/source code, closed-loop outputs, elaborated deepfake criteria, code compliance assurances) have not become binding exceptions or conditions. Legal must review date/selector mappings, reproduction relationship and historical context and confirm interactions of Article 2 scope, Article 111 legacy qualifications and each paragraph-specific exception before accepting any formal basis. Source owner/supervisor owns any fresh capture. This proposal contains no delivered question, approved exception, operational deadline, activation, system impact or compliance finding. No prior semantic rule history or supersession is inferred. TIME version field retains the captured Digital Omnibus on AI content marker only, with assessment unknown; no publication date or verified version identifier is inferred from that marker. Null formal publication fields reflect the literal-ISO evidence prerequisite, while written publication dates are retained above and in citations.",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ",
+          "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/response.json"
+        ],
+        "summary": "U09 ambiguous; retain five textual Article 50 draft bases and two guidance contexts, withhold formal applicability at 2026-08-26. Source-by-source inspection: OJ is the authentic 2024/1689 original, PE/24/2024/REV/1, OJ publication written 12.7.2024; its current-version navigation is not a replacement for its original legislative body. AMEND body identifies 2026/1744, PE/30/2026/REV/1, OJ publication written 24.7.2026, and Article 1 expressly amends 2024/1689. Its Article 4 specifies entry into force on the third day after publication. It is relevant, not unrelated or silently excluded as future: Article 1(20) changes 50(7), 1(39)(b) adds the limited 111(4) provider transition, 1(40) changes other 113 exceptions while leaving the general written 2 August 2026 date. Future milestones in those provisions are scoped provisions, not evidence that the whole amendment is future. Amendment changes to 2018/1139 or 2023/1230, including their own Article 50, are excluded from this reviewed act’s substantive support. CONSOLIDATED body affirmatively identifies Document 02024R1689-20260727 and 02024R1689 — EN — 27.07.2026 — 001.001, lists base OJ 12.7.2024 and M1 2026/1744 OJ 24.7.2026, and reproduces the relevant amendment clauses. It expressly has no legal effect and is used only through that official act chain. There is no substantive competing official chain observed; original/amended differences are retained chronologically. All formal captures originated and finished on HTTPS EUR-Lex as recorded in Stage 02. However literal selector OJ:L_202601744 / CELEX:02024R1689-20260727 is absent from the respective body, and no binding applicability/commencement quote contains a literal ISO date. The consolidated ELI 2026-07-27 is version metadata, not an ISO Article 50 commencement basis. No reviewed date/selector mapping is supplied. Formal publication_date/effective_from fields remain null rather than inventing literal support. LAW explicitly reproduces the 27 July 2026 consolidation and matches 50(1)-(6) plus amended 50(7), but lacks literal 2024/1689 relationship and historical content assurance. TIME explicitly includes Digital Omnibus changes but has no visible publication/version-history date. FAQ has Last update 24 July 2026, yet the captured current body does not prove its historical bytes. Their HTTP last-modified/retrieval dates in October cannot establish August historical suitability. FAQ erroneously cites Article 50(2) for the direct-interaction notice and separately states a shortened review exemption; the binding 50(1) numbering and 50(4) conjunction with editorial responsibility govern the retained drafts. FAQ-only examples (business-to-business/industrial, short sequences/source code, closed-loop outputs, elaborated deepfake criteria, code compliance assurances) have not become binding exceptions or conditions. Legal must review date/selector mappings, reproduction relationship and historical context and confirm interactions of Article 2 scope, Article 111 legacy qualifications and each paragraph-specific exception before accepting any formal basis. Source owner/supervisor owns any fresh capture. This proposal contains no delivered question, approved exception, operational deadline, activation, system impact or compliance finding. No prior semantic rule history or supersession is inferred. TIME version field retains the captured Digital Omnibus on AI content marker only, with assessment unknown; no publication date or verified version identifier is inferred from that marker. Null formal publication fields reflect the literal-ISO evidence prerequisite, while written publication dates are retained above and in citations."
+      },
+      {
+        "evidence_ids": [],
+        "id": "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f",
+        "owner": "Legal",
+        "reason": "No supported binding rule candidates; Legal must resolve the authority scope",
+        "record_type": "blocker",
+        "resolution_need": "Legal must verify the captured authority, version, scope and timing; withhold dependent formal conclusions. Retain this question in the later draft; no request has been sent.",
+        "source_basis": [
+          "LAW",
+          "OJ",
+          "AMEND",
+          "CONSOLIDATED",
+          "TIME",
+          "FAQ",
+          "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/response.json"
+        ],
+        "summary": "No supported binding rule candidates; Legal must resolve the authority scope"
+      }
+    ],
+    "binding_rules": [],
+    "extensions": {
+      "u09_authority": {
+        "schema_version": "rci-u09-authority/1",
+        "value": {
+          "assigned_review_date": "2026-08-26",
+          "candidate_reviews": [
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 1
+            },
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "Providers of AI systems, including general-purpose AI systems, generating synthetic audio, image, video or text content, shall ensure that the outputs of the AI system are marked in a machine-readable format and detectable as artificially generated or manipulated. Providers shall ensure their technical solutions are effective, interoperable, robust and reliable as far as this is technically feasible, taking into account the specificities and limitations of various types of content, the costs of implementation and the generally acknowledged state of the art, as may be reflected in relevant technical standards.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 2
+            },
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "Deployers of an emotion recognition system or a biometric categorisation system shall inform the natural persons exposed thereto of the operation of the system, and shall process the personal data in accordance with Regulations (EU) 2016/679 and (EU) 2018/1725 and Directive (EU) 2016/680, as applicable.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 3
+            },
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "Deployers of an AI system that generates or manipulates image, audio or video content constituting a deep fake, shall disclose that the content has been artificially generated or manipulated.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 4
+            },
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "Deployers of an AI system that generates or manipulates text which is published with the purpose of informing the public on matters of public interest shall disclose that the text has been artificially generated or manipulated.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 5
+            },
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "The EU’s AI Act legislation applies progressively, with a full roll-out of the main application milestones foreseen by 2 August 2028. The timeline takes into account the AI Act amendments introduced by Digital Omnibus on AI.\n01 Aug 2024\nEntry into force\n02 Feb 2025\nGeneral provisions (definitions & AI literacy) and prohibitions apply\n02 Aug 2025\nRules for general-purpose AI apply and governance must be in place\nAI Act obligations for providers of general-purpose AI models enter into application.\nMember States need to designate national competent authorities and adopt national laws on penalties.\nEU-level governance (AI Board, Scientific Panel, Advisory Forum) must be set up.\n02 Aug 2026\nThe majority of rules of the AI Act come into force and enforcement starts for applicable rules\nTransparency rules (Article 50) start to apply.\nMeasures in support of innovation start apply.\nEnforcement of the AI Act starts at national and EU-level concerning general-purpose AI models, prohibitions, transparency rules and AI literacy.\n02 Dec 2026\nNew prohibitions + Article 50(2) transition apply **\nProhibitions, for AI systems generating non-consensual sexual deepfakes and child sexual abuse material, start to apply.\nTransitional deadline for certain providers of AI systems, including GPAI systems, generating synthetic content, that were already placed on the market before 02 Aug 2026, to comply with Article 50(2).\n02 Aug 2027\nMember States should have at least one AI regulatory sandbox per country operational\n02 Dec 2027\nRules for high-risk AI systems in Annex III apply **\n02 Aug 2028\nRules for high-risk AI embedded in regulated products covered by Annex I apply **\n** Following the Digital Omnibus on AI, certain provisions of the AI Act have been amended. For more information, refer to\nthe FAQ section under 'Digital Omnibus\n.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 6
+            },
+            {
+              "blocker_ids": [
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:5ee78209820840739cee53db1bd94c8a",
+                "record:run-f48b4823b3ad4faaa9ac30a301b66505:03:blocker:e931cfa89db448ef8ee853c938fa1b1f"
+              ],
+              "claimed_summary": "When does Article 50 of the AI Act start to apply and is there a grace period?\nArticle 50 of the AI Act\napplies as from 2 August 2026. From that date onwards, providers and deployers of AI systems must comply with the transparency obligations laid down in that provision. A\nlimited grace period is envisaged only for AI systems placed on the market before 2 August 2026 and only as regards the marking and detection obligation for AI-generated content (Article 50(2) of the AI Act). Providers of such systems must comply with those obligations only as from 2 December 2026.\nContent generated prior to 2 August 2026 does not need to be labelled retroactively. Nonetheless, the Commission encourages relevant deployers to do so, where possible, since it contributes to the goals pursued by Article 50\nof the\nAI Act.",
+              "claimed_system_ids": [
+                "AI-001",
+                "AI-002",
+                "AI-003",
+                "AI-004",
+                "AI-005",
+                "AI-006",
+                "AI-007",
+                "AI-008"
+              ],
+              "disposition": "blocked",
+              "number": 7
+            }
+          ],
+          "candidates": [],
+          "draft_only": true,
+          "final_interpretation_owner": "Legal",
+          "interpretation": {
+            "request": {
+              "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/request.json",
+              "sha256": "sha256:6e08b68c4630a1aa80e4bb5b95b12089ec0b4f4c05b00f9d07e0c44e388f21c4"
+            },
+            "response": {
+              "path": "analysis/authority/exchanges/918b277a6439493294bcd1df1633ae77/response.json",
+              "sha256": "sha256:a951db7973ff14c6e8ed3dae530c4c34b6c88608ea681bdb69e5c024c3f70ca4"
+            }
+          },
+          "problems": [
+            "U09 ambiguous; retain five textual Article 50 draft bases and two guidance contexts, withhold formal applicability at 2026-08-26. Source-by-source inspection: OJ is the authentic 2024/1689 original, PE/24/2024/REV/1, OJ publication written 12.7.2024; its current-version navigation is not a replacement for its original legislative body. AMEND body identifies 2026/1744, PE/30/2026/REV/1, OJ publication written 24.7.2026, and Article 1 expressly amends 2024/1689. Its Article 4 specifies entry into force on the third day after publication. It is relevant, not unrelated or silently excluded as future: Article 1(20) changes 50(7), 1(39)(b) adds the limited 111(4) provider transition, 1(40) changes other 113 exceptions while leaving the general written 2 August 2026 date. Future milestones in those provisions are scoped provisions, not evidence that the whole amendment is future. Amendment changes to 2018/1139 or 2023/1230, including their own Article 50, are excluded from this reviewed act’s substantive support. CONSOLIDATED body affirmatively identifies Document 02024R1689-20260727 and 02024R1689 — EN — 27.07.2026 — 001.001, lists base OJ 12.7.2024 and M1 2026/1744 OJ 24.7.2026, and reproduces the relevant amendment clauses. It expressly has no legal effect and is used only through that official act chain. There is no substantive competing official chain observed; original/amended differences are retained chronologically. All formal captures originated and finished on HTTPS EUR-Lex as recorded in Stage 02. However literal selector OJ:L_202601744 / CELEX:02024R1689-20260727 is absent from the respective body, and no binding applicability/commencement quote contains a literal ISO date. The consolidated ELI 2026-07-27 is version metadata, not an ISO Article 50 commencement basis. No reviewed date/selector mapping is supplied. Formal publication_date/effective_from fields remain null rather than inventing literal support. LAW explicitly reproduces the 27 July 2026 consolidation and matches 50(1)-(6) plus amended 50(7), but lacks literal 2024/1689 relationship and historical content assurance. TIME explicitly includes Digital Omnibus changes but has no visible publication/version-history date. FAQ has Last update 24 July 2026, yet the captured current body does not prove its historical bytes. Their HTTP last-modified/retrieval dates in October cannot establish August historical suitability. FAQ erroneously cites Article 50(2) for the direct-interaction notice and separately states a shortened review exemption; the binding 50(1) numbering and 50(4) conjunction with editorial responsibility govern the retained drafts. FAQ-only examples (business-to-business/industrial, short sequences/source code, closed-loop outputs, elaborated deepfake criteria, code compliance assurances) have not become binding exceptions or conditions. Legal must review date/selector mappings, reproduction relationship and historical context and confirm interactions of Article 2 scope, Article 111 legacy qualifications and each paragraph-specific exception before accepting any formal basis. Source owner/supervisor owns any fresh capture. This proposal contains no delivered question, approved exception, operational deadline, activation, system impact or compliance finding. No prior semantic rule history or supersession is inferred. TIME version field retains the captured Digital Omnibus on AI content marker only, with assessment unknown; no publication date or verified version identifier is inferred from that marker. Null formal publication fields reflect the literal-ISO evidence prerequisite, while written publication dates are retained above and in citations.",
+            "No supported binding rule candidates; Legal must resolve the authority scope"
+          ],
+          "schema_version": "rci-u09-authority/1"
+        }
+      }
+    },
+    "guidance_context": [],
+    "timing_rules": []
+  },
+  "status": "blocked",
+  "unresolved": []
+}

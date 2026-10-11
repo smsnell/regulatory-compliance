@@ -1,0 +1,291 @@
+{
+  "recorded_at": "2026-10-10T20:48:21.152511+00:00",
+  "tests": [
+    {
+      "name": "regression-final/shard-1",
+      "exit_code": 1,
+      "args": [
+        "/home/mike/regulatory-compliance/.evidence/u20/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/runtime/test_feedback_remediation.py",
+        "tests/runtime/test_g5.py",
+        "tests/runtime/test_secret_guard.py",
+        "tests/runtime/test_source_resolution_export.py",
+        "tests/runtime/test_u03.py",
+        "tests/runtime/test_u06.py",
+        "tests/runtime/test_u09.py",
+        "tests/runtime/test_u09_timing.py",
+        "tests/runtime/test_u10_resolution.py",
+        "tests/runtime/test_u18.py",
+        "--basetemp=/home/mike/regulatory-compliance/.evidence/u20-remediation/regression-final/shard-1",
+        "--junitxml=/home/mike/regulatory-compliance/.evidence/u20-remediation/regression-final/shard-1.xml",
+        "-k",
+        "not test_local_http_server and not test_manifest_exact_routes_and and not test_require_registers_cli"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp"
+      },
+      "testcase_results": {
+        "passed": 237,
+        "skipped": 6,
+        "failed": 2
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "2",
+        "skipped": "6",
+        "tests": "248",
+        "time": "1360.814",
+        "timestamp": "2026-10-10T16:19:05.239858-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/regression-final-shard-1.xml",
+      "log": "docs/verification/u20/remediation/regression-final-shard-1.log"
+    },
+    {
+      "name": "regression-final/shard-2",
+      "exit_code": 0,
+      "args": [
+        "/home/mike/regulatory-compliance/.evidence/u20/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/runtime/test_feedback_integration.py",
+        "tests/runtime/test_g3.py",
+        "tests/runtime/test_u04.py",
+        "tests/runtime/test_u07.py",
+        "tests/runtime/test_u09_projection.py",
+        "tests/runtime/test_u14_u16.py",
+        "tests/runtime/test_u17_artifacts.py",
+        "tests/runtime/test_u20_authority_remediation.py",
+        "tests/runtime/test_u20_decisions.py",
+        "tests/runtime/test_u20_failure_remediation.py",
+        "tests/runtime/test_u20_metamorphic.py",
+        "tests/runtime/test_validation_cache.py",
+        "--basetemp=/home/mike/regulatory-compliance/.evidence/u20-remediation/regression-final/shard-2",
+        "--junitxml=/home/mike/regulatory-compliance/.evidence/u20-remediation/regression-final/shard-2.xml",
+        "-k",
+        "not test_local_http_server and not test_manifest_exact_routes_and and not test_require_registers_cli"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp"
+      },
+      "testcase_results": {
+        "passed": 299
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "299",
+        "time": "1482.946",
+        "timestamp": "2026-10-10T16:19:05.263173-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/regression-final-shard-2.xml",
+      "log": "docs/verification/u20/remediation/regression-final-shard-2.log"
+    },
+    {
+      "name": "regression-final/shard-3",
+      "exit_code": 1,
+      "args": [
+        "/home/mike/regulatory-compliance/.evidence/u20/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/contracts/test_u02.py",
+        "tests/runtime/test_u05.py",
+        "tests/runtime/test_u08.py",
+        "tests/runtime/test_u10.py",
+        "tests/runtime/test_u11.py",
+        "tests/runtime/test_u12.py",
+        "tests/runtime/test_u13.py",
+        "tests/runtime/test_u17.py",
+        "tests/runtime/test_u17_complete.py",
+        "tests/runtime/test_u20.py",
+        "tests/runtime/test_u20_dependency_remediation.py",
+        "--basetemp=/home/mike/regulatory-compliance/.evidence/u20-remediation/regression-final/shard-3",
+        "--junitxml=/home/mike/regulatory-compliance/.evidence/u20-remediation/regression-final/shard-3.xml",
+        "-k",
+        "not test_local_http_server and not test_manifest_exact_routes_and and not test_require_registers_cli"
+      ],
+      "environment": {
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "TMPDIR": "/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp"
+      },
+      "testcase_results": {
+        "passed": 320,
+        "failed": 1
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "1",
+        "skipped": "0",
+        "tests": "360",
+        "time": "1584.053",
+        "timestamp": "2026-10-10T16:19:05.222074-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/regression-final-shard-3.xml",
+      "log": "docs/verification/u20/remediation/regression-final-shard-3.log"
+    },
+    {
+      "name": "external",
+      "exit_code": 1,
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u05.py -k 'test_local_http_server or test_manifest_exact_routes_and or test_require_registers_cli' --basetemp=/tmp/rci-u20-remediation-external --junitxml=.evidence/u20-remediation/external.xml > .evidence/u20-remediation/external.log 2>&1",
+      "testcase_results": {
+        "passed": 2,
+        "failed": 1
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "1",
+        "skipped": "0",
+        "tests": "3",
+        "time": "0.417",
+        "timestamp": "2026-10-10T15:59:25.847156-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/external.xml",
+      "log": "docs/verification/u20/remediation/external.log"
+    },
+    {
+      "name": "loopback",
+      "exit_code": 0,
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u05.py::test_local_http_server --basetemp=/tmp/rci-u20-remediation-loopback --junitxml=.evidence/u20-remediation/loopback.xml > .evidence/u20-remediation/loopback.log 2>&1",
+      "permission": "Required sandbox escalation: local loopback socket denied on initial attempt.",
+      "testcase_results": {
+        "passed": 1
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "1",
+        "time": "0.928",
+        "timestamp": "2026-10-10T16:00:14.814291-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/loopback.xml",
+      "log": "docs/verification/u20/remediation/loopback.log"
+    },
+    {
+      "name": "final-maintenance",
+      "exit_code": 0,
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_source_resolution_export.py tests/runtime/test_u10.py::test_cli_submission_separate_packet_and_schema_fingerprints --basetemp=.evidence/u20-remediation/final-maintenance --junitxml=.evidence/u20-remediation/final-maintenance.xml > .evidence/u20-remediation/final-maintenance.log 2>&1",
+      "testcase_results": {
+        "passed": 12
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "12",
+        "time": "28.244",
+        "timestamp": "2026-10-10T16:46:09.443197-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/final-maintenance.xml",
+      "log": "docs/verification/u20/remediation/final-maintenance.log"
+    },
+    {
+      "name": "e04/exact-witness-final",
+      "exit_code": 0,
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=/home/mike/regulatory-compliance/.evidence/u20-remediation/tmp .evidence/u20/venv/bin/python -m pytest -q tests/runtime/test_u20_decisions.py -k 'not launcher and not recovery' --basetemp=.evidence/u20-remediation/e04/exact-witness-final --junitxml=.evidence/u20-remediation/e04/exact-witness-final.xml --tb=short > .evidence/u20-remediation/e04/exact-witness-final.log 2>&1",
+      "testcase_results": {
+        "passed": 24
+      },
+      "xml_attributes": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "24",
+        "time": "102.568",
+        "timestamp": "2026-10-10T16:46:02.027553-04:00",
+        "hostname": "MikeysMac"
+      },
+      "xml": "docs/verification/u20/remediation/e04-exact-witness-final.xml",
+      "log": "docs/verification/u20/remediation/e04-exact-witness-final.log"
+    }
+  ],
+  "collection": {
+    "count": 872,
+    "passed_collected_nodes": 866,
+    "intentional_skipped_nodes": [
+      "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[content-action-calendar.ics]",
+      "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[content-compliance-brief.md]",
+      "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[content-impact-register.csv]",
+      "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[date-action-calendar.ics]",
+      "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[date-compliance-brief.md]",
+      "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[date-impact-register.csv]"
+    ],
+    "skip_reason": "Changed-date/content feedback is quarantined and has no current matched condition to tamper. The three matched-condition artifact tamper checks execute for the same variant; independent date/content and historical binding assertions execute for all variants.",
+    "not_passed_nodes": [],
+    "extra_junit_nodes": []
+  },
+  "nonpassing_observations": [
+    {
+      "node": "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[date-impact-register.csv]",
+      "run": "regression-final/shard-1",
+      "result": "skipped"
+    },
+    {
+      "node": "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[date-compliance-brief.md]",
+      "run": "regression-final/shard-1",
+      "result": "skipped"
+    },
+    {
+      "node": "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[date-action-calendar.ics]",
+      "run": "regression-final/shard-1",
+      "result": "skipped"
+    },
+    {
+      "node": "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[content-impact-register.csv]",
+      "run": "regression-final/shard-1",
+      "result": "skipped"
+    },
+    {
+      "node": "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[content-compliance-brief.md]",
+      "run": "regression-final/shard-1",
+      "result": "skipped"
+    },
+    {
+      "node": "tests/runtime/test_feedback_remediation.py::test_independent_validator_rejects_changed_condition[content-action-calendar.ics]",
+      "run": "regression-final/shard-1",
+      "result": "skipped"
+    },
+    {
+      "node": "tests/runtime/test_source_resolution_export.py::test_export_resolution_is_exact_detached_projection_before_fingerprint",
+      "run": "regression-final/shard-1",
+      "result": "failed"
+    },
+    {
+      "node": "tests/runtime/test_source_resolution_export.py::test_export_legacy_without_resolution_omits_new_key",
+      "run": "regression-final/shard-1",
+      "result": "failed"
+    },
+    {
+      "node": "tests/runtime/test_u10.py::test_cli_submission_separate_packet_and_schema_fingerprints",
+      "run": "regression-final/shard-3",
+      "result": "failed"
+    },
+    {
+      "node": "tests/runtime/test_u05.py::test_local_http_server",
+      "run": "external",
+      "result": "failed"
+    }
+  ],
+  "source_changes_during_run": [],
+  "scope": "One disjoint-file full regression, three environment checks, and explicitly listed exact reruns if needed. Fresh synthetic workflow execution; no live legal approval."
+}

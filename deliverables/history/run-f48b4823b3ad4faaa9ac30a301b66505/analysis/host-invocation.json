@@ -1,0 +1,56 @@
+{
+  "command": [
+    "/home/mike/.local/bin/codex",
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "--json",
+    "-C",
+    "/home/mike/regulatory-compliance/deliverables/.staging/run-f48b4823b3ad4faaa9ac30a301b66505",
+    "-m",
+    "gpt-6.1-sol",
+    "-c",
+    "model_reasoning_effort=\"high\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "-c",
+    "sandbox_workspace_write.network_access=false",
+    "-c",
+    "features.multi_agent=false",
+    "-c",
+    "features.web_search=false",
+    "-"
+  ],
+  "metadata": {
+    "host_version": "codex-cli 0.162.1",
+    "instruction_versions": [
+      {
+        "path": "regulatory-change-impact-brief/SKILL.md",
+        "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+      },
+      {
+        "path": "regulatory-change-impact-brief/references/authority-policy.md",
+        "sha256": "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc"
+      }
+    ],
+    "reference_versions": [
+      {
+        "path": "regulatory-change-impact-brief/references/contracts.md",
+        "sha256": "sha256:e02f2b4644bcfb70a84b91ea5e6c8cf093d6d64e7c393be373d3f7e52d61603e"
+      },
+      {
+        "path": "regulatory-change-impact-brief/references/schemas/authority-basis.schema.json",
+        "sha256": "sha256:df9a051da2f2c0ba2f3f26635a549e6b7bb4ad131e8bc3ea07b0de3c05e7849c"
+      }
+    ],
+    "reported_effort": null,
+    "reported_model": null,
+    "requested_effort": "high",
+    "requested_model": "gpt-6.1-sol",
+    "usage": null
+  }
+}

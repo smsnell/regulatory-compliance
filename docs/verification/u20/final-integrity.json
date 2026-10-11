@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-10-10T19:25:14.398410+00:00",
+  "verifier": "Codex U20 final audit integrity check",
+  "immutable_inputs": "passed",
+  "leaf_rows": 502,
+  "leaf_statuses": {
+    "blocked": 28,
+    "demonstrated": 453,
+    "not-demonstrated": 17,
+    "not-applicable-with-basis": 4
+  },
+  "scenario_statuses": {
+    "demonstrated": 26,
+    "not-demonstrated": 5,
+    "blocked": 1
+  },
+  "final_collected_test_coverage": 732,
+  "evidence_references_and_hashes": "passed",
+  "local_markdown_links_checked": 38,
+  "interpretation": "Audit evidence consistency only. Open exceptions remain unclosed; blocked live publication is not successful live-review acceptance."
+}

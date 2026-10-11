@@ -1,0 +1,488 @@
+{
+  "assigned_review_date": "2026-08-26",
+  "created_at": "2026-10-10T21:10:06.595617Z",
+  "expected_response_schema": "rci-interpretation-response/1",
+  "extracts": [
+    {
+      "capture_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:f9c3ca9e34564595b0a69f3657174d9d",
+      "evidence_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:evidence:7471ca4f4a0743c5972d867c025f230f",
+      "locator": {
+        "kind": "sheet",
+        "value": "Incident Evidence Register (gid 0) full CSV table"
+      },
+      "path": "sources/587694e321d9427a97494ce7b354ec87.bin",
+      "sha256": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b",
+      "text": "\"record_id\",\"system_id\",\"record_type\",\"reported_at\",\"owner\",\"status\",\"evidence_ref\",\"evidence_state\",\"notes\"\n\"REC-001\",\"AI-001\",\"evidence\",\"2026-08-20\",\"Learner Operations\",\"closed\",\"notice-screen-v3\",\"complete\",\"Notice screenshot and release record agree\"\n\"REC-002\",\"AI-002\",\"evidence_gap\",\"2026-08-23\",\"Admissions\",\"open\",\"applicant-email-sample\",\"missing\",\"No evidence that recipients are told when generated text is used\"\n\"REC-003\",\"AI-003\",\"incident\",\"2026-08-24\",\"Communications\",\"open\",\"social-post-884\",\"conflicting\",\"Visible label exists but exported platform copy may have lost metadata\"\n\"REC-004\",\"AI-004\",\"incident\",\"2026-08-18\",\"Learning Experience\",\"open\",\"coach-onboarding-v2\",\"complete\",\"First interaction contains no AI notice\"\n\"REC-005\",\"AI-005\",\"evidence_gap\",\"2026-08-25\",\"Assessment Operations\",\"open\",\"provider-role-questionnaire\",\"stale\",\"Provider role questionnaire predates the current release\"\n\"REC-006\",\"AI-005\",\"evidence\",\"2026-08-25\",\"Assessment Operations\",\"open\",\"human-review-sop-v4\",\"complete\",\"Flag never makes the final assessment decision\"\n\"REC-007\",\"AI-006\",\"evidence\",\"2026-08-14\",\"People Operations\",\"closed\",\"internal-use-review\",\"complete\",\"Tool is restricted to staff workspace\"\n\"REC-008\",\"AI-007\",\"incident\",\"2026-08-21\",\"Marketing\",\"open\",\"avatar-page-capture\",\"conflicting\",\"Owner says a banner exists but the current capture shows none\"\n\"REC-009\",\"AI-008\",\"evidence\",\"2026-08-19\",\"Communications\",\"open\",\"localisation-export-test\",\"partial\",\"Visible label verified but machine-readable provenance not checked\"\n\"REC-010\",\"AI-008\",\"exception_request\",\"2026-08-26\",\"Communications\",\"draft\",\"exception-draft-008\",\"missing\",\"No Legal approval or expiry date recorded\"",
+      "text_sha256": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b"
+    },
+    {
+      "capture_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:4e176412a9114ce58d998b8af357a788",
+      "evidence_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:evidence:7624850a84f445218c16e931aa1b4075",
+      "locator": {
+        "kind": "extract",
+        "value": "whole visible POLICY body; quote locates paragraph"
+      },
+      "path": "sources/4459c027a6074f9f88bd1fa1df6bf207.policy.txt",
+      "sha256": "sha256:5b7688aec6a4d66a7ba3751182841e64b3274d010ecbb2cbe77c7ad5a36cce26",
+      "text": "JavaScript must be enabled in order to use Notion.\nPlease enable JavaScript to continue.",
+      "text_sha256": "sha256:5b7688aec6a4d66a7ba3751182841e64b3274d010ecbb2cbe77c7ad5a36cce26"
+    },
+    {
+      "capture_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:41a57887c8d04dc6ab6999bac7ec5ffa",
+      "evidence_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:evidence:79db3b14caf1415290e20bfd3f2501f4",
+      "locator": {
+        "kind": "sheet",
+        "value": "AI System Register (gid 0) full CSV table"
+      },
+      "path": "sources/1361e2f8307a467caa267f7cd719d951.bin",
+      "sha256": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+      "text": "\"system_id\",\"system_name\",\"use_case\",\"owner\",\"provider_role\",\"deployer_role\",\"exposed_group\",\"output_type\",\"current_notice\",\"human_review\",\"evidence_status\",\"evidence_updated_at\",\"record_version\"\n\"AI-001\",\"Learner Support Chat\",\"Answers routine learner questions\",\"Learner Operations\",\"no\",\"yes\",\"learners\",\"direct_interaction\",\"yes\",\"staff escalation\",\"complete\",\"2026-08-20\",\"register-2026-08-26\"\n\"AI-002\",\"Admissions Draft Assistant\",\"Drafts applicant email replies\",\"Admissions\",\"no\",\"yes\",\"applicants\",\"text\",\"unknown\",\"advisor approval\",\"partial\",\"2026-07-01\",\"register-2026-08-26\"\n\"AI-003\",\"Campaign Image Studio\",\"Creates public campaign images\",\"Communications\",\"no\",\"yes\",\"public\",\"synthetic_image\",\"visible_label\",\"communications approval\",\"complete\",\"2026-08-22\",\"register-2026-08-26\"\n\"AI-004\",\"Pronunciation Coach\",\"Provides spoken practice feedback\",\"Learning Experience\",\"no\",\"yes\",\"learners\",\"direct_interaction\",\"no\",\"instructor escalation\",\"complete\",\"2026-08-18\",\"register-2026-08-26\"\n\"AI-005\",\"Remote Proctor Signal\",\"Flags assessment sessions for review\",\"Assessment Operations\",\"unknown\",\"yes\",\"learners\",\"classification\",\"yes\",\"human adjudication\",\"stale\",\"2026-04-15\",\"register-2026-08-26\"\n\"AI-006\",\"Staff Summary Assistant\",\"Summarizes internal meeting notes\",\"People Operations\",\"no\",\"yes\",\"staff\",\"text\",\"not_applicable\",\"author review\",\"complete\",\"2026-08-14\",\"register-2026-08-26\"\n\"AI-007\",\"Website Guide Avatar\",\"Answers public programme questions\",\"Marketing\",\"no\",\"yes\",\"public\",\"direct_interaction\",\"no\",\"marketing escalation\",\"conflicting\",\"2026-08-21\",\"register-2026-08-26\"\n\"AI-008\",\"Video Localisation Tool\",\"Generates dubbed public programme videos\",\"Communications\",\"no\",\"yes\",\"public\",\"synthetic_audio_video\",\"visible_label\",\"communications approval\",\"partial\",\"2026-08-19\",\"register-2026-08-26\"",
+      "text_sha256": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968"
+    },
+    {
+      "capture_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:capture:b720b38d944a4fffb8acd5695764a693",
+      "evidence_id": "record:run-b38ca2b36e1044bbba572399b41bf5ae:02:evidence:ca02fa72c0044e2abbee3dbd2ef7bb04",
+      "locator": {
+        "kind": "sheet",
+        "value": "Compliance Calendar (gid 0) full CSV table"
+      },
+      "path": "sources/47efe27ee0a04e17a4317397f150b9d8.bin",
+      "sha256": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013",
+      "text": "\"action_id\",\"system_id\",\"action\",\"owner\",\"due_date\",\"status\",\"approval_required\",\"source_version\"\n\"ACT-001\",\"AI-004\",\"Add and verify first-interaction AI notice\",\"Learning Experience\",\"2026-09-04\",\"planned\",\"operations\",\"calendar-2026-08-26\"\n\"ACT-002\",\"AI-007\",\"Resolve disclosure evidence conflict\",\"Marketing\",\"2026-09-03\",\"open\",\"operations\",\"calendar-2026-08-26\"\n\"ACT-003\",\"AI-002\",\"Confirm recipient disclosure practice\",\"Admissions\",\"2026-09-08\",\"open\",\"legal\",\"calendar-2026-08-26\"\n\"ACT-004\",\"AI-003\",\"Verify machine-readable provenance after publishing\",\"Communications\",\"2026-09-10\",\"open\",\"operations\",\"calendar-2026-08-26\"\n\"ACT-005\",\"AI-005\",\"Refresh provider-role and release evidence\",\"Assessment Operations\",\"2026-09-12\",\"open\",\"legal\",\"calendar-2026-08-26\"\n\"ACT-006\",\"AI-008\",\"Complete provenance test\",\"Communications\",\"2026-09-09\",\"open\",\"operations\",\"calendar-2026-08-26\"\n\"ACT-007\",\"AI-008\",\"Review exception request\",\"Legal\",\"2026-09-15\",\"blocked\",\"legal\",\"calendar-2026-08-26\"\n\"ACT-008\",\"ALL\",\"Quarterly AI register evidence review\",\"Operations\",\"2026-10-02\",\"scheduled\",\"operations\",\"calendar-2026-08-26\"",
+      "text_sha256": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013"
+    }
+  ],
+  "field_dictionary": {
+    "fields": {
+      "basis": {
+        "capture_root": "docs/verification/u05-anonymous-live",
+        "interview": "interviews/interview-B-3.md#04:35–04:46",
+        "requirements": "REQUIREMENTS.md#7",
+        "run_id": "run-c7a557fb88fa45b3a27b016e264f51fd"
+      },
+      "registers": {
+        "CALENDAR": {
+          "basis": {
+            "header_row": 1,
+            "path": "sources/d6f83bafe04847fc9ab926c418a16bf0.bin",
+            "sha256": "sha256:f490340ff3b08701c73e631dc9e07634af35a6c193e5be77b59085dc60d2a013",
+            "sheet_id": 0
+          },
+          "fields": [
+            {
+              "aliases": [],
+              "field": "action_id",
+              "header": "action_id",
+              "kind": "text",
+              "meaning": "Exact existing action business identity, distinct from generated action:v1 IDs.",
+              "required": true,
+              "source_column": 1
+            },
+            {
+              "aliases": [],
+              "field": "system_id",
+              "header": "system_id",
+              "kind": "text",
+              "meaning": "Exact source scope token; ALL is retained without expansion into invented system rows.",
+              "required": true,
+              "source_column": 2
+            },
+            {
+              "aliases": [],
+              "field": "action",
+              "header": "action",
+              "kind": "text",
+              "meaning": "Reported compliance task text.",
+              "required": true,
+              "source_column": 3
+            },
+            {
+              "aliases": [],
+              "field": "owner",
+              "header": "owner",
+              "kind": "text",
+              "meaning": "Reported task owner; distinct from required reviewer.",
+              "required": true,
+              "source_column": 4
+            },
+            {
+              "aliases": [],
+              "field": "existing_due_date",
+              "header": "due_date",
+              "kind": "date",
+              "meaning": "Existing operational deadline, never proposed date, approved date, legal effective date or assigned review date.",
+              "required": true,
+              "source_column": 5
+            },
+            {
+              "aliases": [],
+              "field": "operational_status",
+              "header": "status",
+              "kind": "enum",
+              "meaning": "Planned/open/blocked/scheduled/closed denote operational progression, not approved/compliant/complete.",
+              "required": true,
+              "source_column": 6,
+              "tokens": {
+                "blocked": "blocked",
+                "closed": "closed",
+                "open": "open",
+                "planned": "planned",
+                "scheduled": "scheduled"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "required_reviewer",
+              "header": "approval_required",
+              "kind": "enum",
+              "meaning": "Review path only: legal -> Legal; operations -> Operations. Not an approval decision.",
+              "required": true,
+              "source_column": 7,
+              "tokens": {
+                "legal": "Legal",
+                "operations": "Operations"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "source_version",
+              "header": "source_version",
+              "kind": "text",
+              "meaning": "Exact source version string; newer versions remain syntactically acceptable.",
+              "required": true,
+              "source_column": 8
+            }
+          ],
+          "identity_header": "action_id",
+          "tab_title": "Compliance Calendar"
+        },
+        "EVIDENCE": {
+          "basis": {
+            "header_row": 1,
+            "path": "sources/4daf8c9227c44b16a524e930c7fe1ca2.bin",
+            "sha256": "sha256:e03fe62f1759806ebb77c9b6bc0f16ccb75b99d362d74bfd68ff3b2c2fe2cf0b",
+            "sheet_id": 0
+          },
+          "fields": [
+            {
+              "aliases": [],
+              "field": "record_id",
+              "header": "record_id",
+              "kind": "text",
+              "meaning": "Exact evidence/incident business identity.",
+              "required": true,
+              "source_column": 1
+            },
+            {
+              "aliases": [],
+              "field": "system_id",
+              "header": "system_id",
+              "kind": "text",
+              "meaning": "Exact referenced system identity; no fuzzy join.",
+              "required": true,
+              "source_column": 2
+            },
+            {
+              "aliases": [],
+              "field": "source_record_type",
+              "header": "record_type",
+              "kind": "enum",
+              "meaning": "Source-native record category, distinct from internal record_type.",
+              "required": true,
+              "source_column": 3,
+              "tokens": {
+                "evidence": "evidence",
+                "evidence_gap": "evidence_gap",
+                "exception_request": "exception_request",
+                "incident": "incident"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "reported_on",
+              "header": "reported_at",
+              "kind": "date",
+              "meaning": "Source report date, not an invented timestamp or observation date.",
+              "required": true,
+              "source_column": 4
+            },
+            {
+              "aliases": [],
+              "field": "owner",
+              "header": "owner",
+              "kind": "text",
+              "meaning": "Reported owner responsible for the record.",
+              "required": true,
+              "source_column": 5
+            },
+            {
+              "aliases": [],
+              "field": "operational_status",
+              "header": "status",
+              "kind": "enum",
+              "meaning": "Reported operational state; closed does not prove compliance or approval.",
+              "required": true,
+              "source_column": 6,
+              "tokens": {
+                "closed": "closed",
+                "draft": "draft",
+                "open": "open"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "evidence_ref",
+              "header": "evidence_ref",
+              "kind": "text",
+              "meaning": "Exact source report reference, not proof that the underlying report was read.",
+              "required": true,
+              "source_column": 7
+            },
+            {
+              "aliases": [],
+              "field": "evidence_state",
+              "header": "evidence_state",
+              "kind": "enum",
+              "meaning": "Complete: supplied evidence, not compliance; partial: verification incomplete; conflicting: reported evidence/capture contradiction. Missing/stale remain source labels, not automatically adjudicated gaps.",
+              "required": true,
+              "source_column": 8,
+              "tokens": {
+                "complete": "complete",
+                "conflicting": "conflicting",
+                "missing": "missing",
+                "partial": "partial",
+                "stale": "stale"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "notes",
+              "header": "notes",
+              "kind": "text",
+              "meaning": "Exact owner/source notes; unresolved contradictions are retained.",
+              "required": true,
+              "source_column": 9
+            }
+          ],
+          "identity_header": "record_id",
+          "tab_title": "Incident Evidence Register"
+        },
+        "SYSTEMS": {
+          "basis": {
+            "header_row": 1,
+            "path": "sources/259b7feb192d4117a822850e99f979af.bin",
+            "sha256": "sha256:423701146f560a243675d5ef3bd764fbe5ce3ba0c58ff680688ce2ed45483968",
+            "sheet_id": 0
+          },
+          "fields": [
+            {
+              "aliases": [],
+              "field": "system_id",
+              "header": "system_id",
+              "kind": "text",
+              "meaning": "Exact system business identity; never derive from position.",
+              "required": true,
+              "source_column": 1
+            },
+            {
+              "aliases": [],
+              "field": "system_name",
+              "header": "system_name",
+              "kind": "text",
+              "meaning": "Source system name.",
+              "required": true,
+              "source_column": 2
+            },
+            {
+              "aliases": [],
+              "field": "use_case",
+              "header": "use_case",
+              "kind": "text",
+              "meaning": "Reported actual use; no legal classification inferred.",
+              "required": true,
+              "source_column": 3
+            },
+            {
+              "aliases": [],
+              "field": "owner",
+              "header": "owner",
+              "kind": "text",
+              "meaning": "Reported system owner; not authenticated reviewer identity.",
+              "required": true,
+              "source_column": 4
+            },
+            {
+              "aliases": [],
+              "field": "provider_role",
+              "header": "provider_role",
+              "kind": "enum",
+              "meaning": "Source role assertion: yes/true, no/false, unknown/null; not verified legal role.",
+              "required": true,
+              "source_column": 5,
+              "tokens": {
+                "no": false,
+                "unknown": null,
+                "yes": true
+              }
+            },
+            {
+              "aliases": [],
+              "field": "deployer_role",
+              "header": "deployer_role",
+              "kind": "enum",
+              "meaning": "Source role assertion; never default all systems to deployer.",
+              "required": true,
+              "source_column": 6,
+              "tokens": {
+                "no": false,
+                "unknown": null,
+                "yes": true
+              }
+            },
+            {
+              "aliases": [],
+              "field": "exposed_group",
+              "header": "exposed_group",
+              "kind": "text",
+              "meaning": "Reported exposed group; preserve exact text rather than guessing a list delimiter.",
+              "required": true,
+              "source_column": 7
+            },
+            {
+              "aliases": [],
+              "field": "output_type",
+              "header": "output_type",
+              "kind": "enum",
+              "meaning": "Reported output category; not a legal applicability determination.",
+              "required": true,
+              "source_column": 8,
+              "tokens": {
+                "classification": "classification",
+                "direct_interaction": "direct_interaction",
+                "synthetic_audio_video": "synthetic_audio_video",
+                "synthetic_image": "synthetic_image",
+                "text": "text"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "current_notice",
+              "header": "current_notice",
+              "kind": "enum",
+              "meaning": "Reported notice state. visible_label is visible disclosure only, never machine-readable provenance; yes alone does not establish timing.",
+              "required": true,
+              "source_column": 9,
+              "tokens": {
+                "no": "no",
+                "not_applicable": "not_applicable",
+                "unknown": "unknown",
+                "visible_label": "visible_label",
+                "yes": "yes"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "human_review",
+              "header": "human_review",
+              "kind": "text",
+              "meaning": "Reported review/escalation path; not evidence of completed review.",
+              "required": true,
+              "source_column": 10
+            },
+            {
+              "aliases": [],
+              "field": "evidence_state",
+              "header": "evidence_status",
+              "kind": "enum",
+              "meaning": "Reported evidence state; complete means supplied evidence, not compliance.",
+              "required": true,
+              "source_column": 11,
+              "tokens": {
+                "complete": "complete",
+                "conflicting": "conflicting",
+                "missing": "missing",
+                "partial": "partial",
+                "stale": "stale"
+              }
+            },
+            {
+              "aliases": [],
+              "field": "evidence_updated_on",
+              "header": "evidence_updated_at",
+              "kind": "date",
+              "meaning": "Date of reported evidence update; not source revision, legal effective date or retrieval time.",
+              "required": true,
+              "source_column": 12
+            },
+            {
+              "aliases": [],
+              "field": "record_version",
+              "header": "record_version",
+              "kind": "text",
+              "meaning": "Exact row version string; no fixed date/version whitelist.",
+              "required": true,
+              "source_column": 13
+            }
+          ],
+          "identity_header": "system_id",
+          "tab_title": "AI System Register"
+        }
+      },
+      "schema_version": "rci-field-dictionary/1"
+    },
+    "sha256": "sha256:b7644f4622522db3ae7bc8f20c8a475f8324d84f477fe7123cad11038575532c",
+    "version": "rci-field-dictionary/1"
+  },
+  "metadata": {
+    "host_version": "codex-cli 0.162.1",
+    "instruction_versions": [
+      {
+        "path": "regulatory-change-impact-brief/SKILL.md",
+        "sha256": "sha256:47006881722923dd7490f9691ce859970c0506d03132fb54a51c189a61076ccd"
+      },
+      {
+        "path": "regulatory-change-impact-brief/references/reconciliation.md",
+        "sha256": "sha256:cc43744da27ed514fa22d61718b5981ac6c1c7c5ac2748615e853cfedfad27d9"
+      }
+    ],
+    "reference_versions": [
+      {
+        "path": "regulatory-change-impact-brief/references/schemas/reconciliation-basis.schema.json",
+        "sha256": "sha256:8b82033bd0ece493670b81cf99b1675e535a808294c8a20958ca0d2ee5aefee7"
+      },
+      {
+        "path": "config/review.example.json",
+        "sha256": "sha256:bc2e13542ef6cc22daa5435a7bf61a89e85f0bf80fb9a3f9669e173211256f3d"
+      }
+    ],
+    "reported_effort": null,
+    "reported_model": null,
+    "requested_effort": "high",
+    "requested_model": "gpt-6.1-sol",
+    "usage": null
+  },
+  "packet_id": "packet-0658c1b961544ed4ae643b7789b402b3",
+  "run_id": "run-b38ca2b36e1044bbba572399b41bf5ae",
+  "schema_version": "rci-interpretation-request/1",
+  "stage": "evidence-reconciliation",
+  "upstream": [
+    {
+      "path": "snapshots/01-scope.json",
+      "sequence": 1,
+      "sha256": "sha256:0a32df637301772a40a104add1106ce998cdbe1b585755fcd7fbfa44be451812",
+      "snapshot_id": "snapshot-ce337b47bd0e4e8c89675c64c26c1957"
+    },
+    {
+      "path": "snapshots/02-source-capture.json",
+      "sequence": 2,
+      "sha256": "sha256:1483765ac20d55cf93dd8ba01d240ccc0f287baf4573877a85ba7a062874b876",
+      "snapshot_id": "snapshot-3170acb2b6d1493480bccb29fd84e720"
+    },
+    {
+      "path": "snapshots/03-authority-and-timing.json",
+      "sequence": 3,
+      "sha256": "sha256:70a8eb5d5e2c51bf0fe8cd038eb59284d5e63fadb68f39e61ccd19b6d56c505c",
+      "snapshot_id": "snapshot-e2ce5cf03e874cbd8f5ab5501bd33ff3"
+    }
+  ]
+}

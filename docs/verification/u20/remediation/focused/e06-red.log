@@ -1,0 +1,281 @@
+FFF.F.F.F..........F.....                                                [100%]
+=================================== FAILURES ===================================
+_ test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/decisions.py-1] _
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_b... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_bytes_c0/skill'))
+relative = 'scripts/rci/decisions.py', sequence = 1
+
+    @pytest.mark.parametrize('relative,sequence',[
+        ('scripts/rci/decisions.py',1),('scripts/rci/snapshots.py',1),
+        ('scripts/rci/pipeline.py',1),('scripts/rci/runner.py',1),
+        ('scripts/rci/adapters/anonymous_sheets.py',2),
+        ('references/field-dictionary.json',2),
+        ('scripts/rci/authority_representations.py',3),
+        ('references/authority-policy.md',3),
+        ('references/schemas/authority-basis.schema.json',3),
+        ('scripts/rci/reconcile.py',4),('references/reconciliation.md',4),
+        ('scripts/rci/impacts.py',5),('references/impacts.md',5),
+        ('scripts/rci/actions.py',6),('scripts/rci/reviews.py',6),
+        ('scripts/rci/renderers/brief.py',7),('scripts/rci/validate.py',7),
+    ])
+    def test_actual_dependency_bytes_classify_earliest_stage(inputs,relative,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        path=skill/relative
+        path.write_bytes(path.read_bytes()+b'\n')
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 1
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 1
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+_ test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/snapshots.py-1] _
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_b... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_bytes_c1/skill'))
+relative = 'scripts/rci/snapshots.py', sequence = 1
+
+    @pytest.mark.parametrize('relative,sequence',[
+        ('scripts/rci/decisions.py',1),('scripts/rci/snapshots.py',1),
+        ('scripts/rci/pipeline.py',1),('scripts/rci/runner.py',1),
+        ('scripts/rci/adapters/anonymous_sheets.py',2),
+        ('references/field-dictionary.json',2),
+        ('scripts/rci/authority_representations.py',3),
+        ('references/authority-policy.md',3),
+        ('references/schemas/authority-basis.schema.json',3),
+        ('scripts/rci/reconcile.py',4),('references/reconciliation.md',4),
+        ('scripts/rci/impacts.py',5),('references/impacts.md',5),
+        ('scripts/rci/actions.py',6),('scripts/rci/reviews.py',6),
+        ('scripts/rci/renderers/brief.py',7),('scripts/rci/validate.py',7),
+    ])
+    def test_actual_dependency_bytes_classify_earliest_stage(inputs,relative,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        path=skill/relative
+        path.write_bytes(path.read_bytes()+b'\n')
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 1
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 1
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+_ test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/pipeline.py-1] _
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_b... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_bytes_c2/skill'))
+relative = 'scripts/rci/pipeline.py', sequence = 1
+
+    @pytest.mark.parametrize('relative,sequence',[
+        ('scripts/rci/decisions.py',1),('scripts/rci/snapshots.py',1),
+        ('scripts/rci/pipeline.py',1),('scripts/rci/runner.py',1),
+        ('scripts/rci/adapters/anonymous_sheets.py',2),
+        ('references/field-dictionary.json',2),
+        ('scripts/rci/authority_representations.py',3),
+        ('references/authority-policy.md',3),
+        ('references/schemas/authority-basis.schema.json',3),
+        ('scripts/rci/reconcile.py',4),('references/reconciliation.md',4),
+        ('scripts/rci/impacts.py',5),('references/impacts.md',5),
+        ('scripts/rci/actions.py',6),('scripts/rci/reviews.py',6),
+        ('scripts/rci/renderers/brief.py',7),('scripts/rci/validate.py',7),
+    ])
+    def test_actual_dependency_bytes_classify_earliest_stage(inputs,relative,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        path=skill/relative
+        path.write_bytes(path.read_bytes()+b'\n')
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 1
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 1
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+_ test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/adapters/anonymous_sheets.py-2] _
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_b... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_bytes_c4/skill'))
+relative = 'scripts/rci/adapters/anonymous_sheets.py', sequence = 2
+
+    @pytest.mark.parametrize('relative,sequence',[
+        ('scripts/rci/decisions.py',1),('scripts/rci/snapshots.py',1),
+        ('scripts/rci/pipeline.py',1),('scripts/rci/runner.py',1),
+        ('scripts/rci/adapters/anonymous_sheets.py',2),
+        ('references/field-dictionary.json',2),
+        ('scripts/rci/authority_representations.py',3),
+        ('references/authority-policy.md',3),
+        ('references/schemas/authority-basis.schema.json',3),
+        ('scripts/rci/reconcile.py',4),('references/reconciliation.md',4),
+        ('scripts/rci/impacts.py',5),('references/impacts.md',5),
+        ('scripts/rci/actions.py',6),('scripts/rci/reviews.py',6),
+        ('scripts/rci/renderers/brief.py',7),('scripts/rci/validate.py',7),
+    ])
+    def test_actual_dependency_bytes_classify_earliest_stage(inputs,relative,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        path=skill/relative
+        path.write_bytes(path.read_bytes()+b'\n')
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 2
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 2
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+_ test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/authority_representations.py-3] _
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_b... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_bytes_c6/skill'))
+relative = 'scripts/rci/authority_representations.py', sequence = 3
+
+    @pytest.mark.parametrize('relative,sequence',[
+        ('scripts/rci/decisions.py',1),('scripts/rci/snapshots.py',1),
+        ('scripts/rci/pipeline.py',1),('scripts/rci/runner.py',1),
+        ('scripts/rci/adapters/anonymous_sheets.py',2),
+        ('references/field-dictionary.json',2),
+        ('scripts/rci/authority_representations.py',3),
+        ('references/authority-policy.md',3),
+        ('references/schemas/authority-basis.schema.json',3),
+        ('scripts/rci/reconcile.py',4),('references/reconciliation.md',4),
+        ('scripts/rci/impacts.py',5),('references/impacts.md',5),
+        ('scripts/rci/actions.py',6),('scripts/rci/reviews.py',6),
+        ('scripts/rci/renderers/brief.py',7),('scripts/rci/validate.py',7),
+    ])
+    def test_actual_dependency_bytes_classify_earliest_stage(inputs,relative,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        path=skill/relative
+        path.write_bytes(path.read_bytes()+b'\n')
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 3
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 3
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+_ test_actual_dependency_bytes_classify_earliest_stage[references/schemas/authority-basis.schema.json-3] _
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_b... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_dependency_bytes_c8/skill'))
+relative = 'references/schemas/authority-basis.schema.json', sequence = 3
+
+    @pytest.mark.parametrize('relative,sequence',[
+        ('scripts/rci/decisions.py',1),('scripts/rci/snapshots.py',1),
+        ('scripts/rci/pipeline.py',1),('scripts/rci/runner.py',1),
+        ('scripts/rci/adapters/anonymous_sheets.py',2),
+        ('references/field-dictionary.json',2),
+        ('scripts/rci/authority_representations.py',3),
+        ('references/authority-policy.md',3),
+        ('references/schemas/authority-basis.schema.json',3),
+        ('scripts/rci/reconcile.py',4),('references/reconciliation.md',4),
+        ('scripts/rci/impacts.py',5),('references/impacts.md',5),
+        ('scripts/rci/actions.py',6),('scripts/rci/reviews.py',6),
+        ('scripts/rci/renderers/brief.py',7),('scripts/rci/validate.py',7),
+    ])
+    def test_actual_dependency_bytes_classify_earliest_stage(inputs,relative,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        path=skill/relative
+        path.write_bytes(path.read_bytes()+b'\n')
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 3
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 3
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+__ test_actual_input_values_and_files_classify_earliest_stage[scope-basis-1] ___
+
+inputs = (namespace(root=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_input_values... PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/red/test_actual_input_values_and_f2/skill'))
+change = 'scope-basis', sequence = 1
+
+    @pytest.mark.parametrize('change,sequence',[
+        ('scope',1),('config',1),('scope-basis',1),('capture',2),
+        ('feedback-input.json',6),('reviewer-policy.json',6),('authentication-context.json',6),
+    ])
+    def test_actual_input_values_and_files_classify_earliest_stage(inputs,change,sequence):
+        store,config,chain,skill=inputs
+        before=pipeline._fingerprints(store,config,chain)
+        if change=='scope':chain[0]['state']['systems_in_scope'].append('AI-002')
+        elif change=='config':config['host']['owner']='Changed authorized operator'
+        elif change=='scope-basis':
+            path=store.root/'analysis/scope-input.json'
+            value=parse_json(path.read_bytes());value['basis_version']='changed-synthetic-version'
+            path.write_bytes(json_bytes(value))
+        elif change=='capture':chain[1]['state']['attempts'][0]['content_hash']='sha256:'+'b'*64
+        else:(store.root/'analysis'/change).write_bytes(json_bytes({'synthetic_changed_input':True}))
+        after=pipeline._fingerprints(store,config,chain)
+>       assert_classification(before,after,sequence)
+
+tests/runtime/test_u20_dependency_remediation.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+before = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+after = {'schema_version': 'rci-stage-fingerprints/1', 'contract_version': 'rci-contracts/1', 'dependencies': {'scope': [], 's...088e858e1', 'evidence-reconciliation': 'sha256:78d0214e5170d7281b7e1370279867a9842a0122838fa54fd9468bacc288e9a3', ...}}
+sequence = 1
+
+    def assert_classification(before,after,sequence):
+        result=classify_change(before,after)
+>       assert result['earliest_changed_sequence']==sequence
+E       assert None == 1
+
+tests/runtime/test_u20_dependency_remediation.py:58: AssertionError
+=========================== short test summary info ============================
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/decisions.py-1]
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/snapshots.py-1]
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/pipeline.py-1]
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/adapters/anonymous_sheets.py-2]
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/authority_representations.py-3]
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[references/schemas/authority-basis.schema.json-3]
+FAILED tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[scope-basis-1]
+7 failed, 18 passed in 1.25s

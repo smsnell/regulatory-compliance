@@ -1,6 +1,7 @@
 """RFC 5545 all-day tentative proposals, serialized by the pinned library."""
 from datetime import date, datetime, timedelta
 from icalendar import Calendar, Event
+from ..reviews import action_feedback_text
 
 
 def render(model):
@@ -17,12 +18,16 @@ def render(model):
         event.add('dtend',day+timedelta(days=1))
         event.add('summary',a['summary'])
         event.add('status','TENTATIVE')
-        event.add('description','\n'.join([
+        description = [
             'Action: '+a['action_id'], 'System: '+a['system_id'],
             'Responsible role: '+(a['owner'] or 'Unresolved; owner confirmation required'),
             'Source/decision basis: '+';'.join(a.get('source_basis', [])),
             'Date basis: '+a['date_basis'], 'Approval: '+a['approval_status'],
             'Run: '+model['run_id'], 'Evidence: '+';'.join(a['evidence_ids']),
-            'Draft proposal; human review required.']))
+            'Draft proposal; human review required.']
+        feedback = action_feedback_text(model, a)
+        if feedback:
+            description.append('Reviewer feedback: ' + feedback)
+        event.add('description', '\n'.join(description))
         calendar.add_component(event)
     return calendar.to_ical()

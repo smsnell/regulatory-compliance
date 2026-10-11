@@ -1,0 +1,854 @@
+EEEEEEEEEEEEEEEEEEEEEEEEE....................                         [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/decisions.py-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/snapshots.py-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/pipeline.py-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/runner.py-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/adapters/anonymous_sheets.py-2] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[references/field-dictionary.json-2] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/authority_representations.py-3] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[references/authority-policy.md-3] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[references/schemas/authority-basis.schema.json-3] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/reconcile.py-4] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[references/reconciliation.md-4] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/impacts.py-5] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[references/impacts.md-5] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/actions.py-6] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/reviews.py-6] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/renderers/brief.py-7] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/validate.py-7] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[scope-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[config-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[scope-basis-1] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[capture-2] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[feedback-input.json-6] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[reviewer-policy.json-6] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_actual_input_values_and_files_classify_earliest_stage[authentication-context.json-6] _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+_ ERROR at setup of test_occurrence_and_output_location_do_not_invent_a_dependency_change _
+
+tmp_path_factory = TempPathFactory(_given_basetemp=PosixPath('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _tr...h('/home/mike/regulatory-compliance/.evidence/u20-remediation/e06/green'), _retention_count=3, _retention_policy='all')
+
+    @pytest.fixture(scope='module')
+    def captured(tmp_path_factory):
+        root=tmp_path_factory.mktemp('dependency-capture')
+        config=deepcopy(CONFIG);config['output_root']='out'
+        (root/'config.json').write_bytes(json_bytes(config))
+        (root/'scope.json').write_bytes(json_bytes(DECLARED))
+        with patch('rci.runtime.REPO',root):
+            result=capture_slice(root/'config.json',scope_path=root/'scope.json',reader_factory=Replay)
+        candidate=root/result['candidate']
+>       chain=validate_slice(candidate)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/runtime/test_u20_dependency_remediation.py:31: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+regulatory-change-impact-brief/scripts/rci/runner.py:263: in validate_slice
+    first, second = read_chain(store.root, count=2)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+root = '/', count = 2
+
+    def read_chain(root: Path, *, count: int = 7) -> list[dict]:
+        """Validate a disk prefix. An incomplete marker rejects even with completion."""
+        require(1 <= count <= 7, 'invalid stage count')
+>       require(not ((root / INCOMPLETE_MARKER).exists() or (root / INCOMPLETE_MARKER).is_symlink()), 'incomplete replacement; package rejected')
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+E       TypeError: unsupported operand type(s) for /: 'str' and 'str'
+
+regulatory-change-impact-brief/scripts/rci/snapshots.py:595: TypeError
+=========================== short test summary info ============================
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/decisions.py-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/snapshots.py-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/pipeline.py-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/runner.py-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/adapters/anonymous_sheets.py-2]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[references/field-dictionary.json-2]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/authority_representations.py-3]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[references/authority-policy.md-3]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[references/schemas/authority-basis.schema.json-3]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/reconcile.py-4]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[references/reconciliation.md-4]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/impacts.py-5]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[references/impacts.md-5]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/actions.py-6]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/reviews.py-6]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/renderers/brief.py-7]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_dependency_bytes_classify_earliest_stage[scripts/rci/validate.py-7]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[scope-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[config-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[scope-basis-1]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[capture-2]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[feedback-input.json-6]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[reviewer-policy.json-6]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_actual_input_values_and_files_classify_earliest_stage[authentication-context.json-6]
+ERROR tests/runtime/test_u20_dependency_remediation.py::test_occurrence_and_output_location_do_not_invent_a_dependency_change
+20 passed, 25 errors, 3 subtests passed in 23.10s

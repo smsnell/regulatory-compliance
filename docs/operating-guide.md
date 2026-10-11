@@ -174,7 +174,29 @@ See [review protocol](../regulatory-change-impact-brief/references/review-protoc
 
 Inspect `analysis/outcome.json`, any `analysis/failure-outcome.json`, host event/stderr
 logs, missing lists and the current control markers. Preserve current files and
-all failed candidates. Retry the same public command with a reason:
+all failed candidates.
+
+Failures caught inside the stage supervisor identify `affected_stage`,
+`affected_outputs`, `recovery_action`, and `next_owner`. These fields describe
+the failed operation and its intended outputs; the missing-file inventories and
+retained bytes show which outputs actually exist. Once an occurrence is allocated,
+lock, inspection, candidate initialization, feedback archive and feedback retention
+failures identify their own stages and the planned run/candidate. A second writer
+or failed directory creation does not create a candidate. `candidate_created`,
+`diagnostic_persistence` and `diagnostic_record` distinguish actual retained evidence
+from stdout-only diagnostics when persistence is impossible. Configuration/preflight
+failures before allocation still report `launcher-preflight` without a candidate.
+The launcher JSON outcome is written to stdout; retain it with the operator's run log.
+See the [U20 remediation report](verification/u20/remediation-report.md).
+
+New runs retain `analysis/producer-code.json`, the input inventory for the existing
+Stage 01 code hash. Production validation reconstructs mandatory decisions and
+rejects profile removal or contradictory producer evidence. Verified legacy bundles
+and four exact historical scope snapshots with their producer hashes remain readable. An unknown
+markerless prefix without that provenance fails closed: preserve its bytes and
+perform a fresh run; do not strip the decision profile to force acceptance.
+
+Retry the same public command with a reason:
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 /tmp/rci-operator-venv/bin/python regulatory-change-impact-brief/scripts/run.py --config config/review.json --scope config/scope.json --change-reason 'Fresh retry after resolving the recorded failure'

@@ -1,0 +1,135 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "baseline_sha256": "sha256:fddc628dcee09abec98dad0de75ec32cca1b37f9d3663b532f3a01e4795e1772",
+      "final_sha256": "sha256:6c5018b00eda3c28f38734ea42600bab34207b5b93c22e20a699453b8787c40b"
+    },
+    {
+      "path": "docs/acceptance-cases.md",
+      "baseline_sha256": "sha256:7ca7174ff7c63da767b5a2bf00e3d82a92ca60d7aec722c05ac5dcf9eb9961fd",
+      "final_sha256": "sha256:5a45582ca83765db59558bc8adfe5e791b969ec18c9fbfd12fd38ba2f3d18787"
+    },
+    {
+      "path": "docs/operating-guide.md",
+      "baseline_sha256": "sha256:c56a9dc7c4a1c61b116f8e5c4e069445812e984c43ad6ce490f1a4aff65c789a",
+      "final_sha256": "sha256:c2a686dd60a79643de97809e718f9babfaca79d86dd86979c4d862143c4e33e9"
+    },
+    {
+      "path": "docs/requirements-traceability.csv",
+      "baseline_sha256": "sha256:e8c14689be3dcd01cdded139eecc6be006cc9a811ed938e6e7f1be2ae72730e1",
+      "final_sha256": "sha256:8db8f916fb503b40cffa1515cdd96237a376a1a21b4104b95823d6b6c18142b4"
+    },
+    {
+      "path": "docs/verification/u20/remediation-report.md",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:a0d50983d8f893ef4260be9c5bd5bee43d6dcc87d3cbcc00750c50321a6443ff"
+    },
+    {
+      "path": "regulatory-change-impact-brief/references/authority-policy.md",
+      "baseline_sha256": "sha256:781da5ba64e23d4ca9b87f335c41f5b4d6bf03aea440ed066188d77e71a65bbc",
+      "final_sha256": "sha256:e247cb060fb22bb8720fd6be9bb63ea547df9833ecbc5c6a694fda82b54384f0"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/actions.py",
+      "baseline_sha256": "sha256:43d5f77e13fb619b185f33da6de0b49aa81a82c33454dc4f99768164d4b0298e",
+      "final_sha256": "sha256:3e81e5dbe8407ac1cf28456721ecdd461c819e2b81e37d9bfb2c66f63aa6df68"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/authority.py",
+      "baseline_sha256": "sha256:956ca15fbc2d104d44c11bc7233af49aa9142c52d7c5ab22b820f24038fb353e",
+      "final_sha256": "sha256:371d83f79a1f0e36582c35ba470635281c4b4b1bbb4323eccda612ee5b4c1af0"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/authority_representations.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:950b15a70f485e1709d900ac1fe14148d08e3bf26d6daa41a0c204bd09d2cd4f"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/decisions.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:0b1c0accba97464447dfbfb627eaa3be3046c550449aba0366fdb0d7ef85bdff"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/pipeline.py",
+      "baseline_sha256": "sha256:6ed8e159c6b093dca0bd16fa4dc54727ed5740d6495188c16de9b5cd232dc601",
+      "final_sha256": "sha256:f4c83aa01fe50c7163fe9740c8b8313e2cd7933f6a2e5461382fc2b20e6eb357"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/brief.py",
+      "baseline_sha256": "sha256:899b1be6298ca98c4819eebd787d3b755e44bf552f6ca83ca42dd1e60d0b6356",
+      "final_sha256": "sha256:6878fad767736f339059bd9c5d6ada301ea78d2a290bd91cbcf97179d1650e20"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/calendar.py",
+      "baseline_sha256": "sha256:2ffba4c2aec6e241aed1cbe95b371eacf56487083d167f1e575bf324896382f0",
+      "final_sha256": "sha256:61733c749cff5a770cc05894a3a70133bc746aef36988b791c08255e63c38653"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/renderers/csv_register.py",
+      "baseline_sha256": "sha256:5c1259a6407dd4b5fab4578c9e341eda718af8e27ce7f6cc9223f85632f69419",
+      "final_sha256": "sha256:aaf711c6eb93bd50783bf862abe8a1c46183f6fa617bd32c0a4af72612655422"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/reviews.py",
+      "baseline_sha256": "sha256:b59b79e4a945e71d023b8142f977e8fd52bf88679903d2b00f277cbe119c1365",
+      "final_sha256": "sha256:69ce48498c9089da77f97f810e723c95beaa75fdf76dbeae65a8c9158f92a1d7"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/runner.py",
+      "baseline_sha256": "sha256:f03359620ba12ddefc49e7105dd32db90540022d64ed19806237e2f6d62c796d",
+      "final_sha256": "sha256:eaee3e5923187d332fa866d079e31c5226b5bd37b4e5b138851ea7db8c3988ee"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/snapshots.py",
+      "baseline_sha256": "sha256:a9b14e8ebed869dbdc4cc0952ed36eba1468bb28246559f09be7e28f2b7ff2e0",
+      "final_sha256": "sha256:cbb640b9cf165851fd5675b55a246a2f7b5fc1b2545717c7b12c8b6e95ad1ee8"
+    },
+    {
+      "path": "regulatory-change-impact-brief/scripts/rci/validate.py",
+      "baseline_sha256": "sha256:163c2ec41484ba78dfd181673df52419975b0f2ddafb464e8715f2589257efb2",
+      "final_sha256": "sha256:9e1da9659e43bebc9f4146071658e0496278a03b78e9c27f3b9a5909d44b2a29"
+    },
+    {
+      "path": "tests/runtime/test_feedback_remediation.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:120a49570db31fbcc561013369e08858a760b9df68865dc7943da270edaef16a"
+    },
+    {
+      "path": "tests/runtime/test_source_resolution_export.py",
+      "baseline_sha256": "sha256:faa4e96101ade52a8a597849d6b53d24a485bbe10ff9eedf7af32e1d4f252558",
+      "final_sha256": "sha256:53fd56a0db17d1a0e5e296903801945cdacc52ceddf78347707fb3d55b4a367f"
+    },
+    {
+      "path": "tests/runtime/test_u09.py",
+      "baseline_sha256": "sha256:a83da8489815d40d062f125382cf781532e2e4d621d0202846861ee329403a55",
+      "final_sha256": "sha256:cf3792bb6d5aea7c5fedf59702bcd109854b1372f1aae372cd5cb5bb9aca58d3"
+    },
+    {
+      "path": "tests/runtime/test_u10.py",
+      "baseline_sha256": "sha256:c9d8e02ceae9ac9a43a9c5f25867b5b4d7344b6a21742933ad6b316c04c92a0e",
+      "final_sha256": "sha256:01be0f9f7e1ed91cfbae06ca311ddb6e57f486081d98a74d8a3cf85f4d6f429e"
+    },
+    {
+      "path": "tests/runtime/test_u20_authority_remediation.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:4cb72e38e9f1d2e525cad7bec3e3c91c4ee3a0426faa24a163f30321ec3196cc"
+    },
+    {
+      "path": "tests/runtime/test_u20_decisions.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:fd80901ac00e2f72a7e29964ac69adbf916a04ea04cfd2714a6da4ff04196b18"
+    },
+    {
+      "path": "tests/runtime/test_u20_dependency_remediation.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:6df87c26bd7d6b9d4d9219fce8e64a5542a08f3076877a87d90d5b1854fcf4c0"
+    },
+    {
+      "path": "tests/runtime/test_u20_failure_remediation.py",
+      "baseline_sha256": null,
+      "final_sha256": "sha256:a87808c2eda8edc9c3e857e8e2bf545147a5da25c71f711228affcf46f85d47e"
+    }
+  ],
+  "scope": "Only implementation, affected test modules and current-facing documents changed relative to the pre-remediation baseline. New portable verification records are listed separately by their evidence manifests. Pre-existing unchanged dirty files are excluded."
+}
