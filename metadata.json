@@ -3,7 +3,7 @@
   "checkpoint_id": "01M4NTHBV6RPTM19EVFNKFD9HG",
   "strategy": "manual-commit",
   "branch": "main",
-  "checkpoints_count": 5,
+  "checkpoints_count": 6,
   "files_touched": [
     "README.md",
     "config/review.u20.json",
@@ -342,8 +342,11 @@
     "docs/acceptance-cases.md",
     "docs/operating-guide.md",
     "docs/requirements-traceability.csv",
+    "docs/secret-safety.md",
     "docs/verification/check-u20.py",
     "docs/verification/final-report.md",
+    "docs/verification/secret-guard-captures.json",
+    "docs/verification/secret-guard-remediation.md",
     "docs/verification/u20/amendment.json",
     "docs/verification/u20/assertion-index.json",
     "docs/verification/u20/audit-secret-scan-clean.json",
@@ -546,7 +549,9 @@
     "regulatory-change-impact-brief/scripts/rci/snapshots.py",
     "regulatory-change-impact-brief/scripts/rci/validate.py",
     "regulatory-change-impact-brief/scripts/run.py",
+    "scripts/secret_guard.py",
     "tests/runtime/test_feedback_remediation.py",
+    "tests/runtime/test_secret_guard.py",
     "tests/runtime/test_source_resolution_export.py",
     "tests/runtime/test_u09.py",
     "tests/runtime/test_u10.py",
@@ -578,14 +583,21 @@
       "compact_transcript": "/2/transcript.jsonl",
       "content_hash": "/2/content_hash.txt",
       "prompt": "/2/prompt.txt"
+    },
+    {
+      "metadata": "/3/metadata.json",
+      "transcript": "/3/full.jsonl",
+      "compact_transcript": "/3/transcript.jsonl",
+      "content_hash": "/3/content_hash.txt",
+      "prompt": "/3/prompt.txt"
     }
   ],
   "token_usage": {
-    "input_tokens": 1046863,
+    "input_tokens": 1144055,
     "cache_creation_tokens": 0,
-    "cache_read_tokens": 46662784,
-    "output_tokens": 182725,
-    "api_call_count": 501,
+    "cache_read_tokens": 50337536,
+    "output_tokens": 206113,
+    "api_call_count": 552,
     "subagent_tokens": {
       "input_tokens": 532258,
       "cache_creation_tokens": 0,

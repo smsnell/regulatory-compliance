@@ -1,0 +1,122 @@
+# Final Pre-Commit Secret Guard Remediation
+
+Investigate and safely resolve the final pre-commit security scan failure in the regulatory-compliance repository.
+
+This is the last known blocker before committing and submitting the completed project.
+
+Do not reopen implementation, rerun the compliance test suite, or conduct a broad architecture audit.
+
+## 1. Manual execution context
+
+I manually attempted the following command outside Codex:
+
+```bash
+TMPDIR="$HOME/.cache/rci-secret-scan" \
+  /usr/bin/time -p git commit \
+  -m "Finalize compliance pipeline and U20 remediation"
+```
+
+The pre-commit hook completed after 367.62 seconds but blocked the commit.
+
+It reported 15 possible-secret findings:
+
+- Six files under `deliverables/history/run-f48b4823b3ad4faaa9ac30a301b66505/sources/`
+- Nine files under `deliverables/sources/`
+
+All flagged files are `.bin` source captures.
+
+The guard suppressed the detected values. No commit or push occurred. Intended submission changes remain staged.
+
+This was a manual execution by the operator, not a Codex action. Document it accurately in the session and any investigation notes.
+
+## 2. Important temporary-directory constraint
+
+The system's `/tmp` filesystem is approximately 96% full.
+
+A separate temporary directory exists on the main filesystem:
+
+`$HOME/.cache/rci-secret-scan`
+
+Use this directory for temporary files during this investigation.
+
+Before running scanners, ensure it exists:
+
+```bash
+mkdir -p "$HOME/.cache/rci-secret-scan"
+```
+
+Explicitly set `TMPDIR` on commands that invoke the scanner or create substantial temporary data:
+
+```bash
+TMPDIR="$HOME/.cache/rci-secret-scan" \
+  python3 scripts/secret_guard.py
+```
+
+Ensure delegated commands inherit the appropriate environment. Do not assume an `export` in one shell persists across unrelated tool executions.
+
+Do not fill `/tmp` further or delete unrelated temporary files.
+
+## 3. Investigate the findings
+
+Inspect:
+
+- `scripts/secret_guard.py`
+- `.gitleaks.toml`
+- `docs/secret-safety.md`
+- The 15 flagged staged source captures
+- Relevant prior U05 security investigations
+
+Determine which Gitleaks rules triggered and what categories of data were detected.
+
+Do not print, copy into reports, transmit, or otherwise expose possible credential values.
+
+Establish whether each finding is a genuine credential, a demonstrably non-sensitive public identifier, or uncertain.
+
+Do not assume that browser-exposed Google API keys are automatically safe.
+
+## 4. Resolve safely
+
+For demonstrably non-sensitive findings, implement the narrowest defensible exception that preserves meaningful scanning of the remaining file contents.
+
+Be aware that the current guard uses `--ignore-gitleaks-allow`. A normal Gitleaks allowlist may therefore not work without a deliberate, security-preserving change to the guard.
+
+For genuine credentials or uncertain sensitive material, do not bypass the scanner or modify hash-bound source captures. Report the blocker and available safe options for my decision.
+
+Preserve source evidence, historical hashes, snapshots, bindings, and required artifacts.
+
+If practical, improve the guard's inefficient per-file scanner invocation without weakening staged-byte coverage or forbidden-path protection. Avoid unrelated changes.
+
+## 5. Targeted verification
+
+Avoid repeatedly running the complete 551-file scanner during investigation.
+
+First test the identified issue and any proposed exception using focused cases.
+
+Verify that:
+
+- The 15 findings receive explicit dispositions.
+- Legitimate secrets are still detected and block commits.
+- Forbidden staged paths still fail.
+- Required evidence remains byte-identical.
+- No source data or credential values leak through diagnostics.
+
+Once the fix is ready, run the actual full pre-commit guard against the staged index using the relocated temporary directory.
+
+Document its exit status and result.
+
+## 6. Final report
+
+Report:
+
+- Root cause of the 15 findings
+- Classification and disposition of every finding
+- Files changed
+- Tests and scanner results
+- Security safeguards preserved
+- Evidence and hash integrity
+- Whether the pre-commit hook is ready to pass
+- Any remaining blockers
+
+Document the manual failed commit attempt as part of the investigation history.
+
+**Do not commit or push.** Stop once the guard is verified and ready for my final manual commit.
